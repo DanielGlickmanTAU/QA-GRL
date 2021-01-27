@@ -2,16 +2,22 @@ import os
 
 import torch
 from tokenizers import BertWordPieceTokenizer
-from transformers import BertTokenizer, BertForQuestionAnswering
+from transformers import BertTokenizer, BertForQuestionAnswering,DistilBertTokenizer, DistilBertForSequenceClassification,DistilBertForQuestionAnswering
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-slow_tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-if not os.path.exists("bert_base_cased/"):
-    os.makedirs("bert_base_cased/")
-slow_tokenizer.save_pretrained("bert_base_cased/")
-tokenizer = BertWordPieceTokenizer("bert_base_cased/vocab.txt", lowercase=False)
-model = BertForQuestionAnswering.from_pretrained('distilbert-base-cased-distilled-squad').to(device=device)
+
+def get_and_save_pretrained_tokenizer(name, tokenizer=BertTokenizer):
+    slow_tokenizer = tokenizer.from_pretrained("%s" % name, return_token_type_ids= True)
+    if not os.path.exists("%s/" % name):
+        os.makedirs("%s/" % name)
+    slow_tokenizer.save_pretrained("%s/" % name)
+    return slow_tokenizer
+
+
+slow_tokenizer = get_and_save_pretrained_tokenizer("distilbert-base-uncased",DistilBertTokenizer)
+# tokenizer = BertWordPieceTokenizer("bert_base_cased/vocab.txt")
+model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad').to(device=device)
 
 
 context = "The Apollo program, also known as Project Apollo, was the third United States human spaceflight " \
@@ -45,24 +51,29 @@ token_type_ids_all = []
 attention_masks = []
 input_offsets = []
 for question in questions:
-    tokenized_context = tokenizer.encode(context)
-    tokenized_question = tokenizer.encode(question)
-    input_ids = tokenized_context.ids + tokenized_question.ids[1:]
-    token_type_ids = [0] * len(tokenized_context.ids) + [1] * len(tokenized_question.ids[1:])
-    attention_mask = [1] * len(input_ids)
-    padding_length = 384 - len(input_ids)
-    if padding_length > 0:
-        input_ids = input_ids + ([0] * padding_length)
-        attention_mask = attention_mask + ([0] * padding_length)
-        token_type_ids = token_type_ids + ([0] * padding_length)
-    input_ids_all.append(input_ids)
-    token_type_ids_all.append(token_type_ids)
-    attention_masks.append(attention_mask)
-    input_offsets.append(tokenized_context.offsets)
+    tokenized_context = slow_tokenizer.encode_plus(question,context)
+    # tokenized_question = tokenizer.encode(question)
+    # input_ids = tokenized_context.ids  +tokenized_question.ids[1:]
+    input_ids = tokenized_context['input_ids']
+    # token_type_ids = [0] * len(tokenized_context.ids) + [1] * len(tokenized_question.ids[1:])
+    # attention_mask = [1] * len(input_ids)
+    attention_mask = tokenized_context['attention_mask']
+    # padding_length = 384 - len(input_ids)
+    # if padding_length > 0:
+    #     input_ids = input_ids + ([0] * padding_length)
+    #     attention_mask = attention_mask + ([0] * padding_length)
+        # token_type_ids = token_type_ids + ([0] * padding_length)
+    # token_type_ids_all.append(token_type_ids)
 
-start_scores, end_scores = model(input_ids=torch.tensor(input_ids_all, device=device),
+    output = model(torch.tensor([input_ids]), attention_mask=torch.tensor([attention_mask]))
+    print(question)
+    print(slow_tokenizer.convert_ids_to_tokens(input_ids[torch.argmax(output.start_logits): torch.argmax(output.end_logits) + 1],skip_special_tokens=True))
+    print('----')
+
+output = model(input_ids=torch.tensor(input_ids_all, device=device),
                                  attention_mask=torch.tensor(attention_masks, device=device),
-                                 token_type_ids=torch.tensor(token_type_ids_all, device=device))
+                                 # token_type_ids=torch.tensor(token_type_ids_all, device=device)
+                                 )
 
 # Q: What project put the first Americans into space?
 # A: Project Mercury
@@ -81,7 +92,9 @@ start_scores, end_scores = model(input_ids=torch.tensor(input_ids_all, device=de
 # Q: What space station supported three manned missions in 1973-1974?
 # A: Skylab
 
-for idx, (start, end) in enumerate(zip(start_scores, end_scores)):
+for idx, (start, end) in enumerate(zip(output.start_logits, output.end_logits)):
     offsets = input_offsets[idx]
     print("Q:", questions[idx])
-    print("A:", context[offsets[torch.argmax(start)][0]:offsets[torch.argmax(end)][1]])
+    start_index = offsets[torch.argmax(start)][0]
+    end_index = offsets[torch.argmax(end)][1]
+    print("A:", context[start_index:end_index])
