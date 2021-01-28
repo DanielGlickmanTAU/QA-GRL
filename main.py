@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForQuestionAnswering, DistilBer
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-def get_and_save_pretrained_tokenizer(name):
+def _get_and_save_pretrained_tokenizer(name):
     slow_tokenizer = AutoTokenizer.from_pretrained("%s" % name , return_token_type_ids= True)
     if not os.path.exists("%s/" % name):
         os.makedirs("%s/" % name)
@@ -14,8 +14,13 @@ def get_and_save_pretrained_tokenizer(name):
     return slow_tokenizer
 
 
-slow_tokenizer = get_and_save_pretrained_tokenizer("distilbert-base-uncased")
-model = AutoModelForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad').to(device=device)
+def get_model_and_tokenizer(model_name='distilbert-base-uncased-distilled-squad', toknizer_model_name="distilbert-base-uncased"):
+    slow_tokenizer = _get_and_save_pretrained_tokenizer(toknizer_model_name)
+    model = AutoModelForQuestionAnswering.from_pretrained(model_name).to(device=device)
+    return model, slow_tokenizer
+
+
+model, slow_tokenizer = get_model_and_tokenizer()
 
 assert type(model) == DistilBertForQuestionAnswering
 
