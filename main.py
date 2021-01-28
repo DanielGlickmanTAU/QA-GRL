@@ -33,10 +33,18 @@ context = "The Apollo program, also known as Project Apollo, was the third Unite
           "a space station that supported three manned missions in 1973-74, and the Apollo-Soyuz Test Project, " \
           "a joint Earth orbit mission with the Soviet Union in 1975. "
 
-Q1 = "What project put the first Americans into space?"
-Q2 = "What program was created to carry out these projects and missions?"
-Q3 = "What year did the first manned Apollo flight occur?"
+context2 = "When a machine learning system performs poorly, it is usually diﬃcult to tellwhether the poor performance is intrinsic to the algorithm itself or whether thereis a bug in the implementation of the algorithm. Machine learning systems arediﬃcult to debug for various reasons.In most cases, we do not know a priori what the intended behavior of thealgorithm is. In fact, the entire point of using machine learning is that it willdiscover useful behavior that we were not able to specify ourselves. If we train aneural network on a new classiﬁcation task and it achieves 5 percent test error,we have no straightforward way of knowing if this is the expected behavior orsuboptimal behavior.A further diﬃculty is that most machine learning models have multiple partsthat are each adaptive. If one part is broken, the other parts can adapt and stillachieve roughly acceptable performance"
+#
+# Q1 = "What project put the first Americans into space?"
+# Q2 = "What program was created to carry out these projects and missions?"
+# Q3 = "What year did the first manned Apollo flight occur?"
+# Q4 = "What President is credited with the original notion of putting Americans in space?"
+Q1 = "Why are Machine learning systems hard to debug?"
+Q2 = "What can happen if one part of machine learning model is broken?"
+Q3 = "What is the problem with evaluating intended behaviour?"
 Q4 = "What President is credited with the original notion of putting Americans in space?"
+
+
 Q5 = "Who did the U.S. collaborate with on an Earth orbit mission in 1975?"
 Q6 = "How long did Project Apollo run?"
 Q7 = "What program helped develop space travel techniques that Project Apollo used?"
@@ -65,5 +73,8 @@ for question in questions:
 
     output = model(torch.tensor([input_ids]), attention_mask=torch.tensor([attention_mask]))
     print(question)
-    print(slow_tokenizer.convert_ids_to_tokens(input_ids[torch.argmax(output.start_logits): torch.argmax(output.end_logits) + 1],skip_special_tokens=True))
+    answer_words = slow_tokenizer.convert_ids_to_tokens(
+        input_ids[torch.argmax(output.start_logits): torch.argmax(output.end_logits) + 1], skip_special_tokens=True)
+    answer = ' '.join(answer_words)
+    print(answer)
     print('----')
