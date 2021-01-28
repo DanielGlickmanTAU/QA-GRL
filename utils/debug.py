@@ -20,5 +20,4 @@ def answer_question(question, context, model, tokenizer):
     answer_words = tokenizer.convert_ids_to_tokens(
         input_ids[torch.argmax(output.start_logits): torch.argmax(output.end_logits) + 1], skip_special_tokens=True)
     answer = ' '.join(answer_words)
-    print(answer)
-    print('----')
+    return answer
