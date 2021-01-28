@@ -1,7 +1,7 @@
 import os
 
 import torch
-from transformers import AutoTokenizer, DistilBertForQuestionAnswering
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, DistilBertForQuestionAnswering
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -15,7 +15,9 @@ def get_and_save_pretrained_tokenizer(name):
 
 
 slow_tokenizer = get_and_save_pretrained_tokenizer("distilbert-base-uncased")
-model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad').to(device=device)
+model = AutoModelForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad').to(device=device)
+
+assert type(model) == DistilBertForQuestionAnswering
 
 
 context = "The Apollo program, also known as Project Apollo, was the third United States human spaceflight " \
