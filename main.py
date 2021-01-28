@@ -1,22 +1,20 @@
 import os
 
 import torch
-from tokenizers import BertWordPieceTokenizer
-from transformers import BertTokenizer, BertForQuestionAnswering,DistilBertTokenizer, DistilBertForSequenceClassification,DistilBertForQuestionAnswering
+from transformers import AutoTokenizer, BertTokenizer, BertForQuestionAnswering,DistilBertTokenizer, DistilBertForSequenceClassification,DistilBertForQuestionAnswering
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-def get_and_save_pretrained_tokenizer(name, tokenizer=BertTokenizer):
-    slow_tokenizer = tokenizer.from_pretrained("%s" % name, return_token_type_ids= True)
+def get_and_save_pretrained_tokenizer(name):
+    slow_tokenizer = AutoTokenizer.from_pretrained("%s" % name , return_token_type_ids= True)
     if not os.path.exists("%s/" % name):
         os.makedirs("%s/" % name)
     slow_tokenizer.save_pretrained("%s/" % name)
     return slow_tokenizer
 
 
-slow_tokenizer = get_and_save_pretrained_tokenizer("distilbert-base-uncased",DistilBertTokenizer)
-# tokenizer = BertWordPieceTokenizer("bert_base_cased/vocab.txt")
+slow_tokenizer = get_and_save_pretrained_tokenizer("distilbert-base-uncased")
 model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad').to(device=device)
 
 
@@ -69,32 +67,3 @@ for question in questions:
     print(question)
     print(slow_tokenizer.convert_ids_to_tokens(input_ids[torch.argmax(output.start_logits): torch.argmax(output.end_logits) + 1],skip_special_tokens=True))
     print('----')
-
-output = model(input_ids=torch.tensor(input_ids_all, device=device),
-                                 attention_mask=torch.tensor(attention_masks, device=device),
-                                 # token_type_ids=torch.tensor(token_type_ids_all, device=device)
-                                 )
-
-# Q: What project put the first Americans into space?
-# A: Project Mercury
-# Q: What program was created to carry out these projects and missions?
-# A: The Apollo program, also known as Project Apollo
-# Q: What year did the first manned Apollo flight occur?
-# A: 1968
-# Q: What President is credited with the original notion of putting Americans in space?
-# A: John F. Kennedy
-# Q: Who did the U.S. collaborate with on an Earth orbit mission in 1975?
-# A: Soviet Union
-# Q: How long did Project Apollo run?
-# A: 1961 to 1972
-# Q: What program helped develop space travel techniques that Project Apollo used?
-# A: Gemini missions
-# Q: What space station supported three manned missions in 1973-1974?
-# A: Skylab
-
-for idx, (start, end) in enumerate(zip(output.start_logits, output.end_logits)):
-    offsets = input_offsets[idx]
-    print("Q:", questions[idx])
-    start_index = offsets[torch.argmax(start)][0]
-    end_index = offsets[torch.argmax(end)][1]
-    print("A:", context[start_index:end_index])
