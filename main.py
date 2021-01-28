@@ -1,16 +1,19 @@
 import os
 
 import torch
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, DistilBertForQuestionAnswering
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, DistilBertForQuestionAnswering, AutoConfig
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 def _get_and_save_pretrained_tokenizer(name):
     slow_tokenizer = AutoTokenizer.from_pretrained("%s" % name , return_token_type_ids= True)
+    config = AutoConfig.from_pretrained(name)
     if not os.path.exists("%s/" % name):
         os.makedirs("%s/" % name)
-    slow_tokenizer.save_pretrained("%s/" % name)
+        slow_tokenizer.save_pretrained("%s/" % name)
+        config.save_pretrained("%s/" % name)
+
     return slow_tokenizer
 
 
