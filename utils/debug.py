@@ -1,7 +1,7 @@
 import torch
 
 
-def answer_question(question, context, model, tokenizer):
+def answer_question(question: str, context: str, model, tokenizer) -> str:
     tokenized_context = tokenizer.encode_plus(question, context)
     # tokenized_question = tokenizer.encode(question)
     # input_ids = tokenized_context.ids  +tokenized_question.ids[1:]
