@@ -42,12 +42,9 @@ Q8 = "What space station supported three manned missions in 1973-1974?"
 
 questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8]
 
-input_ids_all = []
-token_type_ids_all = []
-attention_masks = []
-input_offsets = []
-for question in questions:
-    tokenized_context = slow_tokenizer.encode_plus(question,context)
+
+def answer_quuestion(question, context):
+    tokenized_context = slow_tokenizer.encode_plus(question, context)
     # tokenized_question = tokenizer.encode(question)
     # input_ids = tokenized_context.ids  +tokenized_question.ids[1:]
     input_ids = tokenized_context['input_ids']
@@ -58,9 +55,8 @@ for question in questions:
     # if padding_length > 0:
     #     input_ids = input_ids + ([0] * padding_length)
     #     attention_mask = attention_mask + ([0] * padding_length)
-        # token_type_ids = token_type_ids + ([0] * padding_length)
+    # token_type_ids = token_type_ids + ([0] * padding_length)
     # token_type_ids_all.append(token_type_ids)
-
     output = model(torch.tensor([input_ids]), attention_mask=torch.tensor([attention_mask]))
     print(question)
     answer_words = slow_tokenizer.convert_ids_to_tokens(
@@ -68,3 +64,7 @@ for question in questions:
     answer = ' '.join(answer_words)
     print(answer)
     print('----')
+
+
+for question in questions:
+    answer_quuestion(question,context)
