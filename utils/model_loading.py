@@ -6,7 +6,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 
-def get_model_and_tokenizer(model_name='distilbert-base-uncased-distilled-squad', toknizer_model_name="distilbert-base-uncased"):
+def get_model_and_tokenizer_for_qa(model_name='distilbert-base-uncased-distilled-squad', toknizer_model_name="distilbert-base-uncased"):
     def _get_and_save_pretrained_tokenizer(name):
         slow_tokenizer = AutoTokenizer.from_pretrained("%s" % name , return_token_type_ids= True)
         config = AutoConfig.from_pretrained(name)

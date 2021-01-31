@@ -1,9 +1,9 @@
 from transformers import DistilBertForQuestionAnswering
 
 from utils.debug import answer_question
-from utils.model_loading import get_model_and_tokenizer
+from utils.model_loading import get_model_and_tokenizer_for_qa
 
-model, slow_tokenizer = get_model_and_tokenizer()
+model, slow_tokenizer = get_model_and_tokenizer_for_qa()
 
 assert type(model) == DistilBertForQuestionAnswering
 
