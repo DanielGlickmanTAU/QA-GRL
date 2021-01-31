@@ -1,6 +1,6 @@
 import os
 import torch
-from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering
+from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -8,6 +8,10 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def get_model_and_tokenizer_for_qa(model_name='distilbert-base-uncased-distilled-squad', toknizer_model_name="distilbert-base-uncased"):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForQuestionAnswering)
+
+def get_model_and_tokenizer_for_classification(model_name='distilbert-base-uncased-distilled-squad', toknizer_model_name="distilbert-base-uncased"):
+    return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
+
 
 
 def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
