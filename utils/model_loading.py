@@ -16,6 +16,8 @@ def get_model_and_tokenizer_for_classification(model_name='distilbert-base-uncas
 
 def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
     def _get_and_save_pretrained_tokenizer(name):
+        #NOTE: token_type_ids, seperates the question segment from text segment(its 0 and 1s array)
+        # when using distilbert, it does not return token_type_ids, but the encoder adds [SEP] token
         tokenizer = AutoTokenizer.from_pretrained("%s" % name, return_token_type_ids=True, use_fast=True)
         config = AutoConfig.from_pretrained(name)
         if not os.path.exists("%s/" % name):
