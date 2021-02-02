@@ -1,25 +1,16 @@
-from transformers import DistilBertForQuestionAnswering
+from datasets import load_dataset
 
-from utils.debug import answer_question
-from utils.model_loading import get_model_and_tokenizer_for_qa,get_model_and_tokenizer_for_classification
-import utils.visualization as visualization
+from utils.model_loading import get_model_and_tokenizer_for_classification
 
 model, tokenizer = get_model_and_tokenizer_for_classification()
-
-# assert type(model) == DistilBertFor#QuestionAnswering
-
-from datasets import load_dataset, load_metric
 
 dataset = load_dataset("swag", "regular")
 
 # %%
 
-import utils.visualization as visualization
 import utils.datasets_loading as datasets_loading
 
 x = dataset['train']
-# %%
-# print([t['sent2'] for t in x[:3]])
 
 
 a = x[:10]
@@ -40,7 +31,7 @@ def preprocess():
 encoded_dataset = preprocess()
 print(encoded_dataset)
 
-from transformers import AutoModelForMultipleChoice, TrainingArguments, Trainer
+from transformers import TrainingArguments, Trainer
 
 metric_name = "accuracy"
 batch_size = 12
