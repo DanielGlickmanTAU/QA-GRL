@@ -5,9 +5,9 @@ from IPython.display import display, HTML
 from torch.utils.data import Dataset
 
 
-def show_random_elements(dataset: Dataset, num_examples=10, picks = []):
+def show_random_elements(dataset: Dataset, num_examples=10,picks= []):
     assert num_examples <= len(dataset), "Can't pick more elements than there are in the dataset. Make sure its specific set(i.e train/dev)"
-    if len(picks) > 0:
+    if len(picks) == 0:
         for _ in range(num_examples):
             pick = random.randint(0, len(dataset) - 1)
             while pick in picks:
