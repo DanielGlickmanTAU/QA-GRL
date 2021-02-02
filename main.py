@@ -74,6 +74,7 @@ trainer = Trainer(
     model,
     args,
     train_dataset=encoded_dataset["train"].select(range(20)),
+                                #todo fit on real validation data
     eval_dataset=encoded_dataset["train"].select(range(20)),
     # eval_dataset=encoded_dataset[validation_key].select(range(10)),
     tokenizer=tokenizer,
