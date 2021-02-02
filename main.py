@@ -28,7 +28,7 @@ print('asd')
 
 import utils.decorators as decorators
 
-
+# import sklearn
 @decorators.measure_time
 def preprocess():
     to_remove = list(dataset['train'][0].keys())
@@ -52,7 +52,7 @@ args = TrainingArguments(
     learning_rate=2e-5,
     per_device_train_batch_size=batch_size,
     per_device_eval_batch_size=batch_size,
-    num_train_epochs=5,
+    num_train_epochs=50,
     weight_decay=0.01,
     load_best_model_at_end=True,
     #todo fix one use accuracy metric(use sklearn)
@@ -73,8 +73,9 @@ validation_key = "validation"
 trainer = Trainer(
     model,
     args,
-    train_dataset=encoded_dataset["train"].select(range(200)),
-    eval_dataset=encoded_dataset[validation_key].select(range(100)),
+    train_dataset=encoded_dataset["train"].select(range(20)),
+    eval_dataset=encoded_dataset["train"].select(range(20)),
+    # eval_dataset=encoded_dataset[validation_key].select(range(10)),
     tokenizer=tokenizer,
     #todo fix accyracy
     # compute_metrics=compute_metrics
