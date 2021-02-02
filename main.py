@@ -1,5 +1,6 @@
 from datasets import load_dataset
 
+from utils.datasets_loading import preprocess_swag
 from utils.model_loading import get_model_and_tokenizer_for_classification
 
 model, tokenizer = get_model_and_tokenizer_for_classification()
@@ -8,28 +9,16 @@ dataset = load_dataset("swag", "regular")
 
 # %%
 
-import utils.datasets_loading as datasets_loading
-
 x = dataset['train']
 
 
-a = x[:10]
-b = datasets_loading.preprocess_function(a, tokenizer)
+
 print('asd')
 
-import utils.decorators as decorators
-
 # import sklearn
-@decorators.measure_time
-def preprocess():
-    to_remove = list(dataset['train'][0].keys())
-    to_remove.remove('label')
-    return dataset.map(lambda examples: datasets_loading.preprocess_function(examples, tokenizer), batched=True,
-                       remove_columns=to_remove)
 
 
-encoded_dataset = preprocess()
-print(encoded_dataset)
+encoded_dataset = preprocess_swag(dataset,tokenizer=tokenizer)
 
 from transformers import TrainingArguments, Trainer
 

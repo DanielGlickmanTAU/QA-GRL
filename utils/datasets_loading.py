@@ -1,10 +1,11 @@
 from datasets import load_dataset, load_metric
 import seaborn as sns
 
+from utils import decorators as decorators
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
 
-def preprocess_function(examples,tokenizer):
+def preprocess_function_swag(examples, tokenizer):
     # Repeat each first sentence four times to go with the four possibilities of second sentences.
     first_sentences = [[context] * 4 for context in examples["sent1"]]
     # Grab all second sentences possible for each context.
@@ -26,3 +27,11 @@ def preprocess_function(examples,tokenizer):
     return {'input_ids':tokenized_examples['input_ids'], 'attention_mask':tokenized_examples['attention_mask'], 'label':labels}
 
     # return {k: [v[i:i + 4] for i in range(0, len(v), 4)] for k, v in tokenized_examples.items()}
+
+
+@decorators.measure_time
+def preprocess_swag(dataset, tokenizer):
+    to_remove = list(dataset['train'][0].keys())
+    to_remove.remove('label')
+    return dataset.map(lambda examples: preprocess_function_swag(examples, tokenizer), batched=True,
+                       remove_columns=to_remove)
