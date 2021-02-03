@@ -10,6 +10,5 @@ def get_index_of_free_gpus(minimum_free_giga=4):
 
     return [index for index, mega in get_free_gpu().items() if mega > minimum_free_giga * 1000]
 
-
 def get_device():
     return torch.device('cuda:' + get_index_of_free_gpus()[0] if torch.cuda.is_available() else 'cpu')
