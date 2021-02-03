@@ -1,8 +1,9 @@
 import os
-import torch
 from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
+import compute
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = compute.get_device()
+print('using device ', device)
 
 
 
