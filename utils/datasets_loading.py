@@ -29,6 +29,7 @@ def preprocess_function_swag(examples, tokenizer):
     # return {k: [v[i:i + 4] for i in range(0, len(v), 4)] for k, v in tokenized_examples.items()}
 
 
+
 @decorators.measure_time
 def preprocess_swag(dataset, tokenizer):
     to_remove = list(dataset['train'][0].keys())
