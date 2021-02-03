@@ -8,4 +8,5 @@ def measure_time(function):
         end = time.time()
         print(function.__name__, 'took ', end - start, 'seconds')
         return ret
+
     return wrapper
