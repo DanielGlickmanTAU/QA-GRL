@@ -1,6 +1,6 @@
 import os
 from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
-import compute
+import utils.compute as compute
 
 device = compute.get_device()
 print('using device ', device)
