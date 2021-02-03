@@ -13,3 +13,9 @@ def get_index_of_free_gpus(minimum_free_giga=4):
 
 def get_device():
     return torch.device('cuda:' + str(get_index_of_free_gpus()[0]) if torch.cuda.is_available() else 'cpu')
+
+
+def get_device_and_set_as_global():
+    d = get_device()
+    torch.cuda.set_device(d)
+    return d
