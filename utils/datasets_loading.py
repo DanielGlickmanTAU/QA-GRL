@@ -1,6 +1,6 @@
 from datasets import load_dataset
 
-from main import tokenizer
+from experiments.swag import tokenizer
 from utils import decorators as decorators
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
