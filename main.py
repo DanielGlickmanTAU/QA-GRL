@@ -1,4 +1,3 @@
-import torch
 from datasets import load_dataset, load_metric
 
 from utils.datasets_loading import preprocess_swag
@@ -11,12 +10,6 @@ dataset = load_dataset("swag", "regular")
 # %%
 
 x = dataset['train']
-
-
-
-
-import sklearn
-
 
 encoded_dataset = preprocess_swag(dataset,tokenizer=tokenizer)
 
