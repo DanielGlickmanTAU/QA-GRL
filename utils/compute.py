@@ -1,5 +1,7 @@
 import os
 import time
+from pathlib import Path
+home = str(Path.home())
 
 last_write = 0
 
@@ -11,7 +13,7 @@ def write_gpus_to_file(dict):
     t = time.time()
     if t - last_write > 20:
         last_write = t
-        with open('~/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
+        with open(home + '/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
             f.write(str(dict))
 
 
