@@ -1,6 +1,5 @@
 import os
 import time
-import torch
 
 
 def get_free_gpu():
@@ -29,14 +28,18 @@ def get_index_of_free_gpus(minimum_free_giga=4):
 
 def get_torch():
     gpus = get_index_of_free_gpus()
+    os.environ["CUDA_VISIBLE_DEVICES"] = ','.join(gpus)
+    import torch
+    return torch
 
 
 def get_device():
     #todo here probably should just use device 0, as in get torch we are disabling devices in OS level, so if only gpu 4 is free, it will be regraded as gpu 0.
-    return torch.device('cuda:' + get_index_of_free_gpus()[0] if torch.cuda.is_available() else 'cpu')
+    torch1 = get_torch()
+    return torch1.device('cuda:' + get_index_of_free_gpus()[0] if torch.cuda.is_available() else 'cpu')
 
 
 def get_device_and_set_as_global():
     d = get_device()
-    torch.cuda.set_device(d)
+    get_torch().cuda.set_device(d)
     return d
