@@ -30,13 +30,43 @@ def preprocess_function_swag(examples, tokenizer):
 
 
 @decorators.measure_time
-def preprocess_swag(dataset, tokenizer):
+def preprocess(dataset, tokenizer, preprocess_function):
     to_remove = list(dataset['train'][0].keys())
     to_remove.remove('label')
-    return dataset.map(lambda examples: preprocess_function_swag(examples, tokenizer), batched=True,
+    return dataset.map(lambda examples: preprocess_function(examples, tokenizer), batched=True,
                        remove_columns=to_remove)
 
 
 def get_swag_dataset(tokenizer):
     dataset = load_dataset("swag", "regular")
-    return preprocess_swag(dataset, tokenizer=tokenizer)
+    return preprocess(dataset, tokenizer,preprocess_function_swag)
+
+
+def preprocess_function_race(examples, tokenizer):
+    # Repeat each first sentence four times to go with the four possibilities of second sentences.
+    first_sentences = [[context] * 4 for context in examples["sent1"]]
+    # Grab all second sentences possible for each context.
+    question_headers = examples["sent2"]
+    second_sentences = [[f"{header} {examples[end][i]}" for end in ending_names] for i, header in
+                        enumerate(question_headers)]
+
+    # Flatten everything
+    first_sentences = sum(first_sentences, [])
+    second_sentences = sum(second_sentences, [])
+
+    # Tokenize
+    tokenized_examples = tokenizer(first_sentences, second_sentences, truncation=True)
+    # Un-flatten
+    tags = examples['label']
+    if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
+    labels = sum([[1 if i == label else 0 for i in range(4)] for label in tags], [])
+
+    return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
+            'label': labels}
+
+    # return {k: [v[i:i + 4] for i in range(0, len(v), 4)] for k, v in tokenized_examples.items()}
+
+
+def get_race_dataset(tokenizer):
+    dataset = load_dataset("race", "middle")
+    return preprocess_function_race(dataset, tokenizer=tokenizer)
