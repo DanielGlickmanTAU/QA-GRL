@@ -8,7 +8,10 @@ def get_free_gpu():
     memory_available = [int(x.split()[2]) for x in lines]
     return {index: mb for index, mb in enumerate(memory_available)}
 
+
 last_write = 0
+
+
 def write_gpus_to_file(dict):
     global last_write
     t = time.time()
@@ -21,17 +24,16 @@ def write_gpus_to_file(dict):
 def get_index_of_free_gpus(minimum_free_giga=4):
     gpus = get_free_gpu()
     write_gpus_to_file(gpus)
-    return [index for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
+    return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
 
 
 def get_torch():
-    gpus = get_free_gpu()
-    write_gpus_to_file(gpus)
-
+    gpus = get_index_of_free_gpus()
 
 
 def get_device():
-    return torch.device('cuda:' + str(get_index_of_free_gpus()[0]) if torch.cuda.is_available() else 'cpu')
+    #todo here probably should just use device 0, as in get torch we are disabling devices in OS level, so if only gpu 4 is free, it will be regraded as gpu 0.
+    return torch.device('cuda:' + get_index_of_free_gpus()[0] if torch.cuda.is_available() else 'cpu')
 
 
 def get_device_and_set_as_global():
