@@ -69,4 +69,4 @@ def preprocess_function_race(examples, tokenizer):
 
 def get_race_dataset(tokenizer):
     dataset = load_dataset("race", "middle")
-    return preprocess_function_race(dataset, tokenizer=tokenizer)
+    return preprocess(dataset, tokenizer, preprocess_function_race)
