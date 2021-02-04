@@ -5,7 +5,7 @@ import time
 last_write = 0
 
 
-home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/gpu_usage'
+home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1'
 def write_gpus_to_file(dict):
     if len(dict) == 0:
         return
