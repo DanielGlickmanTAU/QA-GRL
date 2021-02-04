@@ -5,6 +5,8 @@ last_write = 0
 
 
 def write_gpus_to_file(dict):
+    if len(dict) == 0:
+        return
     global last_write
     t = time.time()
     if t - last_write > 20:
