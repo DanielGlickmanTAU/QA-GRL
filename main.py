@@ -14,7 +14,6 @@ x = dataset['train']
 
 
 
-print('asd')
 
 import sklearn
 
@@ -38,11 +37,9 @@ args = TrainingArguments(
     num_train_epochs=50,
     weight_decay=0.01,
     load_best_model_at_end=True,
-    #todo fix one use accuracy metric(use sklearn)
     metric_for_best_model=metric_name,
 )
 
-#todo fix accuracy
 metric = load_metric(metric_name)
 
 def compute_metrics(eval_pred):
@@ -56,12 +53,11 @@ validation_key = "validation"
 trainer = Trainer(
     model,
     args,
-    train_dataset=encoded_dataset["train"].select(range(20)),
+    train_dataset=encoded_dataset["train"].select(range(1000)),
                                 #todo fit on real validation data
-    eval_dataset=encoded_dataset["train"].select(range(20)),
-    # eval_dataset=encoded_dataset[validation_key].select(range(10)),
+    # eval_dataset=encoded_dataset["train"].select(range(20)),
+    eval_dataset=encoded_dataset[validation_key].select(range(100)),
     tokenizer=tokenizer,
-    #todo fix accyracy
     compute_metrics=compute_metrics
 )
 
