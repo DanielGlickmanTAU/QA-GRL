@@ -19,7 +19,7 @@ def write_gpus_to_file(dict):
         except: print('fail to save file')
 
 
-def get_index_of_free_gpus(minimum_free_giga=4):
+def get_index_of_free_gpus(minimum_free_giga=8):
     def get_free_gpu():
         try:
             lines = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free').readlines()
