@@ -16,7 +16,7 @@ def write_gpus_to_file(dict):
         try:
             with open(home + '/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
                 f.write(str(dict))
-        except: pass
+        except: print('fail to save file')
 
 
 def get_index_of_free_gpus(minimum_free_giga=4):
