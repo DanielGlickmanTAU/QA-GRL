@@ -2,12 +2,11 @@ from datasets import load_metric
 
 from utils.datasets_loading import get_swag_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
+from transformers import TrainingArguments, Trainer
 
 model, tokenizer = get_model_and_tokenizer_for_classification()
 
 encoded_dataset = get_swag_dataset()
-
-from transformers import TrainingArguments, Trainer
 
 metric_name = "accuracy"
 batch_size = 12
