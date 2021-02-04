@@ -6,7 +6,7 @@ from transformers import TrainingArguments, Trainer
 
 model, tokenizer = get_model_and_tokenizer_for_classification()
 
-encoded_dataset = get_swag_dataset()
+encoded_dataset = get_swag_dataset(tokenizer)
 
 metric_name = "accuracy"
 batch_size = 12

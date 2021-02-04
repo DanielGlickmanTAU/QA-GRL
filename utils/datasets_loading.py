@@ -1,6 +1,5 @@
 from datasets import load_dataset
 
-from experiments.swag import tokenizer
 from utils import decorators as decorators
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
@@ -38,6 +37,6 @@ def preprocess_swag(dataset, tokenizer):
                        remove_columns=to_remove)
 
 
-def get_swag_dataset():
+def get_swag_dataset(tokenizer):
     dataset = load_dataset("swag", "regular")
     return preprocess_swag(dataset, tokenizer=tokenizer)
