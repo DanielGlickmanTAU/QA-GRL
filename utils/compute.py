@@ -1,11 +1,11 @@
 import os
 import time
-from pathlib import Path
-home = str(Path.home())
+
 
 last_write = 0
 
 
+home = '/specific/scratches/scratch/glickman1/'
 def write_gpus_to_file(dict):
     if len(dict) == 0:
         return
