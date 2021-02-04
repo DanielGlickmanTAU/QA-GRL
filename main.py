@@ -1,13 +1,11 @@
-from datasets import load_dataset, load_metric
+from datasets import load_metric
 
-from utils.datasets_loading import preprocess_swag
+from utils.datasets_loading import get_swag_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
 
 model, tokenizer = get_model_and_tokenizer_for_classification()
 
-dataset = load_dataset("swag", "regular")
-
-encoded_dataset = preprocess_swag(dataset, tokenizer=tokenizer)
+encoded_dataset = get_swag_dataset()
 
 from transformers import TrainingArguments, Trainer
 

@@ -1,4 +1,6 @@
+from datasets import load_dataset
 
+from main import tokenizer
 from utils import decorators as decorators
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
@@ -34,3 +36,8 @@ def preprocess_swag(dataset, tokenizer):
     to_remove.remove('label')
     return dataset.map(lambda examples: preprocess_function_swag(examples, tokenizer), batched=True,
                        remove_columns=to_remove)
+
+
+def get_swag_dataset():
+    dataset = load_dataset("swag", "regular")
+    return preprocess_swag(dataset, tokenizer=tokenizer)
