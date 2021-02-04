@@ -11,7 +11,7 @@ def write_gpus_to_file(dict):
     t = time.time()
     if t - last_write > 20:
         last_write = t
-        with open(str(t) + '_gpu', 'w+') as f:
+        with open('~/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
             f.write(str(dict))
 
 
