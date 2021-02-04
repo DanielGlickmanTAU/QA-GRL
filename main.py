@@ -7,11 +7,7 @@ model, tokenizer = get_model_and_tokenizer_for_classification()
 
 dataset = load_dataset("swag", "regular")
 
-# %%
-
-x = dataset['train']
-
-encoded_dataset = preprocess_swag(dataset,tokenizer=tokenizer)
+encoded_dataset = preprocess_swag(dataset, tokenizer=tokenizer)
 
 from transformers import TrainingArguments, Trainer
 
@@ -35,6 +31,7 @@ args = TrainingArguments(
 
 metric = load_metric(metric_name)
 
+
 def compute_metrics(eval_pred):
     predictions, labels = eval_pred
     predictions = predictions.argmax(axis=1)
@@ -47,8 +44,6 @@ trainer = Trainer(
     model,
     args,
     train_dataset=encoded_dataset["train"].select(range(1000)),
-                                #todo fit on real validation data
-    # eval_dataset=encoded_dataset["train"].select(range(20)),
     eval_dataset=encoded_dataset[validation_key].select(range(100)),
     tokenizer=tokenizer,
     compute_metrics=compute_metrics
