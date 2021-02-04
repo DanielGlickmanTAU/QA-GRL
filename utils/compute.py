@@ -13,8 +13,10 @@ def write_gpus_to_file(dict):
     t = time.time()
     if t - last_write > 20:
         last_write = t
-        with open(home + '/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
-            f.write(str(dict))
+        try:
+            with open(home + '/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
+                f.write(str(dict))
+        except: pass
 
 
 def get_index_of_free_gpus(minimum_free_giga=4):
