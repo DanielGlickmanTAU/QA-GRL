@@ -1,4 +1,5 @@
-from datasets import load_dataset
+import torch
+from datasets import load_dataset, load_metric
 
 from utils.datasets_loading import preprocess_swag
 from utils.model_loading import get_model_and_tokenizer_for_classification
@@ -15,7 +16,7 @@ x = dataset['train']
 
 print('asd')
 
-# import sklearn
+import sklearn
 
 
 encoded_dataset = preprocess_swag(dataset,tokenizer=tokenizer)
@@ -26,7 +27,9 @@ metric_name = "accuracy"
 batch_size = 12
 
 benchmark_folder_name = "swag-classification"
+
 args = TrainingArguments(
+
     benchmark_folder_name,
     evaluation_strategy="epoch",
     learning_rate=2e-5,
@@ -36,16 +39,16 @@ args = TrainingArguments(
     weight_decay=0.01,
     load_best_model_at_end=True,
     #todo fix one use accuracy metric(use sklearn)
-    # metric_for_best_model=metric_name,
+    metric_for_best_model=metric_name,
 )
 
 #todo fix accuracy
-# metric = load_metric(metric_name)
+metric = load_metric(metric_name)
 
 def compute_metrics(eval_pred):
     predictions, labels = eval_pred
     predictions = predictions.argmax(axis=1)
-    return predictions == labels
+    return metric.compute(predictions=predictions, references=labels)
 
 
 validation_key = "validation"
@@ -59,7 +62,7 @@ trainer = Trainer(
     # eval_dataset=encoded_dataset[validation_key].select(range(10)),
     tokenizer=tokenizer,
     #todo fix accyracy
-    # compute_metrics=compute_metrics
+    compute_metrics=compute_metrics
 )
 
 trainer.train()
