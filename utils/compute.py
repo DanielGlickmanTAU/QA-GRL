@@ -13,8 +13,9 @@ def write_gpus_to_file(dict):
     t = time.time()
     if t - last_write > 20:
         last_write = t
+        server_name = os.environ['HOST']
         try:
-            filename = home + '/gpu_usage/' + str(t) + '_gpu'
+            filename = home + '/gpu_usage/' + str(t) + '__' + server_name +'__' + '_gpu'
             with open(filename, 'w+') as f:
                 f.write(str(dict))
             print('print to gpu usage to ' + filename)
