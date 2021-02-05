@@ -14,12 +14,14 @@ def write_gpus_to_file(dict):
     if t - last_write > 20:
         last_write = t
         try:
-            with open(home + '/gpu_usage/' + str(t) + '_gpu', 'w+') as f:
+            filename = home + '/gpu_usage/' + str(t) + '_gpu'
+            with open(filename, 'w+') as f:
                 f.write(str(dict))
+            print('print to gpu usage to ' + filename)
         except: print('fail to save file')
 
 
-def get_index_of_free_gpus(minimum_free_giga=8):
+def get_index_of_free_gpus(minimum_free_giga=4):
     def get_free_gpu():
         try:
             lines = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free').readlines()
