@@ -18,7 +18,7 @@ def write_gpus_to_file(dict):
             filename = home + '/gpu_usage/' + str(t) + '__' + server_name +'__' + '_gpu'
             with open(filename, 'w+') as f:
                 f.write(str(dict))
-            print('print to gpu usage to ' + filename)
+            print('print to gpu usage to ' + filename, dict)
         except: print('fail to save file')
 
 
