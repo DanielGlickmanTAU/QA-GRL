@@ -34,7 +34,7 @@ def get_index_of_free_gpus(minimum_free_giga=6):
 
     gpus = get_free_gpu()
     write_gpus_to_file(gpus)
-    return gpus
+    return {index:mega for index, mega in gpus.items() if mega > minimum_free_giga * 1000}
     # return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
 
 
