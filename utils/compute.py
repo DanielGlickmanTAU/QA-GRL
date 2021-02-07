@@ -52,7 +52,7 @@ def get_device():
     torch = get_torch()
     gpus = get_index_of_free_gpus()
     print(gpus)
-    return torch.device('cuda:' + max(gpus,key=lambda gpu_num: gpus[int(gpu_num)]) if torch.cuda.is_available() else 'cpu')
+    return torch.device('cuda:' + str(max(gpus,key=lambda gpu_num: gpus[int(gpu_num)])) if torch.cuda.is_available() else 'cpu')
 
 
 def get_device_and_set_as_global():
