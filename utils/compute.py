@@ -22,7 +22,7 @@ def write_gpus_to_file(dict):
         except: print('fail to save file')
 
 
-def get_index_of_free_gpus(minimum_free_giga=4):
+def get_index_of_free_gpus(minimum_free_giga=6):
     def get_free_gpu():
         try:
             lines = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free').readlines()
@@ -34,12 +34,13 @@ def get_index_of_free_gpus(minimum_free_giga=4):
 
     gpus = get_free_gpu()
     write_gpus_to_file(gpus)
-    return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
+    return gpus
+    # return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
 
 
 def get_torch():
     gpus = get_index_of_free_gpus()
-    join = ','.join(gpus)
+    join = ','.join(map(str, gpus))
     os.environ["CUDA_VISIBLE_DEVICES"] = join
     print('setting CUDA_VISIBLE_DEVICES=' + join)
     import torch
@@ -50,6 +51,7 @@ def get_device():
     # todo here probably should just use device 0, as in get torch we are disabling devices in OS level, so if only gpu 4 is free, it will be regraded as gpu 0.
     torch = get_torch()
     gpus = get_index_of_free_gpus()
+    print(gpus)
     return torch.device('cuda:' + max(gpus,key=lambda gpu_num: gpus[int(gpu_num)]) if torch.cuda.is_available() else 'cpu')
 
 
