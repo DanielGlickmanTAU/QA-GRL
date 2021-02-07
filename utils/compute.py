@@ -2,9 +2,10 @@ import os
 import time
 
 
+minimum_free_giga=8
+max_num_gpus = 1
+
 last_write = 0
-
-
 home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1'
 def write_gpus_to_file(dict):
     if len(dict) == 0:
@@ -22,7 +23,6 @@ def write_gpus_to_file(dict):
         except: print('fail to save file')
 
 
-minimum_free_giga=6
 def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
     def get_free_gpu():
         try:
@@ -41,7 +41,8 @@ def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
 
 def get_torch():
     gpus = get_index_of_free_gpus()
-    join = ','.join(map(str, gpus))
+    gpus = list(map(str, gpus))[:max_num_gpus]
+    join = ','.join(gpus)
     os.environ["CUDA_VISIBLE_DEVICES"] = join
     print('setting CUDA_VISIBLE_DEVICES=' + join)
     import torch
