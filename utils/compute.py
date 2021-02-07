@@ -39,7 +39,9 @@ def get_index_of_free_gpus(minimum_free_giga=4):
 
 def get_torch():
     gpus = get_index_of_free_gpus()
-    os.environ["CUDA_VISIBLE_DEVICES"] = ','.join(gpus)
+    join = ','.join(gpus)
+    os.environ["CUDA_VISIBLE_DEVICES"] = join
+    print('setting CUDA_VISIBLE_DEVICES=' + join)
     import torch
     return torch
 
