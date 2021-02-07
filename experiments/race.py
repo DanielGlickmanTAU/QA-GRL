@@ -11,10 +11,10 @@ encoded_dataset = get_race_dataset(tokenizer)
 
 
 @dataclass
-class SwagClassificationParams(TaskParams):
+class RACEClassificationParams(TaskParams):
     benchmark_folder_name: str = "race-classification"
 
 
-classificationParams = SwagClassificationParams(encoded_dataset, model, tokenizer)
+classificationParams = RACEClassificationParams(encoded_dataset, model, tokenizer)
 
 # trainer.train()
