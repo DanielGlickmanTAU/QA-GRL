@@ -47,7 +47,8 @@ def get_torch():
 def get_device():
     # todo here probably should just use device 0, as in get torch we are disabling devices in OS level, so if only gpu 4 is free, it will be regraded as gpu 0.
     torch = get_torch()
-    return torch.device('cuda:' + get_index_of_free_gpus()[0] if torch.cuda.is_available() else 'cpu')
+    gpus = get_index_of_free_gpus()
+    return torch.device('cuda:' + max(gpus,key=lambda gpu_num: gpus[gpu_num]) if torch.cuda.is_available() else 'cpu')
 
 
 def get_device_and_set_as_global():
