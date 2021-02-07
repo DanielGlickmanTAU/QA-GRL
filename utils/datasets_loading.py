@@ -60,7 +60,7 @@ def preprocess_function_race(examples, tokenizer):
     options = sum(examples['options'], [])
 
     # Tokenize
-    tokenized_examples = tokenizer(texts, questions, options, truncation=True)
+    tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q,o in zip(questions, options)], truncation=True)
     # Un-flatten
     answers = examples['answer']
     if len(examples) == 1: answers = [
