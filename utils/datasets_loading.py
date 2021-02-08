@@ -1,6 +1,7 @@
 from datasets import load_dataset
 
 from utils import decorators as decorators
+import os
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
 
@@ -39,7 +40,8 @@ def preprocess(dataset, tokenizer, preprocess_function):
 
 
 def get_swag_dataset(tokenizer):
-    dataset = load_dataset("swag", "regular")
+    print('my place is ' + os.getcwd())
+    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache')
     return preprocess(dataset, tokenizer, preprocess_function_swag)
 
 
@@ -60,7 +62,8 @@ def preprocess_function_race(examples, tokenizer):
     options = sum(examples['options'], [])
 
     # Tokenize
-    tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q,o in zip(questions, options)], truncation=True)
+    tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
+                                   truncation=True, padding=True)
     # Un-flatten
     answers = examples['answer']
     if len(examples) == 1: answers = [
