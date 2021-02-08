@@ -57,10 +57,15 @@ def get_device():
     #todo: fix here, need to fix indent.. e.g if setting visiable_devices env var to 0,2.. and max is 2.. need to set 1, because
     #after setting env var, it is like 0,1 to torch
 
-    num_gpus_overall = len(get_index_of_free_gpus(0))
     num_free_gpus = len(gpus)
     # return torch.device('cuda:' + str(max(gpus,key=lambda gpu_num: gpus[int(gpu_num)])) if torch.cuda.is_available() else 'cpu')
-    return torch.device('cuda:' + str(max(gpus,key=lambda gpu_num: gpus[int(gpu_num)]) - (num_gpus_overall - num_free_gpus)) if torch.cuda.is_available() else 'cpu')
+    return torch.device(compute_gpu_indent(gpus) if torch.cuda.is_available() else 'cpu')
+
+
+def compute_gpu_indent(gpus):
+    best_gpu = max(gpus, key=lambda gpu_num: gpus[int(gpu_num)])
+    indented_gpu_index = list(gpus.keys()).index(best_gpu)
+    return 'cuda:' + str(indented_gpu_index)
 
 
 def get_device_and_set_as_global():
