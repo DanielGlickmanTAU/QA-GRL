@@ -63,9 +63,12 @@ def get_device():
 
 
 def compute_gpu_indent(gpus):
-    best_gpu = max(gpus, key=lambda gpu_num: gpus[int(gpu_num)])
-    indented_gpu_index = list(gpus.keys()).index(best_gpu)
-    return 'cuda:' + str(indented_gpu_index)
+    try:
+        best_gpu = max(gpus, key=lambda gpu_num: gpus[int(gpu_num)])
+        indented_gpu_index = list(gpus.keys()).index(best_gpu)
+        return 'cuda:' + str(indented_gpu_index)
+    except:
+        return 'cuda'
 
 
 def get_device_and_set_as_global():
