@@ -1,7 +1,7 @@
 import os
 import time
 
-minimum_free_giga = 8
+minimum_free_giga = 6
 max_num_gpus = 1
 
 last_write = 0
@@ -68,7 +68,7 @@ def get_device():
 
 def compute_gpu_indent(gpus):
     try:
-        return 'cuda'
+        # return 'cuda'
         best_gpu = max(gpus, key=lambda gpu_num: gpus[int(gpu_num)])
         indented_gpu_index = list(gpus.keys()).index(best_gpu)
         return 'cuda:' + str(indented_gpu_index)

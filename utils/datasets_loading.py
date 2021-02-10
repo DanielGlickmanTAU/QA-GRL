@@ -73,7 +73,8 @@ def preprocess_function_race(examples, tokenizer):
     if len(examples) == 1: answers = [
         answers]  # make it list so it is iterable..avoids annoying case for single element
     labels = sum([answer_letter_to_target_list(letter) for letter in answers], [])
-
+    # #todo look at this
+    # labels = [answer_letter_to_target_list(letter) for letter in answers]
     return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
             'label': labels}
 

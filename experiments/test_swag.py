@@ -36,8 +36,8 @@ class Test(TestCase):
         trainer = Trainer(
             params.model,
             args,
-            train_dataset=params.dataset["train"],
-            eval_dataset=params.dataset["validation"],
+            train_dataset=params.dataset["train"].select(range(1_000)),
+            eval_dataset=params.dataset["train"].select(range(1_000)),
             tokenizer=params.tokenizer,
             compute_metrics=compute_metrics
         )
