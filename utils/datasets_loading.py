@@ -21,7 +21,7 @@ def preprocess_function_swag(examples, tokenizer):
     second_sentences = sum(second_sentences, [])
 
     # Tokenize
-    tokenized_examples = tokenizer(first_sentences, second_sentences, truncation=True)
+    tokenized_examples = tokenizer(first_sentences, second_sentences, truncation=True,padding='max_length')
     # Un-flatten
     tags = examples['label']
     if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
