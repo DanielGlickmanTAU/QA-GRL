@@ -3,6 +3,7 @@ from datasets import load_dataset
 from utils import decorators as decorators
 import os
 import utils.special_tokens as special_tokens
+import utils.compute as compute
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
 
@@ -42,7 +43,7 @@ def preprocess(dataset, tokenizer, preprocess_function):
 
 def get_swag_dataset(tokenizer):
     print('my place is ' + os.getcwd())
-    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache')
+    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache', cache_dir=os.getcwd() + '/cache')
     return preprocess(dataset, tokenizer, preprocess_function_swag)
 
 
@@ -78,5 +79,5 @@ def preprocess_function_race(examples, tokenizer):
 
 
 def get_race_dataset(tokenizer):
-    dataset = load_dataset("race", "middle")
+    dataset = load_dataset("race", "middle",cache_dir=compute.get_cache_dir())
     return preprocess(dataset, tokenizer, preprocess_function_race)

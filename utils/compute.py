@@ -85,3 +85,8 @@ def is_university_server():
         return 'gamir' in os.environ['HOST']
     except:
         return False
+
+def get_cache_dir():
+    if is_university_server():
+        return '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/cache'
+    return None

@@ -2,10 +2,9 @@ import os
 import utils.special_tokens as special_tokens
 import utils.compute as compute
 
-dl_glickman_cache = None
+dl_glickman_cache = compute.get_cache_dir()
 
 if compute.is_university_server():
-    dl_glickman_cache = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/cache'
     try:
         # change transofrmers cache dir, cause defalut store in university is not enough
         os.environ['TRANSFORMERS_CACHE'] = dl_glickman_cache
