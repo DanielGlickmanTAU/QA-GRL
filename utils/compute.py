@@ -1,12 +1,13 @@
 import os
 import time
 
-
-minimum_free_giga=8
+minimum_free_giga = 8
 max_num_gpus = 6
 
 last_write = 0
 home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1'
+
+
 def write_gpus_to_file(dict):
     if len(dict) == 0:
         return
@@ -16,11 +17,12 @@ def write_gpus_to_file(dict):
         last_write = t
         try:
             server_name = os.environ['HOST']
-            filename = home + '/gpu_usage/' + str(t) + '__' + server_name +'__' + '_gpu'
+            filename = home + '/gpu_usage/' + str(t) + '__' + server_name + '__' + '_gpu'
             with open(filename, 'w+') as f:
                 f.write(str(dict))
             print('print to gpu usage to ' + filename, dict)
-        except: print('fail to save file')
+        except:
+            print('fail to save file')
 
 
 def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
@@ -35,7 +37,7 @@ def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
 
     gpus = get_free_gpu()
     write_gpus_to_file(gpus)
-    return {index:mega for index, mega in gpus.items() if mega >= minimum_free_giga * 1000}
+    return {index: mega for index, mega in gpus.items() if mega >= minimum_free_giga * 1000}
     # return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
 
 
@@ -54,8 +56,8 @@ def get_device():
     torch = get_torch()
     gpus = get_index_of_free_gpus()
     print(gpus)
-    #todo: fix here, need to fix indent.. e.g if setting visiable_devices env var to 0,2.. and max is 2.. need to set 1, because
-    #after setting env var, it is like 0,1 to torch
+    # todo: fix here, need to fix indent.. e.g if setting visiable_devices env var to 0,2.. and max is 2.. need to set 1, because
+    # after setting env var, it is like 0,1 to torch
 
     num_free_gpus = len(gpus)
     # return torch.device('cuda:' + str(max(gpus,key=lambda gpu_num: gpus[int(gpu_num)])) if torch.cuda.is_available() else 'cpu')
@@ -76,3 +78,10 @@ def get_device_and_set_as_global():
     d = get_device()
     get_torch().cuda.set_device(d)
     return d
+
+
+def is_university_server():
+    try:
+        return 'gamir' in os.environ['HOST']
+    except:
+        return False

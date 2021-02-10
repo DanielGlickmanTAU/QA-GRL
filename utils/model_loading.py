@@ -1,14 +1,17 @@
 import os
-import special_tokens
-
-dl_glickman_cache = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/cache'
-try:
-    # change transofrmers cache dir, cause defalut store in university is not enough
-    os.environ['TRANSFORMERS_CACHE'] = dl_glickman_cache
-except:
-    print('failed changing transformers cache dir')
-from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
+import utils.special_tokens as special_tokens
 import utils.compute as compute
+
+dl_glickman_cache = None
+
+if compute.is_university_server():
+    dl_glickman_cache = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/cache'
+    try:
+        # change transofrmers cache dir, cause defalut store in university is not enough
+        os.environ['TRANSFORMERS_CACHE'] = dl_glickman_cache
+    except:
+        print('failed changing transformers cache dir')
+from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
 
 device = compute.get_device()
 print('using device ', device)

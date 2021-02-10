@@ -2,7 +2,7 @@ from datasets import load_dataset
 
 from utils import decorators as decorators
 import os
-import special_tokens
+import utils.special_tokens as special_tokens
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
 
