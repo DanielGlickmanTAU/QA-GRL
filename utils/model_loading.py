@@ -45,4 +45,5 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
 
     tokenizer = _get_and_save_pretrained_tokenizer(toknizer_model_name)
     model = autoModelClass.from_pretrained(model_name, cache_dir=dl_glickman_cache, device=device)
+    model.resize_token_embeddings(len(tokenizer))
     return model, tokenizer
