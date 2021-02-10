@@ -36,7 +36,8 @@ class Test(TestCase):
 
         qaClassificationModel = ClassificationModel(model, tokenizer)
 
-        trainer = pl.Trainer(gpus=len(get_index_of_free_gpus()))
+        # trainer = pl.Trainer(gpus=len(get_index_of_free_gpus()))
+        trainer = pl.Trainer(gpus=len(get_index_of_free_gpus()),distributed_backend='dp')
         trainer.fit(qaClassificationModel, get_data_loader('train'))
 
         # args = TrainingArguments(
