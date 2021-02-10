@@ -1,4 +1,5 @@
 import os
+import special_tokens
 
 dl_glickman_cache = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1/cache'
 try:
@@ -29,6 +30,8 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
         # when using distilbert, it does not return token_type_ids, but the encoder adds [SEP] token
         tokenizer = AutoTokenizer.from_pretrained("%s" % name, cache_dir=dl_glickman_cache, return_token_type_ids=True,
                                                   use_fast=True)
+        tokenizer.add_special_token(special_tokens.OPT)
+
         config = AutoConfig.from_pretrained(name)
         if not os.path.exists("%s/" % name):
             os.makedirs("%s/" % name)
