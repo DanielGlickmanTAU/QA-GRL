@@ -47,6 +47,8 @@ def get_torch():
     join = ','.join(gpus)
     os.environ["CUDA_VISIBLE_DEVICES"] = join
     print('setting CUDA_VISIBLE_DEVICES=' + join)
+    if max_num_gpus==1:
+        print('remember you are working with 1 gpu:(')
     import torch
     return torch
 
