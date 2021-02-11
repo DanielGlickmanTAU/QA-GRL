@@ -1,1 +1,1 @@
-"# QA-GRL" 
+https://docs.google.com/document/d/1SJMPqlduW6uOHsr5yA1ztoSGPyAsFY4sFU0wMrSvWkc/edit?usp=sharing
