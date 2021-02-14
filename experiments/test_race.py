@@ -57,7 +57,7 @@ class Test(TestCase):
 
             params.benchmark_folder_name,
             evaluation_strategy="epoch",
-            learning_rate=2e-5,
+            learning_rate=8e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
@@ -78,6 +78,6 @@ class Test(TestCase):
         )
 
         #resume_from_checkpoint=params.benchmark_folder_name
-        results = trainer.train()
+        results = trainer.train(params.benchmark_folder_name + '/checkpoint-105500')
         print('done train')
         print(results)
