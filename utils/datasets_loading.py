@@ -69,9 +69,8 @@ def preprocess_function_race(examples, tokenizer):
                                    truncation=True, padding=True, return_overflowing_tokens=True)
     # tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
     #                                truncation=True, padding=True)
-    if any(len(x.overflowing) > 0 for x in tokenized_examples[:]):
-        for i in range(100):
-            print('OVERFLOWING ANSWER')
+    overflown = [x.ids for x in tokenized_examples[:] if len(x.overflowing) > 0]
+    print('OVERFLOWING ANSWER: ', len(overflown), ' Out of: ', len(tokenized_examples[:]))
     # Un-flatten
     answers = examples['answer']
     if len(examples) == 1: answers = [

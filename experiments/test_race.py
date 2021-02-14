@@ -12,7 +12,7 @@ import race
 class Test(TestCase):
     def test_race_classification_params(self):
         params = race.classificationParams
-        batch_size = 16
+        batch_size = 20
         metric_name = "accuracy"
         metric = load_metric(metric_name)
 
@@ -25,7 +25,7 @@ class Test(TestCase):
 
             params.benchmark_folder_name,
             evaluation_strategy="epoch",
-            learning_rate=8e-5,
+            learning_rate=1e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
