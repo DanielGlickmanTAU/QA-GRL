@@ -56,14 +56,41 @@ def preprocess_function_race(examples, tokenizer):
     def answer_letter_to_target_list(letter):
         return [1 if d[letter] == i else 0 for i in range(4)]
 
+    def adjust_negative_samples_ratio(options, labels):
+        ExperimentVariables.race.negative_samples_per_question
+
+        should_take_negative = True
+        options_new = []
+        labels_new = []
+        for i, (option, label) in enumerate(zip(options, labels)):
+            if i % 4 == 0:
+                should_take_negative = True
+
+            if label:
+                options_new.append(option)
+                labels_new.append(label)
+            elif should_take_negative:
+                should_take_negative = False
+                options_new.append(option)
+                labels_new.append(label)
+
+        return options_new, labels_new
+
     # Repeat each first sentence four times to go with the four possibilities of second sentences.
-    texts = [[context] * 4 for context in examples["article"]]
+    texts = [[context] * 2 for context in examples["article"]]
     # Grab all second sentences possible for each context.
-    questions = [[context] * 4 for context in examples["question"]]
+    questions = [[context] * 2 for context in examples["question"]]
     # Flatten everything
     texts = sum(texts, [])
     questions = sum(questions, [])
+
+    answers = examples['answer']
+    if len(examples) == 1: answers = [
+        answers]  # make it list so it is iterable..avoids annoying case for single element
+    labels = sum([answer_letter_to_target_list(letter) for letter in answers], [])
     options = sum(examples['options'], [])
+
+    options, labels = adjust_negative_samples_ratio(options, labels)
 
     # Tokenize
     tokenized_examples = tokenizer(texts, [q + special_tokens.OPT + o for q, o in zip(questions, options)],
@@ -74,13 +101,7 @@ def preprocess_function_race(examples, tokenizer):
         overflown = [x.ids for x in tokenized_examples[:] if len(x.overflowing) > 0]
         if len(overflown) > 1:
             print('OVERFLOWING ANSWER: ', len(overflown), ' Out of: ', len(tokenized_examples[:]))
-    # Un-flatten
-    answers = examples['answer']
-    if len(examples) == 1: answers = [
-        answers]  # make it list so it is iterable..avoids annoying case for single element
-    labels = sum([answer_letter_to_target_list(letter) for letter in answers], [])
-    # #todo look at this
-    # labels = [answer_letter_to_target_list(letter) for letter in answers]
+
     return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
             'label': labels}
 
