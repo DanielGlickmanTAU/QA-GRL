@@ -43,7 +43,7 @@ def preprocess(dataset, tokenizer, preprocess_function):
 
 def get_swag_dataset(tokenizer):
     print('my place is ' + os.getcwd())
-    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache', cache_dir=os.getcwd() + '/cache')
+    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache', cache_dir=os.getcwd() + '/cache',shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function_swag)
 
 
@@ -64,10 +64,10 @@ def preprocess_function_race(examples, tokenizer):
     options = sum(examples['options'], [])
 
     # Tokenize
-    # tokenized_examples = tokenizer(texts, [q + special_tokens.OPT + o for q, o in zip(questions, options)],
-    #                                truncation=True, padding=True)
-    tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
+    tokenized_examples = tokenizer(texts, [q + special_tokens.OPT + o for q, o in zip(questions, options)],
                                    truncation=True, padding=True)
+    # tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
+    #                                truncation=True, padding=True)
     # Un-flatten
     answers = examples['answer']
     if len(examples) == 1: answers = [
@@ -80,5 +80,5 @@ def preprocess_function_race(examples, tokenizer):
 
 
 def get_race_dataset(tokenizer):
-    dataset = load_dataset("race", "middle",cache_dir=compute.get_cache_dir())
+    dataset = load_dataset("race", "middle",cache_dir=compute.get_cache_dir(),shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function_race)
