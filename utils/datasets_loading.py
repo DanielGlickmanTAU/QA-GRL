@@ -21,7 +21,7 @@ def preprocess_function_swag(examples, tokenizer):
     second_sentences = sum(second_sentences, [])
 
     # Tokenize
-    tokenized_examples = tokenizer(first_sentences, second_sentences, truncation=True,padding='max_length')
+    tokenized_examples = tokenizer(first_sentences, second_sentences, truncation=True, padding='max_length')
     # Un-flatten
     tags = examples['label']
     if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
@@ -43,7 +43,8 @@ def preprocess(dataset, tokenizer, preprocess_function):
 
 def get_swag_dataset(tokenizer):
     print('my place is ' + os.getcwd())
-    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache', cache_dir=os.getcwd() + '/cache',shuffle=True)
+    dataset = load_dataset("swag", "regular", data_dir=os.getcwd() + '/.cache', cache_dir=os.getcwd() + '/cache',
+                           shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function_swag)
 
 
@@ -65,10 +66,10 @@ def preprocess_function_race(examples, tokenizer):
 
     # Tokenize
     tokenized_examples = tokenizer(texts, [q + special_tokens.OPT + o for q, o in zip(questions, options)],
-                                   truncation=True, padding=True,return_overflowing_tokens=True)
+                                   truncation=True, padding=True, return_overflowing_tokens=True)
     # tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
     #                                truncation=True, padding=True)
-    if any(len(x.overflowing)>0 for x in tokenized_examples[:]):
+    if any(len(x.overflowing) > 0 for x in tokenized_examples[:]):
         for i in range(100):
             print('OVERFLOWING ANSWER')
     # Un-flatten
@@ -83,5 +84,12 @@ def preprocess_function_race(examples, tokenizer):
 
 
 def get_race_dataset(tokenizer):
-    dataset = load_dataset("race", "middle",cache_dir=compute.get_cache_dir(),shuffle=True)
+    dataset = load_dataset("race", "middle", cache_dir=compute.get_cache_dir(), shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function_race)
+
+
+def get_sst_dataset(tokenizer):
+    def preprocess_function(examples,tokenizer):
+        return tokenizer(examples["sentence"], truncation=True)
+    dataset = load_dataset("glue", "sst2", cache_dir=compute.get_cache_dir(), shuffle=True)
+    return preprocess(dataset, tokenizer, preprocess_function=preprocess_function)
