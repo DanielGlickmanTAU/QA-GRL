@@ -1,0 +1,2 @@
+aws p2 large 1 gpu (v100) 3.45it/s total time 50 hours
+university rack7 3 gpus  2.30it/s total time 25 hours
