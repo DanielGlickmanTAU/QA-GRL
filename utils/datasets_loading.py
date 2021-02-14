@@ -1,5 +1,6 @@
 from datasets import load_dataset
 
+from experiments import ExperimentVariables
 from utils import decorators as decorators
 import os
 import utils.special_tokens as special_tokens
@@ -66,12 +67,13 @@ def preprocess_function_race(examples, tokenizer):
 
     # Tokenize
     tokenized_examples = tokenizer(texts, [q + special_tokens.OPT + o for q, o in zip(questions, options)],
-                                   truncation=True, padding=True, return_overflowing_tokens=True)
-    # tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
-    #                                truncation=True, padding=True)
-    overflown = [x.ids for x in tokenized_examples[:] if len(x.overflowing) > 0]
-    if len(overflown) > 1:
-        print('OVERFLOWING ANSWER: ', len(overflown), ' Out of: ', len(tokenized_examples[:]))
+                                   truncation=True, padding=True,
+                                   return_overflowing_tokens=ExperimentVariables.return_overflowing_tokens)
+
+    if ExperimentVariables.return_overflowing_tokens:
+        overflown = [x.ids for x in tokenized_examples[:] if len(x.overflowing) > 0]
+        if len(overflown) > 1:
+            print('OVERFLOWING ANSWER: ', len(overflown), ' Out of: ', len(tokenized_examples[:]))
     # Un-flatten
     answers = examples['answer']
     if len(examples) == 1: answers = [
@@ -89,7 +91,8 @@ def get_race_dataset(tokenizer):
 
 
 def get_sst_dataset(tokenizer):
-    def preprocess_function(examples,tokenizer):
+    def preprocess_function(examples, tokenizer):
         return tokenizer(examples["sentence"], truncation=True)
+
     dataset = load_dataset("glue", "sst2", cache_dir=compute.get_cache_dir(), shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function=preprocess_function)
