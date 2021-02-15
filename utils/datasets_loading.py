@@ -1,6 +1,6 @@
 from datasets import load_dataset
 
-from experiments import ExperimentVariables
+from config import ExperimentVariables
 from utils import decorators as decorators
 import os
 import utils.special_tokens as special_tokens

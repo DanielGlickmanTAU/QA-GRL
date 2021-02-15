@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from experiments import ExperimentVariables
+from config import ExperimentVariables
 from utils.datasets_loading import get_race_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
 
