@@ -22,8 +22,9 @@ class Test(TestCase):
         def compute_metrics(eval_pred):
             predictions, labels = eval_pred
             predictions = predictions.argmax(axis=1)
-            compute = metric.compute(predictions=predictions, references=labels)
-            return compute
+            accuracy = metric.compute(predictions=predictions, references=labels)
+            experiment.log_metrics(accuracy)
+            return accuracy
 
         args = TrainingArguments(
 
@@ -43,7 +44,7 @@ class Test(TestCase):
         trainer = Trainer(
             params.model,
             args,
-            train_dataset=params.dataset["train"],
+            train_dataset=params.dataset["train"].select(range(10)),
             eval_dataset=params.dataset["validation"],
             tokenizer=params.tokenizer,
             compute_metrics=compute_metrics
