@@ -1,13 +1,9 @@
-from comet_ml import Experiment
-
-experiment = Experiment('FvAd5fm5rJLIj6TtmfGHUJm4b', project_name='dl', workspace="danielglickmantau")
+import experiment
+torch, experiment = experiment.start_experiment()
 from unittest import TestCase
-
-from utils import compute
-
-torch = compute.get_torch()
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
+
 
 import race
 
