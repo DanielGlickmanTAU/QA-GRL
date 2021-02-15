@@ -1,3 +1,6 @@
+from comet_ml import Experiment
+
+experiment = Experiment('FvAd5fm5rJLIj6TtmfGHUJm4b', project_name='dl', workspace="danielglickmantau")
 from unittest import TestCase
 
 from utils import compute
@@ -19,7 +22,8 @@ class Test(TestCase):
         def compute_metrics(eval_pred):
             predictions, labels = eval_pred
             predictions = predictions.argmax(axis=1)
-            return metric.compute(predictions=predictions, references=labels)
+            compute = metric.compute(predictions=predictions, references=labels)
+            return compute
 
         args = TrainingArguments(
 
@@ -29,7 +33,7 @@ class Test(TestCase):
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
-            weight_decay=0.01,
+            # weight_decay=0.01,
             # load_best_model_at_end=True,
             metric_for_best_model=metric_name,
             # overwrite_output_dir=True
@@ -46,6 +50,12 @@ class Test(TestCase):
         )
 
         # resume_from_checkpoint=params.benchmark_folder_name
-        results = trainer.train(params.benchmark_folder_name + '/checkpoint-105500')
+        # results = trainer.train(params.benchmark_folder_name + '/checkpoint-3500')
+        results = trainer.train()
         print('done train')
         print(results)
+
+
+if __name__ == '__main__':
+    print('starting test')
+    Test().test_race_classification_params()
