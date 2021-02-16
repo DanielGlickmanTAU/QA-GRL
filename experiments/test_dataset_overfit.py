@@ -14,7 +14,7 @@ class Test(TestCase):
     def test_race_classification_params(self):
         # params = race.get_race_classification_params()
         params = tasks.task_to_params_getter[hyperparams.task_name]()
-        batch_size = 20
+        batch_size = 16
         metric_name = "accuracy"
         metric = load_metric(metric_name)
 
@@ -29,7 +29,7 @@ class Test(TestCase):
 
             params.benchmark_folder_name +'/overfit',
             evaluation_strategy="epoch",
-            learning_rate=1e-5,
+            learning_rate=4e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
@@ -37,14 +37,15 @@ class Test(TestCase):
             # load_best_model_at_end=True,
             metric_for_best_model=metric_name,
             # overwrite_output_dir=True
-            save_total_limit=1
+            save_total_limit=1,
+            disable_tqdm= hyperparams.disable_tqdm
         )
 
         trainer = Trainer(
             params.model,
             args,
-            train_dataset=params.dataset["train"].select(range(1000)),
-            eval_dataset=params.dataset["train"].select(range(1000)),
+            train_dataset=params.dataset["train"].select(range(100)),
+            eval_dataset=params.dataset["train"].select(range(100)),
             tokenizer=params.tokenizer,
             compute_metrics=compute_metrics
         )
