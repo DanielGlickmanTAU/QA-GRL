@@ -1,7 +1,8 @@
 import experiment
 from config.ExperimentVariables import hyperparams
 
-torch, experiment = experiment.start_experiment(tags=[hyperparams.model_name.model_name, hyperparams.task_name],
+model_name = hyperparams.model_name.model_name
+torch, experiment = experiment.start_experiment(tags=[model_name, hyperparams.task_name],
                                                 hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
@@ -25,9 +26,10 @@ class Test(TestCase):
             experiment.log_metrics(accuracy)
             return accuracy
 
+        save_dir = params.benchmark_folder_name + '/' + model_name
         args = TrainingArguments(
 
-            params.benchmark_folder_name,
+            save_dir,
             evaluation_strategy="epoch",
             learning_rate=4e-5,
             per_device_train_batch_size=batch_size,
@@ -50,9 +52,8 @@ class Test(TestCase):
             compute_metrics=compute_metrics
         )
 
-        # resume_from_checkpoint=params.benchmark_folder_name
-        results = trainer.train(params.benchmark_folder_name + '/checkpoint-84500')
-        # results = trainer.train()
+        # results = trainer.train(save_dir + '/checkpoint-84500')
+        results = trainer.train()
         print('done train')
         print(results)
 
