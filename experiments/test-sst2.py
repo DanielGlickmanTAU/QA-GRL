@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from experiments import config
+from config import ExperimentVariables
 from utils import compute
 
 torch = compute.get_torch()
@@ -35,7 +35,7 @@ class Test(TestCase):
             metric_for_best_model=metric_name,
             # overwrite_output_dir=True
             save_total_limit=2,
-            disable_tqdm=config.disable_tqdm
+            disable_tqdm=ExperimentVariables.disable_tqdm
         )
 
         trainer = Trainer(

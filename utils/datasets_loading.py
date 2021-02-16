@@ -1,6 +1,5 @@
+from config.ExperimentVariables import hyperparams
 from datasets import load_dataset
-
-from config import ExperimentVariables
 from utils import decorators as decorators
 import os
 import utils.special_tokens as special_tokens
@@ -61,7 +60,7 @@ def preprocess_function_race(examples, tokenizer):
         options_new = []
         labels_new = []
         for i, (option, label) in enumerate(zip(options, labels)):
-            if i % 4 < ExperimentVariables.race.negative_samples_per_question:
+            if i % 4 < hyperparams.race.negative_samples_per_question:
                 should_take_negative = True
 
             if label:

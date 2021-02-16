@@ -33,6 +33,10 @@ class _race(AttrDict):
 hyperparams = AttrDict()
 use_unique_seperator_for_answer = True
 return_overflowing_tokens = False
+disable_tqdm = True
+hyperparams.use_unique_seperator_for_answer = True
+hyperparams.return_overflowing_tokens = False
+hyperparams.disable_tqdm = True
 race = _race()
 
 hyperparams.race = race
