@@ -1,7 +1,8 @@
 import experiment
 from config.ExperimentVariables import hyperparams
 
-torch, experiment = experiment.start_experiment(tags=[hyperparams.model_name.model_name], hyperparams=hyperparams)
+torch, experiment = experiment.start_experiment(tags=[hyperparams.model_name.model_name, hyperparams.task_name],
+                                                hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
@@ -11,7 +12,8 @@ import race
 
 class Test(TestCase):
     def test_race_classification_params(self):
-        params = race.get_race_classification_params()
+        # params = race.get_race_classification_params()
+        params = race.task_to_params_getter[hyperparams.task_name]()
         batch_size = 20
         metric_name = "accuracy"
         metric = load_metric(metric_name)
