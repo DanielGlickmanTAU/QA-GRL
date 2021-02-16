@@ -1,7 +1,4 @@
-from dataclasses import dataclass, field
-
-use_unique_seperator_for_answer = True
-return_overflowing_tokens = False
+from dataclasses import dataclass
 
 
 class AttrDict(dict):
@@ -9,16 +6,23 @@ class AttrDict(dict):
         super().__init__(*args, **kwargs)
         self.__dict__ = self
 
-@dataclass
-class _hyperparam(AttrDict):
-    hyperparams: AttrDict = field(default_factory=AttrDict)
-
     def __str__(self): return str(self.__dict__)
 
     def __repr__(self): return str(self.__dict__)
 
+
+@dataclass(repr=False)
+class _model_params(AttrDict):
+    model_name: str
+    model_tokenize: str
+
+
+_distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased')
+_roberta_squad = _model_params('roberta-base-squad2', 'roberta-base-squad2')
+
+
 @dataclass
-class _race(_hyperparam):
+class _race(AttrDict):
     negative_samples_per_question: int = 1
 
     def __str__(self): return str(self.__dict__)
@@ -26,4 +30,10 @@ class _race(_hyperparam):
     def __repr__(self): return str(self.__dict__)
 
 
+hyperparams = AttrDict()
+use_unique_seperator_for_answer = True
+return_overflowing_tokens = False
 race = _race()
+
+hyperparams.race = race
+hyperparams.model_name = _distilbert_squad
