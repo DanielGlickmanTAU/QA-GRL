@@ -16,5 +16,3 @@ class RACEClassificationParams(TaskParams):
 
 
 classificationParams = RACEClassificationParams(encoded_dataset, model, tokenizer)
-
-# trainer.train()
