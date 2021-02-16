@@ -32,7 +32,7 @@ class Test(TestCase):
             learning_rate=4e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
-            num_train_epochs=100,
+            num_train_epochs=60,
             weight_decay=0.01,
             # load_best_model_at_end=True,
             metric_for_best_model=metric_name,
