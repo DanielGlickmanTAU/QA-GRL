@@ -18,7 +18,7 @@ class _model_params(AttrDict):
 
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased')
-_roberta_squad = _model_params('roberta-base-squad2', 'roberta-base-squad2')
+_roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base')
 
 
 @dataclass(repr=False)
@@ -34,5 +34,5 @@ hyperparams.task_name = 'sst'
 race = _race()
 
 hyperparams.race = race
-hyperparams.model_name = _distilbert_squad
+hyperparams.model_name = _roberta_squad
 print('using hyperparams:', hyperparams)

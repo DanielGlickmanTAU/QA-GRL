@@ -24,23 +24,25 @@ def get_model_and_tokenizer_for_qa(model_name=hyperparams.model_name.model_name,
 
 
 def get_model_and_tokenizer_for_classification(model_name=hyperparams.model_name.model_name,
-                                   toknizer_model_name=hyperparams.model_name.model_tokenizer):
+                                               toknizer_model_name=hyperparams.model_name.model_tokenizer):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
 
 
 def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
     def _get_and_save_pretrained_tokenizer(name):
+        first_time_running_model = not os.path.exists("%s/" % name)
+        if first_time_running_model:
+            os.makedirs("%s/" % name)
+            config = AutoConfig.from_pretrained(model_name)
+            config.save_pretrained("%s/" % name)
+
         # NOTE: token_type_ids, seperates the question segment from text segment(its 0 and 1s array)
         # when using distilbert, it does not return token_type_ids, but the encoder adds [SEP] token
-        tokenizer = AutoTokenizer.from_pretrained("%s" % name, cache_dir=dl_glickman_cache, return_token_type_ids=True,
+        tokenizer = AutoTokenizer.from_pretrained("%s" % toknizer_model_name, cache_dir=dl_glickman_cache, return_token_type_ids=True,
                                                   use_fast=True)
         tokenizer.add_special_tokens({'additional_special_tokens': special_tokens.special_tokens})
-
-        config = AutoConfig.from_pretrained(name)
-        if not os.path.exists("%s/" % name):
-            os.makedirs("%s/" % name)
+        if first_time_running_model:
             tokenizer.save_pretrained("%s/" % name)
-            config.save_pretrained("%s/" % name)
 
         return tokenizer
 
