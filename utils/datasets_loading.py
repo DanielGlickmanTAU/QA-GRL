@@ -57,13 +57,11 @@ def preprocess_function_race(examples, tokenizer):
         return [1 if d[letter] == i else 0 for i in range(4)]
 
     def adjust_negative_samples_ratio(options, labels):
-        ExperimentVariables.race.negative_samples_per_question
-
         should_take_negative = True
         options_new = []
         labels_new = []
         for i, (option, label) in enumerate(zip(options, labels)):
-            if i % 4 == 0:
+            if i % 4 < ExperimentVariables.race.negative_samples_per_question:
                 should_take_negative = True
 
             if label:
