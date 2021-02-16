@@ -29,7 +29,7 @@ class Test(TestCase):
 
             params.benchmark_folder_name,
             evaluation_strategy="epoch",
-            learning_rate=1e-5,
+            learning_rate=4e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
