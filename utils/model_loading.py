@@ -1,6 +1,8 @@
 import os
 import utils.special_tokens as special_tokens
 import utils.compute as compute
+from config import ExperimentVariables
+from config.ExperimentVariables import hyperparams
 
 dl_glickman_cache = compute.get_cache_dir()
 
@@ -16,13 +18,13 @@ device = compute.get_device()
 print('using device ', device)
 
 
-def get_model_and_tokenizer_for_qa(model_name='distilbert-base-uncased-distilled-squad',
-                                   toknizer_model_name="distilbert-base-uncased"):
+def get_model_and_tokenizer_for_qa(model_name=hyperparams.model_name.model_name,
+                                   toknizer_model_name=hyperparams.model_name.model_tokenizer):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForQuestionAnswering)
 
 
-def get_model_and_tokenizer_for_classification(model_name='distilbert-base-uncased-distilled-squad',
-                                               toknizer_model_name="distilbert-base-uncased"):
+def get_model_and_tokenizer_for_classification(model_name=hyperparams.model_name.model_name,
+                                   toknizer_model_name=hyperparams.model_name.model_tokenizer):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
 
 

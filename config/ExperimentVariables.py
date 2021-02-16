@@ -14,7 +14,7 @@ class AttrDict(dict):
 @dataclass(repr=False)
 class _model_params(AttrDict):
     model_name: str
-    model_tokenize: str
+    model_tokenizer: str
 
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased')
