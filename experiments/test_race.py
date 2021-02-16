@@ -1,10 +1,10 @@
 import experiment
 from config.ExperimentVariables import hyperparams
-torch, experiment = experiment.start_experiment(hyperparams=hyperparams)
+
+torch, experiment = experiment.start_experiment(tags=[hyperparams.model_name.model_name], hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
-
 
 import race
 
@@ -41,15 +41,15 @@ class Test(TestCase):
         trainer = Trainer(
             params.model,
             args,
-            train_dataset=params.dataset["train"].select(range(10)),
+            train_dataset=params.dataset["train"],
             eval_dataset=params.dataset["validation"],
             tokenizer=params.tokenizer,
             compute_metrics=compute_metrics
         )
 
         # resume_from_checkpoint=params.benchmark_folder_name
-        # results = trainer.train(params.benchmark_folder_name + '/checkpoint-3500')
-        results = trainer.train()
+        results = trainer.train(params.benchmark_folder_name + '/checkpoint-84500')
+        # results = trainer.train()
         print('done train')
         print(results)
 
