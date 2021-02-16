@@ -1,5 +1,6 @@
 import experiment
-torch, experiment = experiment.start_experiment()
+from config.ExperimentVariables import hyperparams
+torch, experiment = experiment.start_experiment(hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer

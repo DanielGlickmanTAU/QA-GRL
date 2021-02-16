@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict,is_dataclass
 
 
 class AttrDict(dict):
@@ -6,9 +6,9 @@ class AttrDict(dict):
         super().__init__(*args, **kwargs)
         self.__dict__ = self
 
-    def __str__(self): return str(self.__dict__)
+    def __str__(self): return str(asdict(self)) if is_dataclass(self) else super().__str__()
 
-    def __repr__(self): return str(self.__dict__)
+    def __repr__(self): return str(asdict(self)) if is_dataclass(self) else super().__repr__()
 
 
 @dataclass(repr=False)
@@ -21,13 +21,9 @@ _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'di
 _roberta_squad = _model_params('roberta-base-squad2', 'roberta-base-squad2')
 
 
-@dataclass
+@dataclass(repr=False)
 class _race(AttrDict):
     negative_samples_per_question: int = 1
-
-    def __str__(self): return str(self.__dict__)
-
-    def __repr__(self): return str(self.__dict__)
 
 
 hyperparams = AttrDict()
@@ -38,3 +34,4 @@ race = _race()
 
 hyperparams.race = race
 hyperparams.model_name = _distilbert_squad
+print('using hyperparams:', hyperparams)
