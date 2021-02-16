@@ -11,7 +11,7 @@ import race
 
 class Test(TestCase):
     def test_race_classification_params(self):
-        params = race.classificationParams
+        params = race.get_race_classification_params()
         batch_size = 20
         metric_name = "accuracy"
         metric = load_metric(metric_name)
