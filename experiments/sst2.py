@@ -16,5 +16,3 @@ class SSTClassificationParams(TaskParams):
 
 
 classificationParams = SSTClassificationParams(encoded_dataset, model, tokenizer)
-
-# trainer.train()
