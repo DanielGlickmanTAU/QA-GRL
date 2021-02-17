@@ -37,8 +37,6 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
             config = AutoConfig.from_pretrained(model_name)
             config.save_pretrained("%s/" % name)
 
-        # NOTE: token_type_ids, seperates the question segment from text segment(its 0 and 1s array)
-        # when using distilbert, it does not return token_type_ids, but the encoder adds [SEP] token
         tokenizer = AutoTokenizer.from_pretrained("%s" % toknizer_model_name, cache_dir=dl_glickman_cache,
                                                   return_token_type_ids=True,
                                                   use_fast=True)
