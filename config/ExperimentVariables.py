@@ -29,7 +29,7 @@ class _race(AttrDict):
 
 
 hyperparams = AttrDict()
-hyperparams.use_unique_seperator_for_answer = True
+hyperparams.use_unique_seperator_for_answer = False
 hyperparams.return_overflowing_tokens = False
 hyperparams.disable_tqdm = True
 hyperparams.task_name = 'race'
