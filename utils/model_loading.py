@@ -18,12 +18,12 @@ device = compute.get_device()
 print('using device ', device)
 
 
-def get_model_and_tokenizer_for_qa(model_name=hyperparams.model_params.model_params,
+def get_model_and_tokenizer_for_qa(model_name=hyperparams.model_params.model_name,
                                    toknizer_model_name=hyperparams.model_params.model_tokenizer):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForQuestionAnswering)
 
 
-def get_model_and_tokenizer_for_classification(model_name=hyperparams.model_params.model_params,
+def get_model_and_tokenizer_for_classification(model_name=hyperparams.model_params.model_name,
                                                toknizer_model_name=hyperparams.model_params.model_tokenizer):
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
 
