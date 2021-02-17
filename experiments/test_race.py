@@ -43,7 +43,7 @@ class Test(TestCase):
             load_best_model_at_end=True,
             metric_for_best_model=metric_name,
             # overwrite_output_dir=True
-            save_total_limit=1,
+            save_total_limit=2,
             disable_tqdm=hyperparams.disable_tqdm
         )
 
