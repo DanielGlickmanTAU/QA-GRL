@@ -27,7 +27,8 @@ class Test(TestCase):
             experiment.log_metrics(accuracy)
             return accuracy
 
-        save_dir = params.benchmark_folder_name + '/' + model_name
+        change_dir = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
+        save_dir = params.benchmark_folder_name + '/' + model_name + change_dir
         args = TrainingArguments(
 
             save_dir,
