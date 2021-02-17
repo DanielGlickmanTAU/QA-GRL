@@ -1,4 +1,5 @@
 import os
+from os import listdir
 
 import utils.compute as compute
 import utils.special_tokens as special_tokens
@@ -38,7 +39,8 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
 
         # NOTE: token_type_ids, seperates the question segment from text segment(its 0 and 1s array)
         # when using distilbert, it does not return token_type_ids, but the encoder adds [SEP] token
-        tokenizer = AutoTokenizer.from_pretrained("%s" % toknizer_model_name, cache_dir=dl_glickman_cache, return_token_type_ids=True,
+        tokenizer = AutoTokenizer.from_pretrained("%s" % toknizer_model_name, cache_dir=dl_glickman_cache,
+                                                  return_token_type_ids=True,
                                                   use_fast=True)
         tokenizer.add_special_tokens({'additional_special_tokens': special_tokens.special_tokens})
         if first_time_running_model:
@@ -50,3 +52,13 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
     model = autoModelClass.from_pretrained(model_name, cache_dir=dl_glickman_cache).to(device=device)
     model.resize_token_embeddings(len(tokenizer))
     return model, tokenizer
+
+
+def get_last_checkpoint_in_path(self, path):
+    files = listdir(path)
+    return self.get_last_checkpoint(files)
+
+
+def get_last_checkpoint(self, files):
+    files = [f for f in files if 'checkpoint-' in f]
+    return sorted(files, key=lambda s: int(s[len('checkpoint-'):]))[-1]
