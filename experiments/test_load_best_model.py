@@ -3,11 +3,23 @@ from unittest import TestCase
 from utils import compute
 from utils import special_tokens
 from utils.model_loading import get_model_and_tokenizer_for_classification
+from os import listdir
 
 torch = compute.get_torch()
 
 
 class Test(TestCase):
+    def get_last_checkpoint_in_path(self,path):
+        files = listdir(path)
+        return self.get_last_checkpoint(files)
+
+    def get_last_checkpoint(self, files):
+        files = [f for f in files if 'checkpoint-' in f]
+        return sorted(files, key=lambda s: int(s[len('checkpoint-'):]))[-1]
+
+    def test_get_last_checkpoint(self):
+        assert self.get_last_checkpoint(['checkpoint-123','checkpoint-234','checkpoint-99']) == 'checkpoint-234'
+
     def test_opt_encoding_is_learned(self):
         model_name = 'deepset/roberta-base-squad2'
         cached_dir = "race-classification" + '/' + model_name + '/checkpoint-53500'
