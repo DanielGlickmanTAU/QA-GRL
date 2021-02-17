@@ -36,5 +36,5 @@ hyperparams.task_name = 'race'
 race = _race()
 
 hyperparams.race = race
-hyperparams.model_name = _roberta_squad
+hyperparams.model_params = _roberta_squad
 print('using hyperparams:', hyperparams)

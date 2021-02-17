@@ -1,7 +1,7 @@
 import experiment
 from config.ExperimentVariables import hyperparams
 
-torch, experiment = experiment.start_experiment(tags=[hyperparams.model_name.model_name, hyperparams.task_name],
+torch, experiment = experiment.start_experiment(tags=[hyperparams.model_params.model_params, hyperparams.task_name],
                                                 hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
