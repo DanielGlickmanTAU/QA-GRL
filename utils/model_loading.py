@@ -54,11 +54,11 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
     return model, tokenizer
 
 
-def get_last_checkpoint_in_path(self, path):
+def get_last_checkpoint_in_path(path):
     files = listdir(path)
-    return self.get_last_checkpoint(files)
+    return get_last_checkpoint(files)
 
 
-def get_last_checkpoint(self, files):
+def get_last_checkpoint(files):
     files = [f for f in files if 'checkpoint-' in f]
     return sorted(files, key=lambda s: int(s[len('checkpoint-'):]))[-1]
