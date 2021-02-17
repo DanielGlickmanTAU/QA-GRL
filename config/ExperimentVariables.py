@@ -1,4 +1,4 @@
-from dataclasses import dataclass, asdict,is_dataclass
+from dataclasses import dataclass, asdict, is_dataclass
 
 
 class AttrDict(dict):
@@ -15,10 +15,12 @@ class AttrDict(dict):
 class _model_params(AttrDict):
     model_name: str
     model_tokenizer: str
+    batch_size: int
+    learning_rate: float
 
 
-_distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased')
-_roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base')
+_distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 18, 3e-5)
+_roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 6, 1e-5)
 
 
 @dataclass(repr=False)
