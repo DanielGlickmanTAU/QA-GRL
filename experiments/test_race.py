@@ -15,7 +15,7 @@ class Test(TestCase):
     def test_race_classification_params(self):
         # params = race.get_race_classification_params()
         params = tasks.task_to_params_getter[hyperparams.task_name]()
-        batch_size = 20
+        batch_size = 6
         metric_name = "accuracy"
         metric = load_metric(metric_name)
 
@@ -31,7 +31,7 @@ class Test(TestCase):
 
             save_dir,
             evaluation_strategy="epoch",
-            learning_rate=4e-5,
+            learning_rate=1e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             num_train_epochs=100,
