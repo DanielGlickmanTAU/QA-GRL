@@ -1,7 +1,7 @@
 import experiment
 from config.ExperimentVariables import hyperparams
 
-model_name = hyperparams.model_params.model_params
+model_name = hyperparams.model_params
 torch, experiment = experiment.start_experiment(tags=[model_name, hyperparams.task_name],
                                                 hyperparams=hyperparams)
 from unittest import TestCase
