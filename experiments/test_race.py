@@ -25,7 +25,7 @@ class Test(TestCase):
             predictions, labels = eval_pred
             predictions = predictions.argmax(axis=1)
             accuracy = metric.compute(predictions=predictions, references=labels)
-            experiment.log_metrics(accuracy)
+            experiment.log_metrics({'accuracy_on_eval': accuracy['accuracy']})
             return accuracy
 
         change_dir = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
