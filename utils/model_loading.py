@@ -1,7 +1,7 @@
 import os
-import utils.special_tokens as special_tokens
+
 import utils.compute as compute
-from config import ExperimentVariables
+import utils.special_tokens as special_tokens
 from config.ExperimentVariables import hyperparams
 
 dl_glickman_cache = compute.get_cache_dir()
