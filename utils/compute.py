@@ -54,15 +54,9 @@ def get_torch():
 
 
 def get_device():
-    # todo here probably should just use device 0, as in get torch we are disabling devices in OS level, so if only gpu 4 is free, it will be regraded as gpu 0.
     torch = get_torch()
     gpus = get_index_of_free_gpus()
     print(gpus)
-    # todo: fix here, need to fix indent.. e.g if setting visiable_devices env var to 0,2.. and max is 2.. need to set 1, because
-    # after setting env var, it is like 0,1 to torch
-
-    num_free_gpus = len(gpus)
-    # return torch.device('cuda:' + str(max(gpus,key=lambda gpu_num: gpus[int(gpu_num)])) if torch.cuda.is_available() else 'cpu')
     return torch.device(compute_gpu_indent(gpus) if torch.cuda.is_available() else 'cpu')
 
 
