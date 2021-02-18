@@ -38,7 +38,7 @@ class Test(TestCase):
             learning_rate=model_params.learning_rate,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
-            num_train_epochs=25,
+            num_train_epochs=15,
             weight_decay=0.01,
             load_best_model_at_end=True,
             metric_for_best_model=metric_name,
@@ -57,7 +57,8 @@ class Test(TestCase):
         )
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
-        results = trainer.train()
+        results = trainer.train(save_dir + '/checkpoint-8474')
+        # results = trainer.train()
         print('done train')
         print(results)
 
