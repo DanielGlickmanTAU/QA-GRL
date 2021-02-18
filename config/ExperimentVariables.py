@@ -17,6 +17,7 @@ class _model_params(AttrDict):
     model_tokenizer: str
     batch_size: int
     learning_rate: float
+    num_epochs: int = 15
 
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 18, 3e-5)
