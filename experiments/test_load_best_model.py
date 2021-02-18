@@ -2,12 +2,28 @@ from unittest import TestCase
 
 from utils import compute
 from utils import special_tokens
-from utils.model_loading import get_model_and_tokenizer_for_classification
+from utils.model_loading import get_model_and_tokenizer_for_classification, get_last_model_and_tokenizer
+from config import ExperimentVariables
 
 torch = compute.get_torch()
 
 
 class Test(TestCase):
+    def test_loading_best_models(self):
+        model_params = ExperimentVariables._electra_squad
+        task = 'race-classification'
+        checkpoint = '../experiments/' + task
+        model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
+
+        todo tokenizer also from path?
+        self.assertIsNotNone(model)
+
+        model_params = ExperimentVariables._roberta_squad
+        checkpoint = '../experiments/' + task
+        model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
+
+        self.assertIsNotNone(model)
+
     def test_opt_encoding_is_learned(self):
         model_name = 'deepset/roberta-base-squad2'
         cached_dir = "race-classification" + '/' + model_name + '/checkpoint-53500'
