@@ -21,7 +21,7 @@ class _model_params(AttrDict):
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 18, 3e-5)
 _roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 6, 1e-5)
-_albert_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512', 'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
+_electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512', 'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
 
 
 @dataclass(repr=False)
@@ -37,5 +37,5 @@ hyperparams.task_name = 'race'
 race = _race()
 
 hyperparams.race = race
-hyperparams.model_params = _albert_squad
+hyperparams.model_params = _electra_squad
 print('using hyperparams:', hyperparams)
