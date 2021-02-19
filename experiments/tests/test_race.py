@@ -1,19 +1,22 @@
-import experiment
+from experiments import experiment
 from config.ExperimentVariables import hyperparams
 
-torch, experiment = experiment.start_experiment(tags=[hyperparams.model_params.model_params, hyperparams.task_name],
+model_params = hyperparams.model_params
+model_name = model_params.model_name
+torch, experiment = experiment.start_experiment(tags=[model_name, hyperparams.task_name],
                                                 hyperparams=hyperparams)
 from unittest import TestCase
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
 
-import tasks
+from experiments import  tasks
 
 
 class Test(TestCase):
     def test_race_classification_params(self):
+        # params = race.get_race_classification_params()
         params = tasks.task_to_params_getter[hyperparams.task_name]()
-        batch_size = 16
+        batch_size = hyperparams.model_params.batch_size
         metric_name = "accuracy"
         metric = load_metric(metric_name)
 
@@ -21,32 +24,39 @@ class Test(TestCase):
             predictions, labels = eval_pred
             predictions = predictions.argmax(axis=1)
             accuracy = metric.compute(predictions=predictions, references=labels)
-            experiment.log_metrics(accuracy)
+            experiment.log_metrics({'accuracy_on_eval': accuracy['accuracy']})
             return accuracy
 
+        change_dir = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
+        save_dir = params.benchmark_folder_name + '/' + model_name + change_dir
+        print('saving to ', save_dir)
         args = TrainingArguments(
 
-            params.benchmark_folder_name +'/overfit',
+            save_dir,
             evaluation_strategy="epoch",
-            learning_rate=4e-5,
+            learning_rate=hyperparams.model_params.learning_rate,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
-            num_train_epochs=10,
+            num_train_epochs=hyperparams.model_params.num_epochs,
             weight_decay=0.01,
+            load_best_model_at_end=True,
             metric_for_best_model=metric_name,
-            save_total_limit=1,
-            disable_tqdm= hyperparams.disable_tqdm
+            # overwrite_output_dir=True
+            save_total_limit=2,
+            disable_tqdm=hyperparams.disable_tqdm
         )
 
         trainer = Trainer(
             params.model,
             args,
-            train_dataset=params.dataset["train"].select(range(100)),
-            eval_dataset=params.dataset["train"].select(range(100)),
+            train_dataset=params.dataset["train"],
+            eval_dataset=params.dataset["validation"],
             tokenizer=params.tokenizer,
             compute_metrics=compute_metrics
         )
 
+        # results = trainer.train(save_dir + '/checkpoint-84500')
+        # results = trainer.train(save_dir + '/checkpoint-8474')
         results = trainer.train()
         print('done train')
         print(results)

@@ -1,4 +1,4 @@
-from experiments.test_race import Test
+from experiments.tests.test_race import Test
 
 #used because pychamrm is problematic with running the same tests twice in the same time.
 if __name__ == '__main__':
