@@ -5,7 +5,7 @@ from utils import special_tokens
 from utils.model_loading import get_model_and_tokenizer_for_classification, get_last_model_and_tokenizer
 from config import ExperimentVariables
 
-torch = compute.get_torch()
+torch = compute.get_torch(forcing_cpu=True)
 
 
 class Test(TestCase):
