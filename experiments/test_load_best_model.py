@@ -12,14 +12,14 @@ class Test(TestCase):
     def test_loading_best_models(self):
         model_params = ExperimentVariables._electra_squad
         task = 'race-classification'
-        checkpoint = '../experiments/' + task
+        # checkpoint = '../experiments/' + task
+        checkpoint = '' + task
         model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
 
-        todo tokenizer also from path?
+        # todo tokenizer also from path?
         self.assertIsNotNone(model)
 
         model_params = ExperimentVariables._roberta_squad
-        checkpoint = '../experiments/' + task
         model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
 
         self.assertIsNotNone(model)
