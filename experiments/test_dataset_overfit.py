@@ -12,7 +12,6 @@ import tasks
 
 class Test(TestCase):
     def test_race_classification_params(self):
-        # params = race.get_race_classification_params()
         params = tasks.task_to_params_getter[hyperparams.task_name]()
         batch_size = 16
         metric_name = "accuracy"
@@ -32,11 +31,9 @@ class Test(TestCase):
             learning_rate=4e-5,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
-            num_train_epochs=60,
+            num_train_epochs=10,
             weight_decay=0.01,
-            # load_best_model_at_end=True,
             metric_for_best_model=metric_name,
-            # overwrite_output_dir=True
             save_total_limit=1,
             disable_tqdm= hyperparams.disable_tqdm
         )
@@ -50,8 +47,6 @@ class Test(TestCase):
             compute_metrics=compute_metrics
         )
 
-        # resume_from_checkpoint=params.benchmark_folder_name
-        # results = trainer.train(params.benchmark_folder_name + '/checkpoint-84500')
         results = trainer.train()
         print('done train')
         print(results)
