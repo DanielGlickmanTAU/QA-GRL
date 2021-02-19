@@ -1,3 +1,16 @@
+### learning seem to happen in very few epochs; after a few, sometimes even a single one, it is close to best preformence. at least when running for ~ epochs
+https://www.comet.ml/danielglickmantau/dl/5332d04179ce424d954e3591b1900e21
+
+
+### roberta does not learn on race with 'batch_size': 16, 'learning_rate': 3e-05.
+run:https://www.comet.ml/danielglickmantau/dl/d97a4af08650437889a9f9bdf93e763b
+loss on train seem completely stuck.
+it did manage to learn in previous runs.
+Maybe the learning rate is too low?
+
+I will give it a few more epocs than
+Trying to disable weight decay and increase the learning rate to 6e-0
+
 ###did not seem to learn to learn on Race dataset 
 the classfier acurraccy got stuck on 0.75(always answer false). Even thought the same code did
 work for SWAG dataset. 
