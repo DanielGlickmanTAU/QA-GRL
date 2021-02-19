@@ -11,7 +11,7 @@ from experiments import tasks
 
 
 class Test(TestCase):
-    def test_race_classification_params(self):
+    def test_overfitting_tiny_dataset(self):
         params = tasks.task_to_params_getter[hyperparams.task_name]()
         batch_size = 16
         metric_name = "accuracy"
