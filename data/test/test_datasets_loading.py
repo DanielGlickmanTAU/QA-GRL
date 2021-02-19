@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from config import ExperimentVariables
 from data.datasets_loading import get_race_dataset
+from data.special_tokens import get_answer_seperator
 from utils.model_loading import get_model_and_tokenizer_for_classification
 
 
@@ -9,19 +10,28 @@ class Test(TestCase):
     def test_preprocess_function_race(self):
         # assuming
         ExperimentVariables.race.negative_samples_per_question = 0.5
+        ExperimentVariables.task_name = "race"
+        ExperimentVariables.model_params = ExperimentVariables._distilbert_squad
 
         def get_t_q_a(tokenizer, example):
-            str = tokenizer.decode(example['input_ids'])
+            def remove_sep_if_starting_with_sep(str):
+                return str[len(sep):] if str.startswith(sep) else str
+            sep = tokenizer.sep_token
+            q_seperator = get_answer_seperator(tokenizer)
 
-            idx = str.index('[SEP]') + 5
+            str = tokenizer.decode(example['input_ids'])
+            str = remove_sep_if_starting_with_sep(str)
+
+            idx = str.index(sep) + len(sep)
             t = str[:idx]
             str = str[idx:]
+            str = remove_sep_if_starting_with_sep(str)
 
-            idx = str.index('[OPT]') + 5
+            idx = str.index(q_seperator) + len(q_seperator)
             q = str[:idx]
             str = str[idx:]
 
-            idx = str.index('[SEP]') + 5
+            idx = str.index(sep) + len(sep)
             a = str[:idx]
 
             return t, q, a
