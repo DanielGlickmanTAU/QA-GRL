@@ -41,13 +41,23 @@ def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
     # return [str(index) for index, mega in gpus.items() if mega > minimum_free_giga * 1000]
 
 
-def get_torch():
+force_cpu = False
+
+
+def get_torch(forcing_cpu=False):
+    if forcing_cpu:
+        print('using cpu')
+        import torch
+        return torch
+
+    global force_cpu
+    force_cpu = True
     gpus = get_index_of_free_gpus()
     gpus = list(map(str, gpus))[:max_num_gpus]
     join = ','.join(gpus)
     os.environ["CUDA_VISIBLE_DEVICES"] = join
     print('setting CUDA_VISIBLE_DEVICES=' + join)
-    if max_num_gpus==1:
+    if max_num_gpus == 1:
         print('remember you are working with 1 gpu:(.. probably should fix gpu index indent')
     import torch
     return torch
@@ -55,6 +65,8 @@ def get_torch():
 
 def get_device():
     torch = get_torch()
+    if force_cpu:
+        return torch.device('cpu')
     gpus = get_index_of_free_gpus()
     print(gpus)
     return torch.device(compute_gpu_indent(gpus) if torch.cuda.is_available() else 'cpu')
@@ -81,6 +93,7 @@ def is_university_server():
         return 'gamir' in os.environ['HOST']
     except:
         return False
+
 
 def get_cache_dir():
     if is_university_server():
