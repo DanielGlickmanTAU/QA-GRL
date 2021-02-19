@@ -1,7 +1,3 @@
 figure out batch size
 
 boolq
-
-1)test if changing seperating token from [SEP] to a new one changes anything
-    tokenized_examples = tokenizer(texts, [q + tokenizer.sep_token + o for q, o in zip(questions, options)],
-                                   truncation=True, padding=True)
