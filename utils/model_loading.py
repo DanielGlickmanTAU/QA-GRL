@@ -2,7 +2,7 @@ import os
 from os import listdir
 
 import utils.compute as compute
-import utils.special_tokens as special_tokens
+import data.special_tokens as special_tokens
 from config.ExperimentVariables import hyperparams
 
 dl_glickman_cache = compute.get_cache_dir()

@@ -2,7 +2,7 @@ from config.ExperimentVariables import hyperparams
 from datasets import load_dataset
 from utils import decorators as decorators
 import os
-import utils.special_tokens as special_tokens
+import data.special_tokens as special_tokens
 import utils.compute as compute
 
 ending_names = ["ending0", "ending1", "ending2", "ending3"]
