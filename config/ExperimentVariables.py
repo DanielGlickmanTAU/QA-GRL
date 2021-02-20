@@ -31,12 +31,14 @@ class _race(AttrDict):
 
 
 hyperparams = AttrDict()
-hyperparams.use_unique_seperator_for_answer = False
-hyperparams.return_overflowing_tokens = False
-hyperparams.disable_tqdm = True
 race = _race()
 hyperparams.race = race
 
 hyperparams.task_name = 'combined'
 hyperparams.model_params = _roberta_squad
+
+
+hyperparams.use_unique_seperator_for_answer = False
+hyperparams.return_overflowing_tokens = False
+hyperparams.disable_tqdm = True
 print('using hyperparams:', hyperparams)
