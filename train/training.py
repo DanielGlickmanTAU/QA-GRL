@@ -2,8 +2,8 @@ from datasets import load_metric
 from transformers import TrainingArguments, Trainer
 
 
-def get_trainer(save_dir, model_params, model_and_dataset, metric_name, load_best_model_at_end, experiment=None,
-                show_tqdm=False):
+def get_trainer(save_dir, model_params, model_and_dataset, load_best_model_at_end, experiment=None,
+                metric_name='accuracy', show_tqdm=False):
     metric = load_metric(metric_name)
 
     def compute_metrics(eval_pred):

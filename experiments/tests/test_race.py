@@ -20,7 +20,7 @@ class Test(TestCase):
 
         metric_name = "accuracy"
 
-        trainer = get_trainer(save_dir, hyperparams.model_params, params, metric_name, True, experiment,
+        trainer = get_trainer(save_dir, hyperparams.model_params, params, True, experiment, metric_name,
                               hyperparams.disable_tqdm)
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
