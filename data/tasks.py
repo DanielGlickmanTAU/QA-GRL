@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from experiments.TaskParams import TaskParams
+from data.TaskParams import TaskParams
 from data.datasets_loading import get_race_dataset, get_sst_dataset, get_swag_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
 

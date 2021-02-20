@@ -9,7 +9,7 @@ from unittest import TestCase
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
 
-from experiments import tasks
+from data import tasks
 
 
 class Test(TestCase):
