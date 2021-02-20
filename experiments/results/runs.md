@@ -3,8 +3,10 @@ https://www.comet.ml/danielglickmantau/dl/bcdc929218194196afc1595b6806e934?exper
 
 roberta with [SETP] 0.81 on race 1.0E-5
 first try:https://www.comet.ml/danielglickmantau/dl/2b1fa4979bc04d73882502a73b872220?experiment-tab=metrics
+another one 
+https://www.comet.ml/danielglickmantau/dl/04deb18572b141eca070109d72342522?
 
-roberta swag
+roberta swag 0.831(2 epochs only)
 https://www.comet.ml/danielglickmantau/dl/5ba36288cbc843539f4d317e99670549
 
 roberta sst 0.946
@@ -23,3 +25,6 @@ https://www.comet.ml/danielglickmantau/dl/5332d04179ce424d954e3591b1900e21
 
 distil-bert sst 0.9 
 https://www.comet.ml/danielglickmantau/dl/fd31f30eac2e433ba41b46c269174814?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
+
+distil-bert combined 0.783( 2 epochs so far..)
+https://www.comet.ml/danielglickmantau/dl/601483b14d0d4912a661d37afcaf7138?
