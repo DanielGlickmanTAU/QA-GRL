@@ -67,4 +67,5 @@ def get_last_model_and_tokenizer(saved_path, model_params):
     # path = '../experiments/' + saved_path + '/' + model_params.model_name + sep
     path = saved_path + '/' + model_params.model_name + sep
     checkpoint = get_last_checkpoint_in_path(path)
+    print('getting model from checkpoint ' , checkpoint)
     return get_model_and_tokenizer_for_classification(path + '/' + checkpoint,model_params.model_tokenizer)
