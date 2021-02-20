@@ -51,7 +51,7 @@ def get_torch(forcing_cpu=False):
         return torch
 
     global force_cpu
-    force_cpu = True
+    force_cpu = force_cpu
     gpus = get_index_of_free_gpus()
     gpus = list(map(str, gpus))[:max_num_gpus]
     join = ','.join(gpus)
