@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from datasets import DatasetDict
+
 from data.TaskParams import TaskParams
 from data.datasets_loading import get_race_dataset, get_sst_dataset, get_swag_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
@@ -46,8 +48,13 @@ def get_swag_params():
 
 def get_combined_params():
     model, tokenizer = get_model_and_tokenizer_for_classification()
-    encoded_dataset = datasets.concatenate_datasets(
-        [get_swag_dataset(tokenizer), get_race_dataset(tokenizer), get_sst_dataset(tokenizer)])
+    all_datasets = [get_swag_dataset(tokenizer), get_race_dataset(tokenizer), get_sst_dataset(tokenizer)]
+
+    train = datasets.concatenate_datasets([ds['train'] for ds in all_datasets])
+    validation = datasets.concatenate_datasets([ds['validation'] for ds in all_datasets])
+    test = datasets.concatenate_datasets([ds['test'] for ds in all_datasets])
+
+    encoded_dataset = DatasetDict({'train':train, 'validation':validation, 'test': test})
     return CombinedClassificationParams(encoded_dataset, model, tokenizer)
 
 
