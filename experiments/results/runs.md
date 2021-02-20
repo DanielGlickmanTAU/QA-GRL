@@ -4,7 +4,11 @@ https://www.comet.ml/danielglickmantau/dl/bcdc929218194196afc1595b6806e934?exper
 roberta with [SETP] 0.81 on race 1.0E-5
 first try:https://www.comet.ml/danielglickmantau/dl/2b1fa4979bc04d73882502a73b872220?experiment-tab=metrics
 
+roberta swag
+https://www.comet.ml/danielglickmantau/dl/5ba36288cbc843539f4d317e99670549
 
+roberta sst 0.946
+https://www.comet.ml/danielglickmantau/dl/acc868b9f4034c728aa69560cdd3a6d7?
 
 electra race 
 first epoch:https://www.comet.ml/danielglickmantau/dl/69dd610a73904cbdab83a43066e5ba4d?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
