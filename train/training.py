@@ -1,8 +1,10 @@
 from datasets import load_metric
 from transformers import TrainingArguments, Trainer
 
+from data.TaskParams import TaskParams
 
-def get_trainer(save_dir, model_params, model_and_dataset, load_best_model_at_end, experiment=None,
+
+def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best_model_at_end, experiment=None,
                 metric_name='accuracy', show_tqdm=False):
     metric = load_metric(metric_name)
 
