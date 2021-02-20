@@ -1,11 +1,12 @@
 from experiments import experiment
 from config.ExperimentVariables import hyperparams
-from train.training import get_trainer
 
 model_params = hyperparams.model_params
 model_name = model_params.model_name
 torch, experiment = experiment.start_experiment(tags=[hyperparams.env, model_name, hyperparams.task_name],
                                                 hyperparams=hyperparams)
+
+from train.training import get_trainer
 from unittest import TestCase
 
 from data import tasks
