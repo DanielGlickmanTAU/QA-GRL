@@ -1,5 +1,5 @@
 from dataclasses import dataclass, asdict, is_dataclass
-
+import os
 
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
@@ -37,6 +37,6 @@ hyperparams.disable_tqdm = True
 race = _race()
 hyperparams.race = race
 
-hyperparams.task_name = 'race'
-hyperparams.model_params = _distilbert_squad
+hyperparams.task_name = 'combined'
+hyperparams.model_params = _roberta_squad
 print('using hyperparams:', hyperparams)
