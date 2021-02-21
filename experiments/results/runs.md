@@ -1,3 +1,5 @@
+![](classification1.png)
+
 roberta with [OPT].. 0.80 on RACE
 https://www.comet.ml/danielglickmantau/dl/bcdc929218194196afc1595b6806e934?experiment-tab=metrics
 
@@ -11,6 +13,9 @@ https://www.comet.ml/danielglickmantau/dl/5ba36288cbc843539f4d317e99670549
 
 roberta sst 0.946
 https://www.comet.ml/danielglickmantau/dl/acc868b9f4034c728aa69560cdd3a6d7?
+
+roberta combined 0.86
+https://www.comet.ml/danielglickmantau/dl/e1f12a8cb4ca4327a5ae51f144fed5f1
 
 electra race 
 first epoch:https://www.comet.ml/danielglickmantau/dl/69dd610a73904cbdab83a43066e5ba4d?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
@@ -26,5 +31,6 @@ https://www.comet.ml/danielglickmantau/dl/5332d04179ce424d954e3591b1900e21
 distil-bert sst 0.9 
 https://www.comet.ml/danielglickmantau/dl/fd31f30eac2e433ba41b46c269174814?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
 
-distil-bert combined 0.783( 2 epochs so far..)
-https://www.comet.ml/danielglickmantau/dl/601483b14d0d4912a661d37afcaf7138?
+distil-bert combined 0.8 
+https://www.comet.ml/danielglickmantau/dl/21d4520cf004405fae9f9f5806f230e6
+0.783 https://www.comet.ml/danielglickmantau/dl/601483b14d0d4912a661d37afcaf7138?
