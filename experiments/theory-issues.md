@@ -1,5 +1,6 @@
 ### learning seem to happen in very few epochs; after a few, sometimes even a single one, it is close to best preformence. at least when running for ~ epochs
 https://www.comet.ml/danielglickmantau/dl/5332d04179ce424d954e3591b1900e21
+answer: its normal like that with fine tuning
 
 
 ### roberta does not learn on race with 'batch_size': 16, 'learning_rate': 3e-05.
