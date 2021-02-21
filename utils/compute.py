@@ -2,7 +2,7 @@ import os
 import time
 
 minimum_free_giga = 8
-max_num_gpus = 4
+max_num_gpus = 3
 
 last_write = 0
 home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1'
