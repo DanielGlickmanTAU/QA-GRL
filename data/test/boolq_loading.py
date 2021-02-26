@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from config import ExperimentVariables
-from data.datasets_loading import get_race_dataset, get_boolq_dataset
+from data.datasets_loading import get_boolq_dataset
 from data.special_tokens import get_answer_seperator
 from utils.model_loading import get_model_and_tokenizer_for_classification
 
@@ -29,6 +29,7 @@ class Test(TestCase):
             a = example['label']
 
             return t, q, a
+
         ExperimentVariables.task_name = "boolq"
 
         ExperimentVariables.model_params = ExperimentVariables._distilbert_squad
