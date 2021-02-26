@@ -8,9 +8,6 @@ from utils.model_loading import get_model_and_tokenizer_for_classification
 
 class Test(TestCase):
     def test_preprocess_function_boolq(self):
-        ExperimentVariables.task_name = "boolq"
-        ExperimentVariables.model_params = ExperimentVariables._distilbert_squad
-
         def get_t_q_a(tokenizer, example):
             def remove_sep_if_starting_with_sep(str):
                 return str[len(sep):] if str.startswith(sep) else str
@@ -32,6 +29,9 @@ class Test(TestCase):
             a = example['label']
 
             return t, q, a
+        ExperimentVariables.task_name = "boolq"
+
+        ExperimentVariables.model_params = ExperimentVariables._distilbert_squad
 
         model, tokenizer = get_model_and_tokenizer_for_classification()
         dataset_race = get_boolq_dataset(tokenizer)
