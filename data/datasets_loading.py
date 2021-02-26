@@ -115,3 +115,12 @@ def get_sst_dataset(tokenizer):
 
     dataset = load_dataset("glue", "sst2", cache_dir=compute.get_cache_dir(), shuffle=True)
     return preprocess(dataset, tokenizer, preprocess_function=preprocess_function)
+
+
+def get_boolq_dataset(tokenizer):
+    def boolq_preprocessor(examples, tokenizer):
+        print(examples)
+
+    print(os.getcwd())
+    dataset = load_dataset("boolq", cache_dir=compute.get_cache_dir())
+    return preprocess(dataset, tokenizer, preprocess_function=boolq_preprocessor)
