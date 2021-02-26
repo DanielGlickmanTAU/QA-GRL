@@ -44,9 +44,3 @@ class Test(TestCase):
         t1, q1, a1 = get_t_q_a(tokenizer, r1)
         t2, q2, a2 = get_t_q_a(tokenizer, r2)
         t3, q3, a3 = get_t_q_a(tokenizer, r3)
-        self.assertEqual(q1, q2)
-        # should have 2 samples of each text
-        self.assertNotEqual(q2, q3)
-
-        self.assertEqual(r1['label'] + r2['label'], 1)
-        self.assertEqual(r3['label'] + r4['label'], 1)
