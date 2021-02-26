@@ -24,8 +24,11 @@ def get_model_and_tokenizer_for_qa(model_name=hyperparams.model_params.model_nam
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForQuestionAnswering)
 
 
-def get_model_and_tokenizer_for_classification(model_name=hyperparams.model_params.model_name,
-                                               toknizer_model_name=hyperparams.model_params.model_tokenizer):
+def get_model_and_tokenizer_for_classification(model_name=None, toknizer_model_name=None):
+    if not model_name:
+        model_name = hyperparams.model_params.model_name
+    if not toknizer_model_name:
+        toknizer_model_name = hyperparams.model_params.model_tokenizer
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
 
 
@@ -68,5 +71,5 @@ def get_last_model_and_tokenizer(saved_path, model_params):
     path = saved_path + '/' + model_params.model_name + sep
     checkpoint = get_last_checkpoint_in_path(path)
     path_checkpoint = path + '/' + checkpoint
-    print('getting model from checkpoint ' , path_checkpoint)
+    print('getting model from checkpoint ', path_checkpoint)
     return get_model_and_tokenizer_for_classification(path_checkpoint, model_params.model_tokenizer)
