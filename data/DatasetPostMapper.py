@@ -13,14 +13,15 @@ class DataSetPostMapper:
 
     def _tensor(self, lst):
         return torch.tensor(lst, device=self.device)
-    def _numpy(self,tensor):
+
+    def _numpy(self, tensor):
         return tensor.detach().cpu().numpy()
 
     def add_is_correct_and_probs(self, examples):
         self.model.eval()
         with torch.no_grad():
             logits = self.model(self._tensor(examples['input_ids']),
-                                                   self._tensor(examples['attention_mask'])).logits
+                                self._tensor(examples['attention_mask'])).logits
             probs = logits.softmax(dim=1).max(dim=1).values
             predictions = logits.argmax(dim=1)
             correct = [1 if y_hat == y else 0 for y, y_hat in
