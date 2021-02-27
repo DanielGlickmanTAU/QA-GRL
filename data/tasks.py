@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from datasets import DatasetDict
 
 from data.TaskParams import TaskParams
-from data.datasets_loading import get_race_dataset, get_sst_dataset, get_swag_dataset
+from data.datasets_loading import get_race_dataset, get_sst_dataset, get_swag_dataset, get_boolq_dataset
 from utils.model_loading import get_model_and_tokenizer_for_classification
 import datasets
 
@@ -21,6 +21,10 @@ class RACEClassificationParams(TaskParams):
 @dataclass
 class SSTClassificationParams(TaskParams):
     benchmark_folder_name: str = "sst-classification"
+
+@dataclass
+class BoolQClassificationParams(TaskParams):
+    benchmark_folder_name: str = "boolq-classification"
 
 
 @dataclass
@@ -44,6 +48,11 @@ def get_swag_params():
     model, tokenizer = get_model_and_tokenizer_for_classification()
     encoded_dataset = get_swag_dataset(tokenizer)
     return SwagClassificationParams(encoded_dataset, model, tokenizer)
+
+def get_boolq_params():
+    model, tokenizer = get_model_and_tokenizer_for_classification()
+    encoded_dataset = get_boolq_dataset(tokenizer)
+    return BoolQClassificationParams(encoded_dataset, model, tokenizer)
 
 
 def get_combined_params():

@@ -33,7 +33,7 @@ class _race(AttrDict):
 hyperparams = AttrDict()
 race = _race()
 hyperparams.env = 'UNI' if 'HOST' in os.environ and 'gamir' in os.environ['HOST'] else 'LOCAL' if 'USERNAME' in os.environ else 'AWS'
-hyperparams.task_name = 'combined'
+hyperparams.task_name = 'boolq'
 hyperparams.model_params = _distilbert_squad
 
 
