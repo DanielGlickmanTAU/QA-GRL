@@ -71,5 +71,6 @@ task_to_params_getter = {
     'swag': get_swag_params,
     'race': get_race_classification_params,
     'sst': get_sst_params,
+    'boolq': get_boolq_params,
     'combined': get_combined_params
 }
