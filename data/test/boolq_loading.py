@@ -1,7 +1,5 @@
 from unittest import TestCase
 
-from numpy import long
-
 from config import ExperimentVariables
 from data.datasets_loading import get_boolq_dataset
 from data.special_tokens import get_answer_seperator
@@ -45,12 +43,15 @@ class Test(TestCase):
         dataset_race = get_boolq_dataset(tokenizer)
 
         r1 = dataset_race['train'][0]
-        r2 = dataset_race['train'][1]
-        r3 = dataset_race['train'][2]
-        r4 = dataset_race['train'][3]
 
         t1, q1, a1 = get_t_q_a(tokenizer, r1)
-        t2, q2, a2 = get_t_q_a(tokenizer, r2)
-        t3, q3, a3 = get_t_q_a(tokenizer, r3)
-
         self.assertNotIsInstance(r1['label'], bool)
+
+        ExperimentVariables.hyperparams.model_params = ExperimentVariables._roberta_squad
+        model, tokenizer = get_model_and_tokenizer_for_classification()
+        dataset_race = get_boolq_dataset(tokenizer)
+
+        r1 = dataset_race['train'][0]
+
+        t1, q1, a1 = get_t_q_a(tokenizer, r1)
+        print(t1,q1)
