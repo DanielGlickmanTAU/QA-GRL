@@ -28,3 +28,6 @@ class DataSetPostMapper:
                        zip(examples['label'], predictions)]
 
             return {'prob': self._numpy(probs), 'prediction': self._numpy(predictions), 'correct': correct}
+
+    def change_labels(self, examples, field_name='correct'):
+        return {'label':examples[field_name]}
