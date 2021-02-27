@@ -34,7 +34,7 @@ class Test(TestCase):
         # will create trainer
         # add column was_model_right, model_prob
         mapper = DataSetPostMapper(task_params)
-        mapped_ds = ds.map(mapper.add_is_correct_and_probs , batched=True)
+        mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=10, writer_batch_size=10)
 
         print(mapped_ds[:10])
 
@@ -48,9 +48,9 @@ class Test(TestCase):
                    zip(m1_out_train.label_ids[:10000], torch.tensor(m1_out_train.predictions[:10000]).argmax(dim=1))]
 
         predict_manually_logits: torch.Tensor = \
-        trainer.prediction_step(model, {'input_ids': torch.tensor(ds['validation']['input_ids'][:10]),
-                                        'attention_mask': torch.tensor(ds['validation']['attention_mask'][:10])},
-                                False)[1]
+            trainer.prediction_step(model, {'input_ids': torch.tensor(ds['validation']['input_ids'][:10]),
+                                            'attention_mask': torch.tensor(ds['validation']['attention_mask'][:10])},
+                                    False)[1]
         same_thing_logits = model.forward(torch.tensor(ds['train']['input_ids'][:10]).to(compute.get_device()),
                                           torch.tensor(ds['train']['attention_mask'][:10]).to(
                                               compute.get_device())).logits
