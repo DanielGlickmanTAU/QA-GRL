@@ -34,7 +34,7 @@ class Test(TestCase):
         # will create trainer
         # add column was_model_right, model_prob
         mapper = DataSetPostMapper(task_params)
-        mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=10, writer_batch_size=10)
+        mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=100, writer_batch_size=100)
 
         print(mapped_ds[:10])
 
