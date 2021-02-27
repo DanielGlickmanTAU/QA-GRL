@@ -13,26 +13,31 @@ class Test(TestCase):
                 return str[len(sep):] if str.startswith(sep) else str
 
             sep = tokenizer.sep_token
+
             q_seperator = get_answer_seperator(tokenizer)
-
             str = tokenizer.decode(example['input_ids'])
-            str = remove_sep_if_starting_with_sep(str)
 
+            str = remove_sep_if_starting_with_sep(str)
             idx = str.index(sep) + len(sep)
+
             t = str[:idx]
             str = str[idx:]
             str = remove_sep_if_starting_with_sep(str)
-
             idx = str.index(q_seperator) + len(q_seperator)
-            q = str[:idx]
 
+            q = str[:idx]
             a = example['label']
 
-            return t, q, a
+            return remove_speical_tokens(tokenizer, t), remove_speical_tokens(tokenizer, q), a
 
-        ExperimentVariables.task_name = "boolq"
+        def remove_speical_tokens(tokenizer, example: str):
+            for special in list(tokenizer.special_tokens_map.values()):
+                example = example.replace(special, '')
+            return example
 
-        ExperimentVariables.model_params = ExperimentVariables._distilbert_squad
+        ExperimentVariables.hyperparams.task_name = "boolq"
+
+        ExperimentVariables.hyperparams.model_params = ExperimentVariables._distilbert_squad
 
         model, tokenizer = get_model_and_tokenizer_for_classification()
         dataset_race = get_boolq_dataset(tokenizer)
