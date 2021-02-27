@@ -17,7 +17,7 @@ class _model_params(AttrDict):
     model_tokenizer: str
     batch_size: int
     learning_rate: float
-    num_epochs: int = 12
+    num_epochs: int = 4
 
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 18, 3e-5)
@@ -34,7 +34,7 @@ hyperparams = AttrDict()
 race = _race()
 hyperparams.env = 'UNI' if 'HOST' in os.environ and 'gamir' in os.environ['HOST'] else 'LOCAL' if 'USERNAME' in os.environ else 'AWS'
 hyperparams.task_name = 'combined'
-hyperparams.model_params = _roberta_squad
+hyperparams.model_params = _distilbert_squad
 
 
 hyperparams.race = race
