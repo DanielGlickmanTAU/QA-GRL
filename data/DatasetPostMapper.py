@@ -27,4 +27,4 @@ class DataSetPostMapper:
             correct = [1 if y_hat == y else 0 for y, y_hat in
                        zip(examples['label'], predictions)]
 
-            return {'probs': self._numpy(probs), 'predictions': self._numpy(predictions), 'correct': correct}
+            return {'prob': self._numpy(probs), 'prediction': self._numpy(predictions), 'correct': correct}

@@ -33,7 +33,7 @@ class Test(TestCase):
         mapper = DataSetPostMapper(task_params)
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
-        sorted_ds = mapped_ds.sort('probs')
+        sorted_ds = mapped_ds.sort('prob')
         best = [boolq_utils.get_t_q_a(example) for example in sorted_ds['validation'][:5]]
         worst = [boolq_utils.get_t_q_a(example) for example in sorted_ds['validation'][-5:]]
 
