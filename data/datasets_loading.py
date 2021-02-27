@@ -120,7 +120,7 @@ def get_sst_dataset(tokenizer):
 def get_boolq_dataset(tokenizer):
     def boolq_preprocessor(examples, tokenizer):
         tokenized_examples = tokenizer(examples['passage'], examples['question'], truncation=True,
-                                       padding='max_length')
+                                       padding=True)
         # Un-flatten
         tags = examples['answer']
         if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
