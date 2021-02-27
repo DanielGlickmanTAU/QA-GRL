@@ -8,11 +8,11 @@ class DataSetPostMapper:
     def __init__(self, task_params: TaskParams):
         self.dataset = task_params.dataset
         self.model = task_params.model
-
         self.tokenizer = task_params.tokenizer
+        self.device = compute.get_device()
 
     def _tensor(self, lst):
-        return torch.tensor(lst, device=compute.get_device())
+        return torch.tensor(lst, device=self.device)
     def _numpy(self,tensor):
         return tensor.detach().cpu().numpy()
 
