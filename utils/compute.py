@@ -7,6 +7,8 @@ max_num_gpus = 3
 last_write = 0
 home = '/specific/netapp5_3/ML_courses/students/DL2020/glickman1'
 
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+
 
 def write_gpus_to_file(dict):
     if len(dict) == 0:
@@ -31,7 +33,7 @@ def get_index_of_free_gpus(minimum_free_giga=minimum_free_giga):
             lines = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free').readlines()
         except Exception as e:
             print('error getting free memory', e)
-            return {0:10000,1:10000,2:0, 3:10000,4:0, 5:0 , 6:0, 7:0}
+            return {0: 10000, 1: 10000, 2: 0, 3: 10000, 4: 0, 5: 0, 6: 0, 7: 0}
 
         memory_available = [int(x.split()[2]) for x in lines]
         return {index: mb for index, mb in enumerate(memory_available)}
@@ -63,11 +65,13 @@ def get_torch(forcing_cpu=False):
     import torch
     return torch
 
+
 def print_size_of_model(model):
     get_torch().save(model.state_dict(), "temp.p")
-    print('Size (MB):', os.path.getsize("temp.p")/1e6)
+    print('Size (MB):', os.path.getsize("temp.p") / 1e6)
     os.remove('temp.p')
-    
+
+
 def get_device():
     torch = get_torch()
     if force_cpu:
