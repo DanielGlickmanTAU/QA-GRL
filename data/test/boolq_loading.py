@@ -1,5 +1,7 @@
 from unittest import TestCase
 
+from numpy import long
+
 from config import ExperimentVariables
 from data.datasets_loading import get_boolq_dataset
 from data.special_tokens import get_answer_seperator
@@ -50,3 +52,5 @@ class Test(TestCase):
         t1, q1, a1 = get_t_q_a(tokenizer, r1)
         t2, q2, a2 = get_t_q_a(tokenizer, r2)
         t3, q3, a3 = get_t_q_a(tokenizer, r3)
+
+        self.assertNotIsInstance(r1['label'], bool)

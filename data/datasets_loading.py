@@ -124,11 +124,10 @@ def get_boolq_dataset(tokenizer):
         # Un-flatten
         tags = examples['answer']
         if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
-        # labels = sum([[1 if i == label else 0 for i in range(4)] for label in tags], [])
+        labels = [1 if x else 0 for x in tags]
 
         return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
-                'label': tags}
-        print(examples)
+                'label': labels}
 
     print(os.getcwd())
     dataset = load_dataset("boolq", cache_dir=compute.get_cache_dir())
