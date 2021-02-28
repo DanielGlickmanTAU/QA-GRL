@@ -28,7 +28,7 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, model, tokenizer = self.get_processed_dataset()
-        self.print_by_probability_ratio(mapped_ds, tokenizer)
+        #self.print_by_probability_ratio(mapped_ds, tokenizer)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer):
         sorted_ds = mapped_ds.sort('prob')
