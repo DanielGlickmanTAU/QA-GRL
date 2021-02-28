@@ -40,6 +40,11 @@ class Test(TestCase):
 
         overlap_texts = [t for t in validation_dict if len(train_dict[t])]
         print(len(overlap_texts) / len(validation_dict))
+        sorted_ds = filtered_mapped_ds.sort('prob')
+        top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
+        buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
+        print(top)
+        print(buttom)
 
         # sorted_ds = mapped_ds.sort('prob')
         # worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
