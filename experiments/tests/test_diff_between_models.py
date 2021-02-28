@@ -11,6 +11,7 @@ from config.ExperimentVariables import hyperparams
 from data import datasets_loading
 from data.TaskParams import TaskParams
 from utils.model_loading import get_last_model_and_tokenizer, get_save_path
+from utils import model_loading
 from data import boolq_utils
 
 model_params = hyperparams.model_params
@@ -27,8 +28,13 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 
 class Test(TestCase):
     def test_diff_between_models(self):
-        mapped_ds, model, tokenizer = self.get_processed_dataset()
-        #self.print_by_probability_ratio(mapped_ds, tokenizer)
+        task = 'boolq-classification'
+        model_params = ExperimentVariables._roberta_squad
+
+        mapped_ds, model, tokenizer = self.get_processed_dataset(task, model_params)
+        # model_loading.get_model_and_tokenizer_for_classification()
+
+        # self.print_by_probability_ratio(mapped_ds, tokenizer)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer):
         sorted_ds = mapped_ds.sort('prob')
@@ -48,9 +54,7 @@ class Test(TestCase):
 
     load_processed_ds_from_disk = True
 
-    def get_processed_dataset(self):
-        task = 'boolq-classification'
-        model_params = ExperimentVariables._roberta_squad
+    def get_processed_dataset(self, task, model_params):
         model, tokenizer = get_last_model_and_tokenizer(task, model_params)
         save_path = '%s/processed_dataset' % get_save_path(task, model_params)
 
