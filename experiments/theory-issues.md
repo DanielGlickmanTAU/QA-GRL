@@ -1,3 +1,6 @@
+### about 25% of the questions in the validation set of boolq where near duplicates of questions in the training set
+Just removed them from the example for the purpose of mining easy examples
+
 ### learning seem to happen in very few epochs; after a few, sometimes even a single one, it is close to best preformence. at least when running for ~ epochs
 https://www.comet.ml/danielglickmantau/dl/5332d04179ce424d954e3591b1900e21
 answer: its normal like that with fine tuning
