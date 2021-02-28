@@ -2,14 +2,11 @@ from utils import compute
 
 torch = compute.get_torch()
 from data.DatasetPostMapper import DataSetPostMapper
-from transformers import TrainingArguments, Trainer
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
 from data import datasets_loading
 from data.TaskParams import TaskParams
-from experiments import experiment
 from utils.model_loading import get_last_model_and_tokenizer
-from train import training
 from data import boolq_utils
 
 model_params = hyperparams.model_params
@@ -17,7 +14,6 @@ model_name = model_params.model_name
 # torch, experiment = experiment.start_experiment(tags=[model_name, hyperparams.task_name],
 #                                                 hyperparams=hyperparams)
 from unittest import TestCase
-import os
 
 
 class Test(TestCase):
