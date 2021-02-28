@@ -2,9 +2,11 @@ from collections import defaultdict
 
 from datasets import load_from_disk
 
+from train.training import get_trainer
 from utils import compute
 
 torch = compute.get_torch()
+from experiments import experiment
 from data.DatasetPostMapper import DataSetPostMapper
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
@@ -16,8 +18,8 @@ from data import boolq_utils
 
 model_params = hyperparams.model_params
 model_name = model_params.model_name
-# torch, experiment = experiment.start_experiment(tags=[model_name, hyperparams.task_name],
-#                                                 hyperparams=hyperparams)
+torch, experiment = experiment.start_experiment(tags=[model_name, "error prediction"],
+                                                hyperparams=hyperparams)
 from unittest import TestCase
 
 
@@ -38,6 +40,17 @@ class Test(TestCase):
         task_params = TaskParams(mapped_ds, confidence_model, confidence_tokenizer, 'error-prediction')
         mapper = DataSetPostMapper(task_params)
         error_ds = mapped_ds.map(mapper.change_labels)
+
+        metric_name = "accuracy"
+        save_dir = get_save_path('error-prediction', model_params)
+
+        trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
+                              hyperparams.disable_tqdm)
+
+        # results = trainer.train(save_dir + '/checkpoint-84500')
+        # results = trainer.train(save_dir + '/checkpoint-8474')
+        results = trainer.train()
+        print('done')
 
         # self.print_by_probability_ratio(mapped_ds, tokenizer)
 
@@ -68,7 +81,7 @@ class Test(TestCase):
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
         task_params = TaskParams(ds, model, tokenizer, 'trash')
-        mapper = DataSetPostMapper(task_params)
+        mapper = DataSetPostMapper(model,tokenizer)
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
         train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)

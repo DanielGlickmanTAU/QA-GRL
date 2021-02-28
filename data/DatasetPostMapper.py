@@ -1,13 +1,12 @@
 from utils import compute
 
 torch = compute.get_torch()
-from data.TaskParams import TaskParams
 
 
 class DataSetPostMapper:
-    def __init__(self, task_params: TaskParams):
-        self.model = task_params.model
-        self.tokenizer = task_params.tokenizer
+    def __init__(self, model, tokenizer):
+        self.model = model
+        self.tokenizer = tokenizer
         self.device = compute.get_device()
 
     def _tensor(self, lst):
