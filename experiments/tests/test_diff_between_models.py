@@ -27,7 +27,7 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 
 class Test(TestCase):
     def test_diff_between_models(self):
-        mapped_ds, tokenizer = self.get_processed_dataset()
+        mapped_ds, model, tokenizer = self.get_processed_dataset()
         self.print_by_probability_ratio(mapped_ds, tokenizer)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer):
@@ -55,7 +55,7 @@ class Test(TestCase):
         save_path = '%s/processed_dataset' % get_save_path(task, model_params)
 
         if self.load_processed_ds_from_disk:
-            return load_from_disk(save_path), tokenizer
+            return load_from_disk(save_path), model, tokenizer
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
         task_params = TaskParams(ds, model, tokenizer, 'trash')
@@ -73,4 +73,4 @@ class Test(TestCase):
         mapped_ds = mapped_ds.filter(_filter)
 
         mapped_ds.save_to_disk(save_path)
-        return mapped_ds, tokenizer
+        return mapped_ds, model, tokenizer
