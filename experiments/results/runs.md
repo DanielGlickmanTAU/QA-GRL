@@ -1,5 +1,11 @@
 ![](classification1.png)
 
+roberta boolq 0.778
+https://www.comet.ml/danielglickmantau/dl/e17cb392d8b649eba7bed216639b8cb8?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
+
+distiledbert boolq 0.713
+https://www.comet.ml/danielglickmantau/dl/51b4180b6bb44ec6923904b6cb1df822?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
+
 roberta with [OPT].. 0.80 on RACE
 https://www.comet.ml/danielglickmantau/dl/bcdc929218194196afc1595b6806e934?experiment-tab=metrics
 
