@@ -29,25 +29,9 @@ class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
 
-        # mapped_ds['train'] 9427
-        # mapped_ds['validation'] 3270
-
-        # filtered_mapped_ds['train'] 9427
-        # filtered_mapped_ds['validation'] 2319
-
-
         sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
         buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
-        # sorted_ds = mapped_ds.sort('prob')
-        # worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
-        #          [sorted_ds['validation'][i] for i in range(5)]]
-        # best = [boolq_utils.get_t_q_a(tokenizer, example) for example in
-        #         [sorted_ds['validation'][-i - 1] for i in range(5)]]
-        #
-        # print('best: ', best)
-        # print('worst: ', worst)
-
         # '\n\n'.join(['question:' + x[0][1] +'\ntext:' + x[0][0] + '\nconfidence:' + str(x[1])   for x in top])
 
     def map_texts_to_questions(self, dataset_split, tokenizer):
