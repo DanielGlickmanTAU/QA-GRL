@@ -29,11 +29,11 @@ class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
 
-        #mapped_ds['train'] 9427
-        #mapped_ds['validation'] 3270
+        # mapped_ds['train'] 9427
+        # mapped_ds['validation'] 3270
 
-        #filtered_mapped_ds['train'] 9427
-        #filtered_mapped_ds['validation'] 2319
+        # filtered_mapped_ds['train'] 9427
+        # filtered_mapped_ds['validation'] 2319
 
         sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
@@ -47,7 +47,6 @@ class Test(TestCase):
         # print('best: ', best)
         # print('worst: ', worst)
 
-
         # '\n\n'.join(['question:' + x[0][1] +'\ntext:' + x[0][0] + '\nconfidence:' + str(x[1])   for x in top])
 
     def map_texts_to_questions(self, dataset_split, tokenizer):
@@ -59,7 +58,7 @@ class Test(TestCase):
             d[t].append(q)
         return d
 
-    #todo change to true
+    # todo change to true
     load_processed_ds_from_disk = False
 
     def get_processed_dataset(self):
@@ -68,7 +67,7 @@ class Test(TestCase):
         model, tokenizer = get_last_model_and_tokenizer(task, model_params)
         save_path = '%s/processed_dataset' % get_save_path(task, model_params)
 
-        if load_from_disk:
+        if self.load_processed_ds_from_disk:
             return load_from_disk(save_path), tokenizer
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
