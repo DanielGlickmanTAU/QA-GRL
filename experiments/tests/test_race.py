@@ -1,5 +1,6 @@
 from experiments import experiment
 from config.ExperimentVariables import hyperparams
+from utils.model_loading import get_save_path
 
 model_params = hyperparams.model_params
 model_name = model_params.model_name
@@ -15,8 +16,7 @@ from data import tasks
 class Test(TestCase):
     def test_race_classification_params(self):
         params = tasks.task_to_params_getter[hyperparams.task_name]()
-        change_dir = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
-        save_dir = params.benchmark_folder_name + '/' + model_name + change_dir
+        save_dir = get_save_path(params.benchmark_folder_name, model_params)
         print('saving to ', save_dir)
 
         metric_name = "accuracy"
