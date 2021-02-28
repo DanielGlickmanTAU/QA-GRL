@@ -6,7 +6,6 @@ from data.TaskParams import TaskParams
 
 class DataSetPostMapper:
     def __init__(self, task_params: TaskParams):
-        self.dataset = task_params.dataset
         self.model = task_params.model
         self.tokenizer = task_params.tokenizer
         self.device = compute.get_device()
@@ -30,4 +29,4 @@ class DataSetPostMapper:
             return {'prob': self._numpy(probs), 'prediction': self._numpy(predictions), 'correct': correct}
 
     def change_labels(self, examples, field_name='correct'):
-        return {'label':examples[field_name]}
+        return {'label': examples[field_name]}
