@@ -20,17 +20,23 @@ model_name = model_params.model_name
 from unittest import TestCase
 
 
+def get_top_examples(k, ds, tokenizer, reverse=False):
+    return [(boolq_utils.get_t_q_a(tokenizer, example), example['prob']) for example in
+            [ds[(-i - 1) if reverse else i] for i in range(k)]]
+
+
 class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
         train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
         validation_dict = self.map_texts_to_questions(mapped_ds['validation'], tokenizer)
 
-        def filter(example):
+        def _filter(example):
             t, q, a = boolq_utils.get_t_q_a(tokenizer, example)
-                                    #just a trick to not filter the training set, only valid
+            # just a trick to not filter the training set, only valid
             return len(train_dict[t]) == 0 or q in train_dict[t]
-        filtered_mapped_ds = mapped_ds.filter(filter)
+
+        filtered_mapped_ds = mapped_ds._filter(_filter)
 
         overlap_texts = [t for t in validation_dict if len(train_dict[t])]
         print(len(overlap_texts) / len(validation_dict))
