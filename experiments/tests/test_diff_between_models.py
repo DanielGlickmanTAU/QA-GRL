@@ -42,7 +42,7 @@ class Test(TestCase):
         save_path = '%s/processed_dataset' % get_save_path(task, model_params)
 
         if load_from_disk:
-            return load_from_disk(save_path)
+            return load_from_disk(save_path), tokenizer
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
         task_params = TaskParams(ds, model, tokenizer, 'trash')
