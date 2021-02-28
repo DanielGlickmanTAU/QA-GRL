@@ -35,8 +35,8 @@ class Test(TestCase):
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
         sorted_ds = mapped_ds.sort('prob')
-        best = [boolq_utils.get_t_q_a(tokenizer, example) for example in [sorted_ds['validation'][i] for i in range(5)]]
-        worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in [sorted_ds['validation'][-i-1] for i in range(5)]]
+        worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in [sorted_ds['validation'][i] for i in range(5)]]
+        best = [boolq_utils.get_t_q_a(tokenizer, example) for example in [sorted_ds['validation'][-i-1] for i in range(5)]]
 
         print('best: ', best)
         print('worst: ', worst)
