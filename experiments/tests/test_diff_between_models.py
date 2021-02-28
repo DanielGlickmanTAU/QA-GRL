@@ -31,8 +31,9 @@ class Test(TestCase):
         task = 'boolq-classification'
         model_params = ExperimentVariables._roberta_squad
 
-        mapped_ds, model, tokenizer = self.get_processed_dataset(task, model_params)
-        # model_loading.get_model_and_tokenizer_for_classification()
+        mapped_ds, answer_model, answer_tokenizer = self.get_processed_dataset(task, model_params)
+
+        confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(model_params.model_name, model_params.model_tokenizer)
 
         # self.print_by_probability_ratio(mapped_ds, tokenizer)
 
