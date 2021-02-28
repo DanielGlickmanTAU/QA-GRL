@@ -28,24 +28,16 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
-        train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
-        validation_dict = self.map_texts_to_questions(mapped_ds['validation'], tokenizer)
 
-        def _filter(example):
-            t, q, a = boolq_utils.get_t_q_a(tokenizer, example)
-            # just a trick to not filter the training set, only valid
-            return len(train_dict[t]) == 0 or q in train_dict[t]
+        #mapped_ds['train'] 9427
+        #mapped_ds['validation'] 3270
 
-        filtered_mapped_ds = mapped_ds.filter(_filter)
+        #filtered_mapped_ds['train'] 9427
+        #filtered_mapped_ds['validation'] 2319
 
-        overlap_texts = [t for t in validation_dict if len(train_dict[t])]
-        print(len(overlap_texts) / len(validation_dict))
-        sorted_ds = filtered_mapped_ds.sort('prob')
+        sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
         buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
-        print(top)
-        print(buttom)
-
         # sorted_ds = mapped_ds.sort('prob')
         # worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
         #          [sorted_ds['validation'][i] for i in range(5)]]
@@ -54,6 +46,9 @@ class Test(TestCase):
         #
         # print('best: ', best)
         # print('worst: ', worst)
+
+
+        # '\n\n'.join(['question:' + x[0][1] +'\ntext:' + x[0][0] + '\nconfidence:' + str(x[1])   for x in top])
 
     def map_texts_to_questions(self, dataset_split, tokenizer):
         d = defaultdict(list)
@@ -64,7 +59,8 @@ class Test(TestCase):
             d[t].append(q)
         return d
 
-    load_processed_ds_from_disk = True
+    #todo change to true
+    load_processed_ds_from_disk = False
 
     def get_processed_dataset(self):
         task = 'boolq-classification'
@@ -79,5 +75,16 @@ class Test(TestCase):
         task_params = TaskParams(ds, model, tokenizer, 'trash')
         mapper = DataSetPostMapper(task_params)
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
+
+        train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
+        validation_dict = self.map_texts_to_questions(mapped_ds['validation'], tokenizer)
+
+        def _filter(example):
+            t, q, a = boolq_utils.get_t_q_a(tokenizer, example)
+            # just a trick to not filter the training set, only valid
+            return len(train_dict[t]) == 0 or q in train_dict[t]
+
+        mapped_ds = mapped_ds.filter(_filter)
+
         mapped_ds.save_to_disk(save_path)
         return mapped_ds, tokenizer
