@@ -26,8 +26,13 @@ class Test(TestCase):
         train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
         validation_dict = self.map_texts_to_questions(mapped_ds['validation'], tokenizer)
 
+        def filter(example):
+            t, q, a = boolq_utils.get_t_q_a(tokenizer, example)
+            return len(train_dict[t]) == 0 or q in train_dict[t]
+        filtered_mapped_ds = mapped_ds.filter(filter)
+
         overlap_texts = [t for t in validation_dict if len(train_dict[t])]
-        print(len(overlap_texts)/ len(validation_dict))
+        print(len(overlap_texts) / len(validation_dict))
 
         # sorted_ds = mapped_ds.sort('prob')
         # worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
