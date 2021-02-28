@@ -66,10 +66,15 @@ def _get_last_checkpoint(files):
 
 
 def get_last_model_and_tokenizer(saved_path, model_params):
-    sep = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
-    # path = '../experiments/' + saved_path + '/' + model_params.model_name + sep
-    path = saved_path + '/' + model_params.model_name + sep
+    path = get_save_path(saved_path, model_params)
     checkpoint = get_last_checkpoint_in_path(path)
     path_checkpoint = path + '/' + checkpoint
     print('getting model from checkpoint ', path_checkpoint)
     return get_model_and_tokenizer_for_classification(path_checkpoint, model_params.model_tokenizer)
+
+
+def get_save_path(saved_path, model_params):
+    sep = '' if hyperparams.use_unique_seperator_for_answer else '/using_sep'
+    # path = '../experiments/' + saved_path + '/' + model_params.model_name + sep
+    path = saved_path + '/' + model_params.model_name + sep
+    return path
