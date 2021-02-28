@@ -1,3 +1,5 @@
+from datasets import load_from_disk
+
 from utils import compute
 
 torch = compute.get_torch()
@@ -18,17 +20,7 @@ from unittest import TestCase
 
 class Test(TestCase):
     def test_diff_between_models(self):
-        task = 'boolq-classification'
-        model_params = ExperimentVariables._distilbert_squad
-        model_params.num_epochs = 0
-        model, tokenizer = get_last_model_and_tokenizer(task, model_params)
-
-        ds = datasets_loading.get_boolq_dataset(tokenizer)
-
-        task_params = TaskParams(ds, model, tokenizer, 'trash')
-
-        mapper = DataSetPostMapper(task_params)
-        mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
+        mapped_ds, tokenizer = self.get_processed_dataset()
 
         sorted_ds = mapped_ds.sort('prob')
         worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in [sorted_ds['validation'][i] for i in range(5)]]
@@ -36,3 +28,16 @@ class Test(TestCase):
 
         print('best: ', best)
         print('worst: ', worst)
+
+        # later do mapped_ds= load_from_disk('boolq-classification/processed_dataset')
+
+    def get_processed_dataset(self):
+        task = 'boolq-classification'
+        model_params = ExperimentVariables._roberta_squad
+        model, tokenizer = get_last_model_and_tokenizer(task, model_params)
+        ds = datasets_loading.get_boolq_dataset(tokenizer)
+        task_params = TaskParams(ds, model, tokenizer, 'trash')
+        mapper = DataSetPostMapper(task_params)
+        mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
+        # mapped_ds.save_to_disk('boolq-classification/processed_dataset')
+        return mapped_ds, tokenizer
