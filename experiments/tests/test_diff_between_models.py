@@ -35,6 +35,7 @@ class Test(TestCase):
         # filtered_mapped_ds['train'] 9427
         # filtered_mapped_ds['validation'] 2319
 
+
         sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
         buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
@@ -59,7 +60,7 @@ class Test(TestCase):
         return d
 
     # todo change to true
-    load_processed_ds_from_disk = False
+    load_processed_ds_from_disk = True
 
     def get_processed_dataset(self):
         task = 'boolq-classification'
