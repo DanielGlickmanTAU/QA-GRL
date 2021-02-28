@@ -28,6 +28,7 @@ class Test(TestCase):
 
         def filter(example):
             t, q, a = boolq_utils.get_t_q_a(tokenizer, example)
+                                    #just a trick to not filter the training set, only valid
             return len(train_dict[t]) == 0 or q in train_dict[t]
         filtered_mapped_ds = mapped_ds.filter(filter)
 
