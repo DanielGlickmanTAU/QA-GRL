@@ -21,7 +21,7 @@ class _model_params(AttrDict):
 
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 32, 3e-5)
-_roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 16, 1e-5)
+_roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 12, 1e-5)
 _electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512', 'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
 
 
