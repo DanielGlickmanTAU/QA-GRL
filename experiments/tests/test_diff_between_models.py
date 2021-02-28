@@ -28,11 +28,14 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
+        self.print_by_probability_ratio(mapped_ds, tokenizer)
 
+    def print_by_probability_ratio(self, mapped_ds, tokenizer):
         sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
         buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
-        # '\n\n'.join(['question:' + x[0][1] +'\ntext:' + x[0][0] + '\nconfidence:' + str(x[1])   for x in top])
+        print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in top]))
+        print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in buttom]))
 
     def map_texts_to_questions(self, dataset_split, tokenizer):
         d = defaultdict(list)
@@ -43,7 +46,6 @@ class Test(TestCase):
             d[t].append(q)
         return d
 
-    # todo change to true
     load_processed_ds_from_disk = True
 
     def get_processed_dataset(self):
