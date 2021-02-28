@@ -36,7 +36,7 @@ class Test(TestCase):
             # just a trick to not filter the training set, only valid
             return len(train_dict[t]) == 0 or q in train_dict[t]
 
-        filtered_mapped_ds = mapped_ds._filter(_filter)
+        filtered_mapped_ds = mapped_ds.filter(_filter)
 
         overlap_texts = [t for t in validation_dict if len(train_dict[t])]
         print(len(overlap_texts) / len(validation_dict))
