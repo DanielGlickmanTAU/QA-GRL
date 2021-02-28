@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from datasets import load_from_disk
 
 from utils import compute
@@ -21,17 +23,29 @@ from unittest import TestCase
 class Test(TestCase):
     def test_diff_between_models(self):
         mapped_ds, tokenizer = self.get_processed_dataset()
+        train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
+        validation_dict = self.map_texts_to_questions(mapped_ds['validation'], tokenizer)
 
-        sorted_ds = mapped_ds.sort('prob')
-        worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
-                 [sorted_ds['validation'][i] for i in range(5)]]
-        best = [boolq_utils.get_t_q_a(tokenizer, example) for example in
-                [sorted_ds['validation'][-i - 1] for i in range(5)]]
+        overlap_texts = [t for t in validation_dict if len(train_dict[t])]
+        print(len(overlap_texts)/ len(validation_dict))
 
-        print('best: ', best)
-        print('worst: ', worst)
+        # sorted_ds = mapped_ds.sort('prob')
+        # worst = [boolq_utils.get_t_q_a(tokenizer, example) for example in
+        #          [sorted_ds['validation'][i] for i in range(5)]]
+        # best = [boolq_utils.get_t_q_a(tokenizer, example) for example in
+        #         [sorted_ds['validation'][-i - 1] for i in range(5)]]
+        #
+        # print('best: ', best)
+        # print('worst: ', worst)
 
-        # later do mapped_ds= load_from_disk('boolq-classification/processed_dataset')
+    def map_texts_to_questions(self, dataset_split, tokenizer):
+        d = defaultdict(list)
+        l = [boolq_utils.get_t_q_a(tokenizer, example) for example in
+             [dataset_split[i] for i in range(len(dataset_split))]]
+
+        for t, q, a in l:
+            d[t].append(q)
+        return d
 
     load_processed_ds_from_disk = True
 
