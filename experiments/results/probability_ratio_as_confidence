@@ -396,7 +396,8 @@ confidence:0.5626793503761292
 
 question:can you buy a gun from a gun show without a background check
 text:Federal law requires background checks for commercial gun sales, but an exemption exists for private-party sales whereby ``any person may sell a firearm to an unlicensed resident of the state where they reside, as long as they do not know or have reasonable cause to believe the person is prohibited from receiving or possessing firearms|'|'. Under federal law, private-party sellers are not required to perform background checks on buyers, record the sale, or ask for identification, whether at a gun show or other venue. This is in contrast to sales by gun stores and other Federal Firearms License (FFL) holders, who are required to perform background checks and record all sales on almost all buyers, regardless of whether the venue is their business location or a gun show. Some states have passed laws to require background checks for private sales with limited exceptions. Access to the National Instant Criminal Background Check System (NICS) is limited to FFL holders.
-confidence:0.5627567172050476 question:is there a train station at oslo airport
+confidence:0.5627567172050476
+question:is there a train station at oslo airport
 text:Oslo Airport Station (Norwegian: Oslo lufthavn stasjon), also known as Gardermoen Station, is a railway station located in the airport terminal building of Oslo Airport, Gardermoen in Norway. Located on the Gardermoen Line, it is served by the Airport Express Trains, express trains to Trondheim and Oslo, regional trains to Lillehammer and Skien (via Oslo) and commuter trains to Eidsvoll and Kongsberg (via Oslo).
 confidence:0.9828139543533325
 
