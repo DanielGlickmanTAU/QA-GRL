@@ -66,5 +66,5 @@ def get_processed_boolq_dataset(tokenizer):
     boolq = processor.process(boolq)
     original_texts = set(boolq['train']['source_text'])
     boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
-    boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask", 'source_text'])
+    boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask"])
     return boolq
