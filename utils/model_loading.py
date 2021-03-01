@@ -46,7 +46,7 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
         first_time_running_model = not os.path.exists("%s/" % name)
         if first_time_running_model:
             os.makedirs("%s/" % name)
-            config = AutoConfig.from_pretrained(model_name)
+            config = AutoConfig.from_pretrained(name)
             config.save_pretrained("%s/" % name)
 
         tokenizer = AutoTokenizer.from_pretrained("%s" % toknizer_model_name, cache_dir=dl_glickman_cache,
