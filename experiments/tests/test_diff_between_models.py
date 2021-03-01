@@ -37,6 +37,12 @@ class Test(TestCase):
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
         confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, model_params, train=False)
+        error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
+
+        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+        mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
+
+        print(mapped_error_ds)
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
         # results = trainer.train(save_dir + '/checkpoint-8474')
