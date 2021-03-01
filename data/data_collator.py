@@ -1,5 +1,6 @@
 from typing import Dict, List, Optional
 from utils import compute
+
 torch = compute.get_torch()
 
 
@@ -41,16 +42,10 @@ class T2TDataCollator():
             input_ids, attention_mask = trim_batch(input_ids, pad_token_id, attention_mask=attention_mask)
             target_ids = trim_batch(target_ids, pad_token_id)
 
-        if self.model_type == "t5":
-            lm_labels = target_ids.clone()
-            decoder_input_ids = self._shift_right_t5(lm_labels)
-            if self.mode == 'training':
-                lm_labels[lm_labels[:, :] == pad_token_id] = -100
-        else:
-            decoder_input_ids = target_ids[:, :-1].contiguous()
-            lm_labels = target_ids[:, 1:].clone()
-            if self.mode == 'training':
-                lm_labels[target_ids[:, 1:] == pad_token_id] = -100
+        lm_labels = target_ids.clone()
+        decoder_input_ids = self._shift_right_t5(lm_labels)
+        if self.mode == 'training':
+            lm_labels[lm_labels[:, :] == pad_token_id] = -100
 
         params = {
             "input_ids": input_ids,
