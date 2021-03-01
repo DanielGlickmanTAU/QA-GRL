@@ -42,18 +42,20 @@ class Test(TestCase):
         mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
         mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
+        #HERE SHOULD TEST THAT CORRECT AND PROB INDEED CHANGE AND THAT WE GET REASONABLE PERFOREMCNE ON VALID TEST
+
         print(mapped_error_ds)
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
         # results = trainer.train(save_dir + '/checkpoint-8474')
         print('done')
 
-        # self.print_by_probability_ratio(mapped_ds, tokenizer)
+        # self.print_by_probability_ratio(mapped_ds['validation'], tokenizer)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer):
         sorted_ds = mapped_ds.sort('prob')
-        top = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer)
-        buttom = get_top_examples(k=20, ds=sorted_ds['validation'], tokenizer=tokenizer, reverse=True)
+        top = get_top_examples(k=20, ds=sorted_ds, tokenizer=tokenizer)
+        buttom = get_top_examples(k=20, ds=sorted_ds, tokenizer=tokenizer, reverse=True)
         print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in top]))
         print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in buttom]))
 
