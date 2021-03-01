@@ -1,7 +1,7 @@
 ![](classification1.png)
 
 
-error prediction 0.758
+error prediction valid acc: 0.758 train acc: 0.86
 https://www.comet.ml/danielglickmantau/dl/addb5ce1b74d401e8e6dc4152aefbcf9?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
 
 

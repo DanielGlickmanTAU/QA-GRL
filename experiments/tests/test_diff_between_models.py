@@ -42,9 +42,12 @@ class Test(TestCase):
         error_prediction_task_name = 'error-prediction'
 
         mapped_error_ds = self.get_processed_error_dataset(confidence_model, confidence_tokenizer,
-                                                    error_prediction_model_params,
-                                                    error_prediction_task_name, mapped_qa_ds)
-        self.print_by_probability_ratio(mapped_qa_ds['validation'], confidence_tokenizer)
+                                                           error_prediction_model_params,
+                                                           error_prediction_task_name, mapped_qa_ds)
+        # self.print_by_probability_ratio(mapped_qa_ds['validation'], confidence_tokenizer)
+
+        print('train acc:', sum(mapped_error_ds['train']['correct']) / len(mapped_error_ds['train']))
+        print('validation acc:', sum(mapped_error_ds['validation']['correct']) / len(mapped_error_ds['validation']))
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
         # results = trainer.train(save_dir + '/checkpoint-8474')
@@ -66,7 +69,7 @@ class Test(TestCase):
         mapped_error_ds.save_to_disk(error_save_path)
         return mapped_error_ds
 
-    def print_by_probability_ratio(self, mapped_ds, tokenizer, k = 100):
+    def print_by_probability_ratio(self, mapped_ds, tokenizer, k=100):
         sorted_ds = mapped_ds.sort('prob')
         top = get_top_examples(k=k, ds=sorted_ds, tokenizer=tokenizer)
         buttom = get_top_examples(k=k, ds=sorted_ds, tokenizer=tokenizer, reverse=True)
