@@ -87,7 +87,7 @@ class Test(TestCase):
             d[t].append(q)
         return d
 
-    load_error_ds_from_disk = False
+    load_error_ds_from_disk = True
     load_processed_ds_from_disk = True
 
     def get_processed_dataset(self, task, model_params, model, tokenizer):
