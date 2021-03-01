@@ -36,13 +36,17 @@ class Test(TestCase):
         answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
-        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, model_params, train=False)
-        error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
+        error_prediction_model_params = ExperimentVariables._roberta_squad
+        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, error_prediction_model_params,
+                                                                      train=False)
+        error_prediction_task_name = 'error-prediction'
 
-        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
-        mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
+        mapped_error_ds = self.get_processed_error_dataset(confidence_model, confidence_tokenizer,
+                                                    error_prediction_model_params,
+                                                    error_prediction_task_name, mapped_qa_ds)
+        self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
 
-        #HERE SHOULD TEST THAT CORRECT AND PROB INDEED CHANGE AND THAT WE GET REASONABLE PERFOREMCNE ON VALID TEST
+        # HERE SHOULD TEST THAT CORRECT AND PROB INDEED CHANGE AND THAT WE GET REASONABLE PERFOREMCNE ON VALID TEST
 
         print(mapped_error_ds)
 
@@ -51,6 +55,20 @@ class Test(TestCase):
         print('done')
 
         # self.print_by_probability_ratio(mapped_ds['validation'], tokenizer)
+
+    def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
+                                    error_prediction_task_name, mapped_qa_ds):
+        error_save_path = '%s/processed_dataset' % get_save_path(error_prediction_task_name,
+                                                                 error_prediction_model_params)
+        if self.load_error_ds_from_disk:
+            return load_from_disk(error_save_path)
+
+        error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
+        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+        mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=50,
+                                       writer_batch_size=50)
+        mapped_error_ds.save_to_disk(error_save_path)
+        return mapped_error_ds
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer):
         sorted_ds = mapped_ds.sort('prob')
@@ -68,6 +86,7 @@ class Test(TestCase):
             d[t].append(q)
         return d
 
+    load_error_ds_from_disk = False
     load_processed_ds_from_disk = True
 
     def get_processed_dataset(self, task, model_params, model, tokenizer):
