@@ -99,4 +99,4 @@ def get_model_and_tokenizer_for_qa_generation(model_params):
     )
     tokenizer.add_tokens(['<sep>', '<hl>'])
     model.resize_token_embeddings(len(tokenizer))
-    return tokenizer
+    return model, tokenizer
