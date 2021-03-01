@@ -132,3 +132,13 @@ def get_boolq_dataset(tokenizer):
     print(os.getcwd())
     dataset = load_dataset("boolq", cache_dir=compute.get_cache_dir())
     return preprocess(dataset, tokenizer, preprocess_function=boolq_preprocessor)
+
+
+def get_boolq_generation_dataset(tokenizer):
+    def _process(examples, tokenizer):
+        source_text = ['generate questions: ' + ex for ex in examples['passage']]
+        target_text = examples['question']
+        return {"source_text": source_text, "target_text": target_text}
+
+    dataset = load_dataset("boolq", cache_dir=compute.get_cache_dir())
+    return preprocess(dataset, tokenizer, preprocess_function=_process)
