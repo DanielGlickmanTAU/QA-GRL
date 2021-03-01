@@ -36,7 +36,7 @@ class Test(TestCase):
         answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
-        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, model_params)
+        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, model_params, train=False)
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
         # results = trainer.train(save_dir + '/checkpoint-8474')
