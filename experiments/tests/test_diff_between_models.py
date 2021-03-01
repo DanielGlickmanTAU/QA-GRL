@@ -70,11 +70,12 @@ class Test(TestCase):
         mapped_error_ds.save_to_disk(error_save_path)
         return mapped_error_ds
 
-    def print_by_probability_ratio(self, mapped_ds, tokenizer):
+    def print_by_probability_ratio(self, mapped_ds, tokenizer, k = 100):
         sorted_ds = mapped_ds.sort('prob')
-        top = get_top_examples(k=20, ds=sorted_ds, tokenizer=tokenizer)
-        buttom = get_top_examples(k=20, ds=sorted_ds, tokenizer=tokenizer, reverse=True)
+        top = get_top_examples(k=k, ds=sorted_ds, tokenizer=tokenizer)
+        buttom = get_top_examples(k=k, ds=sorted_ds, tokenizer=tokenizer, reverse=True)
         print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in top]))
+        print('\n')
         print('\n\n'.join(['question:' + x[0][1] + '\ntext:' + x[0][0] + '\nconfidence:' + str(x[1]) for x in buttom]))
 
     def map_texts_to_questions(self, dataset_split, tokenizer):
