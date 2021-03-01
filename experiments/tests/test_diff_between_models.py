@@ -33,7 +33,9 @@ class Test(TestCase):
         task = 'boolq-classification'
         model_params = ExperimentVariables._roberta_squad
 
-        mapped_ds, answer_model, answer_tokenizer, = self.get_processed_dataset(task, model_params)
+        answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
+        mapped_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
+
         confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
             model_params.model_name, model_params.model_tokenizer)
 
@@ -72,12 +74,12 @@ class Test(TestCase):
 
     load_processed_ds_from_disk = True
 
-    def get_processed_dataset(self, task, model_params):
-        model, tokenizer = get_last_model_and_tokenizer(task, model_params)
+    def get_processed_dataset(self, task, model_params, model, tokenizer):
+
         save_path = '%s/processed_dataset' % get_save_path(task, model_params)
 
         if self.load_processed_ds_from_disk:
-            return load_from_disk(save_path), model, tokenizer
+            return load_from_disk(save_path)
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
         task_params = TaskParams(ds, model, tokenizer, 'trash')
@@ -95,4 +97,4 @@ class Test(TestCase):
         mapped_ds = mapped_ds.filter(_filter)
 
         mapped_ds.save_to_disk(save_path)
-        return mapped_ds, model, tokenizer
+        return mapped_ds
