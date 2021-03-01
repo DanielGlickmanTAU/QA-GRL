@@ -1,5 +1,10 @@
 ![](classification1.png)
 
+
+error prediction 0.758
+https://www.comet.ml/danielglickmantau/dl/addb5ce1b74d401e8e6dc4152aefbcf9?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
+
+
 roberta boolq 0.778
 https://www.comet.ml/danielglickmantau/dl/e17cb392d8b649eba7bed216639b8cb8?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
 
