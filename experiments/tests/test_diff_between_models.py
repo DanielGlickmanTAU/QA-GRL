@@ -104,4 +104,4 @@ def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds,
     task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
     trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
                           hyperparams.disable_tqdm)
-    results = trainer.train()
+    trainer.train()
