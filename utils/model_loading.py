@@ -14,7 +14,7 @@ if compute.is_university_server():
     except:
         print('failed changing transformers cache dir')
 from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification, \
-    AutoModelForSeq2SeqLM
+    AutoModelForSeq2SeqLM, T5Tokenizer
 
 device = compute.get_device()
 print('using device ', device)
@@ -89,3 +89,14 @@ def get_save_path(saved_path, model_params):
     # path = '../experiments/' + saved_path + '/' + model_params.model_name + sep
     path = saved_path + '/' + model_params.model_name + sep
     return path
+
+
+def get_model_and_tokenizer_for_qa_generation(model_params):
+    tokenizer = T5Tokenizer.from_pretrained(model_params.model_tokenizer)
+    model = AutoModelForSeq2SeqLM.from_pretrained(
+        model_params.model_name,
+        # cache_dir=,
+    )
+    tokenizer.add_tokens(['<sep>', '<hl>'])
+    model.resize_token_embeddings(len(tokenizer))
+    return tokenizer
