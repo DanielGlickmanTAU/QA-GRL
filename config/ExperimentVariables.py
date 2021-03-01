@@ -1,6 +1,7 @@
 from dataclasses import dataclass, asdict, is_dataclass
 import os
 
+
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -22,7 +23,9 @@ class _model_params(AttrDict):
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 32, 3e-5)
 _roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 12, 1e-5)
-_electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512', 'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
+_electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512',
+                               'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
+_t5_qg = _model_params('valhalla/t5-small-e2e-qg', 'valhalla/t5-small-e2e-qg', 2, 1e-5)
 
 
 @dataclass(repr=False)
@@ -32,10 +35,10 @@ class _race(AttrDict):
 
 hyperparams = AttrDict()
 race = _race()
-hyperparams.env = 'UNI' if 'HOST' in os.environ and 'gamir' in os.environ['HOST'] else 'LOCAL' if 'USERNAME' in os.environ else 'AWS'
+hyperparams.env = 'UNI' if 'HOST' in os.environ and 'gamir' in os.environ[
+    'HOST'] else 'LOCAL' if 'USERNAME' in os.environ else 'AWS'
 hyperparams.task_name = 'boolq'
 hyperparams.model_params = _roberta_squad
-
 
 hyperparams.race = race
 hyperparams.use_unique_seperator_for_answer = False

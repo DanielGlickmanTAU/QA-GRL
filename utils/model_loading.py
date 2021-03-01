@@ -13,7 +13,8 @@ if compute.is_university_server():
         os.environ['TRANSFORMERS_CACHE'] = dl_glickman_cache
     except:
         print('failed changing transformers cache dir')
-from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoConfig, AutoModelForQuestionAnswering, AutoModelForSequenceClassification, \
+    AutoModelForSeq2SeqLM
 
 device = compute.get_device()
 print('using device ', device)
@@ -32,6 +33,14 @@ def get_model_and_tokenizer_for_classification(model_name=None, toknizer_model_n
     return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSequenceClassification)
 
 
+def get_model_and_tokenizer_for_generation(model_name, toknizer_model_name):
+    if not model_name:
+        model_name = hyperparams.model_params.model_name
+    if not toknizer_model_name:
+        toknizer_model_name = hyperparams.model_params.model_tokenizer
+    return _get_model_and_toknizer(model_name, toknizer_model_name, AutoModelForSeq2SeqLM)
+
+
 def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
     def _get_and_save_pretrained_tokenizer(name):
         first_time_running_model = not os.path.exists("%s/" % name)
@@ -44,6 +53,8 @@ def _get_model_and_toknizer(model_name, toknizer_model_name, autoModelClass):
                                                   return_token_type_ids=True,
                                                   use_fast=True)
         tokenizer.add_special_tokens({'additional_special_tokens': special_tokens.special_tokens})
+        if 't5' in toknizer_model_name:
+            tokenizer.add_tokens(['<sep>', '<hl>'])
         if first_time_running_model:
             tokenizer.save_pretrained("%s/" % name)
 
