@@ -25,17 +25,18 @@ class Test(TestCase):
         model, tokenizer = get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
 
-        original_texts = set(boolq['train']['source_text'])
-        boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
+        # original_texts = set(boolq['train']['source_text'])
+        # boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
 
-        pipe = E2EQGPipeline(model, tokenizer)
-        for i in range(5):
-            t = boolq['validation'][i]['source_text']
-            print(t)
-            print(pipe(t))
-            print('\n')
+        # pipe = E2EQGPipeline(model, tokenizer)
+        # for i in range(5):
+        #     t = boolq['validation'][i]['source_text']
+        #     print(t)
+        #     print(pipe(t))
+        #     print('\n')
 
         metric_name = "accuracy"
+
         task_params = TaskParams(boolq, model, tokenizer, task_name)
         save_dir = get_save_path(task_name, model_params)
         trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
