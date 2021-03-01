@@ -1,7 +1,10 @@
 from utils import compute
-from data import question_generation_dataset
 
 torch = compute.get_torch()
+from transformers import PreTrainedModel, PreTrainedTokenizer
+
+from data import question_generation_dataset
+
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
 from utils.model_loading import get_model_and_tokenizer_for_qa_generation
@@ -23,4 +26,80 @@ class Test(TestCase):
         original_texts = set(boolq['train']['source_text'])
         boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
 
+        pipe = E2EQGPipeline(model, tokenizer)
+        for i in range(5):
+            t = boolq['validation'][i]['source_text']
+            print(t)
+            print(pipe(t))
+            print('\n')
+
         print(tokenizer)
+
+
+class E2EQGPipeline:
+    def __init__(
+            self,
+            model: PreTrainedModel,
+            tokenizer: PreTrainedTokenizer,
+    ):
+
+        self.model = model
+        self.tokenizer = tokenizer
+
+        self.device = compute.get_device()
+        self.model.to(self.device)
+
+        self.default_generate_kwargs = {
+            "max_length": 256,
+            "num_beams": 4,
+            "length_penalty": 1.5,
+            "no_repeat_ngram_size": 3,
+            "early_stopping": True,
+        }
+
+    def __call__(self, context: str, **generate_kwargs):
+        inputs = self._prepare_inputs_for_e2e_qg(context)
+
+        if not generate_kwargs:
+            generate_kwargs = self.default_generate_kwargs
+
+        input_length = inputs["input_ids"].shape[-1]
+
+        outs = self.model.generate(
+            input_ids=inputs['input_ids'].to(self.device),
+            attention_mask=inputs['attention_mask'].to(self.device),
+            **generate_kwargs
+        )
+
+        prediction = self.tokenizer.decode(outs[0], skip_special_tokens=True)
+        questions = prediction.split("<sep>")
+        questions = [question.strip() for question in questions[:-1]]
+        return questions
+
+    def _prepare_inputs_for_e2e_qg(self, context):
+        source_text = context
+        if not context.startswith("generate questions:"):
+            source_text = f"generate questions: {context}"
+        source_text = source_text + " </s>"
+
+        inputs = self._tokenize([source_text], padding=False)
+        return inputs
+
+    def _tokenize(
+            self,
+            inputs,
+            padding=True,
+            truncation=True,
+            add_special_tokens=True,
+            max_length=512
+    ):
+        inputs = self.tokenizer.batch_encode_plus(
+            inputs,
+            max_length=max_length,
+            add_special_tokens=add_special_tokens,
+            truncation=truncation,
+            padding="max_length" if padding else False,
+            pad_to_max_length=padding,
+            return_tensors="pt"
+        )
+        return inputs
