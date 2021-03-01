@@ -36,22 +36,10 @@ class Test(TestCase):
         answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
-        confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
-            model_params.model_name, model_params.model_tokenizer)
-
-        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
-        error_ds = mapped_qa_ds.map(mapper.change_labels)
-
-        metric_name = "accuracy"
-        save_dir = get_save_path('error-prediction', model_params)
-
-        task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
-        trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
-                              hyperparams.disable_tqdm)
+        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, model_params)
 
         # results = trainer.train(save_dir + '/checkpoint-84500')
         # results = trainer.train(save_dir + '/checkpoint-8474')
-        results = trainer.train()
         print('done')
 
         # self.print_by_probability_ratio(mapped_ds, tokenizer)
@@ -98,3 +86,22 @@ class Test(TestCase):
 
         mapped_ds.save_to_disk(save_path)
         return mapped_ds
+
+
+def get_confidence_model(mapped_qa_ds, model_params):
+    save_dir = get_save_path('error-prediction', model_params)
+    confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
+        model_params.model_name, model_params.model_tokenizer)
+    train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, save_dir)
+
+    return confidence_model, confidence_tokenizer
+
+
+def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, save_dir):
+    mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+    error_ds = mapped_qa_ds.map(mapper.change_labels)
+    metric_name = "accuracy"
+    task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
+    trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
+                          hyperparams.disable_tqdm)
+    results = trainer.train()
