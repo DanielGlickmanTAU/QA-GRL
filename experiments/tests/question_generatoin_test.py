@@ -21,10 +21,6 @@ class Test(TestCase):
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
 
         original_texts = set(boolq['train']['source_text'])
-
-        def _filter_dups(example):
-            return example['source_text'] not in original_texts
-
-        boolq['validation'] = boolq['validation'].filter(_filter_dups)
+        boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
 
         print(tokenizer)
