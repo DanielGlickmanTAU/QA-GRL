@@ -1,3 +1,4 @@
+from experiments import experiment
 from collections import defaultdict
 
 from datasets import load_from_disk
@@ -6,7 +7,6 @@ from train.training import get_trainer
 from utils import compute
 
 torch = compute.get_torch()
-from experiments import experiment
 from data.DatasetPostMapper import DataSetPostMapper
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
@@ -37,13 +37,13 @@ class Test(TestCase):
         confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
             model_params.model_name, model_params.model_tokenizer)
 
-        task_params = TaskParams(mapped_ds, confidence_model, confidence_tokenizer, 'error-prediction')
-        mapper = DataSetPostMapper(task_params)
+        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
         error_ds = mapped_ds.map(mapper.change_labels)
 
         metric_name = "accuracy"
         save_dir = get_save_path('error-prediction', model_params)
 
+        task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
         trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
                               hyperparams.disable_tqdm)
 
@@ -81,7 +81,7 @@ class Test(TestCase):
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
         task_params = TaskParams(ds, model, tokenizer, 'trash')
-        mapper = DataSetPostMapper(model,tokenizer)
+        mapper = DataSetPostMapper(model, tokenizer)
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
         train_dict = self.map_texts_to_questions(mapped_ds['train'], tokenizer)
