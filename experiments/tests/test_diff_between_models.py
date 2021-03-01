@@ -34,13 +34,13 @@ class Test(TestCase):
         model_params = ExperimentVariables._roberta_squad
 
         answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
-        mapped_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
+        mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
         confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
             model_params.model_name, model_params.model_tokenizer)
 
         mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
-        error_ds = mapped_ds.map(mapper.change_labels)
+        error_ds = mapped_qa_ds.map(mapper.change_labels)
 
         metric_name = "accuracy"
         save_dir = get_save_path('error-prediction', model_params)
