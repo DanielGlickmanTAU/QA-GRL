@@ -32,3 +32,11 @@ conf1 = split_by_prefix(lines1, 'confidence:')
 q2 = split_by_prefix(lines2, 'question:')
 hard2, easy2 = split_in2(q2)
 conf2 = split_by_prefix(lines2, 'confidence:')
+
+print('hard')
+for k in range(10, 110, 10):
+    print(k, ':', calc_match_percent(hard1, hard2, k))
+
+print('easy')
+for k in range(10, 110, 10):
+    print(k, ':', calc_match_percent(easy1, easy2, k))
