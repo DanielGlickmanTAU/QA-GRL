@@ -9,6 +9,7 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
     metric = load_metric(metric_name)
 
     def compute_metrics(eval_pred):
+        print('computing metric')
         predictions, labels = eval_pred
         predictions = predictions.argmax(axis=1)
         accuracy = metric.compute(predictions=predictions, references=labels)
