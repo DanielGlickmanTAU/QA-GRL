@@ -14,7 +14,7 @@ class DataProcessor:
         if self.model_type == "t5":
             dataset = dataset.map(self._add_eos_examples)
         dataset = dataset.map(self._add_special_tokens)
-        dataset = dataset.map(self._convert_to_features, batched=True,remove_columns=['source_text','target_text'])
+        dataset = dataset.map(self._convert_to_features, batched=True, remove_columns=['source_text', 'target_text'])
 
         return dataset
 
@@ -30,7 +30,6 @@ class DataProcessor:
         example['target_text'] = example['target_text'].replace("{sep_token}", self.sep_token)
         return example
 
-    # tokenize the examples
     def _convert_to_features(self, example_batch):
         source_encoding = self.tokenizer.batch_encode_plus(
             example_batch['source_text'],
