@@ -9,7 +9,7 @@ from config.ExperimentVariables import hyperparams
 torch, experiment = experiment.start_experiment(tags=['AWS', 't5-small', 'question-generation'],
                                                 hyperparams=hyperparams)
 
-from data import question_generation_dataset, data_collator
+from data import question_generation_dataset, data_collator, datasets_loading
 
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
@@ -35,13 +35,18 @@ class Test(TestCase):
                                                  data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
 
+    def test_run_trained_question_generation_model(self):
+        model_params = self.model_params.clone()
+        # model_params.model_tokenizer = model_params.model_name
+
+        model, tokenizer = model_loading.get_last_model_and_tokenizer(self.task_name, self.model_params)
+        # model, tokenizer = model_loading.get_model_and_tokenizer_for_qa_generation(model_params)
+
+        boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
         pipe = E2EQGPipeline(model, tokenizer)
-        for i in range(5):
+        for i in range(20):
             t = boolq['validation'][i]['source_text']
             print(t)
             print(pipe(t))
+            print(boolq['validation'][i]['target_text'])
             print('\n')
-
-
-def run_trained_question_generation_model(self):
-    pass
