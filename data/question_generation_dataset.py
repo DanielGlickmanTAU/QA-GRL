@@ -46,8 +46,9 @@ class DataProcessor:
         )
 
         encodings = {
-            'source_ids': source_encoding['input_ids'],
-            'target_ids': target_encoding['input_ids'],
+            'input_ids': source_encoding['input_ids'],
+            'labels': target_encoding['input_ids'],
+            # 'label': target_encoding['input_ids'], try this?? #TODO
             'attention_mask': source_encoding['attention_mask'],
         }
 
@@ -66,5 +67,10 @@ def get_processed_boolq_dataset(tokenizer):
     boolq = processor.process(boolq)
     original_texts = set(boolq['train']['source_text'])
     boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
-    boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask"])
+
+    # boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask"])
+    # #TODO
+    # return boolq.map(lambda examples: {'input_ids':examples})
+
+    #TO DO TENSOR TO TENSOR
     return boolq
