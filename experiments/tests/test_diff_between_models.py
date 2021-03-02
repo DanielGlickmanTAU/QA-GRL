@@ -3,7 +3,7 @@ from collections import defaultdict
 
 from datasets import load_from_disk
 
-from models.confidence import get_error_dataset, get_last_confidence_model
+from models.confidence import get_last_confidence_model
 from utils import compute
 
 torch = compute.get_torch()
@@ -56,12 +56,7 @@ class Test(TestCase):
         if self.load_error_ds_from_disk:
             return load_from_disk(error_save_path)
 
-        error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
-        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
-        mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=50,
-                                       writer_batch_size=50)
-        mapped_error_ds.save_to_disk(error_save_path)
-        return mapped_error_ds
+        return predict_confidence_on_boolq(confidence_model, confidence_tokenizer, error_save_path, mapped_qa_ds)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer, k=100):
         sorted_ds = mapped_ds.sort('prob')

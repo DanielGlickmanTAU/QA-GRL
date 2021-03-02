@@ -35,3 +35,12 @@ def get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds):
     mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
     error_ds = mapped_qa_ds.map(mapper.change_labels)
     return error_ds
+
+
+def predict_confidence_on_dataset(confidence_model, confidence_tokenizer, save_path, dataset):
+    error_ds = get_error_dataset(confidence_model, confidence_tokenizer, dataset)
+    mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+    mapped_error_ds = error_ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=50,
+                                   writer_batch_size=50)
+    mapped_error_ds.save_to_disk(save_path)
+    return mapped_error_ds
