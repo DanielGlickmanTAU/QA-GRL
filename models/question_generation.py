@@ -17,11 +17,12 @@ class E2EQGPipeline:
         self.model.to(self.device)
 
         self.default_generate_kwargs = {
-            "max_length": 256,
-            "num_beams": 4,
-            "length_penalty": 1.5,
-            "no_repeat_ngram_size": 3,
-            "early_stopping": True,
+            "max_length": 512,
+            "num_beams": 8,
+            "length_penalty": 1,
+            "no_repeat_ngram_size": 4,
+            "early_stopping": False,
+            "num_return_sequences": 2
         }
 
     def __call__(self, context: str, **generate_kwargs):
@@ -30,18 +31,14 @@ class E2EQGPipeline:
         if not generate_kwargs:
             generate_kwargs = self.default_generate_kwargs
 
-        input_length = inputs["input_ids"].shape[-1]
-
         outs = self.model.generate(
             input_ids=inputs['input_ids'].to(self.device),
             attention_mask=inputs['attention_mask'].to(self.device),
             **generate_kwargs
         )
 
-        prediction = self.tokenizer.decode(outs[0], skip_special_tokens=True)
-        questions = prediction.split("<sep>")
-        questions = [question.strip() for question in questions[:-1]]
-        return questions
+        predictions = [self.tokenizer.decode(out, skip_special_tokens=True) for out in outs]
+        return predictions
 
     def _prepare_inputs_for_e2e_qg(self, context):
         source_text = context
