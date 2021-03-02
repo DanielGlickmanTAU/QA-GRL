@@ -3,7 +3,7 @@ from collections import defaultdict
 
 from datasets import load_from_disk
 
-from train.training import get_trainer
+from models.confidence import get_confidence_model, get_error_dataset
 from utils import compute
 
 torch = compute.get_torch()
@@ -13,7 +13,6 @@ from config.ExperimentVariables import hyperparams
 from data import datasets_loading
 from data.TaskParams import TaskParams
 from utils.model_loading import get_last_model_and_tokenizer, get_save_path
-from utils import model_loading
 from data import boolq_utils
 
 model_params = hyperparams.model_params
@@ -38,7 +37,7 @@ class Test(TestCase):
 
         error_prediction_model_params = ExperimentVariables._roberta_squad
         confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, error_prediction_model_params,
-                                                                      train=False)
+                                                                      train=False, experiment=experiment)
         error_prediction_task_name = 'error-prediction'
 
         mapped_error_ds = self.get_processed_error_dataset(confidence_model, confidence_tokenizer,
@@ -108,29 +107,3 @@ class Test(TestCase):
 
         mapped_ds.save_to_disk(save_path)
         return mapped_ds
-
-
-def get_confidence_model(mapped_qa_ds, model_params, train=False):
-    task_name = 'error-prediction'
-    if train:
-        confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
-            model_params.model_name, model_params.model_tokenizer)
-        train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name)
-
-    return get_last_model_and_tokenizer(task_name, model_params)
-
-
-def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name):
-    error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
-    metric_name = "accuracy"
-    task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
-    save_dir = get_save_path(task_name, model_params)
-    trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
-                          hyperparams.disable_tqdm)
-    trainer.train()
-
-
-def get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds):
-    mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
-    error_ds = mapped_qa_ds.map(mapper.change_labels)
-    return error_ds
