@@ -17,6 +17,20 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
             experiment.log_metrics({'accuracy_on_eval': accuracy['accuracy']})
         return accuracy
 
+    args = get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_params, save_dir)
+    trainer = Trainer(
+        model_and_dataset.model,
+        args,
+        train_dataset=model_and_dataset.dataset["train"],
+        eval_dataset=model_and_dataset.dataset["validation"],
+        tokenizer=model_and_dataset.tokenizer,
+        compute_metrics=compute_metrics,
+        data_collator=data_collator
+    )
+    return trainer
+
+
+def get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_params, save_dir):
     args = TrainingArguments(
 
         save_dir,
@@ -29,15 +43,7 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
         load_best_model_at_end=load_best_model_at_end,
         metric_for_best_model=metric_name,
         save_total_limit=2,
-        disable_tqdm=disable_tqdm
+        disable_tqdm=disable_tqdm,
+        prediction_loss_only=True
     )
-    trainer = Trainer(
-        model_and_dataset.model,
-        args,
-        train_dataset=model_and_dataset.dataset["train"],
-        eval_dataset=model_and_dataset.dataset["validation"],
-        tokenizer=model_and_dataset.tokenizer,
-        compute_metrics=compute_metrics,
-        data_collator=data_collator
-    )
-    return trainer
+    return args
