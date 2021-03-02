@@ -1,0 +1,33 @@
+							Duplicate EXAMPLES:
+
+validation:
+	'is harry potter and the escape from gringotts a roller coaster ride'
+train: 
+	'is escape from gringotts ride a roller coaster'  |  'is harry potter escape from gringotts a roller coaster'
+
+
+validation:
+	'is there a word with q without u' 
+train:
+	'is there a word that has a q but no u'  |  'is there a word that has a q without a u'  | 'is there a word with a q and no u'
+
+
+validation:
+	'was the movie strangers based on a true story'
+train:
+	'was the strangers movie based on true events'
+
+
+
+							NON DUPLICATE EXAMPLES:
+
+validation:
+	"is barq's root beer a pepsi product"
+train:
+	"is there caffeine in root beer barq's"
+
+
+validation:
+	'is fantastic beasts and where to find them a prequel'
+train:
+	'is fantastic beasts and where to find them a part of harry potter'
