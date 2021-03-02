@@ -60,7 +60,7 @@ def get_processed_boolq_dataset(tokenizer):
 
     processor = DataProcessor(
         tokenizer,
-        max_source_length=256,
+        max_source_length=512,
         max_target_length=32
     )
 
