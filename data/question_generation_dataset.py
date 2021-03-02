@@ -33,15 +33,15 @@ class DataProcessor:
         source_encoding = self.tokenizer.batch_encode_plus(
             example_batch['source_text'],
             max_length=self.max_source_length,
-            padding='max_length',
+            padding=True,
             pad_to_max_length=True,
             truncation=True,
         )
         target_encoding = self.tokenizer.batch_encode_plus(
             example_batch['target_text'],
             max_length=self.max_target_length,
-            padding='max_length',
-            pad_to_max_length=True,
+            padding=True,
+            # pad_to_max_length=True,
             truncation=True,
         )
 
