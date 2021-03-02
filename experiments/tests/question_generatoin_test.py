@@ -15,6 +15,7 @@ from data import question_generation_dataset, data_collator
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
 from utils.model_loading import get_model_and_tokenizer_for_qa_generation, get_save_path
+from train import training
 
 model_params = hyperparams.model_params
 
@@ -45,10 +46,12 @@ class Test(TestCase):
 
         task_params = TaskParams(boolq, model, tokenizer, task_name)
         save_dir = get_save_path(task_name, model_params)
-        trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
-                              True,
-                              # todo look at htis
-                              data_collator=data_collator.T2TDataCollator(tokenizer))
+        # trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
+        #                       True,
+        #                       # todo look at htis
+        #                       data_collator=data_collator.T2TDataCollator(tokenizer))
+        trainer = training.get_generator_trainer(save_dir, model_params, task_params, load_best_model_at_end=True,
+                                                 data_collator=data_collator.T2TDataCollator(tokenizer))
         # data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
         print(3)
