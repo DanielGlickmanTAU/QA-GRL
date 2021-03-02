@@ -56,7 +56,9 @@ class Test(TestCase):
         if self.load_error_ds_from_disk:
             return load_from_disk(error_save_path)
 
-        return predict_confidence_on_boolq(confidence_model, confidence_tokenizer, error_save_path, mapped_qa_ds)
+        else:
+            raise Exception()
+        # return predict_confidence_on_boolq(confidence_model, confidence_tokenizer, error_save_path, mapped_qa_ds)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer, k=100):
         sorted_ds = mapped_ds.sort('prob')
