@@ -73,9 +73,7 @@ def get_processed_boolq_dataset(tokenizer):
 
     # boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask"])
     # #TODO
-    # return boolq.map(lambda examples: {'input_ids':examples})
+
     boolq.set_format(type='torch', columns=['attention_mask', 'input_ids', 'labels'])
-    print(boolq)
-    print(boolq['train'])
 
     return boolq
