@@ -27,34 +27,16 @@ class Test(TestCase):
         task_name = 'question-generation'
         model_params = ExperimentVariables._t5_qg
 
-        model_type = 't5'
         model, tokenizer = get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
         torch.cuda.empty_cache()
 
-        # original_texts = set(boolq['train']['source_text'])
-        # boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
-
-        # pipe = E2EQGPipeline(model, tokenizer)
-        # for i in range(5):
-        #     t = boolq['validation'][i]['source_text']
-        #     print(t)
-        #     print(pipe(t))
-        #     print('\n')
-
-        metric_name = "accuracy"
-
         task_params = TaskParams(boolq, model, tokenizer, task_name)
         save_dir = get_save_path(task_name, model_params)
-        # trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
-        #                       True,
-        #                       # todo look at htis
-        #                       data_collator=data_collator.T2TDataCollator(tokenizer))
+
         trainer = training.get_generator_trainer(save_dir, model_params, task_params, load_best_model_at_end=True,
                                                  data_collator=data_collator.T2TDataCollator(tokenizer))
-        # data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
-        print(3)
 
         pipe = E2EQGPipeline(model, tokenizer)
         for i in range(5):
