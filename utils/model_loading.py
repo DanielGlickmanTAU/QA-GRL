@@ -81,6 +81,8 @@ def get_last_model_and_tokenizer(saved_path, model_params):
     checkpoint = get_last_checkpoint_in_path(path)
     path_checkpoint = path + '/' + checkpoint
     print('getting model from checkpoint ', path_checkpoint)
+    if 'generation' in saved_path:
+        return get_model_and_tokenizer_for_qa_generation2(path_checkpoint, model_params.model_tokenizer)
     return get_model_and_tokenizer_for_classification(path_checkpoint, model_params.model_tokenizer)
 
 
@@ -92,9 +94,13 @@ def get_save_path(saved_path, model_params):
 
 
 def get_model_and_tokenizer_for_qa_generation(model_params):
-    tokenizer = T5Tokenizer.from_pretrained(model_params.model_tokenizer)
+    return get_model_and_tokenizer_for_qa_generation2(model_params.model_name, model_params.model_tokenizer)
+
+
+def get_model_and_tokenizer_for_qa_generation2(model_name, model_tokenizer):
+    tokenizer = T5Tokenizer.from_pretrained(model_tokenizer)
     model = AutoModelForSeq2SeqLM.from_pretrained(
-        model_params.model_name,
+        model_name,
         # cache_dir=,
     )
     tokenizer.add_tokens(['<sep>', '<hl>'])
