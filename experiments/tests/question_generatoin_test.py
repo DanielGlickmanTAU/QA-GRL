@@ -29,6 +29,7 @@ class Test(TestCase):
         model_type = 't5'
         model, tokenizer = get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
+        torch.cuda.empty_cache()
 
         # original_texts = set(boolq['train']['source_text'])
         # boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
