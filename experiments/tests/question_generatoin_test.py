@@ -1,8 +1,13 @@
+from experiments import experiment
 from data.TaskParams import TaskParams
 from train.training import get_trainer
 from utils import compute
 
 torch = compute.get_torch()
+from config.ExperimentVariables import hyperparams
+
+torch, experiment = experiment.start_experiment(tags=['AWS', 't5-small', 'question-generation'],
+                                                hyperparams=hyperparams)
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
 from data import question_generation_dataset, data_collator
@@ -40,7 +45,10 @@ class Test(TestCase):
         task_params = TaskParams(boolq, model, tokenizer, task_name)
         save_dir = get_save_path(task_name, model_params)
         trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
-                              False, data_collator=data_collator.T2TDataCollator(tokenizer))
+                              True,
+                              # todo look at htis
+                              data_collator=None)
+        # data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
         print(3)
 
