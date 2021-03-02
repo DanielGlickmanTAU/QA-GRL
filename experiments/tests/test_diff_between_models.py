@@ -44,14 +44,9 @@ class Test(TestCase):
         mapped_error_ds = self.get_processed_error_dataset(confidence_model, confidence_tokenizer,
                                                            error_prediction_model_params,
                                                            error_prediction_task_name, mapped_qa_ds)
-        # self.print_by_probability_ratio(mapped_qa_ds['validation'], confidence_tokenizer)
 
         print('train acc:', sum(mapped_error_ds['train']['correct']) / len(mapped_error_ds['train']))
         print('validation acc:', sum(mapped_error_ds['validation']['correct']) / len(mapped_error_ds['validation']))
-
-        # results = trainer.train(save_dir + '/checkpoint-84500')
-        # results = trainer.train(save_dir + '/checkpoint-8474')
-        print('done')
 
         # self.print_by_probability_ratio(mapped_ds['validation'], tokenizer)
 
