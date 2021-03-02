@@ -22,7 +22,7 @@ from unittest import TestCase
 
 
 class Test(TestCase):
-    def test_diff_between_models(self):
+    def train_question_generating_model(self):
         task_name = 'question-generation'
         model_params = ExperimentVariables._t5_qg
 
@@ -42,5 +42,3 @@ class Test(TestCase):
             print(t)
             print(pipe(t))
             print('\n')
-
-
