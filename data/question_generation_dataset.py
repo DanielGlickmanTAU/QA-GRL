@@ -59,7 +59,6 @@ class DataProcessor:
 
 def get_processed_boolq_dataset(tokenizer):
     boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
-    print('1', boolq)
 
     processor = DataProcessor(
         tokenizer,
