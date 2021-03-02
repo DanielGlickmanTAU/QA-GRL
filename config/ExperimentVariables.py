@@ -20,6 +20,10 @@ class _model_params(AttrDict):
     learning_rate: float
     num_epochs: int = 4
 
+    def clone(self):
+        return _model_params(self.model_name, self.model_tokenizer, self.batch_size, self.learning_rate,
+                             self.num_epochs)
+
 
 _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'distilbert-base-uncased', 32, 3e-5)
 _roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 12, 1e-5)
