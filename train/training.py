@@ -5,7 +5,7 @@ from data.TaskParams import TaskParams
 
 
 def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best_model_at_end, experiment=None,
-                metric_name='accuracy', show_tqdm=False, data_collator=None):
+                metric_name='accuracy', disable_tqdm=False, data_collator=None):
     metric = load_metric(metric_name)
 
     def compute_metrics(eval_pred):
@@ -28,7 +28,7 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
         load_best_model_at_end=load_best_model_at_end,
         metric_for_best_model=metric_name,
         save_total_limit=2,
-        disable_tqdm=show_tqdm
+        disable_tqdm=disable_tqdm
     )
     trainer = Trainer(
         model_and_dataset.model,
