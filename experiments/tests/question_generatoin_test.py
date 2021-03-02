@@ -29,7 +29,6 @@ class Test(TestCase):
 
         model, tokenizer = get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
-        torch.cuda.empty_cache()
 
         task_params = TaskParams(boolq, model, tokenizer, task_name)
         save_dir = get_save_path(task_name, model_params)
