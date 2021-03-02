@@ -5,18 +5,23 @@ from train.training import get_trainer
 from utils import model_loading
 from utils.model_loading import get_last_model_and_tokenizer, get_save_path
 
+task_name = 'error-prediction'
 
-def get_confidence_model(mapped_qa_ds, model_params, train=False, experiment = None):
-    task_name = 'error-prediction'
-    if train:
-        confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
-            model_params.model_name, model_params.model_tokenizer)
-        train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name, experiment)
 
+def train_confidence_model(mapped_qa_ds, model_params, experiment=None):
+    confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
+        model_params.model_name, model_params.model_tokenizer)
+    train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name,
+                           experiment)
+
+    return get_last_confidence_model(model_params)
+
+
+def get_last_confidence_model(model_params):
     return get_last_model_and_tokenizer(task_name, model_params)
 
 
-def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name,experiment):
+def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name, experiment):
     error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
     metric_name = "accuracy"
     task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')

@@ -3,7 +3,7 @@ from collections import defaultdict
 
 from datasets import load_from_disk
 
-from models.confidence import get_confidence_model, get_error_dataset
+from models.confidence import get_error_dataset, get_last_confidence_model
 from utils import compute
 
 torch = compute.get_torch()
@@ -36,8 +36,7 @@ class Test(TestCase):
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
         error_prediction_model_params = ExperimentVariables._roberta_squad
-        confidence_model, confidence_tokenizer = get_confidence_model(mapped_qa_ds, error_prediction_model_params,
-                                                                      train=False, experiment=experiment)
+        confidence_model, confidence_tokenizer = get_last_confidence_model(error_prediction_model_params)
         error_prediction_task_name = 'error-prediction'
 
         mapped_error_ds = self.get_processed_error_dataset(confidence_model, confidence_tokenizer,
@@ -47,7 +46,8 @@ class Test(TestCase):
         print('train acc:', sum(mapped_error_ds['train']['correct']) / len(mapped_error_ds['train']))
         print('validation acc:', sum(mapped_error_ds['validation']['correct']) / len(mapped_error_ds['validation']))
 
-        # self.print_by_probability_ratio(mapped_ds['validation'], tokenizer)
+        self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
+        self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
 
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
                                     error_prediction_task_name, mapped_qa_ds):
