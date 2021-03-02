@@ -19,8 +19,10 @@ class DataProcessor:
         return dataset
 
     def _add_eos_examples(self, example):
-        example['source_text'] = example['source_text'] + " </s>"
-        example['target_text'] = example['target_text'] + " </s>"
+        if not example['source_text'].endswith('</s>'):
+            example['source_text'] = example['source_text'] + " </s>"
+        if not example['target_text'].endswith('</s>'):
+            example['target_text'] = example['target_text'] + " </s>"
         return example
 
     def _add_special_tokens(self, example):
@@ -34,7 +36,7 @@ class DataProcessor:
             example_batch['source_text'],
             max_length=self.max_source_length,
             padding=True,
-            pad_to_max_length=True,
+            # pad_to_max_length=True,
             truncation=True,
         )
         target_encoding = self.tokenizer.batch_encode_plus(
@@ -57,6 +59,7 @@ class DataProcessor:
 
 def get_processed_boolq_dataset(tokenizer):
     boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
+    print('1', boolq)
 
     processor = DataProcessor(
         tokenizer,
@@ -64,13 +67,15 @@ def get_processed_boolq_dataset(tokenizer):
         max_target_length=32
     )
 
-    boolq = processor.process(boolq)
     original_texts = set(boolq['train']['source_text'])
     boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
+    boolq = processor.process(boolq)
 
     # boolq.set_format(type='torch', columns=["source_ids", "target_ids", "attention_mask"])
     # #TODO
     # return boolq.map(lambda examples: {'input_ids':examples})
+    boolq.set_format(type='torch', columns=['attention_mask', 'input_ids', 'labels'])
+    print(boolq)
+    print(boolq['train'])
 
-    #TO DO TENSOR TO TENSOR
     return boolq
