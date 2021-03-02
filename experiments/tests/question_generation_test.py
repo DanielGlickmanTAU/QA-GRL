@@ -13,7 +13,7 @@ from data import question_generation_dataset, data_collator
 
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
-from utils.model_loading import get_model_and_tokenizer_for_qa_generation, get_save_path
+import utils.model_loading as model_loading
 from train import training
 
 model_params = hyperparams.model_params
@@ -22,17 +22,16 @@ from unittest import TestCase
 
 
 class Test(TestCase):
-    def train_question_generating_model(self):
-        task_name = 'question-generation'
-        model_params = ExperimentVariables._t5_qg
+    task_name = 'question-generation'
+    model_params = ExperimentVariables._t5_qg
+    save_dir = model_loading.get_save_path(task_name, model_params)
 
-        model, tokenizer = get_model_and_tokenizer_for_qa_generation(model_params)
+    def train_question_generating_model(self):
+        model, tokenizer = model_loading.get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
 
-        task_params = TaskParams(boolq, model, tokenizer, task_name)
-        save_dir = get_save_path(task_name, model_params)
-
-        trainer = training.get_generator_trainer(save_dir, model_params, task_params, load_best_model_at_end=True,
+        task_params = TaskParams(boolq, model, tokenizer, self.task_name)
+        trainer = training.get_generator_trainer(self.save_dir, model_params, task_params, load_best_model_at_end=True,
                                                  data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
 
@@ -42,3 +41,7 @@ class Test(TestCase):
             print(t)
             print(pipe(t))
             print('\n')
+
+
+def run_trained_question_generation_model(self):
+    pass
