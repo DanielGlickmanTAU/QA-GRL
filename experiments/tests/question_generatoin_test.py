@@ -48,7 +48,7 @@ class Test(TestCase):
         trainer = get_trainer(save_dir, model_params, task_params, True, None, metric_name,
                               True,
                               # todo look at htis
-                              data_collator=None)
+                              data_collator=data_collator.T2TDataCollator(tokenizer))
         # data_collator=data_collator.T2TDataCollator(tokenizer))
         trainer.train()
         print(3)

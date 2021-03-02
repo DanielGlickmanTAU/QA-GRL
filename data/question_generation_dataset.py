@@ -12,8 +12,8 @@ class DataProcessor:
 
     def process(self, dataset):
         if self.model_type == "t5":
-            dataset = dataset.map(self._add_eos_examples)
-        dataset = dataset.map(self._add_special_tokens)
+            dataset = dataset.map(self._add_eos_examples, batched=True)
+        dataset = dataset.map(self._add_special_tokens, batched=True)
         dataset = dataset.map(self._convert_to_features, batched=True)
 
         return dataset
