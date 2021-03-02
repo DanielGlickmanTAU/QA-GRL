@@ -11,17 +11,13 @@ task_name = 'error-prediction'
 def train_confidence_model(mapped_qa_ds, model_params, experiment=None):
     confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
         model_params.model_name, model_params.model_tokenizer)
-    train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name,
+    _train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name,
                            experiment)
 
     return get_last_confidence_model(model_params)
 
 
-def get_last_confidence_model(model_params):
-    return get_last_model_and_tokenizer(task_name, model_params)
-
-
-def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name, experiment):
+def _train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name, experiment):
     error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
     metric_name = "accuracy"
     task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
@@ -29,6 +25,10 @@ def train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds,
     trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
                           hyperparams.disable_tqdm)
     trainer.train()
+
+
+def get_last_confidence_model(model_params):
+    return get_last_model_and_tokenizer(task_name, model_params)
 
 
 def get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds):
