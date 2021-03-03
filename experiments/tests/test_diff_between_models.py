@@ -102,11 +102,6 @@ class Test(TestCase):
         with open('results', 'w+') as f:
             f.write('\n\n'.join(results))
 
-        # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
-        # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
-        # for each example, put another of example of the generated one and tag from where it is a
-        # original_boolq.map(lambda examples: gen_model.generate(example['txt'][question]))
-
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
                                     error_prediction_task_name, mapped_qa_ds):
         error_save_path = '%s/processed_dataset' % get_save_path(error_prediction_task_name,
