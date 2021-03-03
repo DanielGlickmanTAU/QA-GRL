@@ -104,7 +104,7 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
         text = boolq_generation_dataset[i]['source_text']
         clean_text = text[len(_generate_question_prefix) + 1:]
 
-        questions = pipe(text)
+        questions = list(set(pipe(text)))
         generated_questions['passage'] += [clean_text] * len(questions)
         generated_questions['question'] += questions
         # hack: adding labels to avoid problems with processing down the road
