@@ -27,9 +27,9 @@ top_k_args = {
 top_p_args = {
     "max_length": 512,
     "do_sample": True,
-    "top_k": 50,
-    'top_p': 0.95,
-    "num_return_sequences": 2
+    "top_k": 25,
+    'top_p': 0.85,
+    "num_return_sequences": 5
 }
 
 
