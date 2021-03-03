@@ -20,7 +20,15 @@ beam_search_args = {
 top_k_args = {
     "max_length": 512,
     "do_sample": True,
-    "top_k": 40,
+    "top_k": 50,
+    "num_return_sequences": 2
+}
+
+top_p_args = {
+    "max_length": 512,
+    "do_sample": True,
+    "top_k": 50,
+    'top_p': 0.95,
     "num_return_sequences": 2
 }
 
@@ -38,7 +46,7 @@ class E2EQGPipeline:
         self.device = compute.get_device()
         self.model.to(self.device)
 
-        self.default_generate_kwargs = top_k_args
+        self.default_generate_kwargs = top_p_args
 
     def __call__(self, context: str, **generate_kwargs):
         inputs = self._prepare_inputs_for_e2e_qg(context)
