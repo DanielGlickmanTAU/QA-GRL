@@ -96,7 +96,7 @@ class Test(TestCase):
                         if p1 > p2:
                             results.append((t, q1, q2, p1 - p2))
                         else:
-                            results.append((t, q2, q1, p1 - p2))
+                            results.append((t, q2, q1, p2 - p1))
 
         results.sort(key=lambda x: x[-1])
         results = ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
