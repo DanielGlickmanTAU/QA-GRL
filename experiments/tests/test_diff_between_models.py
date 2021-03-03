@@ -54,6 +54,14 @@ class Test(TestCase):
         confidence_model, confidence_tokenizer = get_last_confidence_model(error_prediction_model_params)
         error_prediction_task_name = 'error-prediction'
 
+        dataset = datasets_loading.get_boolq_dataset(confidence_tokenizer)
+        assert len(dataset['validation']) < 3000
+
+        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+
+        mapped_error_ds = dataset['validation'].map(mapper.add_is_correct_and_probs, batched=True, batch_size=50,
+                                                    writer_batch_size=50)
+
         # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
         # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
         # for each example, put another of example of the generated one and tag from where it is a
