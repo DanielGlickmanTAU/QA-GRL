@@ -64,7 +64,7 @@ class Test(TestCase):
 
         gen_model, gen_tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)
-        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=20)
+        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=100)
 
         generated_questions = generated_questions.map(
             lambda examples: datasets_loading.tokenize_boolq(examples, confidence_tokenizer), batched=True)
@@ -98,7 +98,8 @@ class Test(TestCase):
                         else:
                             results.append((t, q2, q1, p2 - p1))
 
-        results.sort(key=lambda x: x[-1])
+        results.sort(key=lambda x: -x[-1])
+        results = results[:200]
         results = ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
                    for x in results]
         print('\n\n'.join(results))
