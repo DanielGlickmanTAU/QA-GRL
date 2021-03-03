@@ -35,11 +35,7 @@ top_p_args = {
 
 class QuestionGenerator:
     def __init__(
-            self,
-            model: PreTrainedModel,
-            tokenizer: PreTrainedTokenizer,
-    ):
-
+            self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer):
         self.model = model
         self.tokenizer = tokenizer
 
@@ -71,14 +67,7 @@ class QuestionGenerator:
         inputs = self._tokenize([source_text], padding=False)
         return inputs
 
-    def _tokenize(
-            self,
-            inputs,
-            padding=True,
-            truncation=True,
-            add_special_tokens=True,
-            max_length=512
-    ):
+    def _tokenize(self, inputs, padding=True, truncation=True, add_special_tokens=True, max_length=512):
         inputs = self.tokenizer.batch_encode_plus(
             inputs,
             max_length=max_length,
