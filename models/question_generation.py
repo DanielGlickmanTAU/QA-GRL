@@ -91,7 +91,7 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
         generated_questions['passage'] += [clean_text] * len(questions)
         generated_questions['question'] += questions
         #hack: adding labels to avoid problems with processing down the road
-        generated_questions['label'] = [9] * len(questions)
+        generated_questions['label'] += [9] * len(questions)
 
     return datasets.Dataset.from_dict(generated_questions)
 
