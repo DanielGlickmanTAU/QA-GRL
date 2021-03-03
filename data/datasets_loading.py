@@ -130,8 +130,12 @@ def get_boolq_dataset(tokenizer):
                 'label': labels}
 
     print(os.getcwd())
-    dataset = load_dataset("boolq", cache_dir=compute.get_cache_dir())
-    return preprocess(dataset, tokenizer, preprocess_function=boolq_preprocessor)
+    boolq = load_dataset("boolq", cache_dir=compute.get_cache_dir())
+
+    original_texts = set(boolq['train']['passage'])
+    boolq['validation'] = boolq['validation'].filter(lambda example: example['passage'] not in original_texts)
+
+    return preprocess(boolq, tokenizer, preprocess_function=boolq_preprocessor)
 
 
 def get_boolq_generation_dataset(tokenizer):
