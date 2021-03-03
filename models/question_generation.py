@@ -33,7 +33,7 @@ top_p_args = {
 }
 
 
-class E2EQGPipeline:
+class QuestionGenerator:
     def __init__(
             self,
             model: PreTrainedModel,
@@ -60,8 +60,7 @@ class E2EQGPipeline:
             **generate_kwargs
         )
 
-        predictions = [self.tokenizer.decode(out, skip_special_tokens=True) for out in outs]
-        return predictions
+        return [self.tokenizer.decode(out, skip_special_tokens=True) for out in outs]
 
     def _prepare_inputs_for_e2e_qg(self, context):
         source_text = context
@@ -97,7 +96,7 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
     returns dicts in the form of boolq qa dataset: passage:list[str], question:list[str]
     texts may appear multiple times in passage, with different question in the questions list"""
 
-    pipe = E2EQGPipeline(model, tokenizer)
+    pipe = QuestionGenerator(model, tokenizer)
     generated_questions = {'passage': [], 'question': [], 'answer': []}
 
     for i in range(num_texts):

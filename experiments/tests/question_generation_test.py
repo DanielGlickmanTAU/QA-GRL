@@ -1,7 +1,7 @@
 from experiments import experiment
 from data.TaskParams import TaskParams
 from models import question_generation
-from models.question_generation import E2EQGPipeline
+from models.question_generation import QuestionGenerator
 from utils import compute
 
 torch = compute.get_torch()
@@ -44,7 +44,7 @@ class Test(TestCase):
         # model, tokenizer = model_loading.get_model_and_tokenizer_for_qa_generation(model_params)
 
         boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
-        pipe = E2EQGPipeline(model, tokenizer)
+        pipe = QuestionGenerator(model, tokenizer)
         for i in range(20):
             t = boolq['validation'][i]['source_text']
             print(t)
