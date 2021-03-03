@@ -14,7 +14,7 @@ from data import question_generation_dataset, data_collator, datasets_loading
 
 from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
-import utils.model_loading as model_loading
+import models.model_loading as model_loading
 from train import training
 
 model_params = hyperparams.model_params

@@ -2,8 +2,8 @@ from config.ExperimentVariables import hyperparams
 from data.DatasetPostMapper import DataSetPostMapper
 from data.TaskParams import TaskParams
 from train.training import get_trainer
-from utils import model_loading
-from utils.model_loading import get_last_model_and_tokenizer, get_save_path
+from models import model_loading
+from models.model_loading import get_last_model_and_tokenizer, get_save_path
 
 task_name = 'error-prediction'
 

@@ -4,7 +4,7 @@ from datasets import DatasetDict
 
 from data.TaskParams import TaskParams
 from data.datasets_loading import get_race_dataset, get_sst_dataset, get_swag_dataset, get_boolq_dataset
-from utils.model_loading import get_model_and_tokenizer_for_classification
+from models.model_loading import get_model_and_tokenizer_for_classification
 import datasets
 
 

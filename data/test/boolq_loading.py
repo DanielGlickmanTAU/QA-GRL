@@ -3,7 +3,7 @@ from unittest import TestCase
 from config import ExperimentVariables
 from data.boolq_utils import get_t_q_a
 from data.datasets_loading import get_boolq_dataset
-from utils.model_loading import get_model_and_tokenizer_for_classification
+from models.model_loading import get_model_and_tokenizer_for_classification
 
 
 class Test(TestCase):

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from utils import model_loading
+from models import model_loading
 
 
 class Test(TestCase):

@@ -1,6 +1,6 @@
 from experiments import experiment
 from config.ExperimentVariables import hyperparams
-from utils.model_loading import get_save_path
+from models.model_loading import get_save_path
 
 model_params = hyperparams.model_params
 model_name = model_params.model_name

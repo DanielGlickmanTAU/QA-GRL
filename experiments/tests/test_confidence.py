@@ -5,7 +5,8 @@ from datasets import load_from_disk
 
 from models.confidence import get_last_confidence_model
 from models.question_generation import generate_boolq_dataset
-from utils import compute, model_loading
+from utils import compute
+from models import model_loading
 
 torch = compute.get_torch()
 from data.DatasetPostMapper import DataSetPostMapper
@@ -13,7 +14,7 @@ from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
 from data import datasets_loading
 from data.TaskParams import TaskParams
-from utils.model_loading import get_last_model_and_tokenizer, get_save_path
+from models.model_loading import get_last_model_and_tokenizer, get_save_path
 from data import boolq_utils
 
 model_params = hyperparams.model_params
