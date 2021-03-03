@@ -81,7 +81,7 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
     texts may appear multiple times in passage, with different question in the questions list"""
 
     pipe = E2EQGPipeline(model, tokenizer)
-    generated_questions = {'passage': [], 'question': []}
+    generated_questions = {'passage': [], 'question': [], 'label': []}
 
     for i in range(num_texts):
         text = boolq_generation_dataset[i]['source_text']
@@ -90,6 +90,8 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
         questions = pipe(text)
         generated_questions['passage'] += [clean_text] * len(questions)
         generated_questions['question'] += questions
+        #hack: adding labels to avoid problems with processing down the road
+        generated_questions['label'] = [9] * len(questions)
 
     return datasets.Dataset.from_dict(generated_questions)
 
