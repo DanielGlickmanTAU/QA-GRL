@@ -37,18 +37,14 @@ class Test(TestCase):
         trainer.train()
 
     def test_run_trained_question_generation_model(self):
-        model_params = self.model_params.clone()
-        # model_params.model_tokenizer = model_params.model_name
-
         model, tokenizer = model_loading.get_last_model_and_tokenizer(self.task_name, self.model_params)
-        # model, tokenizer = model_loading.get_model_and_tokenizer_for_qa_generation(model_params)
-
         boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
-        pipe = QuestionGenerator(model, tokenizer)
+        generator = QuestionGenerator(model, tokenizer)
+
         for i in range(20):
             t = boolq['validation'][i]['source_text']
             print(t)
-            print(pipe(t))
+            print(generator(t))
             print(boolq['validation'][i]['target_text'])
             print('\n')
 
