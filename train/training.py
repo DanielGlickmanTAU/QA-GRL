@@ -60,7 +60,8 @@ class GenTrainer(Trainer):
 def get_generator_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best_model_at_end,
                           disable_tqdm=False, data_collator=None):
     args = get_training_args(disable_tqdm, load_best_model_at_end, None, model_params, save_dir)
-    trainer = GenTrainer(
+
+    return GenTrainer(
         model_and_dataset.model,
         args,
         train_dataset=model_and_dataset.dataset["train"],
@@ -68,12 +69,10 @@ def get_generator_trainer(save_dir, model_params, model_and_dataset: TaskParams,
         tokenizer=model_and_dataset.tokenizer,
         data_collator=data_collator
     )
-    return trainer
 
 
 def get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_params, save_dir):
-    args = TrainingArguments(
-
+    return TrainingArguments(
         save_dir,
         evaluation_strategy="epoch",
         learning_rate=model_params.learning_rate,
@@ -87,4 +86,3 @@ def get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_p
         disable_tqdm=disable_tqdm,
         prediction_loss_only=True
     )
-    return args
