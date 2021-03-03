@@ -49,6 +49,16 @@ class Test(TestCase):
         self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
         self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
 
+    def test_simple_confidence_model_example(self):
+        error_prediction_model_params = ExperimentVariables._roberta_squad
+        confidence_model, confidence_tokenizer = get_last_confidence_model(error_prediction_model_params)
+        error_prediction_task_name = 'error-prediction'
+
+        # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
+        # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
+        # for each example, put another of example of the generated one and tag from where it is a
+        # original_boolq.map(lambda examples: gen_model.generate(example['txt'][question]))
+
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
                                     error_prediction_task_name, mapped_qa_ds):
         error_save_path = '%s/processed_dataset' % get_save_path(error_prediction_task_name,
@@ -58,7 +68,7 @@ class Test(TestCase):
 
         else:
             raise Exception()
-        # return predict_confidence_on_boolq(confidence_model, confidence_tokenizer, error_save_path, mapped_qa_ds)
+        # return predict_confidence_on_boolq(confidence_model, confidence_tokenizer, mapped_qa_ds, error_save_path)
 
     def print_by_probability_ratio(self, mapped_ds, tokenizer, k=100):
         sorted_ds = mapped_ds.sort('prob')
