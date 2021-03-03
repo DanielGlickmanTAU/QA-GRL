@@ -64,10 +64,7 @@ class Test(TestCase):
 
         gen_model, gen_tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)
-        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=20)
-        print('yo', generated_questions['question'][0])
-        print('yo', generated_questions['passage'][0])
-        print(generated_questions['answer'])
+        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=200)
 
         generated_questions = generated_questions.map(
             lambda examples: datasets_loading.tokenize_boolq(examples, confidence_tokenizer), batched=True)
@@ -77,7 +74,33 @@ class Test(TestCase):
         generated_questions = generated_questions.map(mapper.add_probs, batched=True, batch_size=50,
                                                       writer_batch_size=50)
 
-        self.print_by_probability_ratio(generated_questions, confidence_tokenizer, k=20)
+        l = [(boolq_utils.get_t_q_a(confidence_tokenizer, example), example['prob']) for example in
+             [generated_questions[i] for i in range(len(generated_questions))]]
+
+        d = defaultdict(list)
+        probs = {}
+        for (t, q, a), prob in l:
+            d[t].append(q)
+            probs[q] = prob
+
+        results = []
+        for t in d:
+            questions = d[t]
+            for i in range(len(questions)):
+                for j in range(1, len(questions)):
+                    q1 = questions[i]
+                    p1 = probs[q1]
+                    q2 = questions[j]
+                    p2 = probs[q2]
+                    if not q1 == q2:
+                        results.append((t, q1, q2, p1 - p2))
+
+        results.sort(key=lambda x: x[-1])
+        results = ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
+                   for x in results]
+        print('\n\n'.join(results))
+        with open('results', 'w+') as f:
+            f.write('\n\n'.join(results))
 
         # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
         # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
