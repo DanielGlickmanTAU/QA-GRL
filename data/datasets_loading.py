@@ -117,22 +117,23 @@ def get_sst_dataset(tokenizer):
     return preprocess(dataset, tokenizer, preprocess_function=preprocess_function)
 
 
+def tokenize_boolq(examples, tokenizer):
+    tokenized_examples = tokenizer(examples['passage'], examples['question'], truncation=True,
+                                   padding=True)
+    # Un-flatten
+    tags = examples['answer']
+    if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
+    labels = [1 if x else 0 for x in tags]
+
+    return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
+            'label': labels}
+
+
 def get_boolq_dataset(tokenizer):
-    def boolq_preprocessor(examples, tokenizer):
-        tokenized_examples = tokenizer(examples['passage'], examples['question'], truncation=True,
-                                       padding=True)
-        # Un-flatten
-        tags = examples['answer']
-        if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
-        labels = [1 if x else 0 for x in tags]
-
-        return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
-                'label': labels}
-
     print(os.getcwd())
     boolq = load_dataset("boolq", cache_dir=compute.get_cache_dir())
     boolq = _remove_duplicate_questions(boolq)
-    return preprocess(boolq, tokenizer, preprocess_function=boolq_preprocessor)
+    return preprocess(boolq, tokenizer, preprocess_function=tokenize_boolq)
 
 
 def get_boolq_generation_dataset(tokenizer):

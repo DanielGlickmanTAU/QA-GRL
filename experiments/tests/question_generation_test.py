@@ -1,5 +1,6 @@
 from experiments import experiment
 from data.TaskParams import TaskParams
+from models import question_generation
 from models.question_generation import E2EQGPipeline
 from utils import compute
 
@@ -50,3 +51,7 @@ class Test(TestCase):
             print(pipe(t))
             print(boolq['validation'][i]['target_text'])
             print('\n')
+
+    def test_generating_questions(self):
+        qs = question_generation.generate_boolq_dataset(num_questions=10)
+        print(qs)

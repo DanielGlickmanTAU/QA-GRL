@@ -1,6 +1,12 @@
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
-from utils import compute
+from config import ExperimentVariables
+from data import datasets_loading
+
+from utils import compute, model_loading
+import datasets
+
+_generate_question_prefix = 'generate questions:'
 
 
 class E2EQGPipeline:
@@ -42,7 +48,7 @@ class E2EQGPipeline:
 
     def _prepare_inputs_for_e2e_qg(self, context):
         source_text = context
-        if not context.startswith("generate questions:"):
+        if not context.startswith(_generate_question_prefix):
             source_text = f"generate questions: {context}"
         source_text = source_text + " </s>"
 
@@ -67,3 +73,39 @@ class E2EQGPipeline:
             return_tensors="pt"
         )
         return inputs
+
+
+def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
+    """ input is boolq split(probably validation only)
+    returns dicts in the form of boolq qa dataset: passage:list[str], question:list[str]
+    texts may appear multiple times in passage, with different question in the questions list"""
+
+    pipe = E2EQGPipeline(model, tokenizer)
+    generated_questions = {'passage': [], 'question': []}
+
+    for i in range(num_texts):
+        text = boolq_generation_dataset[i]['source_text']
+        clean_text = text[len(_generate_question_prefix) + 1:]
+
+        questions = pipe(text)
+        generated_questions['passage'] += [clean_text] * len(questions)
+        generated_questions['question'] += questions
+
+    return datasets.Dataset.from_dict(generated_questions)
+
+
+def generate_boolq_dataset(split='validation', num_questions=0):
+    generation_task_name = 'question-generation'
+
+    generation_model_params = ExperimentVariables._t5_qg
+
+    model, tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name, generation_model_params)
+    boolq_generation = datasets_loading.get_boolq_generation_dataset(tokenizer)
+
+    split_ = boolq_generation[split]
+    num_texts = num_questions if num_questions else len(split_)
+    generated_questions = generate_questions(model, tokenizer, split_, num_texts)
+    return generated_questions.map(
+        lambda examples: tokenizer(examples['passage'], examples['question'], truncation=True,
+                                   padding=True)
+    )
