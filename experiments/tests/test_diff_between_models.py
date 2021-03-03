@@ -64,7 +64,7 @@ class Test(TestCase):
 
         gen_model, gen_tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)
-        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=200)
+        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=20)
 
         generated_questions = generated_questions.map(
             lambda examples: datasets_loading.tokenize_boolq(examples, confidence_tokenizer), batched=True)
@@ -93,7 +93,10 @@ class Test(TestCase):
                     q2 = questions[j]
                     p2 = probs[q2]
                     if not q1 == q2:
-                        results.append((t, q1, q2, p1 - p2))
+                        if p1 > p2:
+                            results.append((t, q1, q2, p1 - p2))
+                        else:
+                            results.append((t, q2, q1, p1 - p2))
 
         results.sort(key=lambda x: x[-1])
         results = ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
