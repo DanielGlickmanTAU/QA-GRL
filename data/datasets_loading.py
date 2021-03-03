@@ -132,8 +132,7 @@ def get_boolq_dataset(tokenizer):
     print(os.getcwd())
     boolq = load_dataset("boolq", cache_dir=compute.get_cache_dir())
 
-    original_texts = set(boolq['train']['passage'])
-    boolq['validation'] = boolq['validation'].filter(lambda example: example['passage'] not in original_texts)
+    boolq = _remove_duplicate_questions(boolq)
 
     return preprocess(boolq, tokenizer, preprocess_function=boolq_preprocessor)
 
@@ -150,4 +149,10 @@ def get_boolq_generation_dataset(tokenizer):
     original_texts = set(boolq['train']['source_text'])
     boolq['validation'] = boolq['validation'].filter(lambda example: example['source_text'] not in original_texts)
 
+    return boolq
+
+
+def _remove_duplicate_questions(boolq):
+    original_texts = set(boolq['train']['passage'])
+    boolq['validation'] = boolq['validation'].filter(lambda example: example['passage'] not in original_texts)
     return boolq
