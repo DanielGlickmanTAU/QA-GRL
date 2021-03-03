@@ -29,7 +29,7 @@ def get_top_examples(k, ds, tokenizer, reverse=False):
 
 
 class Test(TestCase):
-    def test_diff_between_models(self):
+    def test_confidence_ranking(self):
         task = 'boolq-classification'
         model_params = ExperimentVariables._roberta_squad
 
@@ -50,7 +50,7 @@ class Test(TestCase):
         self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
         self.print_by_probability_ratio(mapped_error_ds['validation'], confidence_tokenizer)
 
-    def test_simple_confidence_model_example(self):
+    def test_generate_and_rank_confidence(self):
         error_prediction_model_params = ExperimentVariables._roberta_squad
         confidence_model, confidence_tokenizer = get_last_confidence_model(error_prediction_model_params)
         mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
