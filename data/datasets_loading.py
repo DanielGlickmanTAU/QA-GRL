@@ -122,7 +122,7 @@ def tokenize_boolq(examples, tokenizer):
                                    padding=True)
     # Un-flatten
     tags = examples['answer']
-    if len(examples) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
+    if len(tags) == 1: tags = [tags]  # make it list so it is iterable..avoids annoying case for single element
     labels = [1 if x else 0 for x in tags]
 
     return {'input_ids': tokenized_examples['input_ids'], 'attention_mask': tokenized_examples['attention_mask'],
