@@ -1,10 +1,8 @@
+import datasets
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
-from config import ExperimentVariables
 from data import datasets_loading
-
-from utils import compute, model_loading
-import datasets
+from utils import compute
 
 _generate_question_prefix = 'generate questions:'
 
