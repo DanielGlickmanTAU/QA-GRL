@@ -77,7 +77,7 @@ class Test(TestCase):
         generated_questions = generated_questions.map(mapper.add_probs, batched=True, batch_size=50,
                                                       writer_batch_size=50)
 
-        self.print_by_probability_ratio(generated_questions, confidence_tokenizer, k=2)
+        self.print_by_probability_ratio(generated_questions, confidence_tokenizer, k=20)
 
         # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
         # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
