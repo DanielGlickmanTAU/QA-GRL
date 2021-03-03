@@ -12,7 +12,7 @@ def train_confidence_model(mapped_qa_ds, model_params, experiment=None):
     confidence_model, confidence_tokenizer = model_loading.get_model_and_tokenizer_for_classification(
         model_params.model_name, model_params.model_tokenizer)
     _train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name,
-                           experiment)
+                            experiment)
 
     return get_last_confidence_model(model_params)
 
