@@ -1,0 +1,999 @@
+text:Las Vegas is a city in and the county seat of San Miguel County, New Mexico, United States. Once two separate municipalities (one a city and the other a town), both were named Las Vegas--West Las Vegas (``Old Town'') and East Las Vegas (``New Town'')--are separated by the Gallinas River and retain distinct characters and separate, rival school districts.
+question1:is las vegas a city in new mexico
+question2:is las vegas the same as los angeles
+diff:0.389427125453949
+
+text:The 2018 FIFA World Cup was the 21st FIFA World Cup, an international football tournament contested by the men's national teams of the member associations of FIFA once every four years. It took place in Russia from 14 June to 15 July 2018. It was the first World Cup to be held in Eastern Europe, and the 11th time that it had been held in Europe. At an estimated cost of over $14.2 billion, it was the most expensive World Cup. It was also the first World Cup to use the video assistant referee (VAR) system.
+question1:is there ever a world cup in europe
+question2:is the world cup the same as the world cup
+diff:0.36688899993896484
+
+text:The film was shot in black and white in the styles and motifs of German Expressionism (bizarre shadows, stylized dialogue, distorted perspectives, surrealistic sets, odd camera angles) to create a simplified and disturbing mood that reflects the sinister character of Powell, the nightmarish fears of the children, and the sweetness of their savior Rachel. Due to the film's visual style and themes, it is also often categorized as a film noir.
+question1:is german expressionism a movie noir
+question2:is german expressionism the same as german expressionism
+diff:0.3531046509742737
+
+text:Microsoft is leading the development of the open-source reference C# compiler and set of tools, previously codenamed ``Roslyn''. The compiler, which is entirely written in managed code (C#), has been opened up and functionality surfaced as APIs. It is thus enabling developers to create refactoring and diagnostics tools. While other implementations of C# exist, Visual C# is by far the one most commonly used. The Unity game engine uses C# as its primary scripting language.
+question1:does microsoft have a c# compiler
+question2:is c# the same as c#
+diff:0.34257811307907104
+
+text:Sale or serving of alcoholic beverages from 3 a.m. Christmas Day until 7 a.m. December 26 was banned until HB 1542 was passed in 2015.
+question1:can you buy alcoholic beverages from 3 a.m. on christmas day
+question2:is christmas day the same as christmas day
+diff:0.33881741762161255
+
+text:The fighting words doctrine, in United States constitutional law, is a limitation to freedom of speech as protected by the First Amendment to the United States Constitution.
+question1:is freedom of speech protected by the first amendment
+question2:is freedom of speech the same as freedom of speech
+diff:0.33878785371780396
+
+text:The First Amendment prohibits the making of any law respecting an establishment of religion, impeding the free exercise of religion, abridging the freedom of speech, infringing on the freedom of the press, interfering with the right to peaceably assemble or prohibiting the petitioning for a governmental redress of grievances. Initially, the First Amendment applied only to laws enacted by Congress, and many of its provisions were interpreted more narrowly than they are today.
+question1:does the first amendment apply to the freedom of speech
+question2:is the first amendment the same as the first amendment
+diff:0.33678531646728516
+
+text:White Castle is an American regional hamburger restaurant chain in the Midwestern and Mid-Atlantic regions of the United States. It has been generally credited as the country's first fast-food chain. It is known for its small, square hamburgers. Sometimes referred to as ``sliders'', the burgers were initially priced at five cents until 1929 and remained at ten cents until 1949. In the 1940s, White Castle periodically ran promotional ads in local newspapers which contained coupons offering five burgers for ten cents, takeout only.
+question1:is white castle the first fast food chain
+question2:is white castle the same as white castle
+diff:0.33514827489852905
+
+text:The Better Business Bureau (BBB), founded in 1912, is a private, nonprofit organization whose self-described mission is to focus on advancing marketplace trust, consisting of 106 independently incorporated local BBB organizations in the United States and Canada, coordinated under the Council of Better Business Bureaus (CBBB) in Arlington, Virginia.
+question1:is there a better business bureau in the us
+question2:is the better business bureau the same as the bbb
+diff:0.3282240629196167
+
+text:By the spring of 1949, the airlift was clearly succeeding, and by April it was delivering more cargo than had previously been transported into the city by rail. On 12 May 1949, the USSR lifted the blockade of West Berlin. The Berlin Blockade served to highlight the competing ideological and economic visions for postwar Europe.
+question1:did the usSR lift the blockade of westberlin
+question2:is west berlin the same as west berlin
+diff:0.3180021643638611
+
+text:The new locks opened for commercial traffic on 26 June 2016, and the first ship to cross the canal using the third set of locks was a modern New Panamax vessel, the Chinese-owned container ship Cosco Shipping Panama. The original locks, now over 100 years old, allow engineers greater access for maintenance, and are projected to continue operating indefinitely.
+question1:is there a new panax ship on the canal
+question2:is new panax the same as new panax
+diff:0.3164421319961548
+
+text:The service itself is integrated into iOS and macOS, while enabled devices can be tracked using either an iOS app or the iCloud website. On iOS 8 and older, the tracking app can be downloaded from the App Store free of charge. Starting in iOS 9, the app was bundled with the operating system.
+question1:is there a tracking app on icloud
+question2:is icloud the same as icloud
+diff:0.31611764430999756
+
+text:Historically, reusable quartz cuvettes were required for measurements in the ultraviolet range, because glass and most plastics absorb ultraviolet light, creating interference. Today there are disposable plastic cuvettes made of specialized plastics that are transparent to ultraviolet light. Glass, plastic and quartz cuvettes are all suitable for measurements made at longer wavelengths, such as in the visible light range.
+question1:can you use quartz cuvettes in ultraviolet light
+question2:are quartz cuvettes the same as glass
+diff:0.31554585695266724
+
+text:The Atlantic City Rail Terminal is Atlantic City, New Jersey's train station. It is the easternmost stop on the Atlantic City Line to and from Philadelphia. The station was also served by the Atlantic City Express Service (ACES) from 2009 until it was formally discontinued on March 9, 2012. The Atlantic City terminal is a 5-track, 3-platform terminal located inside of the Atlantic City Convention Center. The Atlantic City Line is a commuter train and runs daily all day.
+question1:is atlanta city a train station
+question2:is the atlanta city rail terminal the same as the atlantic city line
+diff:0.3118772506713867
+
+text:Before 1973, the NCAA's smaller schools were grouped together in the College Division. In 1973, the College Division split in two when the NCAA began using numeric designations for its competitions. The College Division members who wanted to offer athletic scholarships or compete against those who did became Division II, while those who chose not to offer athletic scholarships became Division III.
+question1:is there a division in the college division
+question2:is the college division the same as the college division
+diff:0.31179654598236084
+
+text:It is occasionally used to freeze and remove warts. However, liquid nitrogen performs better in this role, since it is colder so requires less time to act, and less pressure. Dry ice has fewer problems with storage, since it can be generated from compressed carbon dioxide gas as needed.
+question1:can dry ice be used to freeze and remove warts
+question2:is liquid nitrogen the same as liquid nitrogen
+diff:0.3102216124534607
+
+text:A floating island is a mass of floating aquatic plants, mud, and peat ranging in thickness from several centimetres to a few metres. Floating islands are a common natural phenomenon that are found in many parts of the world. They exist less commonly as a man-made phenomenon. Floating islands are generally found on marshlands, lakes, and similar wetland locations, and can be many hectares in size.
+question1:is there a floating island in the world
+question2:is a floating island the same as a man
+diff:0.30973267555236816
+
+text:As of 2016, New York Life Insurance Company was the country's third-largest life insurance company. A mutual insurance company, New York Life is owned by its policyholders and has no outside shareholders. As a mutual, New York Life distributes a portion of its earnings to eligible policyholders as annual dividends. As of 2016, the company has paid a dividend every year since 1854. Through Seguros Monterrey New York Life, the company offers insurance in Mexico.
+question1:is new york life a mutual insurance company
+question2:is new york life the same as new york life
+diff:0.3091486096382141
+
+text:In an action for specific performance of a contract to convey land, the agreement must be in writing to satisfy the statute of frauds. The statute is satisfied if the contract to convey is evidenced by a writing or writings containing the essential terms of a purchase and sale agreement and signed by the party against whom the contract is to be enforced. If there is no written agreement, a court of equity can specifically enforce an oral agreement to convey only if the part performance doctrine is satisfied. In most jurisdictions, part performance is proven when the purchaser pays the purchase price, has possession of the land and makes improvements on the land, all with the permission of the seller. No jurisdiction is satisfied by payment of the purchase price alone.
+question1:can a court of equity enforce an oral agreement to convey a land
+question2:is part performance the same as part performance
+diff:0.3090256452560425
+
+text:When the ocean floor has a gradual slope, the wave will steepen until the crest becomes unstable, resulting in turbulent whitewater spilling down the face of the wave. This continues as the wave approaches the shore, and the wave's energy is slowly dissipated in the whitewater. Because of this, spilling waves break for a longer time than other waves, and create a relatively gentle wave. Onshore wind conditions make spillers more likely.
+question1:does the ocean floor have a slope
+question2:is the ocean floor the same as the ocean floor
+diff:0.30853384733200073
+
+text:The Civil Rights Act of 1964 (Pub.L. 88--352, 78 Stat. 241, enacted July 2, 1964) is a landmark civil rights and US labor law in the United States that outlaws discrimination based on race, color, religion, sex, or national origin. It prohibits unequal application of voter registration requirements, racial segregation in schools, employment, and public accommodations.
+question1:is there a civil rights act in the us
+question2:is civil rights act the same as civil rights act
+diff:0.3048044443130493
+
+text:Six Flags New Orleans (SFNO) is a 140-acre, abandoned theme park in New Orleans that has been closed since Hurricane Katrina struck the state in August 2005. It is owned by the Industrial Development Board (IDB) of New Orleans. Six Flags had leased the park from 2002 until 2009, when the lease was terminated during its bankruptcy proceedings. The former park is located in New Orleans East, off Interstate 10.
+question1:is six flags new orleans a theme park
+question2:is six flags new orleans the same as six flags
+diff:0.30423110723495483
+
+text:In some areas, lemonade stands are usually in technical violation of several laws, including operation without a business license, lack of adherence to health codes, and sometimes child labor laws.
+question1:do lemonade stands have a business license
+question2:is lemonade the same as lemonade
+diff:0.29963386058807373
+
+text:Black garlic can be eaten alone, on bread, or used in soups, sauces, crushed into a mayonnaise or simply tossed into a vegetable dish. A vinaigrette can be made with black garlic, sherry vinegar, soy, a neutral oil, and Dijon mustard. Its softness increases with water content.
+question1:can you make a black garlic vinaigrette
+question2:is black garlic the same as black garlic
+diff:0.2972107529640198
+
+text:Coldwater Creek is an American catalog and online retailer of women's apparel, accessories and home décor with one brick-and-mortar store as of spring 2018.
+question1:is coldwater creek a brick and mortar store
+question2:is coldwater creek the same as coldwater creek
+diff:0.2970495820045471
+
+text:The story mode loosely covers the events of the anime up to episode 135. Players are able to explore the Hidden Leaf Village between missions, which acts as a central hub for the story mode, and access more missions.
+question1:is hidden leaf village a part of the story mode
+question2:is hidden leaf village the same as hidden leaf village
+diff:0.29551994800567627
+
+text:Cell shape is generally characteristic of a given bacterial species, but can vary depending on growth conditions. Some bacteria have complex life cycles involving the production of stalks and appendages (e.g. Caulobacter) and some produce elaborate structures bearing reproductive spores (e.g. Myxococcus, Streptomyces). Bacteria generally form distinctive cell morphologies when examined by light microscopy and distinct colony morphologies when grown on Petri plates.
+question1:can a bacteria have a life cycle
+question2:is cell shape the same as cell shape
+diff:0.2943015694618225
+
+text:Spring fever is any of a number of mood, physical, or behavioral changes, which may be experienced coinciding with the arrival of spring, particularly restlessness, laziness, and even amorousness.
+question1:is there a chance of spring fever
+question2:is spring fever the same as spring fever
+diff:0.29381757974624634
+
+text:Need for Speed: Carbon is a 2006 racing video game published by Electronic Arts. It is the tenth installment in the Need for Speed series and a sequel to Need for Speed: Most Wanted. It was followed by Need for Speed: Prostreet in the following year...
+question1:is there a sequel to need for speed
+question2:is need for speed the same as need for speed
+diff:0.2935972213745117
+
+text:Guitar Hero Live is a 2015 music video game that's developed by FreeStyleGames and published by Activision. It is the first title in the Guitar Hero series since it went on hiatus after 2011, and the first game in the series available for 8th generation video game consoles (PlayStation 4, Wii U, and Xbox One). The game was released worldwide on 20 October 2015 for these systems as well as the PlayStation 3, Xbox 360, and iOS devices including the Apple TV.
+question1:is guitar ohio live a video game
+question2:is guitar ohio live the same as guitar ooh
+diff:0.2934419512748718
+
+text:Garnet is a fictional character from the animated series Steven Universe, created by Rebecca Sugar. She is a ``gem'', a fictional alien being that exists as a magical gemstone projecting a holographic body. Garnet is a ``fusion gem'' -- i.e., two gemstones combining personalities and appearances as one shared holographic body -- formed by two Gems named Ruby and Sapphire; they chose to remain permanently fused out of love for each other.
+question1:is garnet a gem from Steven universe
+question2:is garnet the same as a gem
+diff:0.29294276237487793
+
+text:Rose quartz is a type of quartz which exhibits a pale pink to rose red hue. The color is usually considered as due to trace amounts of titanium, iron, or manganese, in the material. Some rose quartz contains microscopic rutile needles which produces an asterism in transmitted light. Recent X-ray diffraction studies suggest that the color is due to thin microscopic fibers of possibly dumortierite within the quartz.
+question1:is rose quartz a color of pink
+question2:is rose quartz the same as rose quartz
+diff:0.2912524938583374
+
+text:The program was created by Sarah Lambert and was first broadcast on the Nine Network on 17 February 2014. The program is based on the real life forced adoption in Australia for which former Prime Minister Julia Gillard offered a national apology to those affected in 2013. Love Child was renewed for a second series on 2 March 2014. The series was renewed for a third series on 23 February 2015. The series was renewed for a fourth series on 8 November 2016 at Nine's upfronts.
+question1:is love child based on a true story
+question2:is love child the same as love child
+diff:0.2907848358154297
+
+text:A nation, in the sense of a common ethnicity, may include a diaspora or refugees who live outside the nation-state; some nations of this sense do not have a state where that ethnicity predominates. In a more general sense, a nation-state is simply a large, politically sovereign country or administrative territory. A nation-state may be contrasted with:
+question1:does a nation have a nationality
+question2:is a nation the same as a nation
+diff:0.2894900441169739
+
+text:Time in New Zealand, by law, is divided into two standard time zones. The main islands use New Zealand Standard Time (NZST), 12 hours in advance of Coordinated Universal Time (UTC) / military M (Mike), while the outlying Chatham Islands use Chatham Standard Time (CHAST), 12 hours 45 minutes in advance of UTC / military M^ (Mike-Three).
+question1:does new zealand have a standard time zone
+question2:is new zealand standard time the same as nz
+diff:0.2862727642059326
+
+text:When selecting the position for the static port, the aircraft designer's objective is to ensure the pressure in the aircraft's static pressure system is as close as possible to the atmospheric pressure at the altitude at which the aircraft is flying, across the operating range of weight and airspeed. Many authors describe the atmospheric pressure at the altitude at which the aircraft is flying as the freestream static pressure. At least one author takes a different approach in order to avoid a need for the expression freestream static pressure. Gracey has written ``The static pressure is the atmospheric pressure at the flight level of the aircraft''. Gracey then refers to the air pressure at any point close to the aircraft as the local static pressure.
+question1:is there a static pressure at the altitude of the aircraft
+question2:is static pressure the same as static pressure
+diff:0.284451961517334
+
+text:All egg products sold in the U.S that are pasteurized due to the risk of food-borne illnesses are done per U.S. Department of Agriculture rules. They also do not allow any egg products to be sold without going through the process of pasteurization. They also do not recommend eating shell eggs that are raw or undercooked due to the possibility that Salmonella bacteria may be present.
+question1:can you buy shell eggs without pasteurizing
+question2:are shell eggs the same as shell eggs
+diff:0.28338152170181274
+
+text:Soy sauce (also called soya sauce in British English) is a liquid condiment of Chinese origin, made from a fermented paste of soybeans, roasted grain, brine, and Aspergillus oryzae or Aspergillus sojae molds. Soy sauce in its current form was created about 2,200 years ago during the Western Han dynasty of ancient China, and spread throughout East and Southeast Asia where it is used in cooking and as a condiment.
+question1:is soy sauce a condiment of chinese origin
+question2:is soy sauce the same as soy sauce
+diff:0.28186118602752686
+
+text:House of Cards was ranked 84th in the British Film Institute list of the 100 Greatest British Television Programmes in 2000. In 2013, the serial and the Dobbs novel were the basis for a US adaptation set in Washington, D.C., commissioned and released by Netflix.
+question1:is house of cards based on a dobbs novel
+question2:is house of cards the same as house of cards
+diff:0.27964454889297485
+
+text:The Visa Debit card was previously known as ``Visa Delta'' solely in the UK. The Delta name began to be phased out in favour of the Visa Debit branding from September 1998.
+question1:is there a visa debit card in the uk
+question2:is a visa debit card the same as a card
+diff:0.27911561727523804
+
+text:According to a 2015 estimate by the Obama administration, the US oil industry benefited from subsidies of about $4.6 billion per year. A 2017 study by researchers at Stockholm Environment Institute published in the journal Nature Energy estimated that nearly half of U.S. oil production would be unprofitable without subsidies.
+question1:does the oil industry benefit from subsidies
+question2:is the oil industry the same as the oil industry
+diff:0.27867430448532104
+
+text:The high-definition optical disc format war was between the Blu-ray and HD DVD optical disc standards for storing high-definition video and audio; it took place between 2006 and 2008 and was won by Blu-ray Disc.
+question1:is there a high definition optical disc format war
+question2:is a high definition optical disc the same as a bbc
+diff:0.27804088592529297
+
+text:Flash memory cards, e.g., Secure Digital cards, are available in various formats and capacities, and are used by many consumer devices. However, while virtually all PCs have USB ports, allowing the use of USB flash drives, memory card readers are not commonly supplied as standard equipment (particularly with desktop computers). Although inexpensive card readers are available that read many common formats, this results in two pieces of portable equipment (card plus reader) rather than one.
+question1:can you use a card reader on a desktop computer
+question2:is a card reader the same as a card
+diff:0.2772613763809204
+
+text:The 1988 team was the inspiration for the film Cool Runnings (1993). The characters in the film are fictional, although original footage of the crash during a qualifier is used during the film. The film's depiction of the post-crash rescue was changed to show the bobsledders carrying the sled over the line on their shoulders for dramatic effect.
+question1:is cool runnings based on a true story
+question2:is cool runnings the same as cool runnings
+diff:0.2767738699913025
+
+text:The Tribute in Light is an art installation of 88 searchlights placed six blocks south of the World Trade Center on top of the Battery Parking Garage in New York City to create two vertical columns of light to represent the Twin Towers in remembrance of the September 11, 2001 attacks. Tribute in Light began initially as a temporary commemoration of the attacks in early 2002 but became an annual commemoration, currently produced on September 11th by the Municipal Art Society of New York.
+question1:is there a tribute in light in new york city
+question2:is the tribute in light the same as the twin towers
+diff:0.2766032814979553
+
+text:The definition of the molecule has evolved as knowledge of the structure of molecules has increased. Earlier definitions were less precise, defining molecules as the smallest particles of pure chemical substances that still retain their composition and chemical properties. This definition often breaks down since many substances in ordinary experience, such as rocks, salts, and metals, are composed of large crystalline networks of chemically bonded atoms or ions, but are not made of discrete molecules.
+question1:are atoms and ions part of a molecule
+question2:are atoms and ions the same thing
+diff:0.2763863801956177
+
+text:Flash blindness is a visual impairment during and following exposure to a light flash of extremely high intensity. The bright light overwhelms the eye and gradually fades, lasting anywhere from a few seconds to a few minutes.
+question1:is flash blindness a visual impairment
+question2:is flash blindness the same as flash blindness
+diff:0.27472519874572754
+
+text:Scream is an American anthology slasher television series developed by Jill Blotevogel, Dan Dworkin and Jay Beattie for MTV and is based on the slasher film series of the same name created by Kevin Williamson and Wes Craven. The series is produced by Dimension Television and MTV Production Development, and was formerly filmed in Louisiana, in locations such as Baton Rouge and New Orleans as well as Chalmette High School. Blotevogel and Jaime Paglia originally served as showrunners during the first season before being replaced by Michael Gans and Richard Register in the second season, because of creative differences.
+question1:is scream based on a slasher film
+question2:is scream the same as scream
+diff:0.2740035653114319
+
+text:Matter preceding the table of contents is generally not listed there. However, all pages except the outside cover are counted, and the table of contents is often numbered with a lowercase Roman numeral page number. Many popular word processors, such as Microsoft Word, WordPerfect, and StarWriter are capable of automatically generating a table of contents if the author of the text uses specific styles for chapter titles, headings, subheadings, etc.
+question1:is the table of contents numbered with a lowercase roman numeral
+question2:is the table of contents the same as the outside cover
+diff:0.2726858854293823
+
+text:The Magicians is a new adult fantasy novel by the American author Lev Grossman, published in 2009 by Viking Press. It tells the story of Quentin Coldwater, a young man who discovers and attends a college of magic in New York. The novel received critical acclaim, and was followed by The Magician King in 2011 and 2014's The Magician's Land. The novels have been adapted as a television series that currently airs on Syfy.
+question1:is the magicians based on a true story
+question2:is the magicians the same as the magicians
+diff:0.2724337577819824
+
+text:The Andromeda--Milky Way collision is a galactic collision predicted to occur in about 4 billion years between two galaxies in the Local Group--the Milky Way (which contains the Solar System and Earth) and the Andromeda Galaxy. The stars involved are sufficiently far apart that it is improbable that any of them will individually collide. Some stars will be ejected from the resulting galaxy, nicknamed Milkomeda or Milkdromeda.
+question1:is there a collision between the milky way and the andromeda galaxy
+question2:is the milky way the same as the andromeda galaxy
+diff:0.27143847942352295
+
+text:In more recent times Auslan has seen a significant amount of lexical borrowing from American Sign Language (ASL), especially in signs for technical terms. Some of these arose from the signed English educational philosophies of the 1970s and 80s, when a committee looking for signs with direct equivalence to English words found them in ASL and/or in invented English-based signed systems used in North America and introduced them in the classroom. ASL contains many signs initialised from an alphabet which was also derived from LSF, and Auslan users, already familiar with the related ISL alphabet, accepted many of the new signs easily.
+question1:is there a sign language in auslan
+question2:is a sign language the same as a slat
+diff:0.271084725856781
+
+text:Most EMS providers operate on the principle of informed consent; that is, patients must know exactly what it is they are refusing, and what the possible consequences might be, in order to make a proper decision. This precludes parties who are intoxicated or otherwise incapable of making an informed decision, such as the mentally incompetent. Otherwise, agencies could release someone who was not able to understand what refusing might mean to their health.
+question1:do EMS providers have informed consent
+question2:is informed consent the same as informed consent
+diff:0.2705804109573364
+
+text:A will or testament is a legal document by which a person, the testator, expresses their wishes as to how their property is to be distributed at death, and names one or more persons, the executor, to manage the estate until its final distribution. For the devolution of property not disposed of by will, see inheritance and intestacy.
+question1:is a testament a legal document
+question2:is a testament the same as a testament
+diff:0.26982051134109497
+
+text:In 1965, because of rises in bullion prices, the Mint began to strike copper-nickel clad coins instead of silver. No dollar coins had been issued in thirty years, but beginning in 1969, legislators sought to reintroduce a dollar coin into commerce. After Eisenhower died that March, there were a number of proposals to honor him with the new coin. While these bills generally commanded wide support, enactment was delayed by a dispute over whether the new coin should be in base metal or 40% silver. In 1970, a compromise was reached to strike the Eisenhower dollar in base metal for circulation, and in 40% silver as a collectible. President Richard Nixon, who had served as vice president under Eisenhower, signed legislation authorizing mintage of the new coin on December 31, 1970.
+question1:did the mint strike copper nickel clad coins
+question2:is a gold coin the same as a silver coin
+diff:0.2697174549102783
+
+text:The Apple Pencil is a digital stylus pen that works as an input device for the iPad Pro and the 2018 iPad tablet computer and was designed by Apple Inc. It was announced on September 9, 2015, alongside the iPad Pro and released in conjunction with it on November 11, 2015.
+question1:is the apple pen a stylus pen
+question2:is the apple pen the same as the apple pen
+diff:0.2688480615615845
+
+text:Administrative leave is a temporary leave from a job assignment, with pay and benefits intact. Generally, the term is reserved for employees of non-business institutions such as schools, police, and hospitals.
+question1:is administrative leave a temporary leave
+question2:is administrative leave the same as administrative leave
+diff:0.26550596952438354
+
+text:A.D. The Bible Continues (also known as A.D. Kingdom and Empire) is a television miniseries, based on the Bible, and a sequel to the 2013 miniseries, The Bible. It is produced by Roma Downey, Mark Burnett, and Richard Bedser. The limited series began airing on NBC on Easter Sunday, April 5, 2015, in twelve weekly one-hour episodes. The story takes place immediately after the events of The Bible miniseries, beginning with the crucifixion and resurrection of Jesus, and continues with the first ten chapters of the Acts of the Apostles. On July 3, 2015, NBC cancelled A.D. The Bible Continues after one season. However, producers Burnett and Downey plan future biblical productions on their OTT digital channel.
+question1:is there a sequel to the bible
+question2:is the bible the same as the bible
+diff:0.2647676467895508
+
+text:The Phantom II was exported to 11 other nations, and continues to serve in a military role in some parts of the world.
+question1:is the Phantom II a part of the world
+question2:is the Phantom II the same as the Phantom II
+diff:0.26199203729629517
+
+text:8 Seconds is a 1994 American biographical drama film directed by John G. Avildsen. Its title refers to the length of time a bull rider is required to stay on for a ride to be scored. It stars Luke Perry as American rodeo legend Lane Frost and focuses on his life and career as a bull riding champion. It also features Stephen Baldwin as Tuff Hedeman, and Red Mitchell as Cody Lambert. Notably, there is an early appearance by Renée Zellweger.
+question1:is 8 seconds based on a true story
+question2:is 8 seconds the same as 8 seconds
+diff:0.2619131803512573
+
+text:The Constitution of New York is the foremost source of state law. The legislation of the New York State Legislature is published in the official Laws of New York and codified in the Consolidated Laws of New York. State agency rules and regulations are promulgated in the New York State Register and compiled in the New York Codes, Rules and Regulations. Because New York is a common law state, every opinion, memorandum, and motion sent by the Court of Appeals and the Appellate Division of the Supreme Court is published in the New York Reports and Appellate Division Reports, respectively, and selected opinions of the trial courts and Supreme Court appellate terms are published in the Miscellaneous Reports. Each local government may also adopt local laws, and counties, cities, and towns may promulgate ordinances.
+question1:is new york a common law state
+question2:is new york state law the same as new york
+diff:0.26123207807540894
+
+text:The domain name org is a generic top-level domain (gTLD) of the Domain Name System (DNS) used in the Internet. The name is truncated from organization. It was one of the original domains established in 1985, and has been operated by the Public Interest Registry since 2003. The domain was originally intended for non-profit entities, but this restriction was not enforced and has been removed. The domain is commonly used by schools, open-source projects, and communities, but also by some for-profit entities. The number of registered domains in org has increased from fewer than one million in the 1990s, to ten million as of June 2012.
+question1:is org a top level domain
+question2:is org the same as org
+diff:0.2608802318572998
+
+text:Since 2009, Champions League winners have not kept the real trophy, which remains in UEFA's keeping at all times. A full-size replica trophy, the Champions League winners trophy, is awarded to the winning club with their name engraved on it. Winning clubs are also permitted to make replicas of their own; however, they must be clearly marked as such and can be a maximum of eighty percent the size of the actual trophy.
+question1:can you make a replica of a champions league trophy
+question2:is a full size replica trophy the same as a real trophy
+diff:0.25953972339630127
+
+text:The U.S. Coast Guard reports directly to the Secretary of Homeland Security. However, under 14 U.S.C. § 3 as amended by section 211 of the Coast Guard and Maritime Transportation Act of 2006, upon the declaration of war and when Congress so directs in the declaration, or when the President directs, the Coast Guard operates under the Department of Defense as a service in the Department of the Navy.
+question1:does the coast guard operate in the department of the navy
+question2:is the coast guard the same as the navy
+diff:0.25705772638320923
+
+text:She became well-known with the publication of her memoirs, beginning with The English Governess at the Siamese Court (1870), which chronicled her experiences in Siam (modern Thailand), as teacher to the children of the Siamese King Mongkut. Leonowens' own account has been fictionalised in Margaret Landon's 1944 best-selling novel Anna and the King of Siam, as well as films and television series based on the book, most notably Rodgers and Hammerstein's 1951 hit musical The King and I.
+question1:is the king of siam based on a book
+question2:is the king of siam the same as the queen of siam
+diff:0.25691699981689453
+
+text:The question can refer to the explanation of a specific observation, as in ``Why is the sky blue?'' but can also be open-ended, as in ``How can I design a drug to cure this particular disease?'' This stage frequently involves finding and evaluating evidence from previous experiments, personal scientific observations or assertions, as well as the work of other scientists. If the answer is already known, a different question that builds on the evidence can be posed. When applying the scientific method to research, determining a good question can be very difficult and it will affect the outcome of the investigation.
+question1:is there a cure for the sky blue
+question2:is the sky blue the same as the sky blue
+diff:0.256763219833374
+
+text:One school of scholarship based mainly in the United States considers mixed government to be the central characteristic of a republic and holds that the United States has rule by the one (the President) (monarchy), the few (the Senate, which was originally supposed to represent the States) (aristocracy) and the many (House of Representatives) (democracy). Another school of thought in the United States says the Supreme Court has taken on the role of ``The Best'' in recent decades, ensuring a continuing separation of authority by offsetting the direct election of senators and preserving the mixing of democracy, aristocracy and monarchy.
+question1:is the supreme court the best in the us
+question2:is aristocracy and monarchy the same thing
+diff:0.25622570514678955
+
+text:Hi-C is a fruit juice-flavored drink made by the Minute Maid division of The Coca-Cola Company. It was created by Niles Foster in 1946 and released in 1947. The sole original flavor was orange.
+question1:is hi-c a fruit juice drink
+question2:is hi-c the same as hi-c
+diff:0.25621217489242554
+
+text:New York City is split up into five boroughs, which are the Bronx, Brooklyn, Manhattan, Queens, and Staten Island. Each borough has the same boundaries as a county of the state. The county governments were dissolved when the city consolidated in 1898, along with all city, town, and village governments within each county. The term borough was adopted to describe a unique form of governmental administration for each of the five fundamental constituent parts of the newly consolidated city.
+question1:is new york city divided into five boroughs
+question2:is new york city the same as new york city
+diff:0.2560356855392456
+
+text:Mount Evans is the highest summit of the Chicago Peaks in the Front Range of the Rocky Mountains of North America. The prominent 14,271-foot (4350 m) fourteener is located in the Mount Evans Wilderness, 13.4 miles (21.6 km) southwest by south (bearing 214°) of the City of Idaho Springs in Clear Creek County, Colorado, United States, on the drainage divide between Arapaho National Forest and Pike National Forest.
+question1:is mount edwards the highest summit in the california mountains
+question2:is mount edwards the highest summit of the icebergs
+diff:0.2556648850440979
+
+text:Acetone is miscible with water and serves as an important solvent in its own right, typically for cleaning purposes in laboratories. About 6.7 million tonnes were produced worldwide in 2010, mainly for use as a solvent and production of methyl methacrylate and bisphenol A. It is a common building block in organic chemistry. Familiar household uses of acetone are as the active ingredient in nail polish remover, and as paint thinner.
+question1:is acetone the main ingredient in nail polish
+question2:is acetone the same as acetone
+diff:0.2550855875015259
+
+text:The John F. Kennedy Space Center (KSC, originally known as the NASA Launch Operations Center) is one of ten National Aeronautics and Space Administration field centers. Since December 1968, Kennedy Space Center has been NASA's primary launch center of human spaceflight. Launch operations for the Apollo, Skylab and Space Shuttle programs were carried out from Kennedy Space Center Launch Complex 39 and managed by KSC. Located on the east coast of Florida, KSC is adjacent to Cape Canaveral Air Force Station (CCAFS). The management of the two entities work very closely together, share resources, and even own facilities on each other's property.
+question1:is the john f. kerry space center a field center
+question2:is the john f. kinks space center the same as the ksc
+diff:0.2544096112251282
+
+text:The heat of vaporization is temperature-dependent, though a constant heat of vaporization can be assumed for small temperature ranges and for reduced temperature T r (\displaystyle T_(r)) ≪ 1 (\displaystyle \ll 1). The heat of vaporization diminishes with increasing temperature and it vanishes completely at a certain point called the critical temperature ( T r = 1 (\displaystyle T_(r)=1) ). Above the critical temperature, the liquid and vapor phases are indistinguishable, and the substance is called a supercritical fluid.
+question1:is there a constant heat of vaporization
+question2:is the heat of vaporization the same as the critical temperature
+diff:0.2541194558143616
+
+text:The'main wing' was added later: it contains the household accommodation and council and audience chambers. The final addition to the house was a wing built between 1890 and 1891. This wing was designed by John Lockwood Kipling, father of the poet Rudyard Kipling. On the ground floor, it includes the famous Durbar Room, named after an anglicised version of the Hindi word durbar, meaning court. The Durbar Room was built for state functions; it was decorated by Bhai Ram Singh in an elaborate and intricate style, and has a carpet from Agra. It now holds gifts Queen Victoria received on her Golden and Diamond jubilees. These include engraved silver and copper vases, Indian armour, and a model of an Indian palace. The first floor of the new wing was for the sole use of Princess Beatrice and her family. Beatrice was the Queen's youngest daughter, and she lived near Victoria during her life.
+question1:is there a wing on the main wing
+question2:is the king's wing the same as the main wing
+diff:0.25384950637817383
+
+text:Demon Drop is a drop tower amusement ride at Dorney Park & Wildwater Kingdom. Designed by Intamin, it is a Freefall model that was originally located at Cedar Point when it first opened to the public in 1983. It was relocated to Dorney Park following the 2009 season and reopened in 2010. It is one of the oldest of its kind still in operation.
+question1:is demon drop a freefall ride
+question2:is demon drop the same as freefall
+diff:0.2528455853462219
+
+text:The Walking Dead: The Ride (formerly known as X:\ No Way Out and X) is an indoor roller coaster located at Thorpe Park, England. It was the park's first non-powered roller-coaster. It was themed around a rave and had the strapline ``Ride on a wave of light and sound'' -- when it was titled X -- but currently The Walking Dead: The Ride's slogan is ``Those who ride, survive''.
+question1:is the walking dead the ride a roller coaster
+question2:is the walking dead the ride the same as the walking dead
+diff:0.25276798009872437
+
+text:In all but two states, incest is criminalized between consenting adults. In New Jersey and Rhode Island, incest between consenting adults (16 or over for Rhode Island, 18 or over for New Jersey) is not a criminal offense, though marriage is not allowed in either state. New Jersey also increases the severity of underage sex offenses by a degree if they're also incestuous, and criminalizes incest with 16-17 year olds (the normal age of consent in New Jersey is 16).
+question1:is incest in new jersey and nyc a criminal offense
+question2:is incest the same as in nyc
+diff:0.25249409675598145
+
+text:The President's Guest House is one of several residences owned by the United States government for use by the President and Vice President of the United States; other such residences include the White House, Camp David, One Observatory Circle, the Presidential Townhouse, and Trowbridge House. The President's Guest House has been called ``the world's most exclusive hotel'' because it is primarily used to host visiting dignitaries and other guests of the president. It is larger than the White House and closed to the public.
+question1:is the president's guest house the world's most exclusive hotel
+question2:is the president's guest house the same as the white house
+diff:0.25245869159698486
+
+text:While some 19th-century experiments suggested that the underlying premise is true if the heating is sufficiently gradual, according to contemporary biologists the premise is false: a frog that is gradually heated will jump out. Indeed, thermoregulation by changing location is a fundamentally necessary survival strategy for frogs and other ectotherms.
+question1:is a frog a survival strategy for ectotherms
+question2:is the temperature of a frog the same as the temperature of the frog
+diff:0.2519303560256958
+
+text:If a player's king is placed in check and there is no legal move that player can make to escape check, then the king is said to be checkmated, the game ends, and that player loses (Schiller 2003:20--21). Unlike other pieces, the king is never actually captured or removed from the board because checkmate ends the game (Burgess 2009:502).
+question1:can a player escape check
+question2:is the king in check the same as the king
+diff:0.2504580616950989
+
+text:In the 1970s, Hulseman's son, Robert Leo Hulseman, came up with the now-ubiquitous red Solo cup. The red Solo cups are made of thick, molded polystyrene. They are known for being able to withstand drops, easily stackable, and disposable while price accessible. Their characteristic red color may conceal the drinking contents.
+question1:are the red solo cups made of polystyrene
+question2:is a red solo cup the same as a red cup
+diff:0.24802684783935547
+
+text:A jungle is land covered with dense vegetation dominated by trees. Application of the term has varied greatly during the past recent centuries. Before the 1970s, tropical rainforests were generally referred to as jungles but this terminology has fallen out of usage. Jungles in Western literature can represent a less civilised or unruly space outside the control of civilisation, attributed to the jungle's association in colonial discourse with places colonised by Europeans.
+question1:is a jungle a part of a jungle
+question2:is a jungle the same as a jungle
+diff:0.24721956253051758
+
+text:Hellyeah's beginnings can be traced back to 2000 on the Tattoo the Earth tour featuring Mudvayne, Nothingface, Slayer, Slipknot and Sevendust. Nothingface guitarist Tom Maxwell became friends with Mudvayne vocalist Chad Gray, and they talked about the possibility of forming a supergroup. The following year, Nothingface toured with Mudvayne and talks to form the supergroup continued, although were constantly put on hold due to scheduling conflicts. At this time, Gray and Maxwell had brainstormed five band names.
+question1:is there a supergroup in hellyeah
+question2:is hellyeah the same as nothingface
+diff:0.24706190824508667
+
+text:The fourth series of Line of Duty, consisting of six episodes, began broadcasting on 26 March 2017 on BBC One. The story follows DS Kate Fleming (Vicky McClure), DS Steve Arnott (Martin Compston) and Superintendent Ted Hastings (Adrian Dunbar) as they investigate the actions of DCI Roseanne Huntley (Thandie Newton). The supporting characters include FC Tim Ifield (Jason Watkins), DC Jodie Taylor (Claudia Jessie), and DS Sam Railston (Aiysha Hart). As with the previous two series, the storyline is linked thematically to that of series 1.
+question1:is there a fourth line of duty
+question2:is line of duty the same as line of duty
+diff:0.2467719316482544
+
+text:Cross-platform play (cross-play) is the ability to allow different gaming platforms to share the same online servers in a game, allowing players to join together regardless of the platform they own. Since the Dreamcast and Playstation 2 there have been online video games that support cross-play. Listed here is an incomplete list (which misses some mobile games and Xbox One backwards compatible games) of games that support cross-play with their consoles, computers, mobile and handheld game consoles:
+question1:can you play cross-platform games on xbox one
+question2:is cross play the same as cross play
+diff:0.24543511867523193
+
+text:In ice hockey, a goal is scored when the puck entirely crosses the goal line between the two goal posts and below the goal crossbar. A goal awards one point to the team attacking the goal scored upon, regardless of which team the player who actually deflected the puck into the goal belongs to (see also own goal). Typically, a player on the team attempting to score shoots the puck with his/her stick towards the goal net opening, and a player on the opposing team called a goaltender tries to block the shot to prevent a goal from being scored against his/her team.
+question1:is a goal a goal in ice hockey
+question2:is ice hockey the same as ice hockey
+diff:0.24300742149353027
+
+text:Bank of America Merrill Lynch is an American multinational investment bank under the auspices of Bank of America. It provides services in mergers and acquisitions, equity and debt capital markets, lending, trading, risk management, research, and liquidity and payments management. It was formed through the combination of the corporate and investment banking activities of Bank of America and Merrill Lynch following the acquisition of the latter by the former in January 2009.
+question1:is bank of america a m&m
+question2:is bank of america the same as bank of american
+diff:0.24229377508163452
+
+text:Market economies range from minimally regulated ``free market'' and laissez-faire systems--where state activity is restricted to providing public goods and services and safeguarding private ownership--to interventionist forms where the government plays an active role in correcting market failures and promoting social welfare. State-directed or dirigist economies are those where the state plays a directive role in guiding the overall development of the market through industrial policies or indicative planning--which guides but does not substitute the market for economic planning--a form sometimes referred to as a mixed economy.
+question1:is there a market economy in the state
+question2:is free market the same as free market
+diff:0.24127578735351562
+
+text:In 1873, the head of the abbey came to an agreement with a Parisian cheese-seller granting exclusive rights of distribution, and the cheese soon became popular. The abbey sought trade protection, and eventually (in 1959), sold the rights to a major creamery. The cheese is now produced in a factory; the characteristic smooth rind the result of a plastic-coated wrapper. The rind is edible, but is made of wax and detracts from the flavour of the cheese.
+question1:is the rind of the abbey edible
+question2:is the rind of the abbey the same as wax
+diff:0.24116390943527222
+
+text:The tournament book of the London 1883 international chess tournament (originally published in 1883) contains a ``Revised International Chess Code'', which was ``published for the consideration of Chess Players, and especially of the managers of future International Tournaments''. Unlike the 1862 rule, which allowed the pawn to remain a pawn, it requires that: ``A Pawn reaching the eighth square must be named as a Queen or piece... '' (Minchin 1973:iii--iv)
+question1:can a pawn reach the eighth square
+question2:is a pawn the same as a queen
+diff:0.2403143048286438
+
+text:Diet Rite is a brand of no-calorie soft drinks originally distributed by the RC Cola company.
+question1:is diet rite a no calories drink
+question2:is diet rite the same as diet rite
+diff:0.24023908376693726
+
+text:The first solar family car was built in 2013. Researchers at Case Western Reserve University, have also developed a better solar car which can recharge more quickly, due to better materials used in the solar panels.
+question1:is there a solar family car in california
+question2:is a solar family car the same as a solar car
+diff:0.23973917961120605
+
+text:Three-way and four-way switches make it possible to control a light from multiple locations, such as the top and bottom of a stairway, either end of a long hallway, or multiple doorways into a large room. These switches appear externally similar to single pole, single throw (SPST) switches, but have extra connections which allow a circuit to be controlled from multiple locations. Toggling the switch disconnects one ``traveler'' terminal and connects the other.
+question1:can you control a light from multiple locations
+question2:is a three way switch the same as a single throw switch
+diff:0.23970812559127808
+
+text:On June 23, 2008, Allied was purchased by its smaller competitor Republic Services, Inc for US$6.1 billion. The merged company, retaining the Republic name, has become the second largest non-hazardous solid waste management company in the United States.
+question1:is Allied the largest solid waste management company in the us
+question2:is republic services the same as republic services
+diff:0.23900878429412842
+
+text:Bloodline was announced in October 2014 as part of a partnership between Netflix and Sony Pictures Television, representing Netflix's first major deal with a major film studio for a television series. The series was created and executive produced by Todd A. Kessler, Glenn Kessler, and Daniel Zelman, who previously created the FX series Damages. According to its official synopsis released by Netflix, Bloodline ``centers on a close-knit family of four adult siblings whose secrets and scars are revealed when their black sheep brother returns home.''
+question1:is bloodline based on a true story
+question2:is bloodline the same as bloodline
+diff:0.2385750412940979
+
+text:The Nissan Titan is a full-size pickup truck manufactured in the United States for the North American market by Nissan. It was named for the Titans of Greek mythology.
+question1:is the nicolas titan a full size pickup truck
+question2:is the nicolas titan the same as the titans
+diff:0.23776096105575562
+
+text:The North Face is the northern side of Mount Everest. George Mallory's body was found on the North face. The North Face is a place where one author/climber noted, ``a simple slip would mean death.''
+question1:is the north face the northern side of mount everest
+question2:is the north face the same as the north face
+diff:0.23663222789764404
+
+text:Call of Duty: WWII is a first-person shooter video game developed by Sledgehammer Games and published by Activision. It was released worldwide on November 3, 2017 for Microsoft Windows, PlayStation 4 and Xbox One. It is the fourteenth main installment in the Call of Duty series and the first title in the series to be set primarily during World War II since Call of Duty: World at War in 2008.
+question1:is there a sequel to call of duty
+question2:is call of duty the same as world at war
+diff:0.23594748973846436
+
+text:Burlesque is a 2010 American backstage musical film written and directed by Steven Antin and starring Cher and Christina Aguilera along with Eric Dane, Cam Gigandet, Julianne Hough, Alan Cumming, Peter Gallagher, Kristen Bell,Stanley Tucci, Diana Agron and Tyne Stecklein. The film was released on November 24, 2010 in North America.
+question1:is burlesque based on a true story
+question2:is burlesque the same as burlesque
+diff:0.2334384322166443
+
+text:The Stepfather is a 2009 American horror thriller film and a remake of the 1987 horror film of the same title. The film was directed by Nelson McCormick and stars Penn Badgley, Dylan Walsh and Sela Ward. The original was directed by Joseph Ruben and shot from a script by Donald Westlake. The films are loosely based on the crimes of mass murderer John List.
+question1:is the stepfather based on a true story
+question2:is the stepfather the same as the stepfather
+diff:0.23279845714569092
+
+text:The San Andreas Fault is a continental transform fault that extends roughly 1,200 kilometers (750 mi) through California. It forms the tectonic boundary between the Pacific Plate and the North American Plate, and its motion is right-lateral strike-slip (horizontal). The fault divides into three segments, each with different characteristics and a different degree of earthquake risk. The slip rate along the fault ranges from 20 to 35 mm (0.79 to 1.38 in)/yr.
+question1:is there a fault in california
+question2:is the san Andreas fault the same as the california fault
+diff:0.2312716245651245
+
+text:In thermodynamics, an adiabatic process is one that occurs without transfer of heat or matter between a thermodynamic system and its surroundings. In an adiabatic process, energy is transferred to its surroundings only as work. The adiabatic process provides a rigorous conceptual basis for the theory used to expound the first law of thermodynamics, and as such it is a key concept in thermodynamics.
+question1:is there a transfer of heat between a thermodynamic system and its surroundings
+question2:is an adiabatic process the same as a thermodynamic system
+diff:0.23060381412506104
+
+text:War Room is a 2015 American Christian drama film directed by Alex Kendrick and written by he and Stephen Kendrick. It is the Kendrick brothers' fifth film and their first through their subsidiary, Kendrick Brothers Productions. Provident Films, Affirm Films and TriStar Pictures partnered with the Kendrick brothers to release the film.
+question1:is war room based on a true story
+question2:is war room the same as war room
+diff:0.23005080223083496
+
+text:Cod liver oil is a dietary supplement derived from liver of cod fish (Gadidae). As with most fish oils, it contains the omega-3 fatty acids, eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Cod liver oil also contains vitamin A and vitamin D. Historically, it was given to children because vitamin D had been shown to prevent rickets, a consequence of vitamin D deficiency.
+question1:is cod liver oil a dietary supplement
+question2:is cod liver oil the same as cod liver oil
+diff:0.22853583097457886
+
+text:A Snellen chart is an eye chart that can be used to measure visual acuity. Snellen charts are named after the Dutch ophthalmologist Herman Snellen, who developed the chart in 1862. Many ophthalmologists and vision scientists now use an improved chart known as the LogMAR chart.
+question1:can a snellen chart be used to measure visual acuity
+question2:is a snellen chart the same as a logmar
+diff:0.22827750444412231
+
+text:Avengers: Infinity War and its upcoming untitled sequel are American superhero films based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. They are the sequels to Marvel's The Avengers (2012) and Avengers: Age of Ultron (2015), and serve as the nineteenth and twenty-second films of the Marvel Cinematic Universe (MCU), respectively. Both films are directed by Anthony and Joe Russo from screenplays by the writing team of Christopher Markus and Stephen McFeely, and feature an ensemble cast composed of many previous MCU actors.
+question1:is there a sequel to the  Avengers
+question2:is the  Avengers infinity war the same as the  Avengers
+diff:0.22771555185317993
+
+text:Compañía Panameña de Aviación, S.A., (NYSE: CPA) (commonly referred to and branded simply as ``Copa Airlines'') is the flag carrier of Panama. It is headquartered in Panama City, Panama, with its main hub at Tocumen International Airport. Copa is a subsidiary of Copa Holdings, S.A. as well as a member of the Star Alliance. The airline is also the main operator and owner of Colombian airline AeroRepública, currently known as Copa Airlines Colombia.
+question1:is copa a member of the star alliance
+question2:is copa the same as copa airlines
+diff:0.22730320692062378
+
+text:Though historically ``Blue Cross'' was used for hospital coverage while ``Blue Shield'' was used for medical coverage, today that split only exists for traditional health insurance plans in Pennsylvania. Two independent companies operate in central Pennsylvania, Highmark Blue Shield (Pittsburgh) and Capital Blue Cross (Central Pennsylvania). In southeastern Pennsylvania, Independence Blue Cross (Philadelphia) has a joint marketing agreement with Highmark Blue Shield (Pittsburgh) for their separate hospital and medical plans. However, Independence Blue Cross, like most of its sister Blue Cross-Blue Shield companies, cover most of their customers under managed care plans such as HMOs and PPOs which provide hospital and medical care in one policy.
+question1:is there a single blue cross company in california
+question2:is the blue cross the same as the blue cross
+diff:0.22711849212646484
+
+text:A cervical fracture, commonly called a broken neck, is a catastrophic fracture of any of the seven cervical vertebrae in the neck. Examples of common causes in humans are traffic collisions and diving into shallow water. Abnormal movement of neck bones or pieces of bone can cause a spinal cord injury resulting in loss of sensation, paralysis, or usually instant death.
+question1:can you have a broken neck
+question2:is a broken neck the same as a fracture
+diff:0.2261672019958496
+
+text:Wheel of Fortune is an American television game show created by Merv Griffin and first aired in 1975, with a syndicated version airing since 1983. Since its premiere, the program has been adapted into several international versions. The 1975 version premiered on Australian TV in 1981 and premiered in the UK in 1988. It has also been adapted to numerous countries around the world.
+question1:is wheel of fortune based on a true story
+question2:is wheel of fortune the same as wheel of fortune
+diff:0.22591745853424072
+
+text:Shooter is an American television drama series based on the 2007 film of the same name and the novel Point of Impact by Stephen Hunter. The show stars Ryan Phillippe in the lead role of Bob Lee Swagger, an expert marksman living in exile who is coaxed back into action after learning of a plot to kill the president. USA Network picked up the pilot in August 2015 and ordered the pilot to series in February 2016.
+question1:is shooter based on a true story
+question2:is shooter the same as shooter
+diff:0.22571724653244019
+
+text:A homily is a commentary that follows a reading of scripture. In Catholic, Anglican, Lutheran, and Eastern Orthodox Churches, a homily is usually given during Mass (Divine Liturgy or Holy Qurbana for Orthodox and Eastern Catholic Churches, and Divine Service for the Lutheran Church) at the end of the Liturgy of the Word. Many people consider it synonymous with a sermon.
+question1:is a homily a reading of scripture
+question2:is a homily the same as a sermon
+diff:0.2253342866897583
+
+text:In-N-Out Burger has resisted franchising its operations or going public; one reason is the prospect of quality or customer consistency being compromised by excessively rapid business growth. The company's business practices have been noted for employee-centered personnel policies. For example, In-N-Out is one of the few fast food chains in the United States to pay its employees more than state and federally mandated minimum wage guidelines -- starting at US$11 per hour in California, as of May 2017. The In-N-Out restaurant chain has developed a highly loyal customer base, and has been rated as one of the top fast food restaurants in several customer satisfaction surveys.
+question1:is in n out a fast food restaurant in california
+question2:is in-n out burger the same as in n out
+diff:0.22522079944610596
+
+text:The New York Times called the film a ``completely unbelievable but wholly captivating flight into fancy composed of unequal dollops of comedy, romance, poignancy, funny colloquialisms and Manhattan's swankiest East Side areas captured in the loveliest of colors''. In reviewing the performances, the newspaper said Holly Golightly is
+question1:is there a movie in the new york times
+question2:is holly golightly the same as Holly golightly
+diff:0.22468626499176025
+
+text:Lego The Hobbit is a Lego-themed action-adventure video game developed by Traveller's Tales. The game was released by Warner Bros. Interactive Entertainment on 8 April 2014 in North America, and 11 April in Europe. The game is a follow-up to Lego The Lord of the Rings based on the first two Hobbit films; An Unexpected Journey and The Desolation of Smaug. It was released on PlayStation 3, PlayStation 4, PlayStation Vita, Xbox 360, Xbox One, Wii U, Nintendo 3DS, OS X and Microsoft Windows.
+question1:is there a sequel to Lego the Hobbit
+question2:is Lego the Hobbit the same as the Lord of the rings
+diff:0.22449934482574463
+
+text:ME to WE is a socially conscious lifestyle brand, with half of its annual net profits donated to Free The Children, now known as WE Charity, and the other half reinvested to keep the social enterprise sustainable. The enterprise has been noted in Canadian media for setting new standards of governance in the social enterprise field.
+question1:is free the children a social enterprise
+question2:is free the children the same as free the children
+diff:0.22403156757354736
+
+text:While the character of Idi Amin and the events surrounding him in the film are mostly based on fact, Garrigan is a fictional character. Foden has acknowledged that one real-life figure who contributed to the character Garrigan was English-born Bob Astles, who worked with Amin. Another real-life figure who has been mentioned in connection with Garrigan is Scottish doctor Wilson Carswell. Like the novel on which it is based, the film mixes fiction with real events in Ugandan history to give an impression of Amin and Uganda under his rule. While the basic events of Amin's life are followed, the film often departs from actual history in the details of particular events.
+question1:is garrigan based on a fictional character
+question2:is garrigan the same as garrigan
+diff:0.2240203619003296
+
+text:Set 22 years after the events of Jurassic Park, Jurassic World takes place on the same fictional Central American island of Isla Nublar, which is located off the Pacific coast of Costa Rica, where a theme park of cloned dinosaurs has operated for nearly a decade. The park plunges into chaos when a genetically-engineered dinosaur escapes from its enclosure and goes on a rampage.
+question1:is there a cloned dinosaur in jurisc world
+question2:is jurisc world the same as isla nublar
+diff:0.22397881746292114
+
+text:Benzalkonium chloride is also used in many non-consumer processes and products, including as an active ingredient in surgical disinfection. A comprehensive list of uses includes industrial applications. An advantage of benzalkonium chloride, not shared by ethanol-based antiseptics or hydrogen peroxide antiseptic, is that it does not cause a burning sensation when applied to broken skin.. However, prolonged or repeated skin contact may cause dermatitis.
+question1:can benzalkonium chloride cause dermatitis
+question2:is benzalkonium chloride the same as hydrogen peroxide
+diff:0.22382831573486328
+
+text:Toys ``R'' Us expanded as a chain, becoming predominant in its niche field of toy retail. Represented by cartoon mascot Geoffrey the Giraffe from May 1965, Toys ``R'' Us eventually branched out into launching the stores Babies ``R'' Us, Toys ``R'' Us Express, and Kids ``R'' Us.
+question1:is toys r us a toy store
+question2:is toys r us the same as babies r us
+diff:0.22348660230636597
+
+text:Toys ``R'' Us expanded as a chain, becoming predominant in its niche field of toy retail. Represented by cartoon mascot Geoffrey the Giraffe from 1969, Toys ``R'' Us eventually branched out into launching the stores Babies ``R'' Us, Toys ``R'' Us Express, and the now-defunct Kids ``R'' Us.
+question1:is toys r us a toy store
+question2:is toys r us the same as babies r us
+diff:0.22348660230636597
+
+text:Lofoten (Norwegian pronunciation: (ˈluːfuːtn̩)) is an archipelago and a traditional district in the county of Nordland, Norway. Lofoten is known for a distinctive scenery with dramatic mountains and peaks, open sea and sheltered bays, beaches and untouched lands. Though lying within the Arctic Circle, the archipelago experiences one of the world's largest elevated temperature anomalies relative to its high latitude.
+question1:is lufoten a norwegian archipelago
+question2:is lufoten part of the arctic circle
+diff:0.22338086366653442
+
+text:Equipment is generally rated by the power they will deliver, for example, at the shaft of an electric or hydraulic motor. The power input to the equipment will be greater owing to the less than 100% efficiency of the device. Efficiency of a device is often defined as the ratio of output power to the sum of output power and losses. In some types of equipment it is possible to measure or calculate losses directly. This allows efficiency to be calculated with greater precision than the quotient of input power over output power, where relatively small measurement uncertainty will greatly affect the resulting calculated efficiency.
+question1:can you measure output power in a hydraulic motor
+question2:is output power the same as output power
+diff:0.22312146425247192
+
+text:Proteins are polymer chains made of amino acids linked together by peptide bonds. During human digestion, proteins are broken down in the stomach to smaller polypeptide chains via hydrochloric acid and protease actions. This is crucial for the absorption of the essential amino acids that cannot be biosynthesized by the body.
+question1:is a protein a polymer chain
+question2:is a protein the same as a polymer chain
+diff:0.22264552116394043
+
+text:More followed in Old Town Alexandria and Springfield, Virginia, making five by 2001. Their success encouraged the Murrells to franchise their concept the following year, engaging Fransmart, a franchise sales organization. Former Washington Redskins kicker Mark Moseley, who had gone to work for Fransmart after his football career, played a key role in Five Guys' expansion and went on to become the company's director of franchise development after it ended its business relationship with Fransmart. In early 2003 the chain began franchising, opening the doors to rapid expansion which caught the attention of national restaurant trade organizations and the national press. The expansion started in Virginia and Maryland, and by the end of 2004, over 300 units were in development through the Northeast. Over the next few years the chain rapidly expanded across the entire United States and into Canada, reaching over 1,000 locations by 2012.
+question1:did the murrells have a franchise with fransmart
+question2:is five Guys the same as five guys
+diff:0.22135668992996216
+
+text:A fossil fuel is a fuel formed by natural processes, such as anaerobic decomposition of buried dead organisms, containing energy originating in ancient photosynthesis. The age of the organisms and their resulting fossil fuels is typically millions of years, and sometimes exceeds 650 million years. Fossil fuels contain high percentages of carbon and include petroleum, coal, and natural gas. Other commonly used derivatives include kerosene and propane. Fossil fuels range from volatile materials with low carbon to hydrogen ratios like methane, to liquids like petroleum, to nonvolatile materials composed of almost pure carbon, like anthracite coal. Methane can be found in hydrocarbon fields either alone, associated with oil, or in the form of methane clathrates.
+question1:is kerosene and propane a fossil fuel
+question2:is kerosene and propane the same thing
+diff:0.219965398311615
+
+text:While Life Unexpected received mostly positive reviews, it struggled in the ratings and was cancelled by The CW in 2011. The show has since been released on DVD, and it is available on Netflix as well as Amazon Video streaming services.
+question1:is life unexpected based on a true story
+question2:is life unexpected the same as life unexpected
+diff:0.21989154815673828
+
+text:Loan Officers, also referred to as ``Mortgage Loan Originators,'' are people who work for banks and other financial institutions with the main objective to recommend individual and business loan applications for approval and participate in the front end of the mortgage origination process. Loan officers specialize in commercial, consumer and mortgage loans.
+question1:do loan officers work for banks and other financial institutions
+question2:are loan officers the same as loan officers
+diff:0.21960771083831787
+
+text:Cryptorchidism is the absence of one or both testes from the scrotum. The word is from the Greek κρυπτός, kryptos, meaning hidden ὄρχις, orchis, meaning testicle. It is the most common birth defect of the male genital. About 3% of full-term and 30% of premature infant boys are born with at least one undescended testis. However, about 80% of cryptorchid testes descend by the first year of life (the majority within three months), making the true incidence of cryptorchidism around 1% overall. Cryptorchidism may develop after infancy, sometimes as late as young adulthood, but that is exceptional.
+question1:is there a testicle in the scrotum
+question2:is kryptos the same as orchis
+diff:0.2193201780319214
+
+text:A season finale (British English: last in the season; Australian English: season final) is the final episode of a season of a television program. This is often the final episode to be produced for a few months or longer, and, as such, will try to attract viewers to continue watching when the series begins again.
+question1:is there a season finale in australia
+question2:is season finale the same as season finale
+diff:0.2190755009651184
+
+text:The Declaration of war by France and the United Kingdom was given on 3 September 1939, after German forces invaded Poland. Despite the speech being the official announcement of both France and the United Kingdom, the speech was given by the British Prime Minister Neville Chamberlain, in Westminster, London.
+question1:is there a declaration of war between france and the united kingdom
+question2:is the declaration of war the same as a declaration of war
+diff:0.21768420934677124
+
+text:Bank of India (BoI) is commercial bank with headquarters at Bandra Kurla complex, Mumbai. Founded in 1906, it has been government-owned since nationalisation in 1969. Bank of India has 5100 branches as on 31 January 2017, including 56 offices outside India, which includes five subsidiaries, five representative offices, and one joint venture. BoI is a founder member of SWIFT (Society for Worldwide Inter Bank Financial Telecommunications), which facilitates provision of cost-effective financialprocessing and communication services.
+question1:is bank of india a bank of india
+question2:is bank of india the same as bank of india
+diff:0.21766841411590576
+
+text:In mathematics, a ratio is a relationship between two numbers indicating how many times the first number contains the second. For example, if a bowl of fruit contains eight oranges and six lemons, then the ratio of oranges to lemons is eight to six (that is, 8:6, which is equivalent to the ratio 4:3). Similarly, the ratio of lemons to oranges is 6:8 (or 3:4) and the ratio of oranges to the total amount of fruit is 8:14 (or 4:7).
+question1:is there a ratio between oranges and lemons
+question2:is a ratio the same as a lemon
+diff:0.21710091829299927
+
+text:The Family and Medical Leave Act of 1993 (FMLA) is a United States labor law requiring covered employers to provide employees with job-protected and unpaid leave for qualified medical and family reasons. These include pregnancy, adoption, foster care placement of a child, personal or family illness, or family military leave. The FMLA is administered by the Wage and Hour Division of the United States Department of Labor.
+question1:is the family and medical leave act a federal law
+question2:is the family and medical leave act the same as the family leave act
+diff:0.21709692478179932
+
+text:The femoral vein is considered a deep vein, unlike the adjective superficial suggests and has led some physicians to falsely conclude it is a superficial vein, which has resulted in patients (with deep vein thrombosis) being denied efficacious anticoagulant or thrombolytic therapy.
+question1:is the femoral vein a deep vein
+question2:is deep vein the same as deep vein
+diff:0.2163974642753601
+
+text:The infinitely-repeated digit sequence is called the repetend or reptend. If the repetend is a zero, this decimal representation is called a terminating decimal rather than a repeating decimal, since the zeros can be omitted and the decimal terminates before these zeros. Every terminating decimal representation can be written as a decimal fraction, a fraction whose divisor is a power of 10 (e.g. 1.585 = 1585/1000); it may also be written as a ratio of the form k/25 (e.g. 1.585 = 317/25). However, every number with a terminating decimal representation also trivially has a second, alternative representation as a repeating decimal whose repetend is the digit 9. This is obtained by decreasing the final non-zero digit by one and appending a repetend of 9. 1.000... = 0.999... and 1.585000... = 1.584999... are two examples of this. (This type of repeating decimal can be obtained by long division if one uses a modified form of the usual division algorithm.)
+question1:can a repeating decimal be written as a decimal fraction
+question2:is a repeating decimal the same as a terminating decimal
+diff:0.2155570387840271
+
+text:At the Liberation of France in the summer of 1944, Metropolitan France kept GMT+2 as it was the time then used by the Allies (British Double Summer Time). In the winter of 1944--1945, Metropolitan France switched to GMT+1, same as in the United Kingdom, and switched again to GMT+2 in April 1945 like its British ally. In September 1945, Metropolitan France returned to GMT+1 (pre-war summer time), which the British had already done in July 1945. Metropolitan France was officially scheduled to return to GMT+0 on November 18, 1945 (the British returned to GMT+0 in on October 7, 1945), but the French government canceled the decision on November 5, 1945, and GMT+1 has since then remained the official time of Metropolitan France.
+question1:is there a time difference between GMT+2 and GMT+2
+question2:is metropolitan france the same as the british
+diff:0.21478873491287231
+
+text:Elderflower cordial is a soft drink made largely from a refined sugar and water solution and uses the flowers of the European elderberry, (Sambucus nigra L.). Historically the cordial has been popular in North Western Europe where it has a strong Victorian heritage. However, versions of an elderflower cordial recipe can be traced back to Roman times. Nowadays it can be found in almost all of the former Roman Empire territory, predominantly in Central Europe, especially in England, Germany, Austria, Slovenia, Romania, Hungary and Slovakia, where people have acquired a special taste for it and still make it in the traditional way. In some countries the drink can be found as an aromatic syrup, sold as a concentrated squash that is mixed with still or sparkling water. Elderflower pressé is a premixed form of this.
+question1:is elderflower cordial a soft drink
+question2:is elderflower cordial the same as a syrup
+diff:0.2134992480278015
+
+text:Jacques Webster (born April 30, 1992), known professionally as Travis Scott (formerly stylized as Travi$ Scott), is an American rapper, singer, songwriter, and record producer. In 2012, Scott signed his first major-label deal with Epic Records. In November of the same year, Scott signed a deal with Kanye West's GOOD Music, as part of its production wing Very GOOD Beats, after appearing on the label's 2012 compilation album Cruel Summer. In April 2013, it was announced Scott signed a record deal with T.I.'s Grand Hustle imprint.
+question1:is timothy scott a record producer
+question2:is timothy scott the same as travi$ scott
+diff:0.21198809146881104
+
+text:The Exocoetidae are a family of marine fish in the order Beloniformes class Actinopterygii. Fish of this family are known as flying fish. About 64 species are grouped in seven to nine genera. Flying fish can make powerful, self-propelled leaps out of water into air, where their long, wing-like fins enable gliding flight for considerable distances above the water's surface. This uncommon ability is a natural defence mechanism to evade predators.
+question1:are the exocoetidae a marine fish
+question2:are the exocoetidae the same as flying fish
+diff:0.21192854642868042
+
+text:Events of this general type are also possible if the fuel and fuel elements of a liquid-cooled nuclear reactor gradually melt. Such explosions are known as fuel--coolant interactions (FCI). In these events the passage of the pressure wave through the predispersed material creates flow forces which further fragment the melt, resulting in rapid heat transfer, and thus sustaining the wave. Much of the physical destruction in the Chernobyl disaster, a graphite-moderated, light-water-cooled RBMK-1000 reactor, is thought to have been due to such a steam explosion.
+question1:are fuel and fuel elements of a nuclear reactor melted
+question2:are fuel and fuel elements in a liquid cooled reactor the same
+diff:0.20946329832077026
+
+text:Son of Beast is also known for two major, non-fatal accidents. In 2006, damage to the track caused one of the trains to stop abruptly. Another setback occurred in 2009, when a woman claimed to have suffered a head injury. The ride was closed indefinitely, with the only reference of its existence appearing on a tombstone outside the new Banshee coaster (showing a simple logo of the ride and the dates 2000-2009). On July 27, 2012, the closure was made permanent, as Kings Island announced that the roller coaster would be dismantled and removed from the park.
+question1:is there a roller coaster on son of beast
+question2:is son of beast the same as son of beast
+diff:0.20906955003738403
+
+text:A conditional discharge is an order made by a criminal court whereby an offender will not be sentenced for an offence unless a further offence is committed within a stated period. Once the stated period has elapsed and no further offence is committed then the conviction may be removed from the defendant's record.
+question1:can an offender be sentenced for a conditional discharge
+question2:is a conditional discharge the same as an offence
+diff:0.2082614302635193
+
+text:The singular they had emerged by the 14th century. Though it is commonly employed in everyday English, it has been the target of criticism since the late 19th century. Its use in formal English has increased with the trend toward gender-inclusive language.
+question1:is there a single language in england
+question2:is it the same as a single language
+diff:0.20708107948303223
+
+text:Separate sections of law handle territories that the United States has acquired over time, such as Alaska 8 U.S.C. § 1404 and Hawaii 8 U.S.C. § 1405, both incorporated, and unincorporated Puerto Rico 8 U.S.C. § 1402, the U.S. Virgin Islands 8 U.S.C. § 1406, and Guam 8 U.S.C. § 1407. Each of these sections confer citizenship on persons living in these territories as of a certain date, and usually confer native-born status on persons born in incorporated territories after that date.
+question1:are the virgin islands and guam part of law
+question2:are the virgin islands and guam the same
+diff:0.2059880495071411
+
+text:Sometimes the inner phase itself can act as an emulsifier, and the result is a nanoemulsion, where the inner state disperses into ``nano-size'' droplets within the outer phase. A well-known example of this phenomenon, the ``Ouzo effect'', happens when water is poured into a strong alcoholic anise-based beverage, such as ouzo, pastis, absinthe, arak, or raki. The anisolic compounds, which are soluble in ethanol, then form nano-size droplets and emulsify within the water. The resulting color of the drink is opaque and milky white.
+question1:is there a nanoemulsion in the inner phase
+question2:is the inner phase the same as the inner phase
+diff:0.20539772510528564
+
+text:Air Canada Rouge, is a low-cost airline and subsidiary of Air Canada. Air Canada Rouge is fully integrated into the Air Canada mainline and Air Canada Express networks; flights are sold with AC flight numbers but are listed as ``operated by Air Canada Rouge'' (similar to regional flights operated under the Air Canada Express banner). Rouge means ``red'' in French.
+question1:is air canada rouge part of air canada
+question2:is air canada rouge the same as air canada
+diff:0.2042202353477478
+
+text:Peter, Paul and Mary was an American folk group formed in New York City in 1961, during the American folk music revival phenomenon. The trio was composed of tenor Peter Yarrow, baritone Noel Paul Stookey and alto Mary Travers. The group's repertoire included songs written by Yarrow and Stookey, early songs by Bob Dylan as well as covers of other folk musicians. After the death of Travers in 2009, Yarrow and Stookey continued to perform as a duo under their individual names.
+question1:are psi and syria a folk group
+question2:are psi and syria the same group
+diff:0.2041650414466858
+
+text:In the law of the United States, diversity jurisdiction is a form of subject-matter jurisdiction in civil procedure in which a United States district court in the federal judiciary has the power to hear a civil case when the amount in controversy exceeds $75,000 and where the persons that are parties are ``diverse'' in citizenship or state of incorporation (for corporations being legal persons), which generally indicates that they differ in state and/or nationality. Diversity jurisdiction and federal-question jurisdiction (jurisdiction over issues arising under federal law) constitute the two primary categories of subject matter jurisdiction in U.S. federal courts.
+question1:can you hear a civil case in the u.s.
+question2:is diversity jurisdiction the same as diversity jurisdiction
+diff:0.20304840803146362
+
+text:The kidneys are bean-shaped organs which are present on each side of the vertebral column in the abdominal cavity. Humans have two kidneys and each kidney is supplied with blood from the renal artery. The kidneys remove from the blood the nitrogenous wastes such as urea, as well as salts and excess water, and excrete them in the form of urine. This is done with the help of millions of nephrons present in the kidney. The filtrated blood is carried away from the kidneys by the renal vein (or kidney vein). The urine from the kidney is collected by the ureter (or excretory tubes), one from each kidney, and is passed to the urinary bladder. The urinary bladder collects and stores the urine until urination. The urine collected in the bladder is passed into the external environment from the body through an opening called the urethra.
+question1:is there a kidney on each side of the vertebral column
+question2:are the kidneys the same as the kidneys
+diff:0.20294690132141113
+
+text:Most Craftsman hand tools are advertised as having an unlimited lifetime warranty. This lifetime warranty program was instituted by Sears when they began selling the Craftsman line in 1927. This warranty program requires no receipt or dated proof of purchase. If the owner takes the item into a local retail store, it may be replaced or repaired free of charge. In some cases, such as ratchets, the customer may be offered a repair kit with which to repair the item or an already refurbished item. As of 2017, many Sears stores do not offer the kits to consumers, instead they will either rebuild the customer's ratchet or provide one that they have already rebuilt. Ratchet kits for the US made ratchets are different than those for the Asian made ratchets, although some repair kits for the US made ratchets are now made in China (but again, will not interchange with the kits for the Asian ratchets). As of 2018, some stores will supply the customer the rebuild kits for them to rebuild on their own, others will require the customer to have the store employees rebuild the ratchet for them.
+question1:does a ratchet have a lifetime warranty
+question2:is a ratchet the same as a kit
+diff:0.20161867141723633
+
+text:The preamble to the Constitution of India is a brief introductory statement that sets out the guiding people and principles of the document, and it indicates the source from which the ordinary document derives its authority, meaning, the people. The hopes and aspirations of the people as well as the ideals before our nation are described in the preamble in clear words. It may be considered as the heart and soul of Constitution. The preamble can be referred to as the preface which highlights the entire Constitution. It was adopted on 26 November 1949 by the Constituent Assembly and came into effect on 26th January 1950.
+question1:is there a preamble to the constitution of india
+question2:is the preamble to the constitution of india the same
+diff:0.19989299774169922
+
+text:Talc or talcum is a clay mineral composed of hydrated magnesium silicate with the chemical formula HMg(SiO) or MgSiO(OH). In loose form, it is (in ratio with or without corn starch) one of the most widely used substances known as baby powder. It occurs as foliated to fibrous masses, and in an exceptionally rare crystal form. It has a perfect basal cleavage, and the folia are not elastic, although slightly flexible.
+question1:is talcum a clay mineral
+question2:is talcum the same as baby powder
+diff:0.19985008239746094
+
+text:The species has a number of synonyms: A. barbadensis Mill., Aloe indica Royle, Aloe perfoliata L. var. vera and A. vulgaris Lam. Common names include Chinese Aloe, Indian Aloe, True Aloe, Barbados Aloe, Burn Aloe, First Aid Plant. The species epithet vera means ``true'' or ``genuine''. Some literature identifies the white-spotted form of Aloe vera as Aloe vera var. chinensis; however, the species varies widely with regard to leaf spots and it has been suggested that the spotted form of Aloe vera may be conspecific with A. massawana. The species was first described by Carl Linnaeus in 1753 as Aloe perfoliata var. vera, and was described again in 1768 by Nicolaas Laurens Burman as Aloe vera in Flora Indica on 6 April and by Philip Miller as Aloe barbadensis some ten days after Burman in the Gardener's Dictionary.
+question1:is there an aloe vera in the gardener's dictionary
+question2:is aloe vera the same as true aloe
+diff:0.19885903596878052
+
+text:Body of Proof is an American medical drama television series that ran on ABC from March 29, 2011, to May 28, 2013, and starred Dana Delany as medical examiner Dr. Megan Hunt. The series was created by Chris Murphey and produced by ABC Studios. The show was canceled by ABC after three seasons.
+question1:is body of proof based on a true story
+question2:is body of proof the same as body of proof
+diff:0.19880425930023193
+
+text:Good Times is an American sitcom that aired on CBS from February 8, 1974, to August 1, 1979. Created by Eric Monte and Mike Evans, and developed by Norman Lear, the series' primary executive producer, it was television's first African American two-parent family sitcom. Good Times was billed as a spin-off of Maude, which was itself a spin-off of All in the Family.
+question1:is good times a spin off of all in the family
+question2:is good times the same as all in the family
+diff:0.19859814643859863
+
+text:In psychology, relationship obsessive--compulsive disorder (ROCD) is a form of obsessive--compulsive disorder focusing on intimate relationships. Such obsessions can become extremely distressing and debilitating, having negative impacts on relationships functioning.
+question1:can you have a relationship obsessive disorder
+question2:is a relationship obsessive disorder the same as a disorder
+diff:0.19805490970611572
+
+text:Minute Maid Park, previously known as The Ballpark at Union Station, Enron Field, and Astros Field, is a ballpark in Downtown Houston, Texas, United States, that opened in 2000 to house the Houston Astros of Major League Baseball (MLB). The ballpark is Houston's first retractable-roofed stadium, and features a natural grass playing field. The ballpark was built as a replacement of the Astrodome, the first domed sports stadium ever built, which opened in 1965. It is named for beverage brand Minute Maid, a subsidiary of The Coca-Cola Company, which acquired naming rights in 2002 for $100 million over 30 years. As of 2016, Minute Maid Park has a seating capacity of 41,168, which includes 5,197 club seats and 63 luxury suites.
+question1:is minute maid park a ballpark in texas
+question2:is minute maid park the same as the ballpark
+diff:0.19774258136749268
+
+text:The largest city in the Mountain Time Zone is Phoenix, Arizona. The Phoenix metropolitan area is the largest metropolitan area in the zone; the next largest metropolitan area that observes Mountain Time is Denver, closely followed by the El Paso--Juárez area. TV broadcasting in the Mountain Time Zone is typically tape-delayed one hour, so that shows match the broadcast times of the Central Time Zone (i.e. prime time begins at 7 pm MT following the same order of programming as the Central Time Zone).
+question1:is california the largest city in the mountain time zone
+question2:is the mountain time zone the same as the central time zone
+diff:0.1976138949394226
+
+text:Endeavour is a British television detective drama series. It is a prequel to the long-running Inspector Morse and, like that series, is set primarily in Oxford. Shaun Evans portrays the young Endeavour Morse beginning his career as a Detective Constable, and later as Detective Sergeant, with the Oxford City Police CID. The series is produced for ITV as a Mammoth Screen and Masterpiece co-production for ITV Studios. After a pilot episode in 2012, the first series was broadcast in 2013, and four more series have followed. A fifth series with six episodes set in 1968 began on 4 February 2018 and finished on 11 March 2018. A sixth series was later announced, set to air in 2019.
+question1:is Endeavour a prequel to the inspector morse
+question2:is Endeavour the same as inspector morse
+diff:0.1965320110321045
+
+text:After laying down a Phase, players try to ``go out'' as soon as possible. To go out, a player must get rid of all of their cards by hitting and discarding. The player to go out first wins the hand. The winner of the hand, and any other players who also complete their Phase, will advance to the next Phase for the next hand, while any player not able to complete their Phase remain stuck on that Phase. Players count up the total value of cards left in their hands (the fewer cards left in their hand, the better) and score them as follows;
+question1:can you go out in a phase
+question2:do you have to go out before you go out
+diff:0.1962231993675232
+
+text:SeaWorld's main attraction are its killer whales, ten of which are housed in San Diego in a 7 million gallon habitat. Shamu was the name of the first killer whale brought to SeaWorld San Diego in 1965. ``Shamu'' is now used as the character name for the costume character at the park entrance. SeaWorld San Diego ended their theatrical Killer Whale shows at San Diego in January 2017. San Diego was the first of the three SeaWorld parks to premiere ``Orca Encounter,'' a more educational presentation that gives insight into various aspects of a killer whale's life.
+question1:is there a killer whale in san dya
+question2:is shamu the same as the killer whale
+diff:0.19528311491012573
+
+text:The Cape Lookout Lighthouse is a 163-foot high lighthouse located on the Southern Outer Banks of North Carolina. It flashes every 15 seconds and is visible at least 12 miles out to sea and up to 19 miles. The Cape Lookout Light is one of the very few lighthouses that operate during the day. It became fully automated in 1950. The Cape Lookout Lighthouse is the only such structure in the United States to bear the checkered daymark, intended not only for differentiation between similar light towers, but also to show direction. The center of the black diamonds points in a north-south direction, while the center of the white diamonds points east-west.
+question1:is the cap lookout lighthouse in north carolina
+question2:is the cap lookout lighthouse the same as the white diamonds
+diff:0.19508761167526245
+
+text:More than 56% of the dust fertilizing the Amazon rainforest comes from the Bodélé depression in Northern Chad in the Sahara desert. The dust contains phosphorus, important for plant growth. The yearly Sahara dust replaces the equivalent amount of phosphorus washed away yearly in Amazon soil from rains and floods. Up to 50 million tonnes of Sahara dust per year are blown across the Atlantic Ocean.
+question1:is there a lot of sahara dust in the amazon rainforest
+question2:is sahara dust the same as phosphorus
+diff:0.19430631399154663
+
+text:The success of the song ``White Christmas'' eventually led to another film based on the song, White Christmas (1954), which starred Crosby, Danny Kaye, Rosemary Clooney, and Vera-Ellen. It was an extremely loose remake of Holiday Inn, with a plot again involving an inn, but otherwise different from the earlier film. Fred Astaire was offered the second lead in the new film, but after reading the script, he declined. The role was then offered to Donald O'Connor, but he was injured before filming began. Danny Kaye ultimately took the role.
+question1:is white christmas a remake of holiday inn
+question2:is white christmas the same as white christmas
+diff:0.1939753293991089
+
+text:After the first series aired, the show began airing in the United Kingdom on 5Star.
+question1:is 5star the first series of 5star
+question2:is 5star the same as 5star
+diff:0.19321858882904053
+
+text:In the television series, The Governor's disturbing motives are reflected in his authoritarian ways in dealing with threats to his community, primarily by executing most large groups and only accepting lone survivors into his community. His dark nature escalates when he comes into conflict with Rick Grimes and the latter's group, who are occupying the nearby prison. The Governor vows to eliminate the prison group, and in that pursuit, he leaves several key characters dead both in Rick's group and his own. The Governor has a romantic relationship with Andrea, who unsuccessfully seeks to broker a truce between the two groups. In season 4, The Governor attempts to redeem himself upon meeting a new family, to whom he introduces himself as Brian Heriot. However, he commits several brutal acts to ensure the family's survival. This leads to more characters' deaths and forces Rick and his group to abandon the prison.
+question1:does the governor die in the prison
+question2:is the governor the same as the governor
+diff:0.1924787163734436
+
+text:Set six years after its predecessor, Just Cause 3 follows series protagonist Rico Rodriguez as he returns to his homeland of Medici, a fictional Mediterranean island country under the control of dictator General Sebastiano Di Ravello. The game is played from a third-person perspective and allows players to explore the island of Medici in an open world environment.
+question1:is just cause 3 based on a true story
+question2:is just cause 3 the same as just cause 3
+diff:0.19199532270431519
+
+text:Historically, sales of the Five-seven pistol were restricted by FN to military and law enforcement customers, but in 2004 the new Five-seven IOM model was introduced and offered to civilian shooters for use with 5.7×28mm sporting ammunition. The IOM model incorporated several modifications to the weapon's design, such as the addition of an M1913 accessory rail, a magazine safety mechanism, and fully adjustable sights. Although offered only with sporting ammunition, the Five-seven's introduction to civilian shooters was met with strong opposition from gun control organizations such as the Brady Campaign.
+question1:can you buy a five seven pistol in nfl
+question2:is the five seven pistol the same as the five seven
+diff:0.19186538457870483
+
+text:Spark plugs are specified by size, either thread or nut (often referred to as Euro), sealing type (taper or crush washer), and spark gap. Common thread (nut) sizes in Europe are 10 mm (16 mm), 14 mm (21 mm; sometimes, 16 mm), and 18 mm (24 mm, sometimes, 21 mm). In the United States, common thread (nut) sizes are 10mm (16mm), 12mm (14mm, 16mm or 17.5mm), 14mm (16mm, 20.63mm) and 18mm (20.63mm).
+question1:is there a spark plug in the us
+question2:is a spark plug the same as a nut
+diff:0.19184595346450806
+
+text:The Total Drama series is the original series of the greater Total Drama franchise, which consists of five seasons that have aired during a timeframe of seven years: the first season, Total Drama Island, the second season, Total Drama Action, the third season, Total Drama World Tour, the fourth season, Total Drama: Revenge of the Island, and the fifth season, titled as both Total Drama All-Stars and Total Drama: Pahkitew Island. The latest installment premiered on July 7, 2014, in the United States and September 4, 2014, in Canada. A spin-off series based on the main series, The Ridonculous Race, was produced shortly after the fifth season was aired. A spin-off/prequel series, titled Total DramaRama is currently in production which is scheduled to be released in September 2018 on Cartoon Network in the U.S. and in October 2018 on Teletoon in Canada...
+question1:is there a season 4 of total drama island
+question2:is total drama island the same as total drama
+diff:0.19177353382110596
+
+text:Vauxhall (/ˈvɒksɔːl/, VOK-sawl) is a National Rail, London Underground and London Buses interchange station in central London. It is at the Vauxhall Cross road junction opposite the southern approach to Vauxhall Bridge over the River Thames in the district of Vauxhall. The station is on the boundary of zones 1 and 2 of the London Travelcard area and, although a through station, it is classed as a central London terminus for ticketing purposes.
+question1:is vauxhall a railway station in central london
+question2:is vauxhall the same as london buses
+diff:0.19151020050048828
+
+text:Far Cry is a 2008 English-language German action film loosely adapted from the video game of the same name. The film is directed by Uwe Boll and stars Til Schweiger. It was a major box office bomb and, like Boll's other films, a critical disappointment.
+question1:is far cry based on a true story
+question2:is far cry the same as far cry
+diff:0.1911495327949524
+
+text:The Last Jedi had its world premiere in Los Angeles on December 9, 2017, and was released in the United States on December 15, 2017. It grossed over $1.3 billion worldwide, becoming the highest-grossing film of 2017, the seventh-highest-ever grossing film in North America and the ninth-highest-grossing film of all time during its theatrical run. It is also the second-highest-grossing film of the Star Wars franchise, and turned a net profit of over $417 million. It received positive reviews from critics, who praised its ensemble cast, visual effects, musical score, action sequences and emotional weight. The film received four nominations at the 90th Academy Awards, including Best Original Score and Best Visual Effects, as well two nominations at the 71st British Academy Film Awards. A sequel, provisionally titled Star Wars: Episode IX, is scheduled for release on December 20, 2019.
+question1:is there a sequel to the last Jedi
+question2:is the last Jedi the same as the last Jedi
+diff:0.19093775749206543
+
+text:Under the REAL ID Act, the passport card is also accepted for federal purposes (such as domestic air travel or entering federal buildings), which may make it an attractive option for people living in states whose driver's licenses and ID cards are not REAL ID--compliant when those requirements go into effect. TSA regulations list the passport card as an acceptable identity document at airport security checkpoints. For the purposes of state voter photo identification initiatives, the passport card has been deemed acceptable.
+question1:can you use a real ID card at airports
+question2:is a passport card the same as a real ID card
+diff:0.18992680311203003
+
+text:A soft tissue injury (STI) is the damage of muscles, ligaments and tendons throughout the body. Common soft tissue injuries usually occur from a sprain, strain, a one off blow resulting in a contusion or overuse of a particular part of the body. Soft tissue injuries can result in pain, swelling, bruising and loss of function.
+question1:can you have a soft tissue injury
+question2:is a soft tissue injury the same as a sprain
+diff:0.18972617387771606
+
+text:The Flint water crisis first started in 2014 when the drinking water source for the city of Flint, Michigan was changed from Lake Huron and the Detroit River to the cheaper Flint River. Due to insufficient water treatment, lead leached from the lead water pipes into the drinking water, exposing over 100,000 residents. After a pair of scientific studies proved lead contamination was present in the water supply, a federal state of emergency was declared in January 2016 and Flint residents were instructed to use only bottled or filtered water for drinking, cooking, cleaning, and bathing. As of early 2017, the water quality had returned to acceptable levels; however, residents were instructed to continue to use bottled or filtered water until all the lead pipes have been replaced, which is expected to be completed no sooner than 2020.
+question1:is there a federal state of emergency in florida
+question2:is bottled water the same as bottled water
+diff:0.18826597929000854
+
+text:The ``Marcha Real'' (Spanish pronunciation: (ˈmaɾtʃa reˈal), ``Royal March'') is the national anthem of Spain. It is one of only four national anthems in the world (along with those of Bosnia and Herzegovina, Kosovo, and San Marino) that has no official lyrics. Although it had lyrics in the past, they are no longer used.
+question1:is marcha real a national anthem
+question2:is marcha real the same as marcha real
+diff:0.1873723268508911
+
+text:The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still recognizable with many preserved interiors, despite deterioration and damage sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.
+question1:is the wreck of the rms titanic a wreck
+question2:is the wreck of the rms titanic the same as the wreck
+diff:0.18698221445083618
+
+text:Stenotype keyboards enable the trained user to input text as fast as 225 wpm or faster at very high accuracy for an extended period of time, which is sufficient for real-time activities such as court reporting or closed captioning. While dropout rates are very high--in some cases, only 10% or even less graduate--stenotype students are usually able to reach speeds of 100--120 wpm within six months, which is faster than most alphanumeric typists. Guinness World Records gives 360 wpm with 97.23% accuracy as the highest achieved speed using a stenotype.
+question1:can you use a stenotype keyboard to read a text
+question2:is a stenotype keyboard the same as a stenotype
+diff:0.18669456243515015
+
+text:Much of the Balkans was under Ottoman rule throughout the Early modern period. Ottoman rule was long, lasting from the 14th century up until the early 20th in some territories. The Ottoman Empire was religiously, linguistically and ethnically diverse, and, at times, a much more tolerant place for religious practices when compared to other parts of the world. The different groups in the empire were organised along confessional lines, in the so-called the Millet system. Among the Orthodox Christians of the empire (the Rum Millet) a common identity was forged based on a shared sense of time defined by the ecclesiastical calendar, saint's days and feasts.
+question1:is the millet part of the osman empire
+question2:was the osman empire the same as the balkans
+diff:0.18609249591827393
+
+text:During the American Civil War (1861--65) the bayonet was found to be responsible for less than 1% of battlefield casualties, a hallmark of modern warfare. The use of bayonet charges to force the enemy to retreat was very successful in numerous small unit engagements at short range in the American Civil War, as most troops would retreat when charged while reloading (which could take up to a minute with loose powder even for trained troops). Although such charges inflicted few casualties, they often decided short engagements, and tactical possession of important defensive ground features. Additionally, bayonet drill could be used to rally men temporarily discomfited by enemy fire.
+question1:is bayonet a hallmark of modern warfare
+question2:is bayonet the same as a bayonet
+diff:0.18502318859100342
+
+text:With the entry of the United States into World War II, several major league baseball executives started a new professional league with women players in order to maintain baseball in the public eye while the majority of able men were away. The founders included Philip K. Wrigley, Branch Rickey and Paul V. Harper. They feared that Major League Baseball might even temporarily cease due to the war because of the loss of talent, as well as restrictions on team travel due to gasoline rationing.
+question1:did mlb team travel to the united states in ww2
+question2:does mlb have to travel to the u.s.
+diff:0.18444287776947021
+
+text:In chemistry and atomic physics, the main group is the group of elements whose lightest members are represented by helium, lithium, beryllium, boron, carbon, nitrogen, oxygen, and fluorine as arranged in the periodic table of the elements. The main group includes the elements (except hydrogen, which is sometimes not included) in groups 1 and 2 (s-block), and groups 13 to 18 (p-block). The s-block elements are primarily characterised by one main oxidation state, and the p-block elements, when they have multiple oxidation states, often have common oxidation states separated by two units.
+question1:is helium part of the atomic physics group
+question2:is helium the same as boron
+diff:0.18419289588928223
+
+text:ABC became an aggressive competitor to NBC and CBS when, continuing NBC Blue's traditions of public service, it aired symphony performances conducted by Paul Whiteman, performances from the Metropolitan Opera, and jazz concerts aired as part of its broadcast of The Chamber Music Society of Lower Basin Street announced by Milton Cross. The network also became known for such suspenseful dramas as Sherlock Holmes, Gang Busters and Counterspy, as well as several mid-afternoon youth-oriented programs. However, ABC made a name for itself by utilizing the practice of counterprogramming, with which it often placed shows of its own against the offerings of NBC and CBS, adopting the use of the Magnetophon tape recorder, brought to the U.S. from Nazi Germany after its conquest, to pre-record its programming. With the help of the Magnetophon, ABC was able to provide its stars with greater freedom in terms of time, and also attract several big names, such as Bing Crosby at a time when NBC and CBS did not allow pre-taped shows.
+question1:does bing crosby have a tape recorder
+question2:is bing crosby the same as nba
+diff:0.1829676628112793
+
+text:Filming took place from February to July 2017 in the United Kingdom and Hawaii. Produced and distributed by Universal Pictures, Fallen Kingdom premiered in Madrid on May 21, 2018, and was released in the United States on June 22, 2018. The film has grossed over $1.1 billion worldwide, making it the third Jurassic film to pass the mark, the third highest-grossing film of 2018 and the 18th highest-grossing film of all time. It received mixed reviews from critics, who praised Pratt's performance, Bayona's direction, its visuals, and the ``surprisingly dark moments'', although many criticized the screenplay and felt the film added nothing new to the franchise, with some suggesting it had run its course. An untitled sequel is set to be released on June 11, 2021, with Trevorrow returning to direct.
+question1:is fallen kingdom based on a true story
+question2:is fallen kingdom the same as fallen kingdom
+diff:0.1826190948486328
+
+text:In the ninth season, the show added a new format to the auditions in the form of the ``Golden Buzzer'', which began to make appearances within the Got Talent franchise, since it was first introduced on Germany's Got Talent. During auditions, each judge is allowed to use the Golden Buzzer to send an act automatically into the live shows, regardless of the opinion of the other judges; when it was initially used, the buzzer simply saved an act from elimination. The only rule to the buzzer was that a judge could use it only once per season; the host was later allowed to use the Golden Buzzer for an act from the eleventh season.
+question1:can a judge use the golden buzzer for an act
+question2:is golden buzzer the same as golden buzzer
+diff:0.18170946836471558
+
+text:A second film, titled Hunter × Hunter: The Last Mission, was announced following the first one's debut. The film has some focus on Netero, the chairman of the Hunter Association as Gon and his friends discover the dark secrets behind his past. The movie was released on December 27, 2013, and the DVD and Blu-ray was released on July 23, 2014.
+question1:is there a sequel to the last mission
+question2:is hunter the last mission the same as the last mission
+diff:0.18122297525405884
+
+text:Per capita income is often used c measure an area's average income. This is used to see the wealth of the population with those of others. Per capita income is often used to measure a country's standard of living. It is usually expressed in terms of a commonly used international currency such as the euro or United States dollar, and is useful because it is widely known, is easily calculable from readily available gross domestic product (GDP) and population estimates, and produces a useful statistic for comparison of wealth between sovereign territories. This helps to ascertain a country's development status. It is one of the three measures for calculating the Human Development Index of a country.
+question1:is per capita income a measure of a country's standard of living
+question2:is per capita income the same as per capita income
+diff:0.18104404211044312
+
+text:Botulinum toxin (BTX) or Botox is a neurotoxic protein produced by the bacterium Clostridium botulinum and related species. It prevents the release of the neurotransmitter acetylcholine from axon endings at the neuromuscular junction and thus causes flaccid paralysis. Infection with the bacterium causes the disease botulism. The toxin is also used commercially in medicine, cosmetics and research.
+question1:is botulinum toxin a neurotoxic protein
+question2:is botulinum toxin the same as botox
+diff:0.1810210943222046
+
+text:A dorsal root ganglion (or spinal ganglion) (also known as a posterior root ganglion), is a cluster of neurons (a ganglion) in a dorsal root of a spinal nerve. The cell bodies of sensory neurons known as first-order neurons are located in the dorsal root ganglia.
+question1:is there a dorsal root ganglion
+question2:is a dorsal root ganglion the same as a spinal ganglion
+diff:0.1807260513305664
+
+text:The Bachelor of Laws (Latin: Legum Baccalaureus; LL.B. or B.L.) is an undergraduate degree in law (or a first professional degree in law, depending on jurisdiction) originating in England and offered in Japan and most common law jurisdictions--except the United States and Canada--as the degree which allows a person to become a lawyer. It historically served this purpose in the U.S. as well, but was phased out in the mid-1960s in favor of the Juris Doctor degree, and Canada followed suit.
+question1:can you get a bachelor of law in england
+question2:is the bachelor of law the same as a bachelor of law
+diff:0.18041223287582397
+
+text:The crack a whip makes is produced when a section of the whip moves faster than the speed of sound creating a small sonic boom. The creation of the sonic boom was confirmed in 1958 by analyzing the high-speed shadow photography taken in 1927.
+question1:is there a crack in a whip
+question2:is a whip the same as a sonic boom
+diff:0.18011987209320068
+
+text:A player who receives a match penalty is ejected. A match penalty is imposed for deliberately injuring another player as well as attempting to injure another player. Many other penalties automatically become match penalties if injuries actually occur: under NHL rules, butt-ending, goalies using blocking glove to the face of another player, head-butting, kicking, punching an unsuspecting player, spearing, and tape on hands during altercation must be called as a match penalty if injuries occur; under IIHF rules, kneeing and checking to the head or neck area must be called as a match penalty if injuries occur.
+question1:can you get a match penalty in the nfl
+question2:is a match penalty the same as a penalty
+diff:0.18008047342300415
+
+text:In November 2013, Josh Stanley said that Charlotte's web was 0.5% THC and 17% CBD, and that it ``is as legal as other hemp products already sold in stores across Utah, including other oils, clothing and hand creams, but is illegal, federally, to take across state lines.'' The legalities of selling the product to people who transport it across state lines is complicated, with difficulties for both the sellers and transporters. Regardless of state laws in Colorado and Utah which would allow the practice, it is still a Federal offense to transport hemp products across state lines. In September 2014, the content was measured at 0.3% THC.
+question1:is it illegal to transport hemp products across state lines
+question2:is hemp the same as hemp products in utah
+diff:0.17963796854019165
+
+text:The dairy cow will produce large amounts of milk in its lifetime. Production levels peak at around 40 to 60 days after calving. Production declines steadily afterwards until milking is stopped at about 10 months. The cow is ``dried off'' for about sixty days before calving again. Within a 12 to 14-month inter-calving cycle, the milking period is about 305 days or 10 months long. Among many variables, certain breeds produce more milk than others within a range of around 6,800 to 17,000 kg (15,000 to 37,500 lb) of milk per year.
+question1:does a dairy cow produce milk in its lifetime
+question2:is milking the same as milk in a dairy cow
+diff:0.17947918176651
+
+text:It was controlled by Warner Communications, then by Time Warner. That company spun off the cable operations in March 2009 as part of a larger restructuring. From 2009 to 2016, Time Warner Cable was an entirely independent company, continuing to use the Time Warner name under license from its former parent (including the ``Road Runner'' name for its Internet service, now Spectrum Internet).
+question1:was time road runner the same company
+question2:is time fox cable the same as time fox
+diff:0.17946010828018188
+
+text:Due to the ever-increasing numbers of observers, standardisation of the gauges became necessary. Symons began experimenting on new gauges in his own garden. He tried different models with variations in size, shape, and height. In 1863 he began collaboration with Colonel Michael Foster Ward from Calne, Wiltshire, who undertook more extensive investigations. By including Ward and various others around Britain, the investigations continued until 1890. The experiments were remarkable for their planning, execution, and drawing of conclusions. The results of these experiments led to the progressive adoption of the well known standard gauge, still used by the UK Meteorological Office today. Namely, one made of '... copper, with a five-inch funnel having its brass rim one foot above the ground...'
+question1:is there a standard gauge in the uk
+question2:is a standard gauge the same as a brass rim
+diff:0.17906641960144043
+
+text:The ascending colon is the first of four sections of the large intestine. It is connected to the small intestine by a section of bowel called the cecum. The ascending colon runs upwards through the abdominal cavity toward the transverse colon for approximately eight inches (20 cm).
+question1:is the ascending colon the first of four sections of the large intestine
+question2:is the ascending colon the same as the small intestine
+diff:0.17866897583007812
+
+text:Elizabeth's only sibling, Princess Margaret, was born in 1930. The two princesses were educated at home under the supervision of their mother and their governess, Marion Crawford. Lessons concentrated on history, language, literature and music. Crawford published a biography of Elizabeth and Margaret's childhood years entitled The Little Princesses in 1950, much to the dismay of the royal family. The book describes Elizabeth's love of horses and dogs, her orderliness, and her attitude of responsibility. Others echoed such observations: Winston Churchill described Elizabeth when she was two as ``a character. She has an air of authority and reflectiveness astonishing in an infant.'' Her cousin Margaret Rhodes described her as ``a jolly little girl, but fundamentally sensible and well-behaved''.
+question1:is elizabeth's only sibling, princesses
+question2:is elizabeth and princesses the same
+diff:0.1779015064239502
