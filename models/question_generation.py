@@ -118,9 +118,4 @@ def generate_boolq_dataset(model, tokenizer, split='validation', num_questions=0
 
     split_ = boolq_generation[split]
     num_texts = num_questions if num_questions else len(split_)
-    generated_questions = generate_questions(model, tokenizer, split_, num_texts)
-    return generated_questions
-    # return generated_questions.map(
-    #     lambda examples: tokenizer(examples['passage'], examples['question'], truncation=True,
-    #                                padding=True)
-    # )
+    return generate_questions(model, tokenizer, split_, num_texts)
