@@ -18,10 +18,12 @@ def train_confidence_model(mapped_qa_ds, model_params, experiment=None):
 
 
 def _train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds, model_params, task_name, experiment):
+    # get dataset with where the labels are where the qa(not confidence) model was correct
     error_ds = get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds)
     metric_name = "accuracy"
     task_params = TaskParams(error_ds, confidence_model, confidence_tokenizer, 'error-prediction')
     save_dir = get_save_path(task_name, model_params)
+    # train by this labels
     trainer = get_trainer(save_dir, model_params, task_params, True, experiment, metric_name,
                           hyperparams.disable_tqdm)
     trainer.train()
