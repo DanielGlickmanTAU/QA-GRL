@@ -46,7 +46,7 @@ class E2EQGPipeline:
         self.device = compute.get_device()
         self.model.to(self.device)
 
-        self.default_generate_kwargs = top_k_args
+        self.default_generate_kwargs = beam_search_args
 
     def __call__(self, context: str, **generate_kwargs):
         inputs = self._prepare_inputs_for_e2e_qg(context)
