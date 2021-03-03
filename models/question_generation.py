@@ -32,8 +32,7 @@ top_p_args = {
 
 
 class QuestionGenerator:
-    def __init__(
-            self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer):
+    def __init__(self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer):
         self.model = model
         self.tokenizer = tokenizer
 
