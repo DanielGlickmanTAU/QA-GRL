@@ -81,7 +81,7 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
     texts may appear multiple times in passage, with different question in the questions list"""
 
     pipe = E2EQGPipeline(model, tokenizer)
-    generated_questions = {'passage': [], 'question': [], 'label': []}
+    generated_questions = {'passage': [], 'question': [], 'answer': []}
 
     for i in range(num_texts):
         text = boolq_generation_dataset[i]['source_text']
@@ -90,24 +90,21 @@ def generate_questions(model, tokenizer, boolq_generation_dataset, num_texts):
         questions = pipe(text)
         generated_questions['passage'] += [clean_text] * len(questions)
         generated_questions['question'] += questions
-        #hack: adding labels to avoid problems with processing down the road
-        generated_questions['label'] += [9] * len(questions)
+        # hack: adding labels to avoid problems with processing down the road
+        generated_questions['answer'] += [9] * len(questions)
 
     return datasets.Dataset.from_dict(generated_questions)
 
 
-def generate_boolq_dataset(split='validation', num_questions=0):
-    generation_task_name = 'question-generation'
+def generate_boolq_dataset(model, tokenizer, split='validation', num_questions=0):
 
-    generation_model_params = ExperimentVariables._t5_qg
-
-    model, tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name, generation_model_params)
     boolq_generation = datasets_loading.get_boolq_generation_dataset(tokenizer)
 
     split_ = boolq_generation[split]
     num_texts = num_questions if num_questions else len(split_)
     generated_questions = generate_questions(model, tokenizer, split_, num_texts)
-    return generated_questions.map(
-        lambda examples: tokenizer(examples['passage'], examples['question'], truncation=True,
-                                   padding=True)
-    )
+    return generated_questions
+    # return generated_questions.map(
+    #     lambda examples: tokenizer(examples['passage'], examples['question'], truncation=True,
+    #                                padding=True)
+    # )

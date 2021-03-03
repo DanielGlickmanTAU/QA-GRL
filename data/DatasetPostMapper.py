@@ -27,5 +27,14 @@ class DataSetPostMapper:
 
             return {'prob': self._numpy(probs), 'prediction': self._numpy(predictions), 'correct': correct}
 
+    def add_probs(self, examples):
+        self.model.eval()
+        with torch.no_grad():
+            logits = self.model(self._tensor(examples['input_ids']),
+                                self._tensor(examples['attention_mask'])).logits
+            probs = logits.softmax(dim=1).max(dim=1).values
+
+            return {'prob': self._numpy(probs)}
+
     def change_labels(self, examples, field_name='correct'):
         return {'label': examples[field_name]}

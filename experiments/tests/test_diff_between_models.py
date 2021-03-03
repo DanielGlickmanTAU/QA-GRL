@@ -4,7 +4,8 @@ from collections import defaultdict
 from datasets import load_from_disk
 
 from models.confidence import get_last_confidence_model
-from utils import compute
+from models.question_generation import generate_boolq_dataset
+from utils import compute, model_loading
 
 torch = compute.get_torch()
 from data.DatasetPostMapper import DataSetPostMapper
@@ -52,15 +53,31 @@ class Test(TestCase):
     def test_simple_confidence_model_example(self):
         error_prediction_model_params = ExperimentVariables._roberta_squad
         confidence_model, confidence_tokenizer = get_last_confidence_model(error_prediction_model_params)
+        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
         error_prediction_task_name = 'error-prediction'
 
         boolq = datasets_loading.get_boolq_dataset(confidence_tokenizer)
         assert len(boolq['validation']) < 3000
 
-        mapper = DataSetPostMapper(confidence_model, confidence_tokenizer)
+        generation_task_name = 'question-generation'
+        generation_model_params = ExperimentVariables._t5_qg
 
-        mapped_error_ds = boolq['validation'].map(mapper.add_is_correct_and_probs, batched=True, batch_size=50,
-                                                    writer_batch_size=50)
+        gen_model, gen_tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name,
+                                                                              generation_model_params)
+        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=20)
+        print('yo', generated_questions['question'][0])
+        print('yo', generated_questions['passage'][0])
+        print(generated_questions['answer'])
+
+        generated_questions = generated_questions.map(
+            lambda examples: datasets_loading.tokenize_boolq(examples, confidence_tokenizer), batched=True)
+
+        # generated_questions = boolq['validation'].select(range(4)).map(mapper.add_is_correct_and_probs, batched=True)
+        # , batch_size=50,writer_batch_size=50)
+        generated_questions = generated_questions.map(mapper.add_probs, batched=True, batch_size=50,
+                                                      writer_batch_size=50)
+
+        self.print_by_probability_ratio(generated_questions, confidence_tokenizer, k=2)
 
         # JUST NEED TO FIGURE OUT WHAT DATA THE CONFIDENCE MODEL EXCPECTS...
         # PROBABLY JUST NORMAL BOOLQ DATA T + Q...PROBABLY so i need to get regular boolq dataset. and map it..
