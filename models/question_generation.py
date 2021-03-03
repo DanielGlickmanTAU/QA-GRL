@@ -29,7 +29,7 @@ top_p_args = {
     "do_sample": True,
     "top_k": 25,
     'top_p': 0.85,
-    "num_return_sequences": 5
+    "num_return_sequences": 4
 }
 
 
