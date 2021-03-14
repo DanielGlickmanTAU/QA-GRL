@@ -111,15 +111,18 @@ class Test(TestCase):
         import pickle
         import time
         filename = 'results_pickle_' + str(time.time())
+        filename_last = 'results_pickle_last'
         pickle.dump([hyperparams, results], open(filename, "wb"))
+        pickle.dump([hyperparams, results], open(filename_last, "wb"))
 
     def format_results(self, results):
-        return ['text:' + x[0] + '\n'
+        return ['text:' + x[0] + '\n\n'
                 + 'question1:' + x[1]
                 + '\n' + 'prob1:' + str(x[2])
                 + '\n' + 'question2:' + x[3]
                 + '\n' + 'prob2:' + str(x[4])
                 + '\n' + 'diff:' + str(x[5])
+                + '\n' + '-' * 60
                 for x in results]
 
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
