@@ -65,7 +65,7 @@ class Test(TestCase):
 
         gen_model, gen_tokenizer = model_loading.get_best_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)
-        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=0)
+        generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=2)
 
         generated_questions = generated_questions.map(
             lambda examples: datasets_loading.tokenize_boolq(examples, confidence_tokenizer), batched=True)
@@ -114,7 +114,12 @@ class Test(TestCase):
         pickle.dump([hyperparams, results], open(filename, "wb"))
 
     def format_results(self, results):
-        return ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
+        return ['text:' + x[0] + '\n'
+                + 'question1:' + x[1]
+                + '\n' + 'prob1:' + str(x[2])
+                + '\n' + 'question2:' + x[3]
+                + '\n' + 'prob2:' + str(x[4])
+                + '\n' + 'diff:' + str(x[5])
                 for x in results]
 
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
