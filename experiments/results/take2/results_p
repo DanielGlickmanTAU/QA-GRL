@@ -1,0 +1,1900 @@
+ssh://ubuntu@52.0.79.249:22/home/ubuntu/anaconda3/bin/python -u /home/ubuntu/.pycharm_helpers/pycharm/_jb_unittest_runner.py --target test_confidence.Test.test_generate_and_rank_confidence
+Testing started at 17:19 ...
+Launching unittests with arguments python -m unittest test_confidence.Test.test_generate_and_rank_confidence in /home/ubuntu/code/tmp/pycharm_project_82/experiments/tests
+
+using hyperparams: {'env': 'AWS', 'task_name': 'boolq', 'model_params': {'model_name': 'deepset/roberta-base-squad2', 'model_tokenizer': 'roberta-base', 'batch_size': 12, 'learning_rate': 1e-05, 'num_epochs': 4}, 'race': {'negative_samples_per_question': 1}, 'use_unique_seperator_for_answer': False, 'return_overflowing_tokens': False, 'disable_tqdm': False}
+fail to save file
+setting CUDA_VISIBLE_DEVICES=0
+setting CUDA_VISIBLE_DEVICES=0
+comet_ml is installed but `COMET_API_KEY` is not set.
+setting CUDA_VISIBLE_DEVICES=0
+{0: 15106}
+using device  cuda:0
+setting CUDA_VISIBLE_DEVICES=0
+{0: 15106}
+using device  cuda:0
+setting CUDA_VISIBLE_DEVICES=0
+COMET INFO: Experiment is live on comet.ml https://www.comet.ml/danielglickmantau/dl/590a90cf0f3b4e0c8dfce52be3ea4aef
+
+setting CUDA_VISIBLE_DEVICES=0
+
+
+Ran 1 test in 817.174s
+
+OK
+COMET INFO: ---------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     url                   : https://www.comet.ml/danielglickmantau/dl/590a90cf0f3b4e0c8dfce52be3ea4aef
+COMET INFO:   Parameters:
+COMET INFO:     batch_size                      : 12
+COMET INFO:     disable_tqdm                    : 1
+COMET INFO:     do_sample                       : True
+COMET INFO:     env                             : AWS
+COMET INFO:     learning_rate                   : 1e-05
+COMET INFO:     max_length                      : 512
+COMET INFO:     model_name                      : deepset/roberta-base-squad2
+COMET INFO:     model_tokenizer                 : roberta-base
+COMET INFO:     negative_samples_per_question   : 1
+COMET INFO:     num_epochs                      : 4
+COMET INFO:     num_return_sequences            : 4
+COMET INFO:     return_overflowing_tokens       : 1
+COMET INFO:     task_name                       : boolq
+COMET INFO:     top_k                           : 25
+COMET INFO:     top_p                           : 0.85
+COMET INFO:     use_unique_seperator_for_answer : 1
+COMET INFO:   Uploads [count]:
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     installed packages  : 1
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code [2]     : 2
+COMET INFO: ---------------------------
+COMET INFO: Uploading metrics, params, and assets to Comet before program termination (may take several seconds)
+COMET INFO: The Python SDK has 3600 seconds to finish before aborting...
+
+Process finished with exit code 0
+getting model from checkpoint  error-prediction/deepset/roberta-base-squad2/using_sep/checkpoint-1572
+/home/ubuntu/anaconda3/lib/python3.7/subprocess.py:883: ResourceWarning: subprocess 5665 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/code/tmp/pycharm_project_82/utils/compute.py:33: ResourceWarning: unclosed file <_io.TextIOWrapper name=45 encoding='UTF-8'>
+  lines = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free').readlines()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+setting CUDA_VISIBLE_DEVICES=0
+/home/ubuntu/anaconda3/lib/python3.7/subprocess.py:883: ResourceWarning: subprocess 5669 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{0: 13637}
+/home/ubuntu/code/tmp/pycharm_project_82/experiments/tests
+Using custom data configuration default
+Reusing dataset boolq (/home/ubuntu/.cache/huggingface/datasets/boolq/default/0.1.0/1fcfdc6f36dc89a2245ffbbd5248ab33890594b50396731ebc78411bdd2ca534)
+100%|██████████| 4/4 [00:00<00:00, 41.46ba/s]
+Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/boolq/default/0.1.0/1fcfdc6f36dc89a2245ffbbd5248ab33890594b50396731ebc78411bdd2ca534/cache-066f0c28158f62d4.arrow
+100%|██████████| 3/3 [00:01<00:00,  2.67ba/s]
+preprocess took  1.2012028694152832 seconds
+getting model from checkpoint  question-generation/valhalla/t5-small-e2e-qg/using_sep/checkpoint-23570
+Using custom data configuration default
+Reusing dataset boolq (/home/ubuntu/.cache/huggingface/datasets/boolq/default/0.1.0/1fcfdc6f36dc89a2245ffbbd5248ab33890594b50396731ebc78411bdd2ca534)
+Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/boolq/default/0.1.0/1fcfdc6f36dc89a2245ffbbd5248ab33890594b50396731ebc78411bdd2ca534/cache-b4f87c945bd1ba4e.arrow
+Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/boolq/default/0.1.0/1fcfdc6f36dc89a2245ffbbd5248ab33890594b50396731ebc78411bdd2ca534/cache-af75e6890cec2dc4.arrow
+100%|██████████| 3/3 [00:00<00:00, 319.62ba/s]
+preprocess took  0.017980337142944336 seconds
+/home/ubuntu/anaconda3/lib/python3.7/subprocess.py:883: ResourceWarning: subprocess 5677 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+setting CUDA_VISIBLE_DEVICES=0
+/home/ubuntu/anaconda3/lib/python3.7/subprocess.py:883: ResourceWarning: subprocess 5681 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{0: 13637}
+/home/ubuntu/anaconda3/lib/python3.7/site-packages/transformers/models/t5/tokenization_t5.py:184: UserWarning: This sequence already has </s>. In future versions this behavior may lead to duplicated eos tokens being added.
+  f"This sequence already has {self.eos_token}. In future versions this behavior may lead to duplicated eos tokens being added."
+100%|██████████| 5/5 [00:02<00:00,  2.44ba/s]
+100%|██████████| 93/93 [02:44<00:00,  1.76s/ba]
+top: text:Las Vegas is a city in and the county seat of San Miguel County, New Mexico, United States. Once two separate municipalities (one a city and the other a town), both were named Las Vegas--West Las Vegas (``Old Town'') and East Las Vegas (``New Town'')--are separated by the Gallinas River and retain distinct characters and separate, rival school districts.
+
+question1:is las vegas a city in new mexico
+prob1:0.9424231052398682
+question2:is las vegas the same as los angeles
+prob2:0.5529959797859192
+diff:0.389427125453949
+------------------------------------------------------------
+
+text:Sale or serving of alcoholic beverages from 3 a.m. Christmas Day until 7 a.m. December 26 was banned until HB 1542 was passed in 2015.
+
+question1:can you buy alcoholic beverages from 3 a.m. on christmas day
+prob1:0.941057562828064
+question2:is christmas day the same as christmas day
+prob2:0.6022401452064514
+diff:0.33881741762161255
+------------------------------------------------------------
+
+text:White Castle is an American regional hamburger restaurant chain in the Midwestern and Mid-Atlantic regions of the United States. It has been generally credited as the country's first fast-food chain. It is known for its small, square hamburgers. Sometimes referred to as ``sliders'', the burgers were initially priced at five cents until 1929 and remained at ten cents until 1949. In the 1940s, White Castle periodically ran promotional ads in local newspapers which contained coupons offering five burgers for ten cents, takeout only.
+
+question1:is white castle the first fast food chain
+prob1:0.9397508502006531
+question2:is white castle the same as white castle
+prob2:0.604602575302124
+diff:0.33514827489852905
+------------------------------------------------------------
+
+text:Taxation in New Mexico comprises the taxation programs of the U.S state of New Mexico. All taxes are administered on state- and city-levels by the New Mexico Taxation and Revenue Department, a state agency. The principal taxes levied include state income tax, a state gross receipts tax, gross receipts taxes in local jurisdictions, state and local property taxes, and several taxes related to production and processing of oil, gas, and other natural resources.
+
+question1:does new mexico have a tax on oil and gas
+prob1:0.9426583051681519
+question2:is new mexico the same as nma
+prob2:0.6165406703948975
+diff:0.3261176347732544
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:The pardon power of the President extends only to an offense recognizable under federal law. However, the governors of most of the 50 states have the power to grant pardons or reprieves for offenses under state criminal law. In other states, that power is committed to an appointed agency or board, or to a board and the governor in some hybrid arrangement (in some states the agency is merged with that of the parole board, as in the Oklahoma Pardon and Parole Board).
+
+question1:is there a pardon power in oklahoma
+prob1:0.8967161178588867
+question2:is a pardon power the same as a parole board
+prob2:0.5733041167259216
+diff:0.3234120011329651
+------------------------------------------------------------
+
+text:On 15 December 2014, the official music video for ``The Nights'' was released on YouTube and premiered on the front page of Yahoo Music. The video was produced, directed by, and stars ``professional life liver'' Rory Kramer, who filmed an exuberant action-packed recollection of his own life on roller coasters, surfing, snowboarding, skateboarding, balloon flying, making a four door convertible out of a Toyota, etc. -- living a life to be remembered.
+
+question1:is there a video of the nights on yahoo music
+prob1:0.9467664361000061
+question2:is the night the same as the nights
+prob2:0.6264917254447937
+diff:0.3202747106552124
+------------------------------------------------------------
+
+text:The Atlantic City Rail Terminal is Atlantic City, New Jersey's train station. It is the easternmost stop on the Atlantic City Line to and from Philadelphia. The station was also served by the Atlantic City Express Service (ACES) from 2009 until it was formally discontinued on March 9, 2012. The Atlantic City terminal is a 5-track, 3-platform terminal located inside of the Atlantic City Convention Center. The Atlantic City Line is a commuter train and runs daily all day.
+
+question1:is atlanta city a train station
+prob1:0.9316495656967163
+question2:is the atlanta city rail terminal the same as the atlantic city line
+prob2:0.6197723150253296
+diff:0.3118772506713867
+------------------------------------------------------------
+
+text:It is occasionally used to freeze and remove warts. However, liquid nitrogen performs better in this role, since it is colder so requires less time to act, and less pressure. Dry ice has fewer problems with storage, since it can be generated from compressed carbon dioxide gas as needed.
+
+question1:can dry ice be used to freeze and remove warts
+prob1:0.9532283544540405
+question2:is liquid nitrogen the same as liquid nitrogen
+prob2:0.6430067420005798
+diff:0.3102216124534607
+------------------------------------------------------------
+
+text:The Criminal Code creates criminal offences with respect to different aspects of hate propaganda. Those offences are decided in the criminal courts and carry penal sanctions, such as fines, probation orders and imprisonment. The federal government also has standards with respect to hate publications in federal laws relating to broadcasting.
+
+question1:does the federal government have a ban on hate propaganda
+prob1:0.9033857583999634
+question2:is hate propaganda the same as hate propaganda
+prob2:0.594294548034668
+diff:0.3090912103652954
+------------------------------------------------------------
+
+text:In an action for specific performance of a contract to convey land, the agreement must be in writing to satisfy the statute of frauds. The statute is satisfied if the contract to convey is evidenced by a writing or writings containing the essential terms of a purchase and sale agreement and signed by the party against whom the contract is to be enforced. If there is no written agreement, a court of equity can specifically enforce an oral agreement to convey only if the part performance doctrine is satisfied. In most jurisdictions, part performance is proven when the purchaser pays the purchase price, has possession of the land and makes improvements on the land, all with the permission of the seller. No jurisdiction is satisfied by payment of the purchase price alone.
+
+question1:can a court of equity enforce an oral agreement to convey a land
+prob1:0.9189451336860657
+question2:is part performance the same as part performance
+prob2:0.6099194884300232
+diff:0.3090256452560425
+------------------------------------------------------------
+
+text:In the 1970s, Hulseman's son, Robert Leo Hulseman, came up with the now-ubiquitous red Solo cup. The red Solo cups are made of thick, molded polystyrene. They are known for being able to withstand drops, easily stackable, and disposable while price accessible. Their characteristic red color may conceal the drinking contents.
+
+question1:are the red solo cups made of polystyrene
+prob1:0.8900840878486633
+question2:is the red solo cup the same as the red
+prob2:0.5903342366218567
+diff:0.29974985122680664
+------------------------------------------------------------
+
+text:The subsequent trophy, called the ``FIFA World Cup Trophy'', was introduced in 1974. Made of 18 carat gold with bands of malachite on its base, it stands 36.8 centimetres high and weighs 6.1 kilograms. The trophy was made by Stabilimento Artistico Bertoni company in Italy. It depicts two human figures holding up the Earth. The current holders of the trophy are France, winners of the 2018 World Cup.
+
+question1:is there a world cup trophy in italy
+prob1:0.9344744682312012
+question2:is the FIFA world cup trophy the same as the world cup
+prob2:0.6349546909332275
+diff:0.29951977729797363
+------------------------------------------------------------
+
+text:The subsequent trophy, called the ``FIFA World Cup Trophy'', was introduced in 1974. Made of 18 carat gold with a malachite base, it stands 36.8 centimetres high and weighs 6.1 kilograms. The trophy was made by Stabilimento Artistico Bertoni company in Italy. It depicts two human figures holding up the Earth. The current holders of the trophy are France, winners of the 2018 World Cup.
+
+question1:is there a world cup trophy in italy
+prob1:0.9344744682312012
+question2:is the FIFA world cup trophy the same as the world cup
+prob2:0.6349546909332275
+diff:0.29951977729797363
+------------------------------------------------------------
+
+text:Black garlic can be eaten alone, on bread, or used in soups, sauces, crushed into a mayonnaise or simply tossed into a vegetable dish. A vinaigrette can be made with black garlic, sherry vinegar, soy, a neutral oil, and Dijon mustard. Its softness increases with water content.
+
+question1:can a vinaigrette be made with black garlic
+prob1:0.9492327570915222
+question2:is black garlic the same as black garlic
+prob2:0.651100754737854
+diff:0.2981320023536682
+------------------------------------------------------------
+
+text:Garnet is a fictional character from the animated series Steven Universe, created by Rebecca Sugar. She is a ``gem'', a fictional alien being that exists as a magical gemstone projecting a holographic body. Garnet is a ``fusion gem'' -- i.e., two gemstones combining personalities and appearances as one shared holographic body -- formed by two Gems named Ruby and Sapphire; they chose to remain permanently fused out of love for each other.
+
+question1:is garnet a gem from Steven universe
+prob1:0.9408474564552307
+question2:is garnet the same as a gem
+prob2:0.6479046940803528
+diff:0.29294276237487793
+------------------------------------------------------------
+
+text:Son of Beast is also known for two major, non-fatal accidents. In 2006, damage to the track caused one of the trains to stop abruptly. Another setback occurred in 2009, when a woman claimed to have suffered a head injury. The ride was closed indefinitely, with the only reference of its existence appearing on a tombstone outside the new Banshee coaster (showing a simple logo of the ride and the dates 2000-2009). On July 27, 2012, the closure was made permanent, as Kings Island announced that the roller coaster would be dismantled and removed from the park.
+
+question1:is there a roller coaster on son of beast
+prob1:0.9436845183372498
+question2:is sun of beast the same as son of beast
+prob2:0.6510970592498779
+diff:0.2925874590873718
+------------------------------------------------------------
+
+text:The program was created by Sarah Lambert and was first broadcast on the Nine Network on 17 February 2014. The program is based on the real life forced adoption in Australia for which former Prime Minister Julia Gillard offered a national apology to those affected in 2013. Love Child was renewed for a second series on 2 March 2014. The series was renewed for a third series on 23 February 2015. The series was renewed for a fourth series on 8 November 2016 at Nine's upfronts.
+
+question1:is love child based on a true story
+prob1:0.8983530402183533
+question2:is love child the same as love child
+prob2:0.6075682044029236
+diff:0.2907848358154297
+------------------------------------------------------------
+
+text:When the equilateral pentagon is dissected into triangles, two of them appear as isosceles (triangles in orange and blue) while the other one is more general (triangle in green). We assume that we are given the adjacent angles α (\displaystyle \alpha ) and β (\displaystyle \beta ).
+
+question1:is the equilateral pentagon a triangle
+prob1:0.9030441045761108
+question2:are triangles the same as triangles
+prob2:0.6172248721122742
+diff:0.28581923246383667
+------------------------------------------------------------
+
+text:When selecting the position for the static port, the aircraft designer's objective is to ensure the pressure in the aircraft's static pressure system is as close as possible to the atmospheric pressure at the altitude at which the aircraft is flying, across the operating range of weight and airspeed. Many authors describe the atmospheric pressure at the altitude at which the aircraft is flying as the freestream static pressure. At least one author takes a different approach in order to avoid a need for the expression freestream static pressure. Gracey has written ``The static pressure is the atmospheric pressure at the flight level of the aircraft''. Gracey then refers to the air pressure at any point close to the aircraft as the local static pressure.
+
+question1:is there a static pressure at the altitude of the aircraft
+prob1:0.8917490243911743
+question2:is static pressure the same as static pressure
+prob2:0.6072970628738403
+diff:0.284451961517334
+------------------------------------------------------------
+
+text:All egg products sold in the U.S that are pasteurized due to the risk of food-borne illnesses are done per U.S. Department of Agriculture rules. They also do not allow any egg products to be sold without going through the process of pasteurization. They also do not recommend eating shell eggs that are raw or undercooked due to the possibility that Salmonella bacteria may be present.
+
+question1:can you buy shell eggs without pasteurizing
+prob1:0.870110809803009
+question2:are shell eggs the same as shell eggs
+prob2:0.5867292881011963
+diff:0.28338152170181274
+------------------------------------------------------------
+
+text:The beetroot is the taproot portion of the beet plant, usually known in North America as the beet, also table beet, garden beet, red beet, or golden beet. It is one of several of the cultivated varieties of Beta vulgaris grown for their edible taproots and their leaves (called beet greens). These varieties have been classified as B. vulgaris subsp. vulgaris Conditiva Group.
+
+question1:is there a beet root in the uk
+prob1:0.9481742978096008
+question2:is the beetroot the same as a tetra vulgaris
+prob2:0.6661500930786133
+diff:0.28202420473098755
+------------------------------------------------------------
+
+text:The Visa Debit card was previously known as ``Visa Delta'' solely in the UK. The Delta name began to be phased out in favour of the Visa Debit branding from September 1998.
+
+question1:is there a visa debit card in the uk
+prob1:0.9544242024421692
+question2:is a visa debit card the same as a card
+prob2:0.6753085851669312
+diff:0.27911561727523804
+------------------------------------------------------------
+
+text:The high-definition optical disc format war was between the Blu-ray and HD DVD optical disc standards for storing high-definition video and audio; it took place between 2006 and 2008 and was won by Blu-ray Disc.
+
+question1:is there a high definition optical disc format war
+prob1:0.9582256078720093
+question2:is a high definition optical disc the same as a bbc
+prob2:0.6801847219467163
+diff:0.27804088592529297
+------------------------------------------------------------
+
+text:The Tribute in Light is an art installation of 88 searchlights placed six blocks south of the World Trade Center on top of the Battery Parking Garage in New York City to create two vertical columns of light to represent the Twin Towers in remembrance of the September 11, 2001 attacks. Tribute in Light began initially as a temporary commemoration of the attacks in early 2002 but became an annual commemoration, currently produced on September 11th by the Municipal Art Society of New York.
+
+question1:is there a tribute in light in new york city
+prob1:0.9435579776763916
+question2:is the tribute in light the same as the twin towers
+prob2:0.6669546961784363
+diff:0.2766032814979553
+------------------------------------------------------------
+
+text:The definition of the molecule has evolved as knowledge of the structure of molecules has increased. Earlier definitions were less precise, defining molecules as the smallest particles of pure chemical substances that still retain their composition and chemical properties. This definition often breaks down since many substances in ordinary experience, such as rocks, salts, and metals, are composed of large crystalline networks of chemically bonded atoms or ions, but are not made of discrete molecules.
+
+question1:are atoms and ions part of a molecule
+prob1:0.8181804418563843
+question2:are atoms and ions the same thing
+prob2:0.5417940616607666
+diff:0.2763863801956177
+------------------------------------------------------------
+
+text:A floating island is a mass of floating aquatic plants, mud, and peat ranging in thickness from several centimetres to a few metres. Floating islands are a common natural phenomenon that are found in many parts of the world. They exist less commonly as a man-made phenomenon. Floating islands are generally found on marshlands, lakes, and similar wetland locations, and can be many hectares in size.
+
+question1:is a floating island a natural phenomenon
+prob1:0.9168197512626648
+question2:is a floating island the same as a man
+prob2:0.6417534351348877
+diff:0.2750663161277771
+------------------------------------------------------------
+
+text:The series is co-produced by Nickelodeon Productions and Nickelodeon Animation Studio. Dora the Explorer is one of the longest-running shows of Nick Jr. During the sixth season, the show became the Nick Jr. series with the most episodes, surpassing Blue's Clues with 143 episodes, having 144 after it had completed broadcasting on television. It ended on June 5, 2014 after 8 seasons and 172 episodes.
+
+question1:is there a season 6 of dora the Explorer
+prob1:0.9524361491203308
+question2:is blue's clues the same as nick sr
+prob2:0.679101288318634
+diff:0.2733348608016968
+------------------------------------------------------------
+
+text:Matter preceding the table of contents is generally not listed there. However, all pages except the outside cover are counted, and the table of contents is often numbered with a lowercase Roman numeral page number. Many popular word processors, such as Microsoft Word, WordPerfect, and StarWriter are capable of automatically generating a table of contents if the author of the text uses specific styles for chapter titles, headings, subheadings, etc.
+
+question1:is the table of contents numbered with a lowercase roman numeral
+prob1:0.8959501385688782
+question2:is the table of contents the same as the outside cover
+prob2:0.6232642531394958
+diff:0.2726858854293823
+------------------------------------------------------------
+
+text:The Andromeda--Milky Way collision is a galactic collision predicted to occur in about 4 billion years between two galaxies in the Local Group--the Milky Way (which contains the Solar System and Earth) and the Andromeda Galaxy. The stars involved are sufficiently far apart that it is improbable that any of them will individually collide. Some stars will be ejected from the resulting galaxy, nicknamed Milkomeda or Milkdromeda.
+
+question1:is there a collision between the milky way and the andromeda galaxy
+prob1:0.9480923414230347
+question2:is the milky way the same as the andromeda galaxy
+prob2:0.6766538619995117
+diff:0.27143847942352295
+------------------------------------------------------------
+
+text:Most EMS providers operate on the principle of informed consent; that is, patients must know exactly what it is they are refusing, and what the possible consequences might be, in order to make a proper decision. This precludes parties who are intoxicated or otherwise incapable of making an informed decision, such as the mentally incompetent. Otherwise, agencies could release someone who was not able to understand what refusing might mean to their health.
+
+question1:do EMS providers have informed consent
+prob1:0.9319587349891663
+question2:is informed consent the same as informed consent
+prob2:0.6613783240318298
+diff:0.2705804109573364
+------------------------------------------------------------
+
+text:In 1965, because of rises in bullion prices, the Mint began to strike copper-nickel clad coins instead of silver. No dollar coins had been issued in thirty years, but beginning in 1969, legislators sought to reintroduce a dollar coin into commerce. After Eisenhower died that March, there were a number of proposals to honor him with the new coin. While these bills generally commanded wide support, enactment was delayed by a dispute over whether the new coin should be in base metal or 40% silver. In 1970, a compromise was reached to strike the Eisenhower dollar in base metal for circulation, and in 40% silver as a collectible. President Richard Nixon, who had served as vice president under Eisenhower, signed legislation authorizing mintage of the new coin on December 31, 1970.
+
+question1:did the mint strike copper nickel clad coins
+prob1:0.9125889539718628
+question2:is a gold coin the same as a silver coin
+prob2:0.6428714990615845
+diff:0.2697174549102783
+------------------------------------------------------------
+
+text:Administrative leave is a temporary leave from a job assignment, with pay and benefits intact. Generally, the term is reserved for employees of non-business institutions such as schools, police, and hospitals.
+
+question1:is administrative leave a temporary leave
+prob1:0.9492931962013245
+question2:is administrative leave the same as administrative leave
+prob2:0.6837872266769409
+diff:0.26550596952438354
+------------------------------------------------------------
+
+text:A.D. The Bible Continues (also known as A.D. Kingdom and Empire) is a television miniseries, based on the Bible, and a sequel to the 2013 miniseries, The Bible. It is produced by Roma Downey, Mark Burnett, and Richard Bedser. The limited series began airing on NBC on Easter Sunday, April 5, 2015, in twelve weekly one-hour episodes. The story takes place immediately after the events of The Bible miniseries, beginning with the crucifixion and resurrection of Jesus, and continues with the first ten chapters of the Acts of the Apostles. On July 3, 2015, NBC cancelled A.D. The Bible Continues after one season. However, producers Burnett and Downey plan future biblical productions on their OTT digital channel.
+
+question1:is there a sequel to the bible
+prob1:0.942074716091156
+question2:is the bible the same as the bible
+prob2:0.6773070693016052
+diff:0.2647676467895508
+------------------------------------------------------------
+
+text:The fighting words doctrine, in United States constitutional law, is a limitation to freedom of speech as protected by the First Amendment to the United States Constitution.
+
+question1:is freedom of speech protected by the first amendment
+prob1:0.9275140762329102
+question2:is freedom of speech the same as the fighting words doctrine
+prob2:0.6652779579162598
+diff:0.2622361183166504
+------------------------------------------------------------
+
+text:The Constitution of New York is the foremost source of state law. The legislation of the New York State Legislature is published in the official Laws of New York and codified in the Consolidated Laws of New York. State agency rules and regulations are promulgated in the New York State Register and compiled in the New York Codes, Rules and Regulations. Because New York is a common law state, every opinion, memorandum, and motion sent by the Court of Appeals and the Appellate Division of the Supreme Court is published in the New York Reports and Appellate Division Reports, respectively, and selected opinions of the trial courts and Supreme Court appellate terms are published in the Miscellaneous Reports. Each local government may also adopt local laws, and counties, cities, and towns may promulgate ordinances.
+
+question1:is new york a common law state
+prob1:0.9175740480422974
+question2:is new york state law the same as new york
+prob2:0.6563419699668884
+diff:0.26123207807540894
+------------------------------------------------------------
+
+text:The domain name org is a generic top-level domain (gTLD) of the Domain Name System (DNS) used in the Internet. The name is truncated from organization. It was one of the original domains established in 1985, and has been operated by the Public Interest Registry since 2003. The domain was originally intended for non-profit entities, but this restriction was not enforced and has been removed. The domain is commonly used by schools, open-source projects, and communities, but also by some for-profit entities. The number of registered domains in org has increased from fewer than one million in the 1990s, to ten million as of June 2012.
+
+question1:is org a top level domain
+prob1:0.9419856071472168
+question2:is org the same as org
+prob2:0.681105375289917
+diff:0.2608802318572998
+------------------------------------------------------------
+
+text:The Phantom II was exported to 11 other nations, and continues to serve in a military role in some parts of the world.
+
+question1:is the Phantom II a part of the world
+prob1:0.934146523475647
+question2:is the Phantom II the same as Phantom II
+prob2:0.6739392280578613
+diff:0.26020729541778564
+------------------------------------------------------------
+
+text:Since 2009, Champions League winners have not kept the real trophy, which remains in UEFA's keeping at all times. A full-size replica trophy, the Champions League winners trophy, is awarded to the winning club with their name engraved on it. Winning clubs are also permitted to make replicas of their own; however, they must be clearly marked as such and can be a maximum of eighty percent the size of the actual trophy.
+
+question1:can you make a replica of a champions league trophy
+prob1:0.8654794692993164
+question2:is a full size replica trophy the same as a real trophy
+prob2:0.6059397459030151
+diff:0.25953972339630127
+------------------------------------------------------------
+
+text:One school of scholarship based mainly in the United States considers mixed government to be the central characteristic of a republic and holds that the United States has rule by the one (the President) (monarchy), the few (the Senate, which was originally supposed to represent the States) (aristocracy) and the many (House of Representatives) (democracy). Another school of thought in the United States says the Supreme Court has taken on the role of ``The Best'' in recent decades, ensuring a continuing separation of authority by offsetting the direct election of senators and preserving the mixing of democracy, aristocracy and monarchy.
+
+question1:is the supreme court the best in the us
+prob1:0.8982359170913696
+question2:is aristocracy and monarchy the same thing
+prob2:0.6420102119445801
+diff:0.25622570514678955
+------------------------------------------------------------
+
+text:The permittivity of a dielectric medium is often represented by the ratio of its absolute permittivity to the electric constant. This dimensionless quantity is called the medium's relative permittivity, sometimes also called ``permittivity''. Relative permittivity is also commonly referred to as the dielectric constant, a term which has been deprecated in physics and engineering as well as in chemistry.
+
+question1:does a dielectric medium have a permittivity
+prob1:0.9433679580688477
+question2:is a dielectric constant the same as a permittivity
+prob2:0.6874514818191528
+diff:0.2559164762496948
+------------------------------------------------------------
+
+text:The heat of vaporization is temperature-dependent, though a constant heat of vaporization can be assumed for small temperature ranges and for reduced temperature T r (\displaystyle T_(r)) ≪ 1 (\displaystyle \ll 1). The heat of vaporization diminishes with increasing temperature and it vanishes completely at a certain point called the critical temperature ( T r = 1 (\displaystyle T_(r)=1) ). Above the critical temperature, the liquid and vapor phases are indistinguishable, and the substance is called a supercritical fluid.
+
+question1:is there a constant heat of vaporization
+prob1:0.933072030544281
+question2:is the heat of vaporization the same as the critical temperature
+prob2:0.6789525747299194
+diff:0.2541194558143616
+------------------------------------------------------------
+
+text:The'main wing' was added later: it contains the household accommodation and council and audience chambers. The final addition to the house was a wing built between 1890 and 1891. This wing was designed by John Lockwood Kipling, father of the poet Rudyard Kipling. On the ground floor, it includes the famous Durbar Room, named after an anglicised version of the Hindi word durbar, meaning court. The Durbar Room was built for state functions; it was decorated by Bhai Ram Singh in an elaborate and intricate style, and has a carpet from Agra. It now holds gifts Queen Victoria received on her Golden and Diamond jubilees. These include engraved silver and copper vases, Indian armour, and a model of an Indian palace. The first floor of the new wing was for the sole use of Princess Beatrice and her family. Beatrice was the Queen's youngest daughter, and she lived near Victoria during her life.
+
+question1:is there a wing on the main wing
+prob1:0.9145251512527466
+question2:is the king's wing the same as the main wing
+prob2:0.6606756448745728
+diff:0.25384950637817383
+------------------------------------------------------------
+
+text:Demon Drop is a drop tower amusement ride at Dorney Park & Wildwater Kingdom. Designed by Intamin, it is a Freefall model that was originally located at Cedar Point when it first opened to the public in 1983. It was relocated to Dorney Park following the 2009 season and reopened in 2010. It is one of the oldest of its kind still in operation.
+
+question1:is demon drop a freefall ride
+prob1:0.9310068488121033
+question2:is demon drop the same as freefall
+prob2:0.6781612634658813
+diff:0.2528455853462219
+------------------------------------------------------------
+
+text:In all but two states, incest is criminalized between consenting adults. In New Jersey and Rhode Island, incest between consenting adults (16 or over for Rhode Island, 18 or over for New Jersey) is not a criminal offense, though marriage is not allowed in either state. New Jersey also increases the severity of underage sex offenses by a degree if they're also incestuous, and criminalizes incest with 16-17 year olds (the normal age of consent in New Jersey is 16).
+
+question1:is incest in new jersey and nyc a criminal offense
+prob1:0.8944969177246094
+question2:is incest the same as in nyc
+prob2:0.6420028209686279
+diff:0.25249409675598145
+------------------------------------------------------------
+
+text:The President's Guest House is one of several residences owned by the United States government for use by the President and Vice President of the United States; other such residences include the White House, Camp David, One Observatory Circle, the Presidential Townhouse, and Trowbridge House. The President's Guest House has been called ``the world's most exclusive hotel'' because it is primarily used to host visiting dignitaries and other guests of the president. It is larger than the White House and closed to the public.
+
+question1:is the president's guest house the world's most exclusive hotel
+prob1:0.9270808696746826
+question2:is the president's guest house the same as the white house
+prob2:0.6746221780776978
+diff:0.25245869159698486
+------------------------------------------------------------
+
+text:As of 2016, New York Life Insurance Company was the country's third-largest life insurance company. A mutual insurance company, New York Life is owned by its policyholders and has no outside shareholders. As a mutual, New York Life distributes a portion of its earnings to eligible policyholders as annual dividends. As of 2016, the company has paid a dividend every year since 1854. Through Seguros Monterrey New York Life, the company offers insurance in Mexico.
+
+question1:is new york life a mutual insurance company
+prob1:0.9473616480827332
+question2:is new york life the same as nyc life
+prob2:0.6985775828361511
+diff:0.24878406524658203
+------------------------------------------------------------
+
+text:The U.S. Coast Guard reports directly to the Secretary of Homeland Security. However, under 14 U.S.C. § 3 as amended by section 211 of the Coast Guard and Maritime Transportation Act of 2006, upon the declaration of war and when Congress so directs in the declaration, or when the President directs, the Coast Guard operates under the Department of Defense as a service in the Department of the Navy.
+
+question1:does the coast guard operate in the navy
+prob1:0.8620256781578064
+question2:is the coast guard the same as the navy
+prob2:0.6146535873413086
+diff:0.2473720908164978
+------------------------------------------------------------
+
+text:Hellyeah's beginnings can be traced back to 2000 on the Tattoo the Earth tour featuring Mudvayne, Nothingface, Slayer, Slipknot and Sevendust. Nothingface guitarist Tom Maxwell became friends with Mudvayne vocalist Chad Gray, and they talked about the possibility of forming a supergroup. The following year, Nothingface toured with Mudvayne and talks to form the supergroup continued, although were constantly put on hold due to scheduling conflicts. At this time, Gray and Maxwell had brainstormed five band names.
+
+question1:is there a supergroup in hellyeah
+prob1:0.9449464678764343
+question2:is hellyeah the same as nothingface
+prob2:0.6978845596313477
+diff:0.24706190824508667
+------------------------------------------------------------
+
+text:Cross-platform play (cross-play) is the ability to allow different gaming platforms to share the same online servers in a game, allowing players to join together regardless of the platform they own. Since the Dreamcast and Playstation 2 there have been online video games that support cross-play. Listed here is an incomplete list (which misses some mobile games and Xbox One backwards compatible games) of games that support cross-play with their consoles, computers, mobile and handheld game consoles:
+
+question1:can you play cross-platform games on xbox one
+prob1:0.9480758309364319
+question2:is cross play the same as cross play
+prob2:0.7026407122612
+diff:0.24543511867523193
+------------------------------------------------------------
+
+text:In 1873, the head of the abbey came to an agreement with a Parisian cheese-seller granting exclusive rights of distribution, and the cheese soon became popular. The abbey sought trade protection, and eventually (in 1959), sold the rights to a major creamery. The cheese is now produced in a factory; the characteristic smooth rind the result of a plastic-coated wrapper. The rind is edible, but is made of wax and detracts from the flavour of the cheese.
+
+question1:is the rind of the abbey edible
+prob1:0.8782864809036255
+question2:is the rind of the abbey the same as wax
+prob2:0.6371225714683533
+diff:0.24116390943527222
+------------------------------------------------------------
+
+text:The tournament book of the London 1883 international chess tournament (originally published in 1883) contains a ``Revised International Chess Code'', which was ``published for the consideration of Chess Players, and especially of the managers of future International Tournaments''. Unlike the 1862 rule, which allowed the pawn to remain a pawn, it requires that: ``A Pawn reaching the eighth square must be named as a Queen or piece... '' (Minchin 1973:iii--iv)
+
+question1:can a pawn reach the eighth square
+prob1:0.916309654712677
+question2:is a pawn the same as a queen
+prob2:0.6759953498840332
+diff:0.2403143048286438
+------------------------------------------------------------
+
+text:Diet Rite is a brand of no-calorie soft drinks originally distributed by the RC Cola company.
+
+question1:is diet rite a no calories drink
+prob1:0.9504476189613342
+question2:is diet rite the same as diet rite
+prob2:0.710208535194397
+diff:0.24023908376693726
+------------------------------------------------------------
+
+text:Three-way and four-way switches make it possible to control a light from multiple locations, such as the top and bottom of a stairway, either end of a long hallway, or multiple doorways into a large room. These switches appear externally similar to single pole, single throw (SPST) switches, but have extra connections which allow a circuit to be controlled from multiple locations. Toggling the switch disconnects one ``traveler'' terminal and connects the other.
+
+question1:can you control a light from multiple locations
+prob1:0.9437536597251892
+question2:is a three way switch the same as a single throw switch
+prob2:0.7040455341339111
+diff:0.23970812559127808
+------------------------------------------------------------
+
+text:On June 23, 2008, Allied was purchased by its smaller competitor Republic Services, Inc for US$6.1 billion. The merged company, retaining the Republic name, has become the second largest non-hazardous solid waste management company in the United States.
+
+question1:is Allied the largest solid waste management company in the us
+prob1:0.9244495630264282
+question2:is republic services the same as republic services
+prob2:0.6854407787322998
+diff:0.23900878429412842
+------------------------------------------------------------
+
+text:The Nissan Titan is a full-size pickup truck manufactured in the United States for the North American market by Nissan. It was named for the Titans of Greek mythology.
+
+question1:is the naturo titan a full size pickup truck
+prob1:0.9528618454933167
+question2:is the nicolas titan the same as the titans
+prob2:0.7142825722694397
+diff:0.23857927322387695
+------------------------------------------------------------
+
+text:Bloodline was announced in October 2014 as part of a partnership between Netflix and Sony Pictures Television, representing Netflix's first major deal with a major film studio for a television series. The series was created and executive produced by Todd A. Kessler, Glenn Kessler, and Daniel Zelman, who previously created the FX series Damages. According to its official synopsis released by Netflix, Bloodline ``centers on a close-knit family of four adult siblings whose secrets and scars are revealed when their black sheep brother returns home.''
+
+question1:is bloodline based on a true story
+prob1:0.8606189489364624
+question2:is bloodline the same as bloodline
+prob2:0.6220439076423645
+diff:0.2385750412940979
+------------------------------------------------------------
+
+text:Historically, sales of the Five-seven pistol were restricted by FN to military and law enforcement customers, but in 2004 the new Five-seven IOM model was introduced and offered to civilian shooters for use with 5.7×28mm sporting ammunition. The IOM model incorporated several modifications to the weapon's design, such as the addition of an M1913 accessory rail, a magazine safety mechanism, and fully adjustable sights. Although offered only with sporting ammunition, the Five-seven's introduction to civilian shooters was met with strong opposition from gun control organizations such as the Brady Campaign.
+
+question1:can you buy a five seven pistol in nfl
+prob1:0.9102621078491211
+question2:is a five seven pistol the same as a rifle
+prob2:0.6730017066001892
+diff:0.23726040124893188
+------------------------------------------------------------
+
+text:The definition of life is controversial. The current definition is that organisms are open systems that maintain homeostasis, are composed of cells, have a life cycle, undergo metabolism, can grow, adapt to their environment, respond to stimuli, reproduce and evolve. However, several other biological definitions have been proposed, and there are some borderline cases of life, such as viruses or viroids. In the past, there have been many attempts to define what is meant by ``life'' through obsolete concepts such as odic force, hylomorphism, spontaneous generation and vitalism, that have now been disproved by biological discoveries. Abiogenesis describes the natural process of life arising from non-living matter, such as simple organic compounds. Properties common to all organisms include the need for certain core chemical elements to sustain biochemical functions.
+
+question1:are there any biological definitions of life
+prob1:0.9170721173286438
+question2:is abiogenesis the same as a biogenesis
+prob2:0.6809474229812622
+diff:0.2361246943473816
+------------------------------------------------------------
+
+text:Call of Duty: WWII is a first-person shooter video game developed by Sledgehammer Games and published by Activision. It was released worldwide on November 3, 2017 for Microsoft Windows, PlayStation 4 and Xbox One. It is the fourteenth main installment in the Call of Duty series and the first title in the series to be set primarily during World War II since Call of Duty: World at War in 2008.
+
+question1:is there a sequel to call of duty
+prob1:0.9067424535751343
+question2:is call of duty the same as world at war
+prob2:0.6707949638366699
+diff:0.23594748973846436
+------------------------------------------------------------
+
+text:Compañía Panameña de Aviación, S.A., (NYSE: CPA) (commonly referred to and branded simply as ``Copa Airlines'') is the flag carrier of Panama. It is headquartered in Panama City, Panama, with its main hub at Tocumen International Airport. Copa is a subsidiary of Copa Holdings, S.A. as well as a member of the Star Alliance. The airline is also the main operator and owner of Colombian airline AeroRepública, currently known as Copa Airlines Colombia.
+
+question1:is copa a flag carrier in panama
+prob1:0.9481027126312256
+question2:is copa the same as copa airlines
+prob2:0.7132112979888916
+diff:0.23489141464233398
+------------------------------------------------------------
+
+text:Rose quartz is a type of quartz which exhibits a pale pink to rose red hue. The color is usually considered as due to trace amounts of titanium, iron, or manganese, in the material. Some rose quartz contains microscopic rutile needles which produces an asterism in transmitted light. Recent X-ray diffraction studies suggest that the color is due to thin microscopic fibers of possibly dumortierite within the quartz.
+
+question1:is rose quartz a color of rose quartz
+prob1:0.8815358877182007
+question2:is rose quartz the same as rose quartz
+prob2:0.6467710733413696
+diff:0.23476481437683105
+------------------------------------------------------------
+
+text:Snake Eyes (also released as Snake-Eyes) is a fictional character from the G.I. Joe: A Real American Hero toyline, comic books, and cartoon series. He is one of the original and most popular members of the G.I. Joe Team, and is most known for his relationships with Scarlett and Storm Shadow. Snake Eyes is one of the most prominent characters in the G.I. Joe: A Real American Hero franchise, having appeared in every series of the franchise since its inception. He is portrayed by Ray Park in the 2009 live-action film G.I. Joe: The Rise of Cobra, and the 2013 sequel G.I. Joe: Retaliation.
+
+question1:is snake eyes part of the gi joe team
+prob1:0.9042800068855286
+question2:is snake eyes the same as snakeeyes
+prob2:0.6699758768081665
+diff:0.23430413007736206
+------------------------------------------------------------
+
+text:In psychology, relationship obsessive--compulsive disorder (ROCD) is a form of obsessive--compulsive disorder focusing on intimate relationships. Such obsessions can become extremely distressing and debilitating, having negative impacts on relationships functioning.
+
+question1:can you have a relationship obsessive disorder
+prob1:0.9445710778236389
+question2:is relationship obsessive and compulsive disorder the same
+prob2:0.71188884973526
+diff:0.2326822280883789
+------------------------------------------------------------
+
+text:The San Andreas Fault is a continental transform fault that extends roughly 1,200 kilometers (750 mi) through California. It forms the tectonic boundary between the Pacific Plate and the North American Plate, and its motion is right-lateral strike-slip (horizontal). The fault divides into three segments, each with different characteristics and a different degree of earthquake risk. The slip rate along the fault ranges from 20 to 35 mm (0.79 to 1.38 in)/yr.
+
+question1:is there a fault in california
+prob1:0.9539489150047302
+question2:is the san Andreas fault the same as the california fault
+prob2:0.7226772904396057
+diff:0.2312716245651245
+------------------------------------------------------------
+
+text:War Room is a 2015 American Christian drama film directed by Alex Kendrick and written by he and Stephen Kendrick. It is the Kendrick brothers' fifth film and their first through their subsidiary, Kendrick Brothers Productions. Provident Films, Affirm Films and TriStar Pictures partnered with the Kendrick brothers to release the film.
+
+question1:is war room based on a true story
+prob1:0.8516928553581238
+question2:is war room the same as war room
+prob2:0.6216420531272888
+diff:0.23005080223083496
+------------------------------------------------------------
+
+text:The United States Department of Justice (DOJ), also known as the Justice Department, is a federal executive department of the U.S. government, responsible for the enforcement of the law and administration of justice in the United States, equivalent to the justice or interior ministries of other countries. The department was formed in 1870 during the Ulysses S. Grant administration.
+
+question1:is there a department of justice in the us
+prob1:0.957706093788147
+question2:is the department of justice the same as the justice department
+prob2:0.72776198387146
+diff:0.229944109916687
+------------------------------------------------------------
+
+text:Gotham City is traditionally depicted as being located in the state of New Jersey, within close proximity to Metropolis. Over the years, Gotham's look and atmosphere has been influenced by cities such as New York City and Chicago.
+
+question1:is there a city in new york city
+prob1:0.9512231945991516
+question2:is gotham city the same as new york city
+prob2:0.721613347530365
+diff:0.22960984706878662
+------------------------------------------------------------
+
+text:The Magicians is a new adult fantasy novel by the American author Lev Grossman, published in 2009 by Viking Press. It tells the story of Quentin Coldwater, a young man who discovers and attends a college of magic in New York. The novel received critical acclaim, and was followed by The Magician King in 2011 and 2014's The Magician's Land. The novels have been adapted as a television series that currently airs on Syfy.
+
+question1:is the magicians based on a true story
+prob1:0.8524613380432129
+question2:is the magicians the same as the magician's land
+prob2:0.6232771277427673
+diff:0.22918421030044556
+------------------------------------------------------------
+
+text:A Snellen chart is an eye chart that can be used to measure visual acuity. Snellen charts are named after the Dutch ophthalmologist Herman Snellen, who developed the chart in 1862. Many ophthalmologists and vision scientists now use an improved chart known as the LogMAR chart.
+
+question1:can a snellen chart be used to measure visual acuity
+prob1:0.9500752687454224
+question2:is a snellen chart the same as a logmar
+prob2:0.7217977643013
+diff:0.22827750444412231
+------------------------------------------------------------
+
+text:Avengers: Infinity War and its upcoming untitled sequel are American superhero films based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. They are the sequels to Marvel's The Avengers (2012) and Avengers: Age of Ultron (2015), and serve as the nineteenth and twenty-second films of the Marvel Cinematic Universe (MCU), respectively. Both films are directed by Anthony and Joe Russo from screenplays by the writing team of Christopher Markus and Stephen McFeely, and feature an ensemble cast composed of many previous MCU actors.
+
+question1:is there a sequel to the  Avengers
+prob1:0.9505190253257751
+question2:are the  Avengers and the age of ultron the same
+prob2:0.7238521575927734
+diff:0.2266668677330017
+------------------------------------------------------------
+
+text:If a player's king is placed in check and there is no legal move that player can make to escape check, then the king is said to be checkmated, the game ends, and that player loses (Schiller 2003:20--21). Unlike other pieces, the king is never actually captured or removed from the board because checkmate ends the game (Burgess 2009:502).
+
+question1:can a player escape check
+prob1:0.941351056098938
+question2:is the king in check the same as a king
+prob2:0.7148922085762024
+diff:0.2264588475227356
+------------------------------------------------------------
+
+text:A cervical fracture, commonly called a broken neck, is a catastrophic fracture of any of the seven cervical vertebrae in the neck. Examples of common causes in humans are traffic collisions and diving into shallow water. Abnormal movement of neck bones or pieces of bone can cause a spinal cord injury resulting in loss of sensation, paralysis, or usually instant death.
+
+question1:can you have a broken neck
+prob1:0.9410784840583801
+question2:is a broken neck the same as a fracture
+prob2:0.7149112820625305
+diff:0.2261672019958496
+------------------------------------------------------------
+
+text:Shooter is an American television drama series based on the 2007 film of the same name and the novel Point of Impact by Stephen Hunter. The show stars Ryan Phillippe in the lead role of Bob Lee Swagger, an expert marksman living in exile who is coaxed back into action after learning of a plot to kill the president. USA Network picked up the pilot in August 2015 and ordered the pilot to series in February 2016.
+
+question1:is shooter based on a true story
+prob1:0.9127240777015686
+question2:is shooter the same as shooter
+prob2:0.6870068311691284
+diff:0.22571724653244019
+------------------------------------------------------------
+
+text:A homily is a commentary that follows a reading of scripture. In Catholic, Anglican, Lutheran, and Eastern Orthodox Churches, a homily is usually given during Mass (Divine Liturgy or Holy Qurbana for Orthodox and Eastern Catholic Churches, and Divine Service for the Lutheran Church) at the end of the Liturgy of the Word. Many people consider it synonymous with a sermon.
+
+question1:is a homily a reading of scripture
+prob1:0.8613898754119873
+question2:is a homily the same as a sermon
+prob2:0.636055588722229
+diff:0.2253342866897583
+------------------------------------------------------------
+
+text:In-N-Out Burger has resisted franchising its operations or going public; one reason is the prospect of quality or customer consistency being compromised by excessively rapid business growth. The company's business practices have been noted for employee-centered personnel policies. For example, In-N-Out is one of the few fast food chains in the United States to pay its employees more than state and federally mandated minimum wage guidelines -- starting at US$11 per hour in California, as of May 2017. The In-N-Out restaurant chain has developed a highly loyal customer base, and has been rated as one of the top fast food restaurants in several customer satisfaction surveys.
+
+question1:is in n out a fast food restaurant in california
+prob1:0.9003865718841553
+question2:is in-n out burger the same as in n out
+prob2:0.6751657724380493
+diff:0.22522079944610596
+------------------------------------------------------------
+
+text:Lego The Hobbit is a Lego-themed action-adventure video game developed by Traveller's Tales. The game was released by Warner Bros. Interactive Entertainment on 8 April 2014 in North America, and 11 April in Europe. The game is a follow-up to Lego The Lord of the Rings based on the first two Hobbit films; An Unexpected Journey and The Desolation of Smaug. It was released on PlayStation 3, PlayStation 4, PlayStation Vita, Xbox 360, Xbox One, Wii U, Nintendo 3DS, OS X and Microsoft Windows.
+
+question1:is there a sequel to Lego the Hobbit
+prob1:0.9311860203742981
+question2:is Lego the Hobbit the same as the Lord of the rings
+prob2:0.7066866755485535
+diff:0.22449934482574463
+------------------------------------------------------------
+
+text:Benzalkonium chloride is also used in many non-consumer processes and products, including as an active ingredient in surgical disinfection. A comprehensive list of uses includes industrial applications. An advantage of benzalkonium chloride, not shared by ethanol-based antiseptics or hydrogen peroxide antiseptic, is that it does not cause a burning sensation when applied to broken skin.. However, prolonged or repeated skin contact may cause dermatitis.
+
+question1:can benzalkonium chloride cause dermatitis
+prob1:0.9386606812477112
+question2:is benzalkonium chloride the same as hydrogen peroxide
+prob2:0.7148323655128479
+diff:0.22382831573486328
+------------------------------------------------------------
+
+text:Lofoten (Norwegian pronunciation: (ˈluːfuːtn̩)) is an archipelago and a traditional district in the county of Nordland, Norway. Lofoten is known for a distinctive scenery with dramatic mountains and peaks, open sea and sheltered bays, beaches and untouched lands. Though lying within the Arctic Circle, the archipelago experiences one of the world's largest elevated temperature anomalies relative to its high latitude.
+
+question1:is lufoten a norwegian archipelago
+prob1:0.9318324327468872
+question2:is lufoten part of the arctic circle
+prob2:0.7084515690803528
+diff:0.22338086366653442
+------------------------------------------------------------
+
+text:Proteins are polymer chains made of amino acids linked together by peptide bonds. During human digestion, proteins are broken down in the stomach to smaller polypeptide chains via hydrochloric acid and protease actions. This is crucial for the absorption of the essential amino acids that cannot be biosynthesized by the body.
+
+question1:is a protein a polymer chain
+prob1:0.9323961734771729
+question2:is a protein the same as a polymer chain
+prob2:0.7097506523132324
+diff:0.22264552116394043
+------------------------------------------------------------
+
+text:A fossil fuel is a fuel formed by natural processes, such as anaerobic decomposition of buried dead organisms, containing energy originating in ancient photosynthesis. The age of the organisms and their resulting fossil fuels is typically millions of years, and sometimes exceeds 650 million years. Fossil fuels contain high percentages of carbon and include petroleum, coal, and natural gas. Other commonly used derivatives include kerosene and propane. Fossil fuels range from volatile materials with low carbon to hydrogen ratios like methane, to liquids like petroleum, to nonvolatile materials composed of almost pure carbon, like anthracite coal. Methane can be found in hydrocarbon fields either alone, associated with oil, or in the form of methane clathrates.
+
+question1:is kerosene and propane a fossil fuel
+prob1:0.9351097941398621
+question2:is kerosene and propane the same thing
+prob2:0.7151443958282471
+diff:0.219965398311615
+------------------------------------------------------------
+
+text:Loan Officers, also referred to as ``Mortgage Loan Originators,'' are people who work for banks and other financial institutions with the main objective to recommend individual and business loan applications for approval and participate in the front end of the mortgage origination process. Loan officers specialize in commercial, consumer and mortgage loans.
+
+question1:do loan officers work for banks and other financial institutions
+prob1:0.9383862018585205
+question2:are loan officers the same as loan officers
+prob2:0.7187784910202026
+diff:0.21960771083831787
+------------------------------------------------------------
+
+text:Cryptorchidism is the absence of one or both testes from the scrotum. The word is from the Greek κρυπτός, kryptos, meaning hidden ὄρχις, orchis, meaning testicle. It is the most common birth defect of the male genital. About 3% of full-term and 30% of premature infant boys are born with at least one undescended testis. However, about 80% of cryptorchid testes descend by the first year of life (the majority within three months), making the true incidence of cryptorchidism around 1% overall. Cryptorchidism may develop after infancy, sometimes as late as young adulthood, but that is exceptional.
+
+question1:is there a testicle in the scrotum
+prob1:0.948551595211029
+question2:is kryptos the same as orchis
+prob2:0.7292314171791077
+diff:0.2193201780319214
+------------------------------------------------------------
+
+text:A season finale (British English: last in the season; Australian English: season final) is the final episode of a season of a television program. This is often the final episode to be produced for a few months or longer, and, as such, will try to attract viewers to continue watching when the series begins again.
+
+question1:is there a season finale in australia
+prob1:0.9512096047401428
+question2:is season finale the same as season finale
+prob2:0.7321341037750244
+diff:0.2190755009651184
+------------------------------------------------------------
+
+text:Elderflower cordial is a soft drink made largely from a refined sugar and water solution and uses the flowers of the European elderberry, (Sambucus nigra L.). Historically the cordial has been popular in North Western Europe where it has a strong Victorian heritage. However, versions of an elderflower cordial recipe can be traced back to Roman times. Nowadays it can be found in almost all of the former Roman Empire territory, predominantly in Central Europe, especially in England, Germany, Austria, Slovenia, Romania, Hungary and Slovakia, where people have acquired a special taste for it and still make it in the traditional way. In some countries the drink can be found as an aromatic syrup, sold as a concentrated squash that is mixed with still or sparkling water. Elderflower pressé is a premixed form of this.
+
+question1:is elderflower cordial a soft drink
+prob1:0.9343667030334473
+question2:is elderflower cordial the same as elderflower
+prob2:0.7162621021270752
+diff:0.21810460090637207
+------------------------------------------------------------
+
+text:Set six years after its predecessor, Just Cause 3 follows series protagonist Rico Rodriguez as he returns to his homeland of Medici, a fictional Mediterranean island country under the control of dictator General Sebastiano Di Ravello. The game is played from a third-person perspective and allows players to explore the island of Medici in an open world environment.
+
+question1:is just cause 3 based on a true story
+prob1:0.889809250831604
+question2:is just cause 3 the same as just cause
+prob2:0.6719138622283936
+diff:0.21789538860321045
+------------------------------------------------------------
+
+text:In mathematics, a ratio is a relationship between two numbers indicating how many times the first number contains the second. For example, if a bowl of fruit contains eight oranges and six lemons, then the ratio of oranges to lemons is eight to six (that is, 8:6, which is equivalent to the ratio 4:3). Similarly, the ratio of lemons to oranges is 6:8 (or 3:4) and the ratio of oranges to the total amount of fruit is 8:14 (or 4:7).
+
+question1:is there a ratio between oranges and lemons
+prob1:0.9506435394287109
+question2:is a ratio the same as a lemon
+prob2:0.7335426211357117
+diff:0.21710091829299927
+------------------------------------------------------------
+
+text:The Family and Medical Leave Act of 1993 (FMLA) is a United States labor law requiring covered employers to provide employees with job-protected and unpaid leave for qualified medical and family reasons. These include pregnancy, adoption, foster care placement of a child, personal or family illness, or family military leave. The FMLA is administered by the Wage and Hour Division of the United States Department of Labor.
+
+question1:is the family and medical leave act a federal law
+prob1:0.8907312750816345
+question2:is the family and medical leave act the same as the family leave act
+prob2:0.6736343502998352
+diff:0.21709692478179932
+------------------------------------------------------------
+
+text:The femoral vein is considered a deep vein, unlike the adjective superficial suggests and has led some physicians to falsely conclude it is a superficial vein, which has resulted in patients (with deep vein thrombosis) being denied efficacious anticoagulant or thrombolytic therapy.
+
+question1:is the femoral vein a deep vein
+prob1:0.9293930530548096
+question2:is deep vein the same as deep vein
+prob2:0.7129955887794495
+diff:0.2163974642753601
+------------------------------------------------------------
+
+text:Mickey's House and Meet Mickey is a walk through and Meet & Greet attraction at Mickey's Toontown in Disneyland and Toontown at Tokyo Disneyland. Similar attractions formerly existed in the Magic Kingdom and Hong Kong Disneyland.
+
+question1:is there a meet & Greet attraction at toontown
+prob1:0.9593929648399353
+question2:is toontown the same as Mickey's house
+prob2:0.7433903217315674
+diff:0.21600264310836792
+------------------------------------------------------------
+
+text:The hair hang is an aerial circus act where performers (usually young women) are suspended by their hair, acrobatic poses and/or manipulation. Some believe the act originated in South America; others claim the act hails from China. Performers are literally hanging by their hair, which is tied into a hairhang rig; the techniques used to tie the performer's hair, and the acrobatic techniques involved in the act, are key.
+
+question1:is the hair hang an aerial circus act
+prob1:0.9209219217300415
+question2:is the hair hang the same as the acrobatic act
+prob2:0.7070422768592834
+diff:0.21387964487075806
+------------------------------------------------------------
+
+text:Wheel of Fortune is an American television game show created by Merv Griffin and first aired in 1975, with a syndicated version airing since 1983. Since its premiere, the program has been adapted into several international versions. The 1975 version premiered on Australian TV in 1981 and premiered in the UK in 1988. It has also been adapted to numerous countries around the world.
+
+question1:is wheel of fortune based on a true story
+prob1:0.8881006240844727
+question2:is wheel of fortune the same as wheel of Fortune
+prob2:0.6754981875419617
+diff:0.212602436542511
+------------------------------------------------------------
+
+text:The chickpea or chick pea (Cicer arietinum) is a legume of the family Fabaceae, subfamily Faboideae. Its different types are variously known as gram or Bengal gram, garbanzo or garbanzo bean, or Egyptian pea. Its seeds are high in protein. It is one of the earliest cultivated legumes: 7,500-year-old remains have been found in the Middle East. In 2016, India produced 64% of the world's total chickpeas.
+
+question1:is chick pea a part of the fabaceae family
+prob1:0.9413676261901855
+question2:is chickpea the same as chick pea
+prob2:0.7293519377708435
+diff:0.21201568841934204
+------------------------------------------------------------
+
+text:The Exocoetidae are a family of marine fish in the order Beloniformes class Actinopterygii. Fish of this family are known as flying fish. About 64 species are grouped in seven to nine genera. Flying fish can make powerful, self-propelled leaps out of water into air, where their long, wing-like fins enable gliding flight for considerable distances above the water's surface. This uncommon ability is a natural defence mechanism to evade predators.
+
+question1:are the exocoetidae a marine fish
+prob1:0.9505773186683655
+question2:are the exocoetidae the same as flying fish
+prob2:0.7386487722396851
+diff:0.21192854642868042
+------------------------------------------------------------
+
+text:The following list shows the first two digits of the sort codes allocated to clearing banks. Thus, in the example 01-10-01, 01 indicates that the bank is a branch of the National Westminster Bank; the other sets of digits are for internal use. This example represents the NatWest branch in Spring Gardens, Manchester. Clearing banks can act for other banks, so looking up a bank by sort code in this list does not always mean the account is actually handled by that bank, e.g. the sort code 08-32-00 HMRC VAT is not a Co-operative Bank account but a Barclays account, as is 08-32-10 for National Insurance.
+
+question1:is there a branch of the national Westminster bank
+prob1:0.9493809938430786
+question2:is a barclays account the same as a cooperative bank
+prob2:0.739072322845459
+diff:0.21030867099761963
+------------------------------------------------------------
+
+text:Elizabeth's only sibling, Princess Margaret, was born in 1930. The two princesses were educated at home under the supervision of their mother and their governess, Marion Crawford. Lessons concentrated on history, language, literature and music. Crawford published a biography of Elizabeth and Margaret's childhood years entitled The Little Princesses in 1950, much to the dismay of the royal family. The book describes Elizabeth's love of horses and dogs, her orderliness, and her attitude of responsibility. Others echoed such observations: Winston Churchill described Elizabeth when she was two as ``a character. She has an air of authority and reflectiveness astonishing in an infant.'' Her cousin Margaret Rhodes described her as ``a jolly little girl, but fundamentally sensible and well-behaved''.
+
+question1:was elizabeth's only sibling born in 1930
+prob1:0.9331377744674683
+question2:is elizabeth and princesses the same
+prob2:0.7235177159309387
+diff:0.20962005853652954
+------------------------------------------------------------
+bot: text:The traditional American business hours are 9:00 a.m. to 5:00 p.m., Monday to Friday, representing a workweek of five eight-hour days comprising 40 hours in total. These are the origin of the phrase 9-to-5, used to describe a conventional and possibly tedious job. Negatively used, it connotes a tedious or unremarkable occupation. The phrase also indicates that a person is an employee, usually in a large company, rather than an entrepreneur or self-employed. More neutrally, it connotes a job with stable hours and low career risk, but still a position of subordinate employment. The actual time at work often varies between 35 and 48 hours in practice due to the inclusion, or lack of inclusion, of breaks. In many traditional white collar positions, employees were required to be in the office during these hours to take orders from the bosses, hence the relationship between this phrase and subordination. Workplace hours have become more flexible, but the phrase is still commonly used.
+
+question1:do you have to be in the office to take orders from bosses
+prob1:0.858354926109314
+question2:do you have to be in the office to take orders from the bosses
+prob2:0.8580302000045776
+diff:0.0003247261047363281
+------------------------------------------------------------
+
+text:The terms hydraulic lime and hydrated lime are quite similar and may be confused but are not necessarily the same material: hydrated lime is any lime which has been slaked whether it sets through hydration, carbonation, or both.
+
+question1:is hydraulic lime the same as hydrated lime
+prob1:0.820405125617981
+question2:is hydraulic lime and hydrated lime the same
+prob2:0.8200812935829163
+diff:0.00032383203506469727
+------------------------------------------------------------
+
+text:Except for case length, the.38 Special is identical to the.38 Short Colt,.38 Long Colt, and.357 Magnum. This allows the.38 Special round to be safely fired in revolvers chambered for the.357 Magnum, and the.38 Long Colt in revolvers chambered for.38 Special, increasing the versatility of this cartridge. However, the longer and more powerful.357 Magnum cartridge will usually not chamber and fire in weapons rated specifically for.38 Special (e.g. all versions of the Smith & Wesson Model 10), which are not designed for the greatly increased pressure of the magnum rounds. Both.38 Special and.357 Magnum will chamber in Colt New Army revolvers in.38 Long Colt, due to the straight walled chambers, but this should not be done under any circumstances, due to dangerous pressure levels, up to three times what the New Army is designed to withstand.
+
+question1:is a.38 special and.357 magnum the same
+prob1:0.8570128679275513
+question2:is the.38 special and.357 magnum the same
+prob2:0.8566945195198059
+diff:0.00031834840774536133
+------------------------------------------------------------
+
+text:One special example of a high school period is the free period these typically occur after 15 minutes of being unattended. A free period (often abbreviated to ``free'' and also known as a ``spare'' or ``unstructured'') is generally found in most high schools and colleges. During a free period, a student can either:
+
+question1:is there a free period in a high school
+prob1:0.9510621428489685
+question2:is there a free period in high school
+prob2:0.9507455825805664
+diff:0.0003165602684020996
+------------------------------------------------------------
+
+text:Gram-positive bacteria take up the crystal violet stain used in the test, and then appear to be purple-coloured when seen through a microscope. This is because the thick peptidoglycan layer in the bacterial cell wall retains the stain after it is washed away from the rest of the sample, in the decolorization stage of the test.
+
+question1:do gram positive bacteria have crystal violet stain
+prob1:0.9498825073242188
+question2:do grampositive bacteria have crystal violet stain
+prob2:0.9495664834976196
+diff:0.0003160238265991211
+------------------------------------------------------------
+
+text:As with the previous installments of the franchise, players must mimic the on-screen dancer's choreography to a chosen song using either motion controllers or the game's associated Just Dance Controller app on a smartphone. A new ``Super'' judgment was added between ``Good'' and ``Perfect''. The ``Dance Lab'' mode features medleys of choreography representing different professions and animals, while a new ``Kids Mode'' was designed to provide a gameplay experience and choreography tailored towards younger players.
+
+question1:is there a way to mimic a dancer's choreography
+prob1:0.942548394203186
+question2:can you play just dance controller on a smartphone
+prob2:0.9422332048416138
+diff:0.0003151893615722656
+------------------------------------------------------------
+
+text:The London congestion charge is a fee charged on most motor vehicles operating within the Congestion Charge Zone (CCZ) in Central London between 07:00 and 18:00 Mondays to Fridays. It is not charged on weekends, public holidays or between Christmas Day and New Year's Day (inclusive). The charge was introduced on 17 February 2003. As of 2017, the London charge zone remains as one of the largest congestion charge zones in the world, despite the cancellation of the Western Extension which operated between February 2007 and January 2011. The charge aims to reduce high traffic flow and pollution in the central area and raise investment funds for London's transport system.
+
+question1:is there a congestion charge in london
+prob1:0.954437255859375
+question2:is there a congestion charge in central london
+prob2:0.9541261196136475
+diff:0.00031113624572753906
+------------------------------------------------------------
+
+text:Climate change is now a major political talking point in Australia in the last two decades. Persistent drought, and resulting water restrictions during the first decade of the twenty-first century, are an example of natural events' tangible effect on economic and political realities.
+
+question1:is climate change a major political talking point in australia
+prob1:0.9474098086357117
+question2:is climate change a political talking point in australia
+prob2:0.9471030235290527
+diff:0.00030678510665893555
+------------------------------------------------------------
+
+text:Cod liver oil is a dietary supplement derived from liver of cod fish (Gadidae). As with most fish oils, it contains the omega-3 fatty acids, eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Cod liver oil also contains vitamin A and vitamin D. Historically, it was given to children because vitamin D had been shown to prevent rickets, a consequence of vitamin D deficiency.
+
+question1:is cod liver oil a dietary supplement
+prob1:0.9433813095092773
+question2:does cod liver oil contain omega-3 fatty acids
+prob2:0.9430755376815796
+diff:0.0003057718276977539
+------------------------------------------------------------
+
+text:In Canada, the right to silence is protected under section 7 and section 11(c) of the Canadian Charter of Rights and Freedoms. The accused may not be compelled as a witness against himself in criminal proceedings, and therefore only voluntary statements made to police are admissible as evidence. Prior to an accused being informed of their right to legal counsel, any statements they make to police are considered involuntarily compelled and are inadmissible as evidence. After being informed of the right to counsel, the accused may choose to voluntarily answer questions and those statements would be admissible.
+
+question1:is there a right to silence in canada
+prob1:0.9475206732749939
+question2:is there a legal right to silence in canada
+prob2:0.9472204446792603
+diff:0.0003002285957336426
+------------------------------------------------------------
+
+text:On the film review aggregation website Rotten Tomatoes, films that have exclusively positive reviews and have been reviewed by at least five critics have a 100% approval rating. Many of these films, particularly those with a high number of positive reviews, have achieved wide critical acclaim and are often considered among the best. A number of these films also appear on the AFI's 100 Years...100 Movies lists, but there are many others and several entries with dozens of positive reviews, which are considered surprising to some experts. To date, Paddington 2 holds the site's record, with an approval rating of 100% and 205 positive reviews.
+
+question1:does rotten tomatoes have a positive rating
+prob1:0.9434792399406433
+question2:does rotten tomatoes have a 100% approval rating
+prob2:0.9431811571121216
+diff:0.0002980828285217285
+------------------------------------------------------------
+
+text:Tennessee requires a permit to carry a firearm, whether openly or concealed. Additionally, per Tenn. Code Ann. 39-17-1351 r.(1) a facially valid handgun permit, firearms permit, weapons permit or license issued by another state shall be valid in this state (Tennessee) according to its terms and shall be treated as if it is a handgun permit issued by this state (Tennessee)).
+
+question1:can you carry a gun in texas
+prob1:0.9353223443031311
+question2:can you carry a handgun in texas
+prob2:0.9350248575210571
+diff:0.0002974867820739746
+------------------------------------------------------------
+
+text:On February 9, 2015, ABC Family decided to end the show after four seasons and a total of 104 episodes for the series. The series finale aired on August 5, 2015.
+
+question1:will there be a season 2 of bbc family
+prob1:0.9617264270782471
+question2:will there be a season 4 of bbc family
+prob2:0.9614295959472656
+diff:0.0002968311309814453
+------------------------------------------------------------
+
+text:Veterinary science helps human health through the monitoring and control of zoonotic disease (infectious disease transmitted from non-human animals to humans), food safety, and indirectly through human applications from basic medical research. They also help to maintain food supply through livestock health monitoring and treatment, and mental health by keeping pets healthy and long living. Veterinary scientists often collaborate with epidemiologists, and other health or natural scientists depending on type of work. Ethically, veterinarians are usually obliged to look after animal welfare.
+
+question1:is zoonotic disease transmitted from non-human animals to humans
+prob1:0.9274845719337463
+question2:is zoonotic disease transmitted from non human animals to humans
+prob2:0.9271881580352783
+diff:0.0002964138984680176
+------------------------------------------------------------
+
+text:If the 8 ball is pocketed on the break then the breaker can choose either to re-spot the 8 ball and play from the current position or to re-rack and re-break; but if the cue ball is also pocketed on the break then the opponent is the one who has the choice: either to re-spot the 8 ball and shoot with ball-in-hand behind the head string, accepting the current position, or to re-break or have the breaker re-break. (For regional amateur variations, such as pocketing the 8 ball on the break resulting in instant win or loss, see ``Informal rule variations'', below.)
+
+question1:can you re-spot the 8 ball on a break
+prob1:0.9444124698638916
+question2:can you re-spot the 8 ball on the break
+prob2:0.9441162347793579
+diff:0.0002962350845336914
+------------------------------------------------------------
+
+text:Trinidad and Tobago failed to qualify for the FIFA World Cup between 1966 and 2002, then again in 2010 to 2018.
+
+question1:did Trinidad and tobago qualify for the world cup
+prob1:0.9459981918334961
+question2:did tamil and tobago qualify for the world cup
+prob2:0.945706307888031
+diff:0.0002918839454650879
+------------------------------------------------------------
+
+text:Davao City, officially the City of Davao (Cebuano: Dakbayan sa Dabaw, Filipino: Lungsod ng Dabaw), is a highly urbanized city in the island of Mindanao, Philippines. The city has a total land area of 2,443.61 km (943.48 sq mi), and has a population of 1,632,991 based on the 2015 census, making it the largest city in the Philippines in terms of land area. The city is also the third-most-populous city in the Philippines after Quezon City and Manila, the most populous city in the country outside Metro Manila and the most populous in Mindanao.
+
+question1:is davao city the most populous city in the philippines
+prob1:0.9455634951591492
+question2:is davao city the largest city in the philippines
+prob2:0.9452720880508423
+diff:0.00029140710830688477
+------------------------------------------------------------
+
+text:The show was renewed for a second and final series on 1 March 2015. The second and final series is set in 1935 and began airing on 13 March 2016. Although initially planned by producers for five series, on 25 April 2016 it was announced that the show would not be renewed for a third series due to poor ratings and strong competition in its timeslot.
+
+question1:is there going to be a second and final series
+prob1:0.9511220455169678
+question2:will there be a second and final series
+prob2:0.9508339762687683
+diff:0.0002880692481994629
+------------------------------------------------------------
+
+text:The medullary cavity (medulla, innermost part) is the central cavity of bone shafts where red bone marrow and/or yellow bone marrow (adipose tissue) is stored; hence, the medullary cavity is also known as the marrow cavity. Located in the main shaft of a long bone (diaphysis) (consisting mostly of compact bone), the medullary cavity has walls composed of spongy bone (cancellous bone) and is lined with a thin, vascular membrane (endosteum). However, the medullary cavity is the area inside any bone (long, flat, etc.) that holds the bone marrow.
+
+question1:is the medullary cavity the same as the marrow cavity
+prob1:0.8001582622528076
+question2:is the medullary cavity the same as the marrow
+prob2:0.7998734712600708
+diff:0.0002847909927368164
+------------------------------------------------------------
+
+text:The project was originally titled Oxygen while in development at Isla Producciones (in collaboration with Olé). It was then adapted for the American market by Powwow before being acquired by The CW. Star-Crossed premiered on The CW on Monday, February 17, 2014, at 8:00 pm Eastern/7:00 pm Central. The series was picked up for a thirteen-episode season.
+
+question1:is there a season 13 of star crossed
+prob1:0.9540476202964783
+question2:is there a season 3 of star crossed
+prob2:0.953777551651001
+diff:0.0002700686454772949
+------------------------------------------------------------
+
+text:On March 21, 2018, the band released the latest music video for ``Say Amen (Saturday Night)'' and a new single ``(Fuck A) Silver Lining''. With the release came the announcement of a summer tour. ARIZONA and Hayley Kiyoko were announced as the opening acts.
+
+question1:is there a summer tour of arizona
+prob1:0.9511315226554871
+question2:is there a summer tour in arizona
+prob2:0.9508662819862366
+diff:0.0002652406692504883
+------------------------------------------------------------
+
+text:Roma tomato or Roma is a plum tomato popularly used both for canning and producing tomato paste because of their slender and firm nature. Commonly found in supermarkets in some countries, Roma tomatoes are also known as Italian tomatoes or Italian plum tomatoes.
+
+question1:are rom tomatoes and italy plum tomatoes the same
+prob1:0.7313690185546875
+question2:is rom tomato the same as italy tomato
+prob2:0.7311071753501892
+diff:0.000261843204498291
+------------------------------------------------------------
+
+text:The best result for the United States in a World Cup came in 1930 when they reached the semifinals. The best result in the modern era is the 2002 World Cup, when the U.S. reached the quarterfinals. The worst result in the modern era was a first round elimination in 1990, 1998, and 2006.
+
+question1:did the us reach the quarterfinals of the world cup
+prob1:0.9281003475189209
+question2:did the us reach the world cup quarterfinals
+prob2:0.9278388619422913
+diff:0.00026148557662963867
+------------------------------------------------------------
+
+text:Two people have won the $1,000,000 prize: Kathy Cox, superintendent of public schools for the U.S. state of Georgia; and George Smoot, winner of the 2006 Nobel Prize in Physics and professor at the University of California, Berkeley.
+
+question1:has there ever been a winner of the nfl
+prob1:0.9503241181373596
+question2:has there ever been a winner of a nfl prize
+prob2:0.9500666856765747
+diff:0.0002574324607849121
+------------------------------------------------------------
+
+text:The lunar eclipse was completely visible over Eastern Africa, Southern Africa, Southern Asia and Central Asia, seen rising over South America, Western Africa, and Europe, and setting over Eastern Asia, and Australia.
+
+question1:is there a lunar eclipse over southeastern africa
+prob1:0.9597395062446594
+question2:is there a lunar eclipse in southeastern africa
+prob2:0.9594850540161133
+diff:0.0002544522285461426
+------------------------------------------------------------
+
+text:The series chronicles the lives of various fictitious country music singers in Nashville, Tennessee starring Connie Britton as Rayna Jaymes, a legendary country music superstar, whose stardom begins fading, and Hayden Panettiere as rising younger star Juliette Barnes. Britton left the show in season five.
+
+question1:does connie briton leave the show in season five
+prob1:0.9451627731323242
+question2:does connie briton leave the show in season 5
+prob2:0.944908857345581
+diff:0.00025391578674316406
+------------------------------------------------------------
+
+text:There has only been one game where a 16-seed beat a 1-seed (0.74%) since 1985, out of 136 games played:
+
+question1:has there ever been a 16 seed game
+prob1:0.9427573680877686
+question2:has there ever been a 16-seed game
+prob2:0.9425047636032104
+diff:0.00025260448455810547
+------------------------------------------------------------
+
+text:Fetus in fetu (or foetus in foetu) is a developmental abnormality in which a mass of tissue resembling a fetus forms inside the body. An early example of the phenomenon was described in 1808 by George William Young.
+
+question1:is foetus in fetu a developmental abnormality
+prob1:0.9491550922393799
+question2:is fetus in foetu a developmental abnormality
+prob2:0.9489046931266785
+diff:0.000250399112701416
+------------------------------------------------------------
+
+text:The third season premiered on July 9, 2018 on Univision, and on July 27, 2018 on Netflix.
+
+question1:will there be a season 3 of unvision
+prob1:0.9627645611763
+question2:is there a season 3 of unvision
+prob2:0.9625157713890076
+diff:0.00024878978729248047
+------------------------------------------------------------
+
+text:Avengers: Infinity War held its world premiere on April 23, 2018 in Los Angeles and was released in the United States on April 27, 2018, in IMAX and 3D. The film received praise for the performances of the cast (particularly Brolin's) and the emotional weight of the story, as well as the visual effects and action sequences. It was the fourth film and the first superhero film to gross over $2 billion worldwide, breaking numerous box office records and becoming the highest-grossing film of 2018, as well as the fourth-highest-grossing film of all time and in the United States and Canada. The currently untitled sequel is set to be released on May 3, 2019.
+
+question1:is there a sequel to affinity war
+prob1:0.9548012614250183
+question2:is there a sequel to Avengers: infinity war
+prob2:0.9545540809631348
+diff:0.0002471804618835449
+------------------------------------------------------------
+
+text:Avengers: Infinity War held its world premiere on April 23, 2018 in Los Angeles and was released in the United States on April 27, 2018, in 2D, Real D 3D, IMAX and IMAX 3D. The film received praise for the performances of the cast (particularly Brolin's) and the emotional weight of the story, as well as the visual effects and action sequences. It became the fourth film and the first superhero film to gross over $2 billion worldwide, breaking numerous records and becoming the highest-grossing film of 2018 to date. The currently untitled sequel is set to be released on May 3, 2019.
+
+question1:is there a sequel to affinity war
+prob1:0.9548012614250183
+question2:is there a sequel to Avengers: infinity war
+prob2:0.9545540809631348
+diff:0.0002471804618835449
+------------------------------------------------------------
+
+text:Nuclear power is a significant source of electrical power in Michigan, producing roughly one-quarter of the state's supply. The three nuclear power plants supply Michigan with about 30% of its electricity.
+
+question1:is there a nuclear power plant in michigan
+prob1:0.9604146480560303
+question2:is there a nuclear power plant in mexico
+prob2:0.9601702690124512
+diff:0.00024437904357910156
+------------------------------------------------------------
+
+text:Toys ``R'' Us expanded as a chain, becoming predominant in its niche field of toy retail. Represented by cartoon mascot Geoffrey the Giraffe from May 1965, Toys ``R'' Us eventually branched out into launching the stores Babies ``R'' Us, Toys ``R'' Us Express, and Kids ``R'' Us.
+
+question1:is toys r us a toy store
+prob1:0.9227653741836548
+question2:is toys r' us a toy store
+prob2:0.9225229024887085
+diff:0.00024247169494628906
+------------------------------------------------------------
+
+text:Toys ``R'' Us expanded as a chain, becoming predominant in its niche field of toy retail. Represented by cartoon mascot Geoffrey the Giraffe from 1969, Toys ``R'' Us eventually branched out into launching the stores Babies ``R'' Us, Toys ``R'' Us Express, and the now-defunct Kids ``R'' Us.
+
+question1:is toys r us a toy store
+prob1:0.9227653741836548
+question2:is toys r' us a toy store
+prob2:0.9225229024887085
+diff:0.00024247169494628906
+------------------------------------------------------------
+
+text:In basketball, goaltending is the violation of interfering with the ball while it is on its way to the basket and it is (a) in a downward flight, (b) entirely above the rim and has the possibility of entering the basket, and (c) not touching the rim. In NCAA basketball, WNBA and NBA basketball, goaltending is also called if the ball has already touched the backboard while being above the height of the rim in its flight, regardless of whether it being in an upward or downward flight or whether it is directly above the rim. Goaltending in this context defines by exclusion what is considered a legal block of a field goal. In high school and NCAA basketball, goaltending is also called when a player interferes with a free throw at any time in its flight towards the basket. If goaltending is called for interference with a field goal, the shooting team is awarded the points for the field goal as if it had been made. In high school and NCAA basketball, if goaltending is called on a free throw, the shooting team is awarded one point and a technical foul is called against the offending player.
+
+question1:is goaltending a legal block of a field goal
+prob1:0.8194268345832825
+question2:is goaltending a legal block of a field goal in ohio
+prob2:0.8191856145858765
+diff:0.00024121999740600586
+------------------------------------------------------------
+
+text:Any visitor who holds a valid, multiple entry and previously used visa issued by a Schengen area country, United States, or the United Kingdom can enter Albania without a visa for 90 days. Visa must have been used at least once before arrival to Albania. The visa exemption also applies to valid Green Card holders, holders of resident permits issued by a Schengen country, or holders of refugee and stateless travel documents issued by an EU or EFTA member state.
+
+question1:can you enter albania without a visa
+prob1:0.936700701713562
+question2:can you enter albania without a green card
+prob2:0.9364595413208008
+diff:0.00024116039276123047
+------------------------------------------------------------
+
+text:The series gives viewers an inside look of the lives of WWE Divas from their work within WWE to their personal lives. Behind the scene footage of the Divas is also included. On February 24, 2015, Paige announced Total Divas was renewed for a fourth season, with filming commencing at the end of the month. It was then announced at the end of the season three finale, that the fourth season would premiere on July 7, 2015, moving from Sunday to Tuesday nights. Unlike other WWE programs, most of the performers use their real names instead of their ring names, leading to Cameron, Naomi, Natalya, Jimmy Uso, and Tyson Kidd being referred to as Ariane, Trinity, Nattie, Jon, and TJ respectively.
+
+question1:will there be a fourth season of total divas
+prob1:0.9569483995437622
+question2:is there a season 4 of total divas
+prob2:0.956708550453186
+diff:0.00023984909057617188
+------------------------------------------------------------
+
+text:The Black Death was a bubonic plague pandemic, which reached England in June 1348. It was the first and most severe manifestation of the Second Pandemic, caused by Yersinia pestis bacteria. The term ``Black Death'' was not used until the late 17th century.
+
+question1:was there a black death pandemic in england
+prob1:0.9552632570266724
+question2:is there a black death in england
+prob2:0.9550273418426514
+diff:0.0002359151840209961
+------------------------------------------------------------
+
+text:It has often been stated that ``633 Squadron'' was based on a true story but in fact this is not the case. Rather the story was ``inspired by the exploits of the British and Commonwealth Mosquito Air Crews'' (as is stated just after the main titles of the film). There never was a 633 Squadron nor was there ever an attack on a factory in a Norwegian fiord using ``earthquake bombs''. In fact the bombs which appear in the 1964 film version look like standard RAF 4,000 lb ``cookie'' bombs.
+
+question1:is 633 squadron based on a true story
+prob1:0.9265504479408264
+question2:is the 633 squadron based on a true story
+prob2:0.9263184070587158
+diff:0.0002320408821105957
+------------------------------------------------------------
+
+text:In the United Kingdom, there is not an equivalent of a vehicle title. Instead, there is a document known as the'vehicle registration document', and is issued by the Driver and Vehicle Licensing Agency (DVLA). The current version has the reference number V5C. Prior to computerisation, the title document was the 'log book', and this term is sometimes still used to describe the V5C. The V5 document records who the Registered Keeper of the vehicle is; it does not establish legal ownership of the vehicle. These documents used to be blue on the front. However, they were changed to red in 2010/11 after approximately 2.2 million blank blue V5 documents were stolen, allowing thieves to clone stolen vehicles much more easily.
+
+question1:is there a vehicle registration document in the uk
+prob1:0.9326514005661011
+question2:is there a vehicle registration document in the united kingdom
+prob2:0.9324215650558472
+diff:0.00022983551025390625
+------------------------------------------------------------
+
+text:Some schools, however, have opted to compete in a sport at a higher level and are allowed to do so by the NCAA under certain circumstances. First, schools in Divisions II and III are allowed to classify one men's sport and one women's sport as Division I (except for football and basketball), provided that they were sponsoring said sports at Division I level prior to 2011. In addition to this, a lower-division school may compete as a Division I member in a given sport if the NCAA does not sponsor a championship in that sport for the school's own division. Division II schools may award scholarships and operate under Division I rules in their Division I sports. Division III schools cannot award scholarships in their Division I sports (except as noted below), but can operate under most Division I rules in those sports.
+
+question1:can a lower division school compete in a division
+prob1:0.9439719915390015
+question2:can a lower division school compete in a sport
+prob2:0.9437478184700012
+diff:0.00022417306900024414
+------------------------------------------------------------
+
+text:Citizens of member nations of the Gulf Cooperation Council may travel to Oman without visa limits. Nationals of 71 other countries and territories can apply for visas online which are valid for a period of 30 days. All visitors must hold a passport valid for 6 months.
+
+question1:can i travel to oman without a visa
+prob1:0.9491384625434875
+question2:can you travel to oman without a visa
+prob2:0.9489148855209351
+diff:0.00022357702255249023
+------------------------------------------------------------
+
+text:Trees have a wide variety of sizes and shapes and growth habits. Specimens may grow as individual trunks, multitrunk masses, coppices, clonal colonies, or even more exotic tree complexes. Most champion tree programs focus finding and measuring the largest single-trunk example of each species. There are three basic parameters commonly measured to characterize the size of a single trunk tree: height, girth, and crown spread. Additional details on the methodology of Tree height measurement, Tree girth measurement, Tree crown measurement, and Tree volume measurement are presented in the links herein. A detailed guideline to these basic measurements is provided in The Tree Measuring Guidelines of the Eastern Native Tree Society by Will Blozan.
+
+question1:can a tree grow as a single trunk tree
+prob1:0.943170964717865
+question2:can a tree grow as a single trunk
+prob2:0.9429482221603394
+diff:0.00022274255752563477
+------------------------------------------------------------
+
+text:Despite the similarity in the names, EZ Tags are not compatible with the E-ZPass system in the northeast U.S.
+
+question1:are EZ Tags compatible with the e-zpass system
+prob1:0.9436474442481995
+question2:are EZ Tags compatible with the e-zPass system
+prob2:0.9434310793876648
+diff:0.00021636486053466797
+------------------------------------------------------------
+
+text:Junctional rhythm can be diagnosed by looking at an ECG: it usually presents without a P wave or with an inverted P wave. Retrograde P waves refers to the depolarization from the AV node back towards the SA node.
+
+question1:can you have a p wave in the sa node
+prob1:0.9438506960868835
+question2:can you have a p wave in the av node
+prob2:0.9436384439468384
+diff:0.00021225214004516602
+------------------------------------------------------------
+
+text:It is a sequel to the previous Dragon Ball and Dragon Ball Z anime series.
+
+question1:is dragon ball a sequel to dragon ball
+prob1:0.9500790238380432
+question2:is dragon ball and dragon ball a sequel
+prob2:0.9498720765113831
+diff:0.00020694732666015625
+------------------------------------------------------------
+
+text:The British Isles are a group of islands in the North Atlantic off the north-western coast of continental Europe that consist of the islands of Great Britain, Ireland, the Isle of Man and over six thousand smaller isles. They have a total area of about 315,159 km and a combined population of just under 70 million, and include two sovereign states, the Republic of Ireland (which covers roughly five-sixths of the island of Ireland) and the United Kingdom of Great Britain and Northern Ireland. The islands of Alderney, Jersey, Guernsey and Sark, and their neighbouring smaller islands, are sometimes also taken to be part of the British Isles.
+
+question1:are the british islands part of the uk
+prob1:0.9188923835754395
+question2:is the island of man part of the british islands
+prob2:0.9186863899230957
+diff:0.00020599365234375
+------------------------------------------------------------
+
+text:It has higher performance (in terms of durability, lifetime, and power loss) than non-O-ring chain as it has less friction than O-ring chain which also increases reliability. It can last twice as long as the O-ring chain.
+
+question1:can an o ring chain last twice as long
+prob1:0.9484054446220398
+question2:can o ring chain last twice as long
+prob2:0.9482006430625916
+diff:0.0002048015594482422
+------------------------------------------------------------
+
+text:Steven Universe is an American animated television series created by Rebecca Sugar for Cartoon Network. The series revolves around Steven Universe (voiced by Zach Callison), who protects his hometown of Beach City alongside Garnet (voiced by Estelle), Amethyst (voiced by Michaela Dietz) and Pearl (voiced by Deedee Magno Hall), three magical alien guardians known as the Crystal Gems. The series was renewed for a fourth and fifth season on March 30, 2016. On July 21, 2018, it was announced that a Steven Universe television film, Steven Universe: The Movie, was in production.
+
+question1:is there a season 4 of Steven universe
+prob1:0.9555313587188721
+question2:is there a season 4 of steve universe
+prob2:0.9553266763687134
+diff:0.0002046823501586914
+------------------------------------------------------------
+
+text:Texas is the second-largest U.S. state, after Alaska, with an area of 268,820 square miles (696,200 km). Though 10% larger than France and almost twice as large as Germany or Japan, it ranks only 27th worldwide amongst country subdivisions by size. If it were an independent country, Texas would be the 40th largest behind Chile and Zambia.
+
+question1:is texas the largest state in the world
+prob1:0.9419500827789307
+question2:is texas the second largest state in the world
+prob2:0.9417503476142883
+diff:0.00019973516464233398
+------------------------------------------------------------
+
+text:In October 2012, a 32-year-old man died while competitively eating live roaches and worms in a contest to win a ball python. An autopsy revealed he choked to death. On July 4, 2014, a 47-year-old competitive eater similarly choked to death during a hot dog eating contest. At a Sacred Heart University event on April 2, 2017, a 20-year-old female student died as a result of a pancake-eating contest.
+
+question1:did a 32 year old die in a hot dog eating contest
+prob1:0.9363315105438232
+question2:did a 32-year-old die in a hot dog eating contest
+prob2:0.9361371397972107
+diff:0.00019437074661254883
+------------------------------------------------------------
+
+text:Eeyore (/ˈiːɔːr/ ( listen) EE-or) is a character in the Winnie-the-Pooh books by A.A. Milne. He is generally characterized as a pessimistic, gloomy, depressed, anhedonic, old grey stuffed donkey who is a friend of the title character, Winnie-the-Pooh.
+
+question1:is eeyore a friend of the winnie the pooh
+prob1:0.941097617149353
+question2:is eeyore a friend of winnie the pooh
+prob2:0.940903902053833
+diff:0.00019371509552001953
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:The central nervous system is responsible for the orderly recruitment of motor neurons, beginning with the smallest motor units. Henneman's size principle indicates that motor units are recruited from smallest to largest based on the size of the load. For smaller loads requiring less force, slow twitch, low-force, fatigue-resistant muscle fibers are activated prior to the recruitment of the fast twitch, high-force, less fatigue-resistant muscle fibers. Larger motor units are typically composed of faster muscle fibers that generate higher forces.
+
+question1:is the central nervous system responsible for the recruitment of muscle fibers
+prob1:0.9348390698432922
+question2:is the central nervous system responsible for the recruitment of motor neurons
+prob2:0.9346504211425781
+diff:0.00018864870071411133
+------------------------------------------------------------
+
+text:At present, the show has run for thirteen series, with the most recent revealing in late 2017 that a fourteenth series is being created to be aired at the end of 2018.
+
+question1:is there going to be a 14th series
+prob1:0.9574466943740845
+question2:is there going to be a fourteenth series
+prob2:0.9572744965553284
+diff:0.00017219781875610352
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:Dalmatian puppies are born with plain white coats and their first spots usually appear within 3 to 4 weeks after birth, however spots are visible on their skin. After about a month, they have most of their spots, although they continue to develop throughout life at a much slower rate. Spots usually range in size from 30 to 60 mm, and are most commonly black or brown (liver) on a white background. Other, more rare colors, include blue (a blue-grayish color), brindle, mosaic, tricolor-ed (with tan spotting on the eyebrows, cheeks, legs, and chest), and orange or lemon (dark to pale yellow). Patches of color may appear anywhere on the body, mostly on the head or ears, and usually, consist of a solid color. Patches are visible at birth and are not a group of connected spots and are identifiable by the smooth edge of the patch.
+
+question1:are dalmatian puppies born with plain white coats
+prob1:0.9330762028694153
+question2:are dalmatian puppies born with white coats
+prob2:0.9329048991203308
+diff:0.00017130374908447266
+------------------------------------------------------------
+
+text:The ``classic'' lineup of Jefferson Airplane, from October 1966 to February 1970, was Marty Balin (vocals), Paul Kantner (guitar, vocals), Grace Slick (vocals), Jorma Kaukonen (lead guitar, vocals), Jack Casady (bass), and Spencer Dryden (drums). Marty Balin left the band in 1971. After 1972, Jefferson Airplane effectively split into two groups. Kaukonen and Casady moved on full time to their own band, Hot Tuna. Slick, Kantner, and the remaining members of Jefferson Airplane recruited new members and regrouped as Jefferson Starship in 1974, with Marty Balin eventually joining them. Jefferson Airplane was inducted into the Rock and Roll Hall of Fame in 1996 and was presented with the Grammy Lifetime Achievement Award in 2016.
+
+question1:was mary balin part of the rock and roll hall of fame
+prob1:0.928111732006073
+question2:was mary balin in the hall of fame
+prob2:0.9279458522796631
+diff:0.0001658797264099121
+------------------------------------------------------------
+
+text:Surgical treatments of ingrown toenails include a number of different options. If conservative treatment of a minor ingrown toenail does not succeed or if the ingrown toenail is severe, surgical management is recommended by a podiatrist. The initial surgical approach is typically a partial avulsion of the nail plate known as a wedge resection or a complete removal of the toenail. If the ingrown toenail reoccurs despite this treatment, destruction of the germinal matrix with phenol is recommended. Antibiotics are not needed if surgery is performed.
+
+question1:is there a cure for ingrown toenail
+prob1:0.900777280330658
+question2:is there a cure for ingrown toenails
+prob2:0.9006161093711853
+diff:0.00016117095947265625
+------------------------------------------------------------
+
+text:Chris and Ann decide to move to Ann Arbor, Michigan, as Chris is offered a job at the University of Michigan coupled with their desire to be closer to Ann's family, who reside in Michigan. Upon hearing the news, Leslie decides to throw Ann a goodbye party and start groundbreaking on ``Pawnee Commons'', the lot that was a pit at the start of the series, which Leslie vowed to turn into a park. On Ann and Chris' final day in Pawnee, Ann tells Leslie she will always be her best friend and invites her to come and visit, then she and Chris leave Pawnee until moving back in the final episode of season 7.
+
+question1:does chris and anne go back to pawnee
+prob1:0.9139021039009094
+question2:does chris and anne leave pawnee in season 7
+prob2:0.913760781288147
+diff:0.00014132261276245117
+------------------------------------------------------------
+
+text:The Maverick 88 is a pump action shotgun manufactured by O.F. Mossberg & Sons. The Maverick 88 is virtually identical to the Mossberg 500. Factory Maverick 88s feature a black, synthetic only stock and forearm, cylinder bore (although interchangeable chokes are available on some hunting models), and cross-bolt safety. Most accessories are interchangeable with a Mossberg 500.
+
+question1:is the maverick 88 the same as the mossberg 500
+prob1:0.8667129874229431
+question2:is the maverick 88 the same as the mosberg 500
+prob2:0.8665809631347656
+diff:0.00013202428817749023
+------------------------------------------------------------
+
+text:The perceived significance of the RBI is displayed by the fact that it is one of the three categories that compose the triple crown. In addition, career RBIs are often cited in debates over who should be elected to the Hall of Fame. However, critics, particularly within the field of sabermetrics, argue that RBIs measure the quality of the lineup more than it does the player himself since an RBI can only be credited to a player if one or more batters preceding him in the batting order reached base (the exception to this being a home run, in which the batter is credited with driving himself in, not just those already on base). This implies that better offensive teams--and therefore, the teams in which the most players get on base--tend to produce hitters with higher RBI totals than equivalent hitters on lesser-hitting teams.
+
+question1:is there a triple crown in sabermetrics
+prob1:0.9483225345611572
+question2:is there a triple crown in the sabermetrics
+prob2:0.9481909275054932
+diff:0.0001316070556640625
+------------------------------------------------------------
+
+text:Sometimes a batsman, whilst backing up, leaves the popping crease before the bowler has actually delivered the ball. Where this has happened, the bowler may attempt to run the non-striking batsman out in accordance with the Laws of the game. If he fails, and the batsman has remained within the crease, the delivery is called a dead ball.
+
+question1:can a batsman deliver a dead ball
+prob1:0.94135582447052
+question2:can a batsman throw a dead ball
+prob2:0.9412332773208618
+diff:0.00012254714965820312
+------------------------------------------------------------
+
+text:The first four episodes of Sacred Games premiered on 29 June, 2018 with the full season of eight episodes released on Netflix on 6 July across 191 countries with subtitles in more than 20 languages. It received mostly positive review from critics, with particular praise on the performances and writing.
+
+question1:is there a season 8 of Sacred games
+prob1:0.9591805934906006
+question2:is there a season 4 of Sacred games
+prob2:0.9590608477592468
+diff:0.00011974573135375977
+------------------------------------------------------------
+
+text:One morning, Marley and Sarah sit in the park. Marley confesses to Sarah that she is no longer afraid to die, even though Sarah is terrified at the prospect of having to live without her. Marley drifts off and Sarah is unable to wake her. Knowing it's almost time, Marley is visited by everyone in the hospital who surround her bed and wait with her until the end. The exception is Renee, who is in labor with her son. Julian makes it in the nick of time to say goodbye and, in that final moment, Marley realizes her third wish was to fall in love. The film ends with Marley's funeral, a colorful celebration of her life with all of her friends and family.
+
+question1:do marley and sarah die in the movie
+prob1:0.919043779373169
+question2:do marley and sarah die in the film
+prob2:0.9189265966415405
+diff:0.00011718273162841797
+------------------------------------------------------------
+
+text:On August 7, 2018, E! and WWE announced that Total Bellas had been renewed for a fourth season.
+
+question1:will there be a season 4 of total bellas
+prob1:0.9601830840110779
+question2:is there a season 4 of total bellas
+prob2:0.9600676894187927
+diff:0.00011539459228515625
+------------------------------------------------------------
+
+text:Conversely, double jeopardy comes with a key exception. Under the dual sovereignty doctrine, multiple sovereigns can indict a defendant for the same crime. The federal and state governments can have overlapping criminal laws, so a criminal offender may be convicted in individual states and federal courts for exactly the same crime or for different crimes arising out of the same facts. However, in 2016, the Supreme Court held that Puerto Rico is not a separate sovereign for purposes of the Double Jeopardy Clause. The dual sovereignty doctrine has been the subject of substantial scholarly criticism.
+
+question1:can you indict a person for double jeopardy
+prob1:0.9299936890602112
+question2:can you indict a defendant for double jeopardy
+prob2:0.9298789501190186
+diff:0.00011473894119262695
+------------------------------------------------------------
+
+text:The Lockheed P-38 Lighting is an American two-engine fighter used by the United States Army Air Forces and other Allied air forces during World War II. Of the 10,037 planes built, 26 survive today, 22 of which are located in the United States, and 10 of which are airworthy.
+
+question1:is the lockheed p-38 lighting a two engine fighter
+prob1:0.9505403637886047
+question2:is the lockheed p38 lighting a two engine fighter
+prob2:0.9504278302192688
+diff:0.0001125335693359375
+------------------------------------------------------------
+
+text:The Ender's Game series (often referred to as the Ender saga and also the Enderverse) is a series of science fiction books written by American author Orson Scott Card. The series started with the novelette Ender's Game, which was later expanded into the novel of the same title. It currently consists of sixteen novels, thirteen short stories, 47 comic issues, an audioplay, and a film. The first two novels in the series, Ender's Game and Speaker for the Dead, each won both the Hugo and Nebula Awards, and were among the most influential fiction novels of the 1980s.
+
+question1:is ender's game and speaker for the dead the same
+prob1:0.7559058666229248
+question2:is ender's game the same as the enderverse
+prob2:0.7557970285415649
+diff:0.00010883808135986328
+------------------------------------------------------------
+
+text:The 2017 Ivy League Men's Basketball Tournament was a postseason conference tournament for the Ivy League. The tournament was March 11 and 12, 2017 at the Palestra on the campus of the University of Pennsylvania in Philadelphia.
+
+question1:is there a men's basketball tournament in the ivy league
+prob1:0.9594076871871948
+question2:is there a men's basketball tournament in california
+prob2:0.9593092799186707
+diff:9.840726852416992e-05
+------------------------------------------------------------
+
+text:A probability of precipitation (POP), (also expressed as: ``chance of precipitation,'' ``chance of rain'') is a description of the likelihood of precipitation that is often published with weather forecasts. Generally it refers to the probability that at least some minimum quantity of precipitation will occur within a specified forecast period and location.
+
+question1:is there a probability of precipitation in a forecast period
+prob1:0.9490421414375305
+question2:is there a probability of precipitation
+prob2:0.9489471912384033
+diff:9.495019912719727e-05
+------------------------------------------------------------
+
+text:An alternative cut of the ending appeared on the season nine DVD and the box set. It did not contain any new footage, but is edited in a way that changes the fates of Ted, Tracy and Robin. The voiceover is performed by Saget, rather than Radnor, and is completely different.
+
+question1:is there a cut of the ending on season nine
+prob1:0.9287137389183044
+question2:is there a new cut of the season nine
+prob2:0.9286341071128845
+diff:7.963180541992188e-05
+------------------------------------------------------------
+
+text:I had always had an ending to Earl and I'm sorry I didn't get the chance to see it happen. You've got a show about a guy with a list so not seeing him finish it is a bummer. But the truth is, he wasn't ever going to finish the list. The basic idea of the ending was that while he was stuck on a really hard list item he was going to start to get frustrated that he was never going to finish it. Then he runs into someone who had a list of their own and Earl was on it. They needed to make up for something bad they had done to Earl. He asks them where they got the idea of making a list and they tell him that someone came to them with a list and that person got the idea from someone else. Earl eventually realizes that his list started a chain reaction of people with lists and that he's finally put more good into the world than bad. So at that point he was going to tear up his list and go live his life. Walk into the sunset a free man. With good karma. --Greg Garcia
+
+question1:is there a show about a guy with a list
+prob1:0.8168710470199585
+question2:is there a show about a man with a list
+prob2:0.8167933821678162
+diff:7.766485214233398e-05
+------------------------------------------------------------
+
+text:Most varieties of prawn crackers can also be prepared in a microwave oven, in which a few discs can be cooked in less than a minute. This will usually cause them to cook and expand in a way similar to when they are deep fried. For small quantities, this method is faster and less messy, as the crackers do not become as oily. However, this may cause the cracker to retain a stronger aroma of raw shrimp and the cracker has to be consumed within hours before it softens and loses its crispness.
+
+question1:can prawn crackers be cooked in a microwave oven
+prob1:0.9480143189430237
+question2:can you make prawn crackers in a microwave oven
+prob2:0.9479458332061768
+diff:6.848573684692383e-05
+------------------------------------------------------------
+
+text:A split-phase or single-phase three-wire system is a type of single-phase electric power distribution. It is the AC equivalent of the original Edison three-wire direct-current system. Its primary advantage is that it saves conductor material over a single-ended single-phase system, while only requiring a single phase on the supply side of the distribution transformer.
+
+question1:is a split phase three wire system the same as a single phase
+prob1:0.8022462725639343
+question2:is a split phase three wire system the same as a single phase system
+prob2:0.8021786212921143
+diff:6.765127182006836e-05
+------------------------------------------------------------
+
+text:As of September 2017, there are two new reactors under construction with a gross electrical capacity of 2,500 MW, while 34 reactors have been permanently shut down. The United States is the world's largest producer of commercial nuclear power, and in 2013 generated 33% of the world's nuclear electricity.
+
+question1:is there a new reactor in the united states
+prob1:0.9500262141227722
+question2:is there a new reactor in the us
+prob2:0.9499608874320984
+diff:6.532669067382812e-05
+------------------------------------------------------------
+
+text:Aside from hydrogen peroxide, some other major classes of peroxides are these:
+
+question1:is hydrogen peroxide the same as hydrogen peroxy
+prob1:0.7839804291725159
+question2:is hydrogen peroxide the same as hydrogen
+prob2:0.7839164733886719
+diff:6.395578384399414e-05
+------------------------------------------------------------
+
+text:Six episodes of the first season premiered on May 5, 2017. The series was renewed for a second season and it premiered on September 8, 2017. The series was renewed for a third season and it premiered on November 17, 2017. The series was renewed for a fourth season and it premiered on March 16, 2018. A fifth season of the show was released on Netflix on May 11, 2018. A sixth season of the show was released on Netflix on August 17, 2018.
+
+question1:is there a season 6 of the first season
+prob1:0.9519696235656738
+question2:is there a season 6 of the first season of the show
+prob2:0.9519146680831909
+diff:5.4955482482910156e-05
+------------------------------------------------------------
+
+text:Although the alligator has a heavy body and a slow metabolism, it is capable of short bursts of speed, especially in very short lunges. Alligators' main prey are smaller animals they can kill and eat with a single bite. They may kill larger prey by grabbing it and dragging it into the water to drown. Alligators consume food that cannot be eaten in one bite by allowing it to rot, or by biting and then spinning or convulsing wildly until bite-sized chunks are torn off. This is referred to as a ``death roll''. Critical to the alligator's ability to initiate a death roll, the tail must flex to a significant angle relative to its body. An alligator with an immobilized tail cannot perform a death roll.
+
+question1:can you kill a gator with a bite
+prob1:0.9420242309570312
+question2:can you kill an alligator with a bite
+prob2:0.9419705867767334
+diff:5.364418029785156e-05
+------------------------------------------------------------
+
+text:More followed in Old Town Alexandria and Springfield, Virginia, making five by 2001. Their success encouraged the Murrells to franchise their concept the following year, engaging Fransmart, a franchise sales organization. Former Washington Redskins kicker Mark Moseley, who had gone to work for Fransmart after his football career, played a key role in Five Guys' expansion and went on to become the company's director of franchise development after it ended its business relationship with Fransmart. In early 2003 the chain began franchising, opening the doors to rapid expansion which caught the attention of national restaurant trade organizations and the national press. The expansion started in Virginia and Maryland, and by the end of 2004, over 300 units were in development through the Northeast. Over the next few years the chain rapidly expanded across the entire United States and into Canada, reaching over 1,000 locations by 2012.
+
+question1:do the murrells have a franchise with fransmart
+prob1:0.9380119442939758
+question2:did the murrells have a franchise with fransmart
+prob2:0.9379640221595764
+diff:4.792213439941406e-05
+------------------------------------------------------------
+
+text:Columbus Day is a national holiday in many countries of the Americas and elsewhere which officially celebrates the anniversary of Christopher Columbus's arrival in the Americas on October 12, 1492. The landing is celebrated as ``Columbus Day'' in the United States, as ``Día de la Raza'' (``Day of the Race'') in some countries in Latin America, as ``Día de la Hispanidad'' and ``Fiesta Nacional'' in Spain, where it is also the religious festivity of la Virgen del Pilar, as Día de las Américas (Day of the Americas) in Belize and Uruguay, as Día del Respeto a la Diversidad Cultural (Day of Respect for Cultural Diversity) in Argentina, and as Giornata Nazionale di Cristoforo Colombo or Festa Nazionale di Cristoforo Colombo in Italy as well as in Little Italys around the world. As the day of remembrance of Our Lady of the Pillar, 12 October had been declared a religious feast day throughout the Spanish Empire in 1730; the secular Fiesta de la Raza Española was first proposed by Faustino Rodríguez-San Pedro y Díaz-Argüelles in 1913. In recent years, celebration of the holiday has faced some opposition from various organizations.
+
+question1:is colombia day a national holiday in the us
+prob1:0.9064674973487854
+question2:is colombia day a national holiday in the u.s
+prob2:0.9064275622367859
+diff:3.993511199951172e-05
+------------------------------------------------------------
+
+text:Naval Base San Diego, which locals refer to as 32nd Street Naval Station, is the second largest Surface Ship base of the United States Navy and is located in San Diego, California. Naval Base San Diego is the principal homeport of the Pacific Fleet, consisting of over 50 ships and over 190 tenant commands. The base is composed of 13 piers stretched over 977 acres (3.95 km) of land and 326 acres (1.32 km) of water. The total on base population is over 24,000 military personnel and over 10,000 civilians.
+
+question1:is there a naval base in california
+prob1:0.9548397660255432
+question2:is there a surface ship base in california
+prob2:0.9548007249832153
+diff:3.904104232788086e-05
+------------------------------------------------------------
+
+text:Kathryn Beaumont (born 27 June 1938) is an English actress, voice actress, singer and school teacher. She is best known for providing Disney animated films with the voices of both Alice in Alice in Wonderland (1951) and Wendy Darling in Peter Pan (1953), for which she was named a Disney Legend in 1998. Walt Disney personally cast Beaumont after seeing the film On an Island with You (1948), in which she had a small role. Beaumont reprised her voice acting role as Alice in two episodes of the animated series Disney's House of Mouse (2001--2003) and as both Alice and Wendy in the 2002 video game Kingdom Hearts.
+
+question1:is there a movie on an island with you
+prob1:0.942202091217041
+question2:is katryn beremont a voice actress
+prob2:0.9421669840812683
+diff:3.510713577270508e-05
+------------------------------------------------------------
+
+text:Though not all of its rules represent law, the Highway Code states ``Only flash your headlights to let other road users know that you are there. Do not flash your headlights in an attempt to intimidate other road users''. Drivers warning others about speed traps have been fined in the past for ``misuse of headlights''.
+
+question1:do you have to flash your headlights to let other road users know that you are there
+prob1:0.8418424129486084
+question2:do you have to flash your headlights to let other road users know you are there
+prob2:0.8418076038360596
+diff:3.4809112548828125e-05
+------------------------------------------------------------
+
+text:This is a list of dams in the watershed of the Missouri River, a tributary of the Mississippi River, in the United States. There are an estimated 17,200 dams and reservoirs in the basin, most of which are small, local irrigation structures. Reservoirs in the watershed total a capacity of approximately 141,000,000 acre feet (174 km).
+
+question1:is there a dam in the mexican river
+prob1:0.9569979906082153
+question2:is there a dam in the mississippi river
+prob2:0.9569747447967529
+diff:2.3245811462402344e-05
+------------------------------------------------------------
+
+text:Charles Frederick ``Chuck'' Hughes (March 2, 1943 -- October 24, 1971) was an American football player, a wide receiver in the National Football League from 1967 to 1971. He is, to date, the only NFL player to die on the field during a game.
+
+question1:is there a football player in the nfl
+prob1:0.9484599828720093
+question2:is there a football player in the national football league
+prob2:0.9484375715255737
+diff:2.2411346435546875e-05
+------------------------------------------------------------
+
+text:While it is commonly done, removing one's letter from the letter jacket upon graduation is not firmly held as protocol. Many graduates keep the letter on the jacket after graduation as a symbol of accomplishment and school pride and commitment, especially with college lettermen.
+
+question1:is removing a letter from the letter jacket the same
+prob1:0.7693259119987488
+question2:is removing a letter from a school jacket the same
+prob2:0.7693127989768982
+diff:1.3113021850585938e-05
+------------------------------------------------------------
+
+text:Season one (2011--12) began in 1865, shortly after the assassination of Abraham Lincoln, season two (2012) covered 1866, seasons three (2013) and four (2014) opened in 1867, season five (2015--16) carries the series into 1869. On November 7, 2014, Hell on Wheels was renewed for a fifth and final season comprising 14 episodes, split between 2015 and 2016.
+
+question1:is there a season 5 of hell on wheels
+prob1:0.9493857026100159
+question2:is there a season 1 of hell on wheels
+prob2:0.9493732452392578
+diff:1.245737075805664e-05
+------------------------------------------------------------
+
+text:Callie is referenced occasionally by Arizona and Sofia after her departure from the show. At the conclusion of season 14, Arizona departs the show to move to New York and it is implied that the two may ultimately reconcile.
+
+question1:is there a season 14 of california
+prob1:0.9509554505348206
+question2:will there be a season 14 of california
+prob2:0.9509462714195251
+diff:9.179115295410156e-06
+------------------------------------------------------------
+
+text:The Boss Baby: Back in Business is an American computer-animated web television series produced by DreamWorks Animation that is a follow-up of the 2017 film The Boss Baby, loosely based on the book of the same name by Marla Frazee. The series premiered on Netflix on April 6, 2018.
+
+question1:is the boss baby back in business based on the book
+prob1:0.9308569431304932
+question2:is the boss baby back in business based on a book
+prob2:0.9308496713638306
+diff:7.271766662597656e-06
+------------------------------------------------------------
+
+text:In trigonometry, the law of sines, sine law, sine formula, or sine rule is an equation relating the lengths of the sides of a triangle (any shape) to the sines of its angles. According to the law,
+
+question1:is the law of sines the same as the sine rule
+prob1:0.8166539669036865
+question2:is the law of sines the same as sine law
+prob2:0.8166508078575134
+diff:3.159046173095703e-06
+------------------------------------------------------------
+
+text:X-Men: The Last Stand has been criticized by fans for killing off major characters such as Professor Charles Xavier, Cyclops, and Jean Grey. The 2014 film X-Men: Days of Future Past has subsequently been viewed by some critics as a revision of those controversial plot elements in X-Men: The Last Stand. Writer Kinberg would later state that ``there are a lot of things about 'X3' that I love and there are a lot of things that I regret'', detailing that he would have preferred the Dark Phoenix as the main plotline and ``I would have fought harder'' for that, considering that at the period ``the darkness of her story was a little bit daunting on a huge $200 million studio movie'' leading Fox to ask for rewrites. Previous X-Men director Bryan Singer declared that The Last Stand ``isn't what I would have done'' and he was dissatisfied with the busy plot and excessive character deaths, but Singer still liked some parts of the movie, such as Ellen Page's casting -- leading Singer to bring her back as Kitty Pryde in X-Men: Days of Future Past -- and the scenes with Leech, which he described as ``really sweet moments''. Matthew Vaughn, who was attached as director before dropping out, criticized Ratner's direction: ``I could have done something with far more emotion and heart. I'm probably going to be told off for saying that, but I genuinely believe it.'' While promoting his own installment of the franchise, 2011's X-Men: First Class, Vaughn would say regarding The Last Stand that ``I storyboarded the whole bloody film, did the script. My X3 would have been 40 minutes longer. They didn't let the emotions and the drama play in that film. It became wall-to-wall noise and drama. I would have let it breathe and given far more dramatic elements to it.''
+
+question1:is X-men the last stand based on a true story
+prob1:0.6834766268730164
+question2:is x-men the last stand based on a true story
+prob2:0.6834748387336731
+diff:1.7881393432617188e-06
+------------------------------------------------------------
+/home/ubuntu/code/tmp/pycharm_project_82/experiments/tests/test_confidence.py:115: ResourceWarning: unclosed file <_io.BufferedWriter name='results_pickle_1615736014.469759'>
+  pickle.dump([hyperparams, results], open(filename, "wb"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/code/tmp/pycharm_project_82/experiments/tests/test_confidence.py:116: ResourceWarning: unclosed file <_io.BufferedWriter name='results_pickle_last'>
+  pickle.dump([hyperparams, results], open(filename_last, "wb"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback

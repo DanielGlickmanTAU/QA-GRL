@@ -114,6 +114,7 @@ class Test(TestCase):
         filename_last = 'results_pickle_last'
         pickle.dump([hyperparams, results], open(filename, "wb"))
         pickle.dump([hyperparams, results], open(filename_last, "wb"))
+        experiment.add_tags([filename])
 
     def format_results(self, results):
         return ['text:' + x[0] + '\n\n'
