@@ -37,7 +37,7 @@ class Test(TestCase):
         trainer.train()
 
     def test_run_trained_question_generation_model(self):
-        model, tokenizer = model_loading.get_last_model_and_tokenizer(self.task_name, self.model_params)
+        model, tokenizer = model_loading.get_best_model_and_tokenizer(self.task_name, self.model_params)
         boolq = datasets_loading.get_boolq_generation_dataset(tokenizer)
         generator = QuestionGenerator(model, tokenizer)
 

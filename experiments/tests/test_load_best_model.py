@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from utils import compute
 from data import special_tokens
-from models.model_loading import get_model_and_tokenizer_for_classification, get_last_model_and_tokenizer
+from models.model_loading import get_model_and_tokenizer_for_classification, get_best_model_and_tokenizer
 from config import ExperimentVariables
 
 torch = compute.get_torch(forcing_cpu=True)
@@ -14,13 +14,13 @@ class Test(TestCase):
         task = 'race-classification'
         # checkpoint = '../experiments/' + task
         checkpoint = '' + task
-        model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
+        model, tokenizer = get_best_model_and_tokenizer(checkpoint, model_params)
 
         # todo tokenizer also from path?
         self.assertIsNotNone(model)
 
         model_params = ExperimentVariables._roberta_squad
-        model, tokenizer = get_last_model_and_tokenizer(checkpoint, model_params)
+        model, tokenizer = get_best_model_and_tokenizer(checkpoint, model_params)
 
         self.assertIsNotNone(model)
 

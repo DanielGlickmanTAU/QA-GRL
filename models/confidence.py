@@ -3,7 +3,7 @@ from data.DatasetPostMapper import DataSetPostMapper
 from data.TaskParams import TaskParams
 from train.training import get_trainer
 from models import model_loading
-from models.model_loading import get_last_model_and_tokenizer, get_save_path
+from models.model_loading import get_best_model_and_tokenizer, get_save_path
 
 task_name = 'error-prediction'
 
@@ -30,7 +30,7 @@ def _train_confidence_model(confidence_model, confidence_tokenizer, mapped_qa_ds
 
 
 def get_last_confidence_model(model_params):
-    return get_last_model_and_tokenizer(task_name, model_params)
+    return get_best_model_and_tokenizer(task_name, model_params)
 
 
 def get_error_dataset(confidence_model, confidence_tokenizer, mapped_qa_ds):

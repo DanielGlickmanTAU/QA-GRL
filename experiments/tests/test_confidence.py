@@ -14,7 +14,7 @@ from config import ExperimentVariables
 from config.ExperimentVariables import hyperparams
 from data import datasets_loading
 from data.TaskParams import TaskParams
-from models.model_loading import get_last_model_and_tokenizer, get_save_path
+from models.model_loading import get_best_model_and_tokenizer, get_save_path
 from data import boolq_utils
 
 model_params = hyperparams.model_params
@@ -34,7 +34,7 @@ class Test(TestCase):
         task = 'boolq-classification'
         model_params = ExperimentVariables._roberta_squad
 
-        answer_model, answer_tokenizer = get_last_model_and_tokenizer(task, model_params)
+        answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
         mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer)
 
         error_prediction_model_params = ExperimentVariables._roberta_squad
@@ -63,7 +63,7 @@ class Test(TestCase):
         generation_task_name = 'question-generation'
         generation_model_params = ExperimentVariables._t5_qg
 
-        gen_model, gen_tokenizer = model_loading.get_last_model_and_tokenizer(generation_task_name,
+        gen_model, gen_tokenizer = model_loading.get_best_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)
         generated_questions = generate_boolq_dataset(gen_model, gen_tokenizer, num_questions=0)
 
