@@ -71,14 +71,25 @@ def get_last_checkpoint_in_path(path):
     return _get_last_checkpoint(files)
 
 
+def get_best_checkpoint_in_path(path):
+    files = listdir(path)
+    return _get_best_checkpoint(files)
+
+
 def _get_last_checkpoint(files):
     files = [f for f in files if 'checkpoint-' in f]
     return sorted(files, key=lambda s: int(s[len('checkpoint-'):]))[-1]
 
 
-def get_last_model_and_tokenizer(saved_path, model_params):
+def _get_best_checkpoint(files):
+    """ best checkpoint is the lowest checkpoint. Assuming keep_last = 1 and """
+    files = [f for f in files if 'checkpoint-' in f]
+    return sorted(files, key=lambda s: int(s[len('checkpoint-'):]))[0]
+
+
+def get_best_model_and_tokenizer(saved_path, model_params):
     path = get_save_path(saved_path, model_params)
-    checkpoint = get_last_checkpoint_in_path(path)
+    checkpoint = get_best_checkpoint_in_path(path)
     path_checkpoint = path + '/' + checkpoint
     print('getting model from checkpoint ', path_checkpoint)
     if 'generation' in saved_path:
