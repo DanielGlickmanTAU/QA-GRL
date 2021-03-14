@@ -102,12 +102,16 @@ class Test(TestCase):
                             results.append((t, q2, p2, q1, p1, p2 - p1))
 
         results.sort(key=lambda x: -x[-1])
-        results = results[:200]
-        results = ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
-                   for x in results]
-        print('\n\n'.join(results))
+
         with open('results_topk', 'w+') as f:
-            f.write('\n\n'.join(results))
+            f.write('\n\n'.join(self.format_results(results)))
+
+        print('top:', '\n\n'.join(self.format_results(results[:100])))
+        print('bot:', '\n\n'.join(self.format_results(results[-100:])))
+
+    def format_results(self, results):
+        return ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
+                for x in results]
 
     def get_processed_error_dataset(self, confidence_model, confidence_tokenizer, error_prediction_model_params,
                                     error_prediction_task_name, mapped_qa_ds):
