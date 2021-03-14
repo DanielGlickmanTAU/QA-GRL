@@ -108,6 +108,10 @@ class Test(TestCase):
 
         print('top:', '\n\n'.join(self.format_results(results[:100])))
         print('bot:', '\n\n'.join(self.format_results(results[-100:])))
+        import pickle
+        import time
+        filename = 'results_pickle_' + str(time.time())
+        pickle.dump([hyperparams, results], open(filename, "wb"))
 
     def format_results(self, results):
         return ['text:' + x[0] + '\n' + 'question1:' + x[1] + '\n' + 'question2:' + x[2] + '\n' + 'diff:' + str(x[3])
