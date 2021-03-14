@@ -47,7 +47,7 @@ hyperparams.model_params = _roberta_squad
 hyperparams.race = race
 hyperparams.use_unique_seperator_for_answer = False
 hyperparams.return_overflowing_tokens = False
-hyperparams.disable_tqdm = True
+hyperparams.disable_tqdm = False
 print('using hyperparams:', hyperparams)
 
 beam_search_args = {
