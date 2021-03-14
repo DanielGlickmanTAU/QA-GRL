@@ -87,6 +87,8 @@ class Test(TestCase):
         results = []
         for t in d:
             questions = d[t]
+            if len(questions) < 2:
+                continue
             for i in range(len(questions)):
                 for j in range(1, len(questions)):
                     q1 = questions[i]
@@ -95,9 +97,9 @@ class Test(TestCase):
                     p2 = probs[q2]
                     if not q1 == q2:
                         if p1 > p2:
-                            results.append((t, q1, q2, p1 - p2))
+                            results.append((t, q1, p1, q2, p2, p1 - p2))
                         else:
-                            results.append((t, q2, q1, p2 - p1))
+                            results.append((t, q2, p2, q1, p1, p2 - p1))
 
         results.sort(key=lambda x: -x[-1])
         results = results[:200]
