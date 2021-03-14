@@ -1,36 +1,11 @@
 import datasets
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
+from config.ExperimentVariables import active_config
 from data import datasets_loading
 from utils import compute
 
 _generate_question_prefix = 'generate questions:'
-
-beam_search_args = {
-    "max_length": 512,
-    "num_beams": 8,
-    "length_penalty": 1,
-    "no_repeat_ngram_size": 3,
-    "early_stopping": False,
-    "num_return_sequences": 2
-}
-
-top_k_args = {
-    "max_length": 512,
-    "do_sample": True,
-    "top_k": 50,
-    "num_return_sequences": 2
-}
-
-top_p_args = {
-    "max_length": 512,
-    "do_sample": True,
-    "top_k": 25,
-    'top_p': 0.85,
-    "num_return_sequences": 4
-}
-
-active_config = beam_search_args
 
 
 class QuestionGenerator:
