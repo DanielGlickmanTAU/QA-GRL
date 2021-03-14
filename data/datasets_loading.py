@@ -129,10 +129,15 @@ def tokenize_boolq(examples, tokenizer):
             'label': labels}
 
 
-def get_boolq_dataset(tokenizer):
+def get_boolq_dataset(tokenizer, limit=None):
     print(os.getcwd())
     boolq = load_dataset("boolq", cache_dir=compute.get_cache_dir())
     boolq = _remove_duplicate_questions(boolq)
+
+    if limit:
+        boolq['train'] = boolq['train'].select(range(10))
+        boolq['validation'] = boolq['validation'].select(range(10))
+
     return preprocess(boolq, tokenizer, preprocess_function=tokenize_boolq)
 
 
