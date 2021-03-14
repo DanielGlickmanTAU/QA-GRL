@@ -30,6 +30,8 @@ top_p_args = {
     "num_return_sequences": 4
 }
 
+active_config = beam_search_args
+
 
 class QuestionGenerator:
     def __init__(self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer):
@@ -39,7 +41,7 @@ class QuestionGenerator:
         self.device = compute.get_device()
         self.model.to(self.device)
 
-        self.default_generate_kwargs = beam_search_args
+        self.default_generate_kwargs = active_config
 
     def __call__(self, context: str, **generate_kwargs):
         inputs = self._prepare_inputs_for_e2e_qg(context)
