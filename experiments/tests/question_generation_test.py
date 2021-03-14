@@ -24,10 +24,12 @@ from unittest import TestCase
 
 class Test(TestCase):
     task_name = 'question-generation'
-    model_params = ExperimentVariables._t5_qg_base
+    model_params = ExperimentVariables._t5_qg_small
     save_dir = model_loading.get_save_path(task_name, model_params)
 
-    def train_question_generating_model(self):
+    def test_train_question_generating_model(self):
+        model_params = ExperimentVariables._t5_qg_base
+        print(model_params)
         model, tokenizer = model_loading.get_model_and_tokenizer_for_qa_generation(model_params)
         boolq = question_generation_dataset.get_processed_boolq_dataset(tokenizer)
 
@@ -53,4 +55,5 @@ class Test(TestCase):
         print(qs)
 
 
-Test().train_question_generating_model()
+if __name__ == '__main__':
+    Test().test_train_question_generating_model()
