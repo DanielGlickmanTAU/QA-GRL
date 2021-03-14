@@ -61,7 +61,7 @@ class Test(TestCase):
         assert len(boolq['validation']) < 3000
 
         generation_task_name = 'question-generation'
-        generation_model_params = ExperimentVariables._t5_qg
+        generation_model_params = ExperimentVariables._t5_qg_small
 
         gen_model, gen_tokenizer = model_loading.get_best_model_and_tokenizer(generation_task_name,
                                                                               generation_model_params)

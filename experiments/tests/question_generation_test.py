@@ -24,7 +24,7 @@ from unittest import TestCase
 
 class Test(TestCase):
     task_name = 'question-generation'
-    model_params = ExperimentVariables._t5_qg
+    model_params = ExperimentVariables._t5_qg_small
     save_dir = model_loading.get_save_path(task_name, model_params)
 
     def train_question_generating_model(self):
