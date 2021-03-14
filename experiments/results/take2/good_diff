@@ -1,0 +1,999 @@
+text:The hospital is a teaching affiliate of both the University of Massachusetts Medical School and Tufts University School of Medicine. It also conducts teaching programs in collaboration with the Harvard T.H. Chan School of Public Health and the Harvard School of Medicine.
+
+q1:is the university of massachusetts a teaching affiliate
+
+prob1:0.9529483318328857
+
+q2:is the university of massachusetts the same as university of mcdonalds
+
+prob2:0.7516151070594788
+--------------------------------------------------
+text:The Country Music Association Awards is a major awards show in country music, with the highest honor being the award for Entertainer of the Year. Garth Brooks has won the most awards with six. In 1972, Loretta Lynn became the first female artist to be honored with this award. Barbara Mandrell became the first artist to win twice.
+
+q1:is there a country music association award
+
+prob1:0.953052282333374
+
+q2:is country music the same as entertainer of the year
+
+prob2:0.752825140953064
+--------------------------------------------------
+text:The preamble to the Constitution of India is a brief introductory statement that sets out the guiding people and principles of the document, and it indicates the source from which the ordinary document derives its authority, meaning, the people. The hopes and aspirations of the people as well as the ideals before our nation are described in the preamble in clear words. It may be considered as the heart and soul of Constitution. The preamble can be referred to as the preface which highlights the entire Constitution. It was adopted on 26 November 1949 by the Constituent Assembly and came into effect on 26th January 1950.
+
+q1:is there a preamble to the constitution of india
+
+prob1:0.9513845443725586
+
+q2:is the preamble to the constitution of india the same
+
+prob2:0.7514915466308594
+--------------------------------------------------
+text:Spark plugs are specified by size, either thread or nut (often referred to as Euro), sealing type (taper or crush washer), and spark gap. Common thread (nut) sizes in Europe are 10 mm (16 mm), 14 mm (21 mm; sometimes, 16 mm), and 18 mm (24 mm, sometimes, 21 mm). In the United States, common thread (nut) sizes are 10mm (16mm), 12mm (14mm, 16mm or 17.5mm), 14mm (16mm, 20.63mm) and 18mm (20.63mm).
+
+q1:is there a spark plug in the us
+
+prob1:0.9438016414642334
+
+q2:is a spark plug the same as a nut
+
+prob2:0.7519556879997253
+--------------------------------------------------
+text:The Total Drama series is the original series of the greater Total Drama franchise, which consists of five seasons that have aired during a timeframe of seven years: the first season, Total Drama Island, the second season, Total Drama Action, the third season, Total Drama World Tour, the fourth season, Total Drama: Revenge of the Island, and the fifth season, titled as both Total Drama All-Stars and Total Drama: Pahkitew Island. The latest installment premiered on July 7, 2014, in the United States and September 4, 2014, in Canada. A spin-off series based on the main series, The Ridonculous Race, was produced shortly after the fifth season was aired. A spin-off/prequel series, titled Total DramaRama is currently in production which is scheduled to be released in September 2018 on Cartoon Network in the U.S. and in October 2018 on Teletoon in Canada...
+
+q1:is there a season 4 of total drama island
+
+prob1:0.9525724053382874
+
+q2:is total drama island the same as total drama
+
+prob2:0.7607988715171814
+--------------------------------------------------
+text:Under the REAL ID Act, the passport card is also accepted for federal purposes (such as domestic air travel or entering federal buildings), which may make it an attractive option for people living in states whose driver's licenses and ID cards are not REAL ID--compliant when those requirements go into effect. TSA regulations list the passport card as an acceptable identity document at airport security checkpoints. For the purposes of state voter photo identification initiatives, the passport card has been deemed acceptable.
+
+q1:can you use a real ID card at airports
+
+prob1:0.9408385753631592
+
+q2:is a passport card the same as a real ID card
+
+prob2:0.7509117722511292
+--------------------------------------------------
+text:Incredicoaster is a steel roller coaster located in the Pixar Pier section of Disney California Adventure in Anaheim, California. Opened on February 8, 2001 as California Screamin', it is one of the park's original rides, and is the only roller coaster at the Disneyland Resort to feature an inversion. Its top speed of 55 miles per hour (89 km/h) makes it the fastest ride at the Disneyland Resort. California Screamin' closed on January 8, 2018 and was re-themed to the Incredicoaster, inspired by The Incredibles, which opened in the new Pixar Pier on June 23, 2018, in conjunction with the release of the film Incredibles 2.
+
+q1:is there a roller coaster in incredicoaster
+
+prob1:0.9437415599822998
+
+q2:is incredicoaster the same as california screamin'
+
+prob2:0.7569896578788757
+--------------------------------------------------
+text:A second film, titled Hunter × Hunter: The Last Mission, was announced following the first one's debut. The film has some focus on Netero, the chairman of the Hunter Association as Gon and his friends discover the dark secrets behind his past. The movie was released on December 27, 2013, and the DVD and Blu-ray was released on July 23, 2014.
+
+q1:is there a sequel to the last mission
+
+prob1:0.943467915058136
+
+q2:is hunter the last mission the same as hunter
+
+prob2:0.7568104863166809
+--------------------------------------------------
+text:Shea butter (/ʃiː/, /ˈʃiːə/, or /ʃeɪ/) is a fat extracted from the nut of the African shea tree (Vitellaria paradoxa). It is usually yellow in color when raw, with more processed versions being ivory or white in color. Shea butter is a triglyceride (fat) derived mainly from stearic acid and oleic acid. It is widely used in cosmetics as a moisturizer, salve or lotion. Shea butter is edible and is used in food preparation in some African countries. Occasionally, shea butter is mixed with other oils as a substitute for cocoa butter, although the taste is noticeably different.
+
+q1:is shea butter a fat extracted from the nut of the african shea tree
+
+prob1:0.942701518535614
+
+q2:is shea butter the same as cocoa butter
+
+prob2:0.7614033222198486
+--------------------------------------------------
+text:Botulinum toxin (BTX) or Botox is a neurotoxic protein produced by the bacterium Clostridium botulinum and related species. It prevents the release of the neurotransmitter acetylcholine from axon endings at the neuromuscular junction and thus causes flaccid paralysis. Infection with the bacterium causes the disease botulism. The toxin is also used commercially in medicine, cosmetics and research.
+
+q1:is botulinum toxin a neurotoxic protein
+
+prob1:0.9449114203453064
+
+q2:is botulinum toxin the same as botox
+
+prob2:0.7638903260231018
+--------------------------------------------------
+text:The crack a whip makes is produced when a section of the whip moves faster than the speed of sound creating a small sonic boom. The creation of the sonic boom was confirmed in 1958 by analyzing the high-speed shadow photography taken in 1927.
+
+q1:is there a crack in a whip
+
+prob1:0.9587298035621643
+
+q2:is a whip the same as a sonic boom
+
+prob2:0.7786099314689636
+--------------------------------------------------
+text:A player who receives a match penalty is ejected. A match penalty is imposed for deliberately injuring another player as well as attempting to injure another player. Many other penalties automatically become match penalties if injuries actually occur: under NHL rules, butt-ending, goalies using blocking glove to the face of another player, head-butting, kicking, punching an unsuspecting player, spearing, and tape on hands during altercation must be called as a match penalty if injuries occur; under IIHF rules, kneeing and checking to the head or neck area must be called as a match penalty if injuries occur.
+
+q1:can you get a match penalty in the nfl
+
+prob1:0.9409671425819397
+
+q2:is a match penalty the same as a penalty
+
+prob2:0.7608866691589355
+--------------------------------------------------
+text:Modified-release dosage is a mechanism that (in contrast to immediate-release dosage) delivers a drug with a delay after its administration (delayed-release dosage) or for a prolonged period of time (extended-release (ER, XR, XL) dosage) or to a specific target in the body (targeted-release dosage).
+
+q1:can you take a drug with a delayed release
+
+prob1:0.9406039714813232
+
+q2:is a modified release dose the same as a delayed release
+
+prob2:0.7609356641769409
+--------------------------------------------------
+text:The Fire Tablet, formerly called the Kindle Fire, is a tablet computer developed by Amazon.com. Built with Quanta Computer, the Kindle Fire was first released in November 2011, featuring a color 7-inch multi-touch display with IPS technology and running a custom version of Google's Android operating system called Fire OS. The Kindle Fire HD followed in September 2012, and the Kindle Fire HDX in September 2013. In September 2014, when the fourth generation was introduced, the name ``Kindle'' was dropped. In September 2015, the fifth generation Fire 7 was released, followed by the sixth generation Fire HD 8, in September 2016. The seventh generation Fire 7 was released in June 2017.
+
+q1:is the Kindle fire a tablet
+
+prob1:0.9328041672706604
+
+q2:is the Kindle fire the same as the fire tablet
+
+prob2:0.7537105083465576
+--------------------------------------------------
+text:The ascending colon is the first of four sections of the large intestine. It is connected to the small intestine by a section of bowel called the cecum. The ascending colon runs upwards through the abdominal cavity toward the transverse colon for approximately eight inches (20 cm).
+
+q1:is the ascending colon the first of four sections of the large intestine
+
+prob1:0.9441706538200378
+
+q2:is the ascending colon the same as the small intestine
+
+prob2:0.7655016779899597
+--------------------------------------------------
+text:In 2013, 64% of health spending was paid for by the government, and funded via programs such as Medicare, Medicaid, the Children's Health Insurance Program, and the Veterans Health Administration. People aged under 67 acquire insurance via their or a family member's employer, by purchasing health insurance on their own, or are uninsured. Health insurance for public sector employees is primarily provided by the government in its role as employer.
+
+q1:is there a health insurance program in the u.s.
+
+prob1:0.9448703527450562
+
+q2:is a child's health insurance the same as a family member
+
+prob2:0.7665508389472961
+--------------------------------------------------
+text:The Canada men's national soccer team (French: Équipe du Canada de soccer masculin) represents Canada in international soccer competitions at the senior men's level. They are overseen by the Canadian Soccer Association and compete in the Confederation of North, Central American and Caribbean Association Football (CONCACAF).
+
+q1:is canada a men's national soccer team
+
+prob1:0.9480034708976746
+
+q2:is canada the same as canada's national soccer team
+
+prob2:0.7697206139564514
+--------------------------------------------------
+text:The section of I-30 between Dallas and Fort Worth is designated the Tom Landry Highway in honor of the long-time Dallas Cowboys coach. Though I-30 passed well south of Texas Stadium, the Cowboys' former home, their new stadium in Arlington, Texas is near I-30. However, the freeway designation was made before Arlington voted to build Cowboys Stadium. This section was previously known as the Dallas-Fort Worth Turnpike, which preceded the Interstate System. Although tolls had not been collected for many years, it was still known locally as the Dallas-Fort Worth Turnpike until receiving its present name. The section from downtown Dallas to Arlington was recently widened to over 16 lanes in some sections, by 2010. From June 15, 2010, through February 6, 2011, this 30-mile (48 km) section of I-30 was temporarily designated as the ``Tom Landry Super Bowl Highway'' in commemoration of Super Bowl XLV which was played at Cowboys Stadium.
+
+q1:is there a tom landry highway in texas
+
+prob1:0.9432604908943176
+
+q2:is the tom landry highway the same as the cowboys stadium
+
+prob2:0.7654983401298523
+--------------------------------------------------
+text:The Hawaiian Islands (Hawaiian: Mokupuni o Hawai'i) are an archipelago of eight major islands, several atolls, numerous smaller islets, and seamounts in the North Pacific Ocean, extending some 1,500 miles (2,400 kilometers) from the island of Hawaiʻi in the south to northernmost Kure Atoll. Formerly the group was known to Europeans and Americans as the ``Sandwich Islands'', a name chosen by James Cook in honor of the then First Lord of the Admiralty John Montagu, 4th Earl of Sandwich. The contemporary name is derived from the name of the largest island, Hawaii Island.
+
+q1:is the hawaiian islands the largest island
+
+prob1:0.9274193048477173
+
+q2:is the hawaiian islands the same as the sandwich islands
+
+prob2:0.7501575350761414
+--------------------------------------------------
+text:``The House of the Rising Sun'' is a traditional folk song, sometimes called ``Rising Sun Blues''. It tells of a life gone wrong in New Orleans; many versions also urge a sibling to avoid the same fate. The most successful commercial version, recorded in 1964 by British rock group the Animals, was a number one hit on the UK Singles Chart and also in the United States and France. As a traditional folk song recorded by an electric rock band, it has been described as the ``first folk rock hit''.
+
+q1:is the house of the rising sun a folk song
+
+prob1:0.9299797415733337
+
+q2:is the house of the rising sun the same as the rose sun blues
+
+prob2:0.7531344294548035
+--------------------------------------------------
+text:A moving violation is any violation of the law committed by the driver of a vehicle while it is in motion. The term ``motion'' distinguishes it from other motor vehicle violations, such as paperwork violations (which include violations involving automobile insurance, registration and inspection), parking violations, or equipment violations.
+
+q1:is a moving violation a violation of the law
+
+prob1:0.9381123185157776
+
+q2:is a moving violation the same as a motor vehicle
+
+prob2:0.7614341378211975
+--------------------------------------------------
+text:The whale shark is found in open waters of the tropical oceans and is rarely found in water below 21 °C (70 °F). Modeling suggests a lifespan of about 70 years, but measurements have proven difficult. Whale sharks have very large mouths and are filter feeders, which is a feeding mode that occurs in only two other sharks, the megamouth shark and the basking shark. They feed almost exclusively on plankton and are not known to pose a threat to humans.
+
+q1:can a whale shark be found in water below 21 °C
+
+prob1:0.9405395984649658
+
+q2:is a whale shark the same as a basking shark
+
+prob2:0.7639650106430054
+--------------------------------------------------
+text:In 1963, the revolutionary government in Burma nationalized Central Bank of India's operations there, which became People's Bank No. 1.
+
+q1:is there a central bank of india in burma
+
+prob1:0.9424455761909485
+
+q2:is the central bank of india the same as the people's bank
+
+prob2:0.7664823532104492
+--------------------------------------------------
+text:In marketing, a Corporate anniversary is a celebration of a firm's continued existence after a particular number of years. The celebration is a media event which can help a firm achieve diverse marketing goals, such as promoting its corporate identity, boosting employee morale, building greater investor confidence, and encouraging sales. As a public relations opportunity, it is a way for a firm to tout past accomplishments while strengthening relationships with employees and customers and investors. The duration of the celebration itself can vary considerably, from an hour or day to activities happening throughout the year. Many businesses use an anniversary to express gratitude for past success. Generally, larger corporations have the means to stage more elaborate celebrations.
+
+q1:is a corporate anniversary a celebration of success
+
+prob1:0.9326897859573364
+
+q2:is a corporate anniversary the same as an anniversary
+
+prob2:0.7572888731956482
+--------------------------------------------------
+text:The Home Park, previously known as the Little Park (and originally Lydecroft Park), is a private 655-acre (265 ha) Royal park, administered by the Crown Estate. It lies on the eastern side of Windsor Castle in the town and former civil parish of Windsor in the English county of Berkshire.
+
+q1:is the home park a royal park
+
+prob1:0.9343681931495667
+
+q2:is the home park the same as the little park
+
+prob2:0.7599438428878784
+--------------------------------------------------
+text:The Cat is the fourth animal symbol in the 12-year cycle of the Vietnamese zodiac and Gurung zodiac, taking place of the Rabbit in the Chinese zodiac. As such, the traits associated with the Rabbit are attributed to the cat. Cats are in conflict with the Rat.
+
+q1:is the cat the fourth animal symbol in the chinese zodiac
+
+prob1:0.9265115857124329
+
+q2:is the cat the same as the rat
+
+prob2:0.7525022625923157
+--------------------------------------------------
+text:Turtle may either refer to the order as a whole, or to particular turtles that make up a form taxon that is not monophyletic, or may be limited to only aquatic species. Tortoise usually refers to any land-dwelling, non-swimming chelonian. Terrapin is used to describe several species of small, edible, hard-shell turtles, typically those found in brackish waters.
+
+q1:can a turtle be a part of a taxon
+
+prob1:0.9393121600151062
+
+q2:is tiger the same as chelonian
+
+prob2:0.7654221653938293
+--------------------------------------------------
+text:Most North American rinks follow the National Hockey League (NHL) specifications of 200 feet (61 m) × 85 feet (26 m) with a corner radius of 28 feet (8.5 m). The distance from the end boards to the nearest goal line is 11 feet (3.4 m). The NHL attacking zones are expanded, with blue lines 64 feet (20 m) from the goal line and 50 feet (15 m) apart. Canadian rinks may vary from NHL ones, especially in the goal crease shape (semi-circular), and in the rink dimensions which can accept widths from 85 to 100 feet.
+
+q1:can you reach a goal line in the nhl
+
+prob1:0.9365068078041077
+
+q2:is the nhl the same as the national hockey league
+
+prob2:0.7636425495147705
+--------------------------------------------------
+text:In addition to domestic units, industrial dishwashers are available for use in commercial establishments such as hotels and restaurants, where a large number of dishes must be cleaned. Washing is conducted with temperatures of 65--71 °C (149--160 °F) and sanitation is achieved by either the use of a booster heater that will provide an 82 °C (180 °F) ``final rinse'' temperature or through the use of a chemical sanitizer.
+
+q1:is there a need for a dishwasher
+
+prob1:0.927146852016449
+
+q2:is a dishwasher the same as a booster heater
+
+prob2:0.7551980018615723
+--------------------------------------------------
+text:A private equity fund is a collective investment scheme used for making investments in various equity (and to a lesser extent debt) securities according to one of the investment strategies associated with private equity. Private equity funds are typically limited partnerships with a fixed term of 10 years (often with annual extensions). At inception, institutional investors make an unfunded commitment to the limited partnership, which is then drawn over the term of the fund. From the investors' point of view, funds can be traditional (where all the investors invest with equal terms) or asymmetric (where different investors have different terms).
+
+q1:can you invest in a private equity fund
+
+prob1:0.9342454075813293
+
+q2:is a private equity fund the same as a limited partnership
+
+prob2:0.762582540512085
+--------------------------------------------------
+text:Until the early 1960s, most front turn signals worldwide emitted white light and most rear turn signals emitted red. The auto industry in the USA voluntarily adopted amber front-turn signals for most vehicles beginning in the 1963 model year, though the advent of amber signals was accompanied by legal stumbles in some states and front turn signals were still legally permitted to emit white light until FMVSS 108 took effect for the 1968 model year, whereupon amber became the only permissible front turn signal colour. Presently, most countries outside of the United States and Canada require that all front, side and rear turn signals produce amber light. Exceptions include Switzerland and New Zealand.
+
+q1:is there an amber front turn signal in the us
+
+prob1:0.9220453500747681
+
+q2:is amber the same as a rear turn signal
+
+prob2:0.7503907680511475
+--------------------------------------------------
+text:Capital punishment is a legal penalty in the U.S. state of Kansas but it is rarely used.
+
+q1:is capital punishment a legal penalty in kansas
+
+prob1:0.9221735596656799
+
+q2:is capital punishment the same as capital punishment
+
+prob2:0.7511259317398071
+--------------------------------------------------
+text:The blue whale (Balaenoptera musculus) is a marine mammal belonging to the baleen whale parvorder, Mysticeti. At up to 30 metres (98 ft) in length and with a maximum recorded weight of 173 tonnes (190 short tons), it is the largest animal known to have ever existed.
+
+q1:is the blue whale a mammal
+
+prob1:0.950840950012207
+
+q2:is a blue whale the same as a baleen whale
+
+prob2:0.7805030345916748
+--------------------------------------------------
+text:``Little Red Riding Hood'' is a European fairy tale about a young girl and a Big Bad Wolf. Its origins can be traced back to the 10th century by several European folk tales, including one from Italy called The False Grandmother (Italian: La finta nonna), later written among others by Italo Calvino in the Italian Folktales collection; the best known versions were written by Charles Perrault and the Brothers Grimm. The story has been changed considerably in various retellings and subjected to numerous modern adaptations and readings. Other names for the story are: ``Little Red Ridinghood'', ``Little Red Cap'' or simply ``Red Riding Hood''. It is number 333 in the Aarne--Thompson classification system for folktales.
+
+q1:is little red ridinghood a fairy tale
+
+prob1:0.9346364736557007
+
+q2:is little red ridinghood the same as a big bad wolf
+
+prob2:0.7659785747528076
+--------------------------------------------------
+text:Chimpanzees and other apes -- species which have been studied extensively -- compare the most to humans with the most convincing findings and straightforward evidence in the relativity of self-awareness in animals so far. Dolphins were put to a similar test and achieved the same results. Diana Reiss, a psycho-biologist at the New York Aquarium discovered that bottlenose dolphins can recognize themselves in mirrors.
+
+q1:can dolphins recognize themselves in mirrors
+
+prob1:0.9421132802963257
+
+q2:are dolphins and chimpanzees the same species
+
+prob2:0.7736707329750061
+--------------------------------------------------
+text:The groundhog is the largest sciurid in its geographical range. Adults are 16 to 20 inches long, including a six inch tail. A large woodchuck thought to weigh twenty pounds when carried was exactly half that weight when weighed by scale. Woodchuck weight ranges from five to twelve pounds. Extremely large individuals may weigh up to 15 pounds. Seasonal weight changes indicate circannual deposition and use of fat. Progressive higher weights are attained each year for the first 2--3 years after which weights plateau. Groundhogs have four incisor teeth which grow 1/16'' per week. Constant usage wears them down again by about that much each week. Unlike the incisors of other rodents, the incisors of groundhogs are white to ivory white. Groundhogs are well adapted for digging, with short, powerful limbs and curved, thick claws. Unlike other sciurids, the groundhog's spine is curved, more like that of a mole, and the tail is comparably shorter as well -- only about one-fourth of body length. Suited to their temperate habitat, groundhogs are covered with two coats of fur: a dense grey undercoat and a longer coat of banded guard hairs that gives the groundhog its distinctive ``frosted'' appearance.
+
+q1:is groundhog the largest sciurid in the world
+
+prob1:0.9264336824417114
+
+q2:is a groundhog the same as a mole
+
+prob2:0.758243978023529
+--------------------------------------------------
+text:Before about 1600, the game could also be won by capturing all of the opponent's pieces, leaving just a bare king. This style of play is now called annihilation or robado. In Medieval times players began to consider it nobler to win by checkmate, so annihilation became a half-win for a while, until it was abandoned.
+
+q1:can you win annihilation by checkmate
+
+prob1:0.9426300525665283
+
+q2:is annihilation the same as robado
+
+prob2:0.7748137712478638
+--------------------------------------------------
+text:The first usage of the word president to denote the highest official in a government was during the Commonwealth of England. After the abolition of the monarchy the English Council of State, whose members were elected by the House of Commons, became the executive government of the Commonwealth. The Council of State was the successor of the Privy Council, which had previously been headed by the Lord President; its successor the Council of State was also headed by a Lord President, the first of which was John Bradshaw. However, the Lord President alone was not head of state, because that office was vested in the council as a whole.
+
+q1:is there a president in england
+
+prob1:0.9534590244293213
+
+q2:is the council of state the same as the president
+
+prob2:0.7856885194778442
+--------------------------------------------------
+text:Enterprise value (EV), total enterprise value (TEV), or firm value (FV) is an economic measure reflecting the market value of a business. It is a sum of claims by all claimants: creditors (secured and unsecured) and shareholders (preferred and common). Enterprise value is one of the fundamental metrics used in business valuation, financial modeling, accounting, portfolio analysis, and risk analysis.
+
+q1:is total enterprise value a measure of the market value of a business
+
+prob1:0.927725613117218
+
+q2:is total enterprise value the same as total business value
+
+prob2:0.760125458240509
+--------------------------------------------------
+text:The chill-coma temperature in relation to flying insects is the temperature at which flight muscles cannot be activated. Compared to honey bees and carpenter bees, bumblebees have the lowest chill-coma temperature. Of the bumblebees Bombus bimaculatus has the lowest at 7 °C (45 °F). However, bumblebees have been seen to fly in colder ambient temperatures. This discrepancy is likely because the chill-coma temperature was determined by tests done in a laboratory setting. However, bumblebees live in insulated shelters and can shiver to warm up before venturing into the cold.
+
+q1:is there a chill-coma temperature in bumblebees
+
+prob1:0.9513713121414185
+
+q2:is bumblebees the same as honey bees
+
+prob2:0.7844142913818359
+--------------------------------------------------
+text:The sauce itself does not contain any lobster, and may vary in preparation method from place to place or restaurant to restaurant. However, it will typically contain chicken broth, garlic, ginger, fermented black beans, and eggs, and is thickened with cornstarch. Some recipes incorporate ground pork and soy sauce. The color varies from being pale white, to a yellow, mainly depending on how the eggs are incorporated into the sauce; if the eggs are added quickly, the sauce acquires a yellow hue. Lobster sauce in most of New England, where it is a thicker, brown sauce, is the exception.
+
+q1:can you make a lobster sauce in new england
+
+prob1:0.9303519129753113
+
+q2:is a lobster sauce the same as a chicken broth
+
+prob2:0.7635977268218994
+--------------------------------------------------
+text:The Lykan HyperSport is featured in the film Furious 7, and the video games Project CARS, Driveclub, Asphalt 8: Airborne, Asphalt Nitro, Forza Motorsport 6, Forza Horizon 3, Forza Motorsport 7, GT Racing 2: The Real Car Experience, CSR Racing and CSR Racing 2. The Lykan can also be briefly seen in the second Fate of the Furious trailer, however, the Lykan does not make an appearance, the footage is actually from the seventh instalment in the series, Fast and Furious 7.
+
+q1:does the lykan hypersport appear in the movie furious 7
+
+prob1:0.9317229390144348
+
+q2:is the likan hypersport the same as the fast and furious 7
+
+prob2:0.7650144100189209
+--------------------------------------------------
+text:An echocardiogram, often referred to as a cardiac echo or simply an echo, is a sonogram of the heart. (It is not abbreviated as ECG, because that is an abbreviation for an electrocardiogram.) Echocardiography uses standard two-dimensional, three-dimensional, and Doppler ultrasound to create images of the heart.
+
+q1:is an echo a sonogram of the heart
+
+prob1:0.9356002807617188
+
+q2:is an echo the same as an echocardiogram
+
+prob2:0.7691868543624878
+--------------------------------------------------
+text:Wendy Torrance in the film is relatively meek, submissive, passive, gentle, and mousy; this is shown by the way she defends Jack even in his absence to the doctor examining Danny. It is implied she has perhaps been abused by him as well. In the novel, she is a far more self-reliant and independent personality who is tied to Jack in part by her poor relationship with her parents. In the novel, she never displays hysteria or collapses the way she does in the film, but remains cool and self-reliant. Writing in Hollywood's Stephen King, author Tony Magistrale writes about the mini-series remake:
+
+q1:is jack a jack movie based on a true story
+
+prob1:0.9183235168457031
+
+q2:is jack the same as jack
+
+prob2:0.7521105408668518
+--------------------------------------------------
+text:Bile is a digestive fluid made by the liver, stored in the gallbladder, and discharged into duodenum after food is ingested to aid in the digestion of fat. Normally, the pyloric sphincter prevents bile from entering the stomach. When the pyloric sphincter is damaged or fails to work correctly, bile can enter the stomach and then be transported into the esophagus as in gastric reflux. The presence of small amounts of bile in the stomach is relatively common and usually asymptomatic, but excessive refluxed bile causes irritation and inflammation.
+
+q1:can bile enter the stomach and enter the esophagus
+
+prob1:0.9389413595199585
+
+q2:is bile the same as gastric reflux
+
+prob2:0.7731234431266785
+--------------------------------------------------
+text:The Codex Alimentarius requires brown sugar to contain at least 88% of sucrose plus invert sugar. Commercial brown sugar contains from 3.5% molasses (light brown sugar) to 6.5% molasses (dark brown sugar) based on total volume. Based on total weight, regular commercial brown sugar contains up to 10% molasses. The product is naturally moist from the hygroscopic nature of the molasses and is often labelled as ``soft.'' The product may undergo processing to give a product that flows better for industrial handling. The addition of dyes or other chemicals may be permitted in some areas or for industrial products.
+
+q1:can you use invert sugar in commercial brown sugar
+
+prob1:0.9286364316940308
+
+q2:is brown sugar the same as invert sugar
+
+prob2:0.7636756896972656
+--------------------------------------------------
+text:When President Bush came to the end of his second term in 2009, a VC-25 was used to transport him to Texas. For this purpose the aircraft call sign was Special Air Mission 28000, as the aircraft did not carry the current President of the United States. Similar arrangements were made for former Presidents Ronald Reagan, Bill Clinton, and Barack Obama.
+
+q1:is there a special air mission 28000 in texas
+
+prob1:0.9476439952850342
+
+q2:is a VC-25 the same as a special air mission
+
+prob2:0.783189058303833
+--------------------------------------------------
+text:Orange County is a county located in the U.S. state of New York. As of the 2010 census, the population was 372,813. The county seat is Goshen. This county was first created in 1683 and reorganized with its present boundaries in 1798.
+
+q1:is orange county a county in new york
+
+prob1:0.9485126733779907
+
+q2:is orange county the same as goshen
+
+prob2:0.7850914597511292
+--------------------------------------------------
+text:The term ``burger'' can also be applied to the meat patty on its own, especially in the UK where the term ``patty'' is rarely used, or the term can even refer simply to ground beef. The term may be prefixed with the type of meat or meat substitute used, as in ``turkey burger'', ``bison burger'', or ``veggie burger''.
+
+q1:can a burger be used as a meat substitute
+
+prob1:0.9444289803504944
+
+q2:is burger the same as ground beef
+
+prob2:0.7812609076499939
+--------------------------------------------------
+text:The United States Post Office issued the Statue of Liberty Forever stamp on December 1, 2010. The stamp shows the replica of the Statue of Liberty (Liberty Enlightening the World) located at the New York-New York Hotel and Casino on the Las Vegas Strip rather than the original Statue of Liberty in New York. The error was not noticed until March 2011. The error was identified by Sunipix, a stock photo agency in Texas. Ten and a half billion of the error stamps were produced. The mistake is the largest run of an error on a postage stamp.
+
+q1:is there a replica of the statue of liberty forever stamp
+
+prob1:0.9453083872795105
+
+q2:is the statue of liberty forever the same as the statue of liberty
+
+prob2:0.7824715375900269
+--------------------------------------------------
+text:The Turnpike collects tolls in the portion of I-75 known as Alligator Alley, the Sunshine Skyway Bridge, the Pinellas Bayway System and the Beachline East (State Road 528) -- all FDOT-owned roads and bridges. It also provides toll collection services for the Garcon Point and Mid-Bay Bridges in Florida's Panhandle as well as the Lee Roy Selmon Expressway in Tampa. These roads, as well as the roads on the Central Florida Expressway Authority system (Apopka Expressway, Beachline Expressway east of exit 8, Central Florida GreeneWay, East-West Expressway, and the Western Beltway) are compatible with SunPass and benefit from an average of 25% discount.
+
+q1:is there a toll on alligator alley in flora
+
+prob1:0.9391672611236572
+
+q2:is the turnpike the same as alligator alley
+
+prob2:0.7764013409614563
+--------------------------------------------------
+text:Brown rice (malt) syrup, also known as rice syrup or rice malt, is a sweetener which is rich in compounds categorized as sugars and is derived by culturing cooked rice starch with saccharifying enzymes to break down the starches, followed by straining off the liquid and reducing it by evaporative heating until the desired consistency is reached. The enzymes used in the saccharification step are supplied by an addition of sprouted barley grains to the rice starch (the traditional method) or by adding bacterial- or fungal-derived purified enzyme isolates (the modern, industrialized method).
+
+q1:is brown rice syrup a sweetener
+
+prob1:0.9450929164886475
+
+q2:is brown rice syrup the same as rice malt
+
+prob2:0.782568633556366
+--------------------------------------------------
+text:Tanjore painting is an important form of classical South Indian painting native to the town of Tanjore in Tamil Nadu. The art form dates back to the early 9th century, a period dominated by the Chola rulers, who encouraged art and literature. These paintings are known for their elegance, rich colours, and attention to detail. The themes for most of these paintings are Hindu Gods and Goddesses and scenes from Hindu mythology. In modern times, these paintings have become a much sought-after souvenir during festive occasions in South India.
+
+q1:is tanjore painting a part of south india
+
+prob1:0.9208489656448364
+
+q2:is tanjore painting the same as tamil nadu
+
+prob2:0.7584013938903809
+--------------------------------------------------
+text:Spontaneous glass breakage is a phenomenon by which toughened glass (or tempered) may spontaneously break without any apparent reason. The most common causes are:
+
+q1:can tempered glass break without a reason
+
+prob1:0.9470818638801575
+
+q2:is tempered glass the same as toughened glass
+
+prob2:0.7846614122390747
+--------------------------------------------------
+text:A substantial portion of the volume of the cytoplasm of smooth muscle cells are taken up by the molecules myosin and actin, which together have the capability to contract, and, through a chain of tensile structures, make the entire smooth muscle tissue contract with them.
+
+q1:are the molecules myosin and actin part of the smooth muscle tissue
+
+prob1:0.9185449481010437
+
+q2:are the molecules myosin and actin the same
+
+prob2:0.7563550472259521
+--------------------------------------------------
+text:Many reef aquarium keepers use reverse osmosis systems for their artificial mixture of seawater. Ordinary tap water can contain excessive chlorine, chloramines, copper, nitrates, nitrites, phosphates, silicates, or many other chemicals detrimental to the sensitive organisms in a reef environment. Contaminants such as nitrogen compounds and phosphates can lead to excessive and unwanted algae growth. An effective combination of both reverse osmosis and deionization is the most popular among reef aquarium keepers, and is preferred above other water purification processes due to the low cost of ownership and minimal operating costs. Where chlorine and chloramines are found in the water, carbon filtration is needed before the membrane, as the common residential membrane used by reef keepers does not cope with these compounds.
+
+q1:do reef aquarium keepers use reverse osmosis
+
+prob1:0.942916989326477
+
+q2:is reverse osmosis the same as water purification
+
+prob2:0.781290590763092
+--------------------------------------------------
+text:A cabbit is a fictional hybrid between a cat and a rabbit. They have appeared in fiction and fantasy stories including Japanese anime and manga, and have also been dubiously purported to have been observed in the wild. Most if not all observations are attributable to either misidentified Manx cats or outright hoaxes.
+
+q1:is a cabbit a hybrid of a cat and a rabbit
+
+prob1:0.9341623783111572
+
+q2:is a cabbit the same as a rabbit
+
+prob2:0.7728276252746582
+--------------------------------------------------
+text:In 1974, cost overruns at the Four Seasons Hotel Vancouver nearly led the company into bankruptcy. As a result, the company began shifting to its current, management-only business model, eliminating costs associated with buying land and buildings. The company went public in 1986. In the 1990s, Four Seasons and Ritz-Carlton began direct competition, with Ritz-Carlton emphasizing a uniform look while Four Seasons emphasized local architecture and styles with uniform service; in the end Four Seasons gained market share.
+
+q1:did four seasons and ritz Carlton go public
+
+prob1:0.9238589406013489
+
+q2:is four seasons and ritz Carlton the same company
+
+prob2:0.7636237144470215
+--------------------------------------------------
+text:In the United States, television is available via broadcast (also known as ``over-the-air'' or OTA) -- the earliest method of receiving television programming, which merely requires an antenna and an equipped internal or external tuner capable of picking up channels that transmit on the two principal broadcast bands, very high frequency (VHF) and ultra high frequency (UHF), in order to receive the signal -- and four conventional types of multichannel subscription television: cable, unencrypted satellite (``free-to-air''), direct-broadcast satellite television and IPTV (internet protocol television). There are also competing video services on the World Wide Web, which have become an increasingly popular mode of television viewing since the late 2000s, particularly with younger audiences as an alternative or a supplement to the aforementioned traditional forms of viewing television content.
+
+q1:is there a way of receiving tv in the us
+
+prob1:0.9478958249092102
+
+q2:is tv broadcast the same as over the air
+
+prob2:0.7879620790481567
+--------------------------------------------------
+text:Special features of endocrine glands are, in general, their ductless nature, their vascularity, and commonly the presence of intracellular vacuoles or granules that store their hormones. In contrast, exocrine glands, such as salivary glands, sweat glands, and glands within the gastrointestinal tract, tend to be much less vascular and have ducts or a hollow lumen. A number of glands that signal each other in sequence are usually referred to as an axis, for example, the hypothalamic-pituitary-adrenal axis.
+
+q1:do endocrine glands have a hollow lumen
+
+prob1:0.9258339405059814
+
+q2:are endocrine glands the same as salivary glands
+
+prob2:0.7659420371055603
+--------------------------------------------------
+text:The United States Federal Food, Drug, and Cosmetic Act (abbreviated as FFDCA, FDCA, or FD&C), is a set of laws passed by Congress in 1938 giving authority to the U.S. Food and Drug Administration (FDA) to oversee the safety of food, drugs, and cosmetics. A principal author of this law was Royal S. Copeland, a three-term U.S. Senator from New York. In 1968, the Electronic Product Radiation Control provisions were added to the FD&C. Also in that year the FDA formed the Drug Efficacy Study Implementation (DESI) to incorporate into FD&C regulations the recommendations from a National Academy of Sciences investigation of effectiveness of previously marketed drugs. The act has been amended many times, most recently to add requirements about bioterrorism preparations.
+
+q1:is there a federal food and drug act
+
+prob1:0.9483675956726074
+
+q2:is the federal food and drug act the same as FD&C
+
+prob2:0.7886075973510742
+--------------------------------------------------
+text:Cross listing of shares is when a firm lists its equity shares on one or more foreign stock exchange in addition to its domestic exchange. This concept is distinctly different than examples such as: American Depositary Receipt (ADR), European Depositary Receipt (EDR), global depository receipt (GDR) (also referred to as international depository receipt), and Global Registered Shares (GRS).
+
+q1:is there a cross listing of shares on a foreign stock exchange
+
+prob1:0.9549815058708191
+
+q2:is a cross listing of shares the same as a global depository receipt
+
+prob2:0.7956756353378296
+--------------------------------------------------
+text:Just as before the 'Mazda 626 was renamed to Mazda6 Atenza, Ford continues to use the Mazda's G-series platform for the basis of a number of its CD3 platform coded vehicles, including the Ford Fusion, Mercury Milan, Lincoln Zephyr/MKZ, Lincoln MKX, and a range of SUVs and minivans. Ford also plans to offer a hybrid powertrain on the platform. The official Mazda chassis codes are GG (saloon/hatch) and GY (estate) series -- following the 626/Capella in its GF/GW series.
+
+q1:is there a hybrid powertrain on the mcda 626
+
+prob1:0.9519649147987366
+
+q2:is the mcda 626 the same as the 626
+
+prob2:0.7933556437492371
+--------------------------------------------------
+text:Display lag is a phenomenon associated with some types of liquid crystal displays (LCDs) like smartphones and computers, and nearly all types of high-definition televisions (HDTVs). It refers to latency, or lag measured by the difference between the time there is a signal input, and the time it takes the input to display on the screen. This lag time has been measured as high as 68 ms, or the equivalent of 3-4 frames on a 60 Hz display. Display lag is not to be confused with pixel response time. Currently the majority of manufacturers do not include any specification or information about display latency on the screens they produce.
+
+q1:is there a difference between latency and latency
+
+prob1:0.93733149766922
+
+q2:is display lag the same as pixel response time
+
+prob2:0.7792266011238098
+--------------------------------------------------
+text:Over the years, Philip Morris USA made many poster and television ads to promote the Philip Morris and Commander brand, starting from 1933 and ending in 1966, when the brand started to lose appeal.
+
+q1:did the philippines and commander brand lose its appeal
+
+prob1:0.9294073581695557
+
+q2:is the philippines and commander brand the same
+
+prob2:0.7718262672424316
+--------------------------------------------------
+text:The fennec fox or fennec (Vulpes zerda) is a small nocturnal fox found in the Sahara of North Africa, the Sinai Peninsula, South West Israel (Arava desert) and the Arabian desert. Its most distinctive feature is its unusually large ears, which also serve to dissipate heat. Its name comes from the Berber word (fanak), which means fox, and the species name zerda comes from the Greek word xeros which means dry, referring to the fox's habitat. The fennec is the smallest species of canid. Its coat, ears, and kidney functions have adapted to high-temperature, low-water, desert environments. Also, its hearing is sensitive enough to hear prey moving underground. It mainly eats insects, small mammals, and birds.
+
+q1:is the fennec fox the smallest species of canid
+
+prob1:0.9349274039268494
+
+q2:is the fennec fox the same as the fox
+
+prob2:0.7777364253997803
+--------------------------------------------------
+text:Travel to each of these altitude regions can lead to medical problems, from the mild symptoms of acute mountain sickness to the potentially fatal high-altitude pulmonary edema (HAPE) and high-altitude cerebral edema (HACE). The higher the altitude, the greater the risk. Research also indicates elevated risk of permanent brain damage in people climbing to extreme altitudes. Expedition doctors commonly stock a supply of dexamethasone, or ``dex,'' to treat these conditions on site.
+
+q1:can you travel to extreme altitudes with dexamethasone
+
+prob1:0.9475457072257996
+
+q2:do you have to travel to extreme altitudes
+
+prob2:0.7905840277671814
+--------------------------------------------------
+text:The United Kingdom and the Netherlands are both countries that are run under a constitutional monarchy. King Willem-Alexander of the Netherlands is around 890th in line to the British throne.
+
+q1:is the united kingdom and the uk governed by a monarchy
+
+prob1:0.9440975785255432
+
+q2:is the united kingdom the same as the uk
+
+prob2:0.787423849105835
+--------------------------------------------------
+text:A golden match, in which an opponent does not lose a single point in an entire match, has only been recorded three times in the history of competitive tennis, and never in a best of 5 set match. Hazel Wightman of the United States recorded the first competitive golden match in 1910. It took over a century for the feat to be repeated, and then it occurred twice in the span of 42 days, first by Benjamin Tullou of France on 3 September 2016 at the 2016 France F17 Futures qualifying tournament, and then on 15 October 2016 by Joffrey de Schepper, also of France at the 2016 France F23 Futures qualifying event in Rodez, France. The unfortunate opponent to both of these men in their golden matches was a 55-year-old amateur, Tomas Fabian of the Czech Republic, who failed to win a single game in five different matches in the same event over two seasons. Mr. de Schepper did allow Fabian an ``honor point'' by deliberately hitting a ball in the last game out, but he is still generally credited with a golden match.
+
+q1:has there ever been a golden match in the world cup
+
+prob1:0.9454411268234253
+
+q2:is a golden match the same as a gold match
+
+prob2:0.7888696789741516
+--------------------------------------------------
+text:A lever (/ˈliːvər/ or US: /ˈlɛvər/) is a simple machine consisting of a beam or rigid rod pivoted at a fixed hinge, or fulcrum. A lever is a rigid body capable of rotating on a point on itself. On the basis of the location of fulcrum, load and effort, the lever is divided into three types. It is one of the six simple machines identified by Renaissance scientists. A lever amplifies an input force to provide a greater output force, which is said to provide leverage. The ratio of the output force to the input force is the mechanical advantage of the lever.
+
+q1:is a lever a simple machine
+
+prob1:0.9196097254753113
+
+q2:is a lever the same as a fulcrum
+
+prob2:0.7641635537147522
+--------------------------------------------------
+text:In electromagnetism, displacement current density is the quantity ∂D/∂t appearing in Maxwell's equations that is defined in terms of the rate of change of D, the electric displacement field. Displacement current density has the same units as electric current density, and it is a source of the magnetic field just as actual current is. However it is not an electric current of moving charges, but a time-varying electric field. In physical materials (as opposed to vacuum), there is also a contribution from the slight motion of charges bound in atoms, called dielectric polarization.
+
+q1:is displacement current density a source of the magnetic field
+
+prob1:0.9344081282615662
+
+q2:is displacement current density the same as electric current density
+
+prob2:0.7803546190261841
+--------------------------------------------------
+text:Bell Mobility, which shares towers and coverage with Telus, intends to expand LTE coverage to 98% of the Canadian population by the end of 2016. As a consequence, Telus' coverage will similarly expand. In April 2015, Telus announced that all of its wireless sites in British Columbia and Alberta will be upgraded to LTE. According to Telus, as of March 31, 2016, it had LTE coverage available 97% of the Canadian population and LTE Advance coverage available to 50% of the Canadian population.
+
+q1:will telus have LTE coverage
+
+prob1:0.9353028535842896
+
+q2:is telus the same as bell mobility
+
+prob2:0.7813903093338013
+--------------------------------------------------
+text:Polyorchidism is the incidence of more than two testicles. It is a very rare congenital disorder, with fewer than 201 cases reported in medical literature and 6 cases (two horses, two dogs and two cats) in veterinary literature.
+
+q1:is polyorchidism a congenital disorder
+
+prob1:0.9459851980209351
+
+q2:is polyorchidism the same as a dog
+
+prob2:0.7921998500823975
+--------------------------------------------------
+text:A cabinet is a body of high-ranking state officials, typically consisting of the top leaders of the executive branch. They are usually called ministers, but in some jurisdictions are sometimes called secretaries. The functions of a cabinet are varied: in some countries it is a collegiate decision-making body with collective responsibility, while in others it may function either as a purely advisory body or an assisting institution to a decision making head of state or head of government. Cabinets are typically the body responsible for the day-to-day management of the government and response to sudden events, whereas the legislative and judicial branches work in a measured pace, in sessions according to lengthy procedures.
+
+q1:is a cabinet part of the executive branch
+
+prob1:0.9453709125518799
+
+q2:is a cabinet the same as a minister
+
+prob2:0.7918336391448975
+--------------------------------------------------
+text:The United Kingdom European Communities membership referendum, also known as the Referendum on the European Community (Common Market), the Common Market referendum and EEC membership referendum took place on 5 June 1975 in the United Kingdom to gauge support for the country's continued membership of the European Communities (EC)--often known at the time as the ``European Community'' and the ``Common Market'' which it had entered on 1 January 1973 under the Conservative government of Edward Heath under the provisions of the Referendum Act 1975. Labour's manifesto for the October 1974 general election had promised that the people would decide ``through the ballot box'' whether to remain in the EC.
+
+q1:is the uk a member of the european community
+
+prob1:0.9196084141731262
+
+q2:is the common market the same as the european community
+
+prob2:0.7666332125663757
+--------------------------------------------------
+text:The Munchkin or '''Sausage Cat''' is a new breed of cat characterized by its very short legs, which are caused by a genetic mutation. Much controversy erupted over the breed when it was recognized by The International Cat Association in 1995 with critics voicing concern over potential health and mobility issues.
+
+q1:is the munchkin a new breed of cat
+
+prob1:0.9422410130500793
+
+q2:is the munchkin the same as the sausage cat
+
+prob2:0.789800763130188
+--------------------------------------------------
+text:Every rhombus is a parallelogram and a kite. A rhombus with right angles is a square.
+
+q1:is a rhombus a square
+
+prob1:0.9423079490661621
+
+q2:is a rhombus the same as a kite
+
+prob2:0.7909079194068909
+--------------------------------------------------
+text:The Citadel, The Military College of South Carolina, commonly referred to simply as The Citadel, is a state-supported, comprehensive college located in Charleston, South Carolina, United States. Established in 1842, it is one of six United States senior military colleges. It has 18 academic departments divided into five schools offering 29 majors and 38 minors. The military program consists of cadets pursuing bachelor's degrees who live on campus, while civilian degrees are offered through 8 undergraduate and 24 graduate programs.
+
+q1:is the military college of south carolina a military college
+
+prob1:0.9335067272186279
+
+q2:is the citadel the same as the military college of south carolina
+
+prob2:0.7821811437606812
+--------------------------------------------------
+text:A 24-hour run is a form of ultramarathon, in which a competitor runs as far as they can in 24 hours. They are typically held on 1- to 2-mile loops or occasionally 400-meter tracks.
+
+q1:can you run a marathon in 24 hours
+
+prob1:0.9538402557373047
+
+q2:is a marathon the same as an ultramarathon
+
+prob2:0.8026158213615417
+--------------------------------------------------
+text:The novel was followed by a sequel called The Queen's Fool, set during the reign of Henry's daughter, Queen Mary. The Queen's Fool was followed by The Virgin's Lover, set during the early days of Queen Elizabeth I's reign.
+
+q1:is there a sequel to the queen's Fool
+
+prob1:0.9440419673919678
+
+q2:is the queen's Fool the same as the virgin's lover
+
+prob2:0.7928838729858398
+--------------------------------------------------
+text:The October Revolution (Russian: Октя́брьская револю́ция, tr. Oktyabr'skaya revolyutsiya, IPA: (ɐkˈtjabrjskəjə rjɪvɐˈljutsɨjə)), officially known in Soviet literature as the Great October Socialist Revolution (Вели́кая Октя́брьская социалисти́ческая револю́ция, Velikaya Oktyabr'skaya sotsialističeskaya revolyutsiya), and commonly referred to as Red October, the October Uprising, the Bolshevik Revolution, or the Bolshevik Coup, was a revolution in Russia led by the Bolsheviks and Vladimir Lenin that was instrumental in the larger Russian Revolution of 1917. It took place with an armed insurrection in Petrograd on 7 November (25 October, Old Style) 1917.
+
+q1:did the bolshevik revolution take place in russia
+
+prob1:0.9354016184806824
+
+q2:is the bolshevik revolution the same as the october uprising
+
+prob2:0.7843443751335144
+--------------------------------------------------
+text:The two terms ``bank holidays'' and ``public holidays'' are often used interchangeably, although strictly and legally there is a difference. A government website describes the difference as follows:
+
+q1:is there a difference between bank holidays and public holidays
+
+prob1:0.9417867660522461
+
+q2:are bank holidays and public holidays the same
+
+prob2:0.790741503238678
+--------------------------------------------------
+text:The Banaue Rice Terraces (Filipino: Hagdan-hagdang Palayan ng Banawe) are terraces that were carved into the mountains of Ifugao in the Philippines by ancestors of the indigenous people. They are frequently called the ``Eight Wonder of the World''. It is commonly thought that the terraces were built with minimal equipment, largely by hand. The terraces are located approximately 1,500 metres (4,900 feet) above sea level. They are fed by an ancient irrigation system from the rainforests above the terraces. It is said that if the steps were put end to end, it would encircle half the globe.
+
+q1:are the banaue rice terraces in the world
+
+prob1:0.9351029992103577
+
+q2:are the banaue rice terraces the same as the 8 Wonder of the world
+
+prob2:0.7844687700271606
+--------------------------------------------------
+text:Sometimes the inner phase itself can act as an emulsifier, and the result is a nanoemulsion, where the inner state disperses into ``nano-size'' droplets within the outer phase. A well-known example of this phenomenon, the ``Ouzo effect'', happens when water is poured into a strong alcoholic anise-based beverage, such as ouzo, pastis, absinthe, arak, or raki. The anisolic compounds, which are soluble in ethanol, then form nano-size droplets and emulsify within the water. The resulting color of the drink is opaque and milky white.
+
+q1:is there a nanoemulsion in the inner phase
+
+prob1:0.9503712058067322
+
+q2:is the inner phase the same as a nanoemulsion
+
+prob2:0.7998262643814087
+--------------------------------------------------
+text:Bourbon whiskey /bɜːrbən/ is a type of American whiskey, a barrel-aged distilled spirit made primarily from corn. The name derives from the French Bourbon dynasty, although the precise inspiration for the whiskey's name is unsettled; contenders include Bourbon County in Kentucky and Bourbon Street in New Orleans. Bourbon has been distilled since the 18th century. The use of the term ``bourbon'' for the whiskey has been traced to the 1820s, and the term began to be used consistently in Kentucky in the 1870s. While bourbon may be made anywhere in the United States, it is strongly associated with the American South, and with Kentucky in particular. As of 2014, the distillers' wholesale market revenue for bourbon sold within the U.S. is about $2.7 billion, and bourbon makes up about two-thirds of the $1.6 billion of U.S. exports of distilled spirits.
+
+q1:is bourbon whiskey distilled from corn
+
+prob1:0.9062559604644775
+
+q2:is bourbon whiskey the same as a whiskey
+
+prob2:0.7571390271186829
+--------------------------------------------------
+text:A keg, or half-barrel is a 15.5 U.S. gallon vessel. A quarter-barrel has a volume of 7.75 U.S. gallons. Generally a keg is a vessel smaller than a barrel; thus, it is 30 gallons or smaller.
+
+q1:is a half barrel a gallon vessel
+
+prob1:0.9221586585044861
+
+q2:is a half barrel the same as a keg
+
+prob2:0.7731478810310364
+--------------------------------------------------
+text:As the neutral point of an electrical supply system is often connected to earth ground, ground and neutral are closely related. Under certain conditions, a conductor used to connect to a system neutral is also used for grounding (earthing) of equipment and structures. Current carried on a grounding conductor can result in objectionable or dangerous voltages appearing on equipment enclosures, so the installation of grounding conductors and neutral conductors is carefully defined in electrical regulations. Where a neutral conductor is used also to connect equipment enclosures to earth, care must be taken that the neutral conductor never rises to a high voltage with respect to local ground.
+
+q1:is the neutral point of an electrical supply system connected to earth
+
+prob1:0.9341133832931519
+
+q2:is a neutral conductor the same as a grounding conductor
+
+prob2:0.7852321267127991
+--------------------------------------------------
+text:Founded in the United States between 1980 and 1990, the American Bully was produced using a foundation of American Staffordshire Terriers and American Pit Bull Terriers bred to several bulldog-type breeds. It was created with the purpose of being a family companion dog.
+
+q1:is the american bully a family dog
+
+prob1:0.9272680282592773
+
+q2:is a bulldog the same as a pit bull
+
+prob2:0.7784597873687744
+--------------------------------------------------
+text:Tonic water (or Indian tonic water) is a carbonated soft drink in which quinine is dissolved. Originally used as a prophylactic against malaria, tonic water usually now has a significantly lower quinine content and is consumed for its distinctive bitter flavor, which is similar to a sour grapefruit. It is often used in mixed drinks, particularly in gin and tonic.
+
+q1:is tonic water a soft drink
+
+prob1:0.935945987701416
+
+q2:is tonic water the same as sour grapefruit
+
+prob2:0.7892420887947083
+--------------------------------------------------
+text:Since the 20th century, the word ``girdle'' also has been used to define an undergarment made of elasticized fabric that was worn by women. It is a form-fitting foundation garment that encircles the lower torso, perhaps extending below the hips, and worn often to shape or for support. It may be worn for aesthetic or medical reasons. In sports or medical treatment, a girdle may be worn as a compression garment. This form of women's foundation wear replaced the corset in popularity, and was in turn to a large extent surpassed by the pantyhose in the 1960s.
+
+q1:can a girdle be worn as a compression garment
+
+prob1:0.948638916015625
+
+q2:is a girdle the same as a compression garment
+
+prob2:0.8019376397132874
+--------------------------------------------------
+text:Private companies such as Celestis, Inc., Elysium Space, Ascending Memories,, Orbital Memorialsand Horizon Ascending Limited., offer space burial services.
+
+q1:is elysium space a private company
+
+prob1:0.9179867506027222
+
+q2:is elysium space the same as orbital memorials
+
+prob2:0.7713930010795593
+--------------------------------------------------
+text:``American statutes typically provide that, in absence of issue and subject to the share of a surviving spouse, intestate property passes to the parents or to the surviving parent of the decedent''. Under the civil law system of computation and its various modified forms that are widely adopted by statute in the United States, ``a claimant's degree of kinship is the total of (1) the number of the steps, counting one from each generation, from the decedent up to the nearest common ancestor of the decedent and the claimant, and (2) the number of steps from the common ancestor down to the claimant.'' ``The claimant having the lowest degree count (i.e., the nearest or next of kin) is entitled to the property.'' ``If there are two or more claimants who stand in equal degree of kinship to the decedent, they share per capita.''
+
+q1:does a claimant have a degree of kinship
+
+prob1:0.9168466925621033
+
+q2:does a claimant have the same degree of kinship
+
+prob2:0.7703896760940552
+--------------------------------------------------
+text:In the sport of athletics, a four-minute mile means completing a mile run (1,760 yards, or 1,609.344 metres) in less than four minutes. It was first achieved in 1954 by Roger Bannister in 3:59.4. The ``four-minute barrier'' has since been broken by over 1,400 male athletes, and is now the standard of all male professional middle distance runners. In the last 50 years the mile record has been lowered by almost 17 seconds, and currently stands at 3:43.13. Running a mile in four minutes translates to a speed of 15 miles per hour (24.14 km/h, or 2:29.13 per kilometre, or 14.91 seconds per 100 metres). It also equals 22 feet per second (1,320 feet per minute).
+
+q1:can you run a four minute mile in less than four minutes
+
+prob1:0.9499786496162415
+
+q2:is a four minute mile the same as a mile
+
+prob2:0.8042608499526978
+--------------------------------------------------
+text:All rounds are best-of-seven series. Series are played in a 2--2--1--1--1 format, meaning the team with home-court advantage hosts games 1, 2, 5, and 7, while their opponent hosts games 3, 4, and 6, with games 5--7 being played if needed. This format has been used since 2014, after NBA team owners unanimously voted to change from a 2--3--2 format on October 23, 2013.
+
+q1:is there a best of seven series
+
+prob1:0.9503493309020996
+
+q2:is the best of seven series played in the same format
+
+prob2:0.8051598072052002
+--------------------------------------------------
+text:The sea otter (Enhydra lutris) is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (31 and 99 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom. Although it can walk on land, the sea otter is capable of living exclusively in the ocean.
+
+q1:is the sea otter a part of the weasel family
+
+prob1:0.9335588812828064
+
+q2:is the sea otter the same as the weasel family
+
+prob2:0.7884637713432312
+--------------------------------------------------
+text:The number 1 is called a unit. It has no prime factors and is neither prime nor composite.
+
+q1:is the number 1 a unit
+
+prob1:0.9518561363220215
+
+q2:is the number 1 the same as the unit
+
+prob2:0.8071091175079346
+--------------------------------------------------
+text:This version of the fairy tale character has been very well received by film critics and the public, and is considered one of Disney's most iconic and menacing villains. Besides in the film, the Evil Queen has made numerous appearances in Disney attractions and productions, including not only these directly related to the tale of Snow White, such as Fantasmic!, The Kingdom Keepers and Kingdom Hearts Birth by Sleep, sometimes appearing in them alongside Maleficent from Sleeping Beauty. The film's version of the Queen has also become a popular archetype that influenced a number of artists and non-Disney works.
+
+q1:is the evil queen based on a fairy tale
+
+prob1:0.9176400303840637
+
+q2:is the evil queen the same as the kingdom keepers
+
+prob2:0.7732222676277161
+--------------------------------------------------
+text:The All-American Girls Professional Baseball League (AAGPBL) was a women's professional baseball league founded by Philip K. Wrigley which existed from 1943 to 1954. The AAGPBL is the forerunner of women's professional league sports in the United States. Over 600 women played in the league. In 1948, league attendance peaked at over 900,000 spectators. The most successful team, the Rockford Peaches won a league-best four championships. The 1992 motion picture A League of Their Own is a mostly fictionalized account of the early days of the league and its stars.
+
+q1:is there a women's professional baseball league
+
+prob1:0.9550038576126099
+
+q2:is the all american girls professional baseball league the same
+
+prob2:0.8107239007949829
+--------------------------------------------------
+text:85% of MGN cases are classified as primary membranous glomerulonephritis--that is to say, the cause of the disease is idiopathic (of unknown origin or cause). This can also be referred to as idiopathic membranous nephropathy. One study has identified antibodies to an M-type phospholipase A receptor in 70% (26 of 37) cases evaluated. Other studies have implicated neutral endopeptidase and cationic bovine serum albumin as antigens.
+
+q1:is there an idiopathic membranous nephropathy
+
+prob1:0.9500786066055298
+
+q2:is idiopathic nephropathy the same as membranous glomerulonephritis
+
+prob2:0.8060042858123779
+--------------------------------------------------
+text:If ``infield fly'' is called and the fly ball is caught, it is treated exactly as an ordinary caught fly ball; the batter is out, there is no force, and the runners must tag up. On the other hand, if ``infield fly'' is called and the ball lands fair without being caught, the batter is still out, there is still no force, but the runners are not required to tag up. In either case, the ball is live, and the runners may advance on the play, at their own peril.
+
+q1:is there a fly ball infield fly
+
+prob1:0.9434183239936829
+
+q2:is infield fly the same as a fly ball
+
+prob2:0.8004737496376038
