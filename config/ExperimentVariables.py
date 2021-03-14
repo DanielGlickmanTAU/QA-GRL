@@ -29,7 +29,7 @@ _distilbert_squad = _model_params('distilbert-base-uncased-distilled-squad', 'di
 _roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 12, 1e-5)
 _electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512',
                                'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
-_t5_qg = _model_params('valhalla/t5-small-e2e-qg', 't5-small', 2, 1e-5, num_epochs=6)
+_t5_qg = _model_params('valhalla/t5-small-e2e-qg', 't5-small', 12, 1e-5, num_epochs=6)
 
 
 @dataclass(repr=False)
