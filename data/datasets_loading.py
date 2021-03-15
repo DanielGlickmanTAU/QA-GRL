@@ -131,7 +131,7 @@ def tokenize_boolq(examples, tokenizer):
 
 def get_boolq_dataset(tokenizer, limit=None):
     print(os.getcwd())
-    boolq = load_dataset("boolq", cache_dir=compute.get_cache_dir())
+    boolq = load_boolq()
     boolq = _remove_duplicate_questions(boolq)
 
     if limit:
@@ -139,6 +139,10 @@ def get_boolq_dataset(tokenizer, limit=None):
         boolq['validation'] = boolq['validation'].select(range(10))
 
     return preprocess(boolq, tokenizer, preprocess_function=tokenize_boolq)
+
+
+def load_boolq():
+    return load_dataset("boolq", cache_dir=compute.get_cache_dir())
 
 
 def get_boolq_generation_dataset(tokenizer):
