@@ -76,3 +76,12 @@ task_to_params_getter = {
     'boolq': get_boolq_params,
     'combined': get_combined_params
 }
+
+
+def get_task_params(task_name, model_name, toknizer_model_name):
+    if '@' in task_name:
+        name, number = task_name.split('@')
+        task_params = task_to_params_getter[name](model_name, toknizer_model_name)
+        task_params.benchmark_folder_name += number
+        return task_params
+    return task_to_params_getter[task_name]
