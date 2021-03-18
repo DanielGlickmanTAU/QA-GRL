@@ -30,7 +30,7 @@ _roberta_squad = _model_params('deepset/roberta-base-squad2', 'roberta-base', 12
 _electra_squad = _model_params('ahotrod/electra_large_discriminator_squad2_512',
                                'ahotrod/electra_large_discriminator_squad2_512', 2, 1e-5)
 _t5_qg_small = _model_params('valhalla/t5-small-e2e-qg', 't5-small', 12, 1e-4, num_epochs=40)
-_t5_qg_base = _model_params('valhalla/t5-base-e2e-qg', 't5-base', 8, 1e-4, num_epochs=40)
+_t5_qg_base = _model_params('valhalla/t5-base-e2e-qg', 't5-base', 6, 1e-5, num_epochs=3)
 
 
 @dataclass(repr=False)
@@ -44,6 +44,7 @@ hyperparams.env = 'UNI' if 'HOST' in os.environ and 'gamir' in os.environ[
     'HOST'] else 'LOCAL' if 'USERNAME' in os.environ else 'AWS'
 hyperparams.task_name = 'boolq'
 hyperparams.model_params = _roberta_squad
+hyperparams.model_params = _t5_qg_base
 
 hyperparams.race = race
 hyperparams.use_unique_seperator_for_answer = False
