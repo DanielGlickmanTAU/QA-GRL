@@ -16,12 +16,13 @@ class Test(TestCase):
         torch, exp = experiment.start_experiment(tags=[hyperparams.env, model_name, hyperparams.task_name],
                                                  hyperparams=hyperparams)
 
-        params = tasks.task_to_params_getter['boolq']()
+        params = tasks.task_to_params_getter['boolq'](model_params.model_name, model_params.model_tokenizer)
         save_dir = get_save_path(params.benchmark_folder_name, model_params)
         print('saving to ', save_dir)
 
         metric_name = "accuracy"
 
+        model_params.num_epochs = 3
         trainer = get_trainer(save_dir, hyperparams.model_params, params, True, exp, metric_name,
                               hyperparams.disable_tqdm)
 
