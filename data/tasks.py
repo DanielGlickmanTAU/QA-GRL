@@ -51,7 +51,7 @@ def get_swag_params():
     return SwagClassificationParams(encoded_dataset, model, tokenizer)
 
 
-def get_boolq_params(model_name=None, toknizer_model_name=None):
+def get_boolq_params(model_name, toknizer_model_name):
     model, tokenizer = get_model_and_tokenizer_for_classification(model_name, toknizer_model_name)
     encoded_dataset = get_boolq_dataset(tokenizer)
     return BoolQClassificationParams(encoded_dataset, model, tokenizer)
