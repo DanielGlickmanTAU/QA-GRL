@@ -17,6 +17,13 @@ from data.TaskParams import TaskParams
 from models.model_loading import get_best_model_and_tokenizer, get_save_path
 from data import boolq_utils
 
+print('runnings')
+import pickle
+
+res = pickle.load(open('results_pickle_last', 'rb'))
+('\n' + ('-'*50)+'\n').join(['\n\n'.join(('text:'+t[0],'q1:'+t[1],'prob1:'+str(t[2]),'q2:'+t[3],'prob2:'+str(t[4]))) for t in sorted({(t,q1,p1,q2,p2,diff) for (t,q1,p1,q2,p2,diff) in res[1] if 0.75<p2},key=lambda x : -x[-1])[:100]])
+exit()
+
 model_params = hyperparams.model_params
 model_name = model_params.model_name
 torch, experiment = experiment.start_experiment(tags=[model_name, "error prediction"],
