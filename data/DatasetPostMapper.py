@@ -27,6 +27,9 @@ class DataSetPostMapper:
 
             return {'prob': self._numpy(probs), 'prediction': self._numpy(predictions), 'correct': correct}
 
+    def add_prob_to_be_correct(self, examples, label_name='prob_correct'):
+        """ runs model on examples and adds the prob to be correct. as apposed to add_is_correct_and_probs, which add max prob by the model, even if it is false answer """
+
     def add_probs(self, examples):
         self.model.eval()
         with torch.no_grad():
