@@ -22,11 +22,18 @@ class Test(TestCase):
         def aggregate_scores():
             pass
 
-        tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3', 'boolq-classification4',
-                 'boolq-classification5']
-        model_params = variables._distilbert_squad.clone()
+        distilbert_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3',
+                            'boolq-classification4', 'boolq-classification5']
+        distilbert_model_params = variables._distilbert_squad.clone()
+
+        roberta_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3']
+        roberta_model_params = variables._roberta_squad.clone()
 
         dataset = None
+        dataset = self.iterate_tasks(dataset, distilbert_model_params, distilbert_tasks)
+        dataset = self.iterate_tasks(dataset, roberta_model_params, roberta_tasks)
+
+    def iterate_tasks(self, dataset, model_params, tasks):
         for task in tasks:
             path = get_save_path(task, model_params)
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
@@ -36,8 +43,7 @@ class Test(TestCase):
                 dataset = dataset['validation']
             dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
             print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
-            print('avg being correct when label is 0:',
-                  sum([x for x, l in zip(dataset[path], dataset['label']) if l == 0]) / dataset['label'].count(0))
+        return dataset
 
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
