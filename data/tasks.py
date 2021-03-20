@@ -51,9 +51,9 @@ def get_swag_params():
     return SwagClassificationParams(encoded_dataset, model, tokenizer)
 
 
-def get_boolq_params(model_name, toknizer_model_name):
+def get_boolq_params(model_name, toknizer_model_name, **kwargs):
     model, tokenizer = get_model_and_tokenizer_for_classification(model_name, toknizer_model_name)
-    encoded_dataset = get_boolq_dataset(tokenizer)
+    encoded_dataset = get_boolq_dataset(tokenizer, **kwargs)
     return BoolQClassificationParams(encoded_dataset, model, tokenizer)
 
 
@@ -78,10 +78,10 @@ task_to_params_getter = {
 }
 
 
-def get_task_params(task_name, model_name, toknizer_model_name):
+def get_task_params(task_name, model_name, toknizer_model_name, **kwargs):
     if '@' in task_name:
         name, number = task_name.split('@')
-        task_params = task_to_params_getter[name](model_name, toknizer_model_name)
+        task_params = task_to_params_getter[name](model_name, toknizer_model_name, **kwargs)
         task_params.benchmark_folder_name += number
         return task_params
     return task_to_params_getter[task_name]

@@ -135,6 +135,7 @@ def get_boolq_dataset(tokenizer, limit=None):
     boolq = _remove_duplicate_questions(boolq)
 
     if limit:
+        print('limiting dataset to', limit)
         boolq['train'] = boolq['train'].select(range(10))
         boolq['validation'] = boolq['validation'].select(range(10))
 
