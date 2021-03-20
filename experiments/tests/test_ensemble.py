@@ -18,13 +18,6 @@ import torch
 
 
 class Test(TestCase):
-    # def train_boolq_test(self):
-    #     model_params = variables._distilbert_squad.clone()
-    #     task_name = 'boolq@1'
-    #     model_params.num_epochs = 1
-    #
-    #     self.run_exp(model_params, task_name)
-
     def test_mark_prob_being_correct(self):
         def aggregate_scores():
             pass
