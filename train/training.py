@@ -22,7 +22,13 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
         return accuracy
 
     args = get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_params, save_dir)
-    trainer = Trainer(
+
+    class MyTrainer(Trainer):
+        def _save_checkpoint(self, model, trial, metrics=None):
+            print('here you go', metrics)
+            super(MyTrainer, self)._save_checkpoint()._save_checkpoint(model, trial, metrics)
+
+    trainer = MyTrainer(
         model_and_dataset.model,
         args,
         train_dataset=model_and_dataset.dataset["train"],
@@ -76,13 +82,13 @@ def get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_p
         save_dir,
         evaluation_strategy="epoch",
         learning_rate=model_params.learning_rate,
-        per_device_train_batch_size=(model_params.batch_size),
-        per_device_eval_batch_size=(model_params.batch_size),
+        per_device_train_batch_size=model_params.batch_size,
+        per_device_eval_batch_size=model_params.batch_size,
         num_train_epochs=model_params.num_epochs,
         weight_decay=0.01,
         load_best_model_at_end=load_best_model_at_end,
-        metric_for_best_model=metric_name,
-        save_total_limit=2,
+        # metric_for_best_model=metric_name,
+        save_total_limit=1 if load_best_model_at_end else 2,
         disable_tqdm=disable_tqdm,
         prediction_loss_only=True
     )
