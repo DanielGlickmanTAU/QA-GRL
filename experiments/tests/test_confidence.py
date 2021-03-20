@@ -172,7 +172,6 @@ class Test(TestCase):
             return load_from_disk(save_path)
 
         ds = datasets_loading.get_boolq_dataset(tokenizer)
-        task_params = TaskParams(ds, model, tokenizer, 'trash')
         mapper = DataSetPostMapper(model, tokenizer)
         mapped_ds = ds.map(mapper.add_is_correct_and_probs, batched=True, batch_size=20, writer_batch_size=20)
 
