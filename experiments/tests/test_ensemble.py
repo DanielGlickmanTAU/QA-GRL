@@ -25,13 +25,13 @@ class Test(TestCase):
     #
     #     self.run_exp(model_params, task_name)
 
-    def test_train_boolq_multiplem_models(self):
+    def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
         done_txt_file = 'so_far.txt' if 'distilbert' in model_params.model_name \
             else 'so_far_roberta.txt' if 'roberta' in model_params.model_name else None
 
         hyperparams.model_params = model_params
-        model_params.num_epochs = 4
+        model_params.num_epochs = 2
         tasks = ['boolq@1', 'boolq@2', 'boolq@3']
         try:
             with open(done_txt_file, 'r') as f:
@@ -68,24 +68,29 @@ def test_mark_prob_being_correct(self):
              'boolq-classification5']
     model_params = variables._roberta_squad.clone()
 
+    dataset = None
     for task in tasks:
         path = get_save_path(task, model_params)
         answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
-        mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer, path)
+        # first time, load unprocessed dataset
+        if not dataset:
+            dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
+        dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
 
 
-def get_processed_dataset(self, model, tokenizer, path):
+def process_dataset(self, model, tokenizer, path, dataset):
     save_path = '%s/processed_dataset' % path
 
     if os.path.isdir(save_path):
+        print('loading dataset from ', save_path)
         return load_from_disk(save_path)
 
-    ds = datasets_loading.get_boolq_dataset(tokenizer, remove_duplicates=False)
+    print('processing dataset from model', path)
     mapper = DataSetPostMapper(model, tokenizer)
-    mapped_ds = ds['validation'].map(lambda examples: mapper.add_prob_to_be_correct(examples, path), batched=True,
-                                     batch_size=20,
-                                     writer_batch_size=20)
-
+    mapped_ds = dataset['validation'].map(lambda examples: mapper.add_prob_to_be_correct(examples, path), batched=True,
+                                          batch_size=20,
+                                          writer_batch_size=20)
+    print('saving to:', save_path)
     mapped_ds.save_to_disk(save_path)
     return mapped_ds
 
