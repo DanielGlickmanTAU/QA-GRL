@@ -1,12 +1,17 @@
+import os
+
 from experiments import experiment
+from datasets import load_from_disk
+
+from data.DatasetPostMapper import DataSetPostMapper
 from config.ExperimentVariables import hyperparams
 import config.ExperimentVariables as variables
-from models.model_loading import get_save_path
+from models.model_loading import get_save_path, get_best_model_and_tokenizer
 
 from train.training import get_trainer
 from unittest import TestCase
 
-from data import tasks
+from data import tasks, datasets_loading
 import gc
 
 import torch
@@ -21,17 +26,19 @@ class Test(TestCase):
     #     self.run_exp(model_params, task_name)
 
     def test_train_boolq_multiplem_models(self):
-        model_params = variables._distilbert_squad.clone()
+        model_params = variables._roberta_squad.clone()
+        done_txt_file = 'so_far.txt' if 'distilbert' in model_params.model_name \
+            else 'so_far_roberta.txt' if 'roberta' in model_params.model_name else None
 
         hyperparams.model_params = model_params
-        model_params.num_epochs = 3
-        tasks = ['boolq@1', 'boolq@2', 'boolq@3', 'boolq@4', 'boolq@5']
+        model_params.num_epochs = 4
+        tasks = ['boolq@1', 'boolq@2', 'boolq@3']
         try:
-            with open('so_far.txt', 'r') as f:
+            with open(done_txt_file, 'r') as f:
                 so_far = f.read()
         except:
             so_far = []
-        with open('so_far.txt', 'a') as f:
+        with open(done_txt_file, 'a') as f:
             for task in tasks:
                 if task not in so_far:
                     self.run_exp(model_params, task)
@@ -49,14 +56,38 @@ class Test(TestCase):
         save_dir = get_save_path(params.benchmark_folder_name, model_params)
         print('saving to ', save_dir)
         metric_name = "accuracy"
-        metric_name = "accuracy"
         trainer = get_trainer(save_dir, hyperparams.model_params, params, True, exp, metric_name,
                               hyperparams.disable_tqdm)
-        # results = trainer.train(save_dir + '/checkpoint-84500')
-        # results = trainer.train(save_dir + '/checkpoint-8474')
         results = trainer.train()
         print('done train')
         print(results)
+
+
+def test_mark_prob_being_correct(self):
+    tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3', 'boolq-classification4',
+             'boolq-classification5']
+    model_params = variables._roberta_squad.clone()
+
+    for task in tasks:
+        path = get_save_path(task, model_params)
+        answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
+        mapped_qa_ds = self.get_processed_dataset(task, model_params, answer_model, answer_tokenizer, path)
+
+
+def get_processed_dataset(self, model, tokenizer, path):
+    save_path = '%s/processed_dataset' % path
+
+    if os.path.isdir(save_path):
+        return load_from_disk(save_path)
+
+    ds = datasets_loading.get_boolq_dataset(tokenizer, remove_duplicates=False)
+    mapper = DataSetPostMapper(model, tokenizer)
+    mapped_ds = ds['validation'].map(lambda examples: mapper.add_prob_to_be_correct(examples, path), batched=True,
+                                     batch_size=20,
+                                     writer_batch_size=20)
+
+    mapped_ds.save_to_disk(save_path)
+    return mapped_ds
 
 
 if __name__ == '__main__':

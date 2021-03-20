@@ -129,10 +129,11 @@ def tokenize_boolq(examples, tokenizer):
             'label': labels}
 
 
-def get_boolq_dataset(tokenizer, limit=None):
+def get_boolq_dataset(tokenizer, limit=None, remove_duplicates=True):
     print(os.getcwd())
     boolq = load_boolq()
-    boolq = _remove_duplicate_questions(boolq)
+    if remove_duplicates:
+        boolq = _remove_duplicate_questions(boolq)
 
     if limit:
         print('limiting dataset to', limit)
