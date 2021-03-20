@@ -25,6 +25,25 @@ class Test(TestCase):
     #
     #     self.run_exp(model_params, task_name)
 
+    def test_mark_prob_being_correct(self):
+        def aggregate_scores():
+            pass
+
+        tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3', 'boolq-classification4',
+                 'boolq-classification5']
+        model_params = variables._distilbert_squad.clone()
+
+        dataset = None
+        for task in tasks:
+            path = get_save_path(task, model_params)
+            answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
+            # first time, load unprocessed dataset
+            if not dataset:
+                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
+                dataset = dataset['validation']
+            dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
+            print(dataset[0])
+
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
         done_txt_file = 'so_far.txt' if 'distilbert' in model_params.model_name \
@@ -62,37 +81,22 @@ class Test(TestCase):
         print('done train')
         print(results)
 
+    def process_dataset(self, model, tokenizer, path, dataset):
+        save_path = '%s/processed_dataset' % path
 
-def test_mark_prob_being_correct(self):
-    tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3', 'boolq-classification4',
-             'boolq-classification5']
-    model_params = variables._roberta_squad.clone()
+        if os.path.isdir(save_path):
+            print('loading dataset from ', save_path)
+            return load_from_disk(save_path)
 
-    dataset = None
-    for task in tasks:
-        path = get_save_path(task, model_params)
-        answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
-        # first time, load unprocessed dataset
-        if not dataset:
-            dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
-        dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
-
-
-def process_dataset(self, model, tokenizer, path, dataset):
-    save_path = '%s/processed_dataset' % path
-
-    if os.path.isdir(save_path):
-        print('loading dataset from ', save_path)
-        return load_from_disk(save_path)
-
-    print('processing dataset from model', path)
-    mapper = DataSetPostMapper(model, tokenizer)
-    mapped_ds = dataset['validation'].map(lambda examples: mapper.add_prob_to_be_correct(examples, path), batched=True,
-                                          batch_size=20,
-                                          writer_batch_size=20)
-    print('saving to:', save_path)
-    mapped_ds.save_to_disk(save_path)
-    return mapped_ds
+        print('processing dataset from model', path)
+        mapper = DataSetPostMapper(model, tokenizer)
+        mapped_ds = dataset.map(lambda examples: mapper.add_prob_to_be_correct(examples, path),
+                                batched=True,
+                                batch_size=20,
+                                writer_batch_size=20)
+        print('saving to:', save_path)
+        mapped_ds.save_to_disk(save_path)
+        return mapped_ds
 
 
 if __name__ == '__main__':
