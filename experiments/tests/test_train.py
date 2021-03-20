@@ -38,6 +38,8 @@ class Test(TestCase):
                     f.write(task)
                     gc.collect()
                     torch.cuda.empty_cache()
+                else:
+                    print('skipping', task)
 
     def run_exp(self, model_params, task_name):
         model_name = model_params.model_name
