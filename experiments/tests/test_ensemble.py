@@ -19,8 +19,11 @@ import torch
 
 class Test(TestCase):
     def test_mark_prob_being_correct(self):
-        def aggregate_scores():
-            pass
+        def aggregate_scores(example, stupid_keys, smart_keys):
+            stupid_scores = [example[key] for key in stupid_keys]
+            smart_scores = [example[key] for key in smart_keys]
+            normalizer = len(stupid_scores) / len(smart_scores)
+            return {'score': (normalizer * sum(smart_scores)) - sum(stupid_scores)}
 
         distilbert_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3',
                             'boolq-classification4', 'boolq-classification5']
@@ -29,11 +32,16 @@ class Test(TestCase):
         roberta_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3']
         roberta_model_params = variables._roberta_squad.clone()
 
-        dataset = None
-        dataset = self.iterate_tasks(dataset, distilbert_model_params, distilbert_tasks)
-        dataset = self.iterate_tasks(dataset, roberta_model_params, roberta_tasks)
+        dataset_stupid = self.iterate_tasks(distilbert_model_params, distilbert_tasks)
+        dataset_smart = self.iterate_tasks(roberta_model_params, roberta_tasks)
+        assert len(dataset_smart['scores']) == len(dataset_stupid['scores'])
 
-    def iterate_tasks(self, dataset, model_params, tasks):
+        dataset = dataset.map(lambda example: aggregate_scores(example, stupid_paths, smart_paths))
+        dataset = dataset.sort('score')
+
+    def iterate_tasks(self, model_params, tasks):
+        dataset = None
+        paths = []
         for task in tasks:
             path = get_save_path(task, model_params)
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
@@ -42,8 +50,10 @@ class Test(TestCase):
                 dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
                 dataset = dataset['validation']
             dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
+            paths.append(path)
             print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
-        return dataset
+
+        return dataset.map(lambda example: {'scores': [example[key] for key in paths]})
 
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
