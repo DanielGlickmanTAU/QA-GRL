@@ -23,12 +23,7 @@ def get_trainer(save_dir, model_params, model_and_dataset: TaskParams, load_best
 
     args = get_training_args(disable_tqdm, load_best_model_at_end, metric_name, model_params, save_dir)
 
-    class MyTrainer(Trainer):
-        def _save_checkpoint(self, model, trial, metrics=None):
-            print('here you go', metrics)
-            super(MyTrainer, self)._save_checkpoint()._save_checkpoint(model, trial, metrics)
-
-    trainer = MyTrainer(
+    trainer = Trainer(
         model_and_dataset.model,
         args,
         train_dataset=model_and_dataset.dataset["train"],
