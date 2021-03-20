@@ -42,7 +42,9 @@ class Test(TestCase):
                 dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
                 dataset = dataset['validation']
             dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
-            print(dataset[0])
+            print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
+            print('avg being correct when label is 0:',
+                  sum([x for x, l in zip(dataset[path], dataset['label']) if l == 0]) / dataset['label'].count(0))
 
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
