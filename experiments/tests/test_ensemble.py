@@ -15,6 +15,7 @@ from experiments import scoring_functions
 from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 
+remove_boolq_duplicates = False
 sanity_asserts = False
 ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores', 'label'])
 
@@ -48,8 +49,9 @@ class Test(TestCase):
         # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong)
         # self.print_nicely(scored, scoring_functions.absolute_error)
 
-    def iterate_tasks(self, model_params, tasks):
+    def iterate_tasks(self, model_params, tasks, remove_boolq_duplicates=remove_boolq_duplicates):
         final_model_path = get_save_path('scored_is', model_params)
+        final_model_path = final_model_path + '_no_dups' if remove_boolq_duplicates else final_model_path
         dataset = None
         paths = []
         if os.path.isdir(final_model_path):
@@ -59,7 +61,8 @@ class Test(TestCase):
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
             # first time, load unprocessed dataset
             if not dataset:
-                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False, keep_text=True)
+                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer,
+                                                             remove_duplicates=remove_boolq_duplicates, keep_text=True)
                 dataset = dataset['validation']
             dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
             paths.append(path)
