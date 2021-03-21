@@ -45,13 +45,16 @@ class Test(TestCase):
             return (normalizer * sum(smart_scores)) - sum(stupid_scores)
 
         scored.sort(
-            key=lambda scored_question: aggregate_scores(scored_question.smart_score, scored_question.stupid_score))
+            key=lambda scored_question: aggregate_scores(scored_question.smart_scores, scored_question.stupid_scores))
         print(scored[:3])
         print(scored[-3:])
 
     def iterate_tasks(self, model_params, tasks):
+        final_model_path = get_save_path('scored_is', model_params)
         dataset = None
         paths = []
+        if os.path.isdir(final_model_path):
+            load_from_disk(final_model_path)
         for task in tasks:
             path = get_save_path(task, model_params)
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
@@ -63,7 +66,9 @@ class Test(TestCase):
             paths.append(path)
             print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
 
-        return dataset.map(lambda example: {'scores': [example[key] for key in paths]})
+        scored_ds = dataset.map(lambda example: {'scores': [example[key] for key in paths]})
+        scored_ds.save_to_disk(final_model_path)
+        return scored_ds
 
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
