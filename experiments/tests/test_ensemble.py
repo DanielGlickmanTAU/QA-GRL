@@ -11,6 +11,7 @@ from config.ExperimentVariables import hyperparams
 from data import tasks, datasets_loading
 from data.DatasetPostMapper import DataSetPostMapper
 from experiments import experiment
+from .. import scoring_functions
 from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 
@@ -41,11 +42,7 @@ class Test(TestCase):
                 assert smart['question'] == stupid['question']
             scored.append(ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores']))
 
-        def aggregate_scores(smart_scores, stupid_scores):
-            normalizer = len(stupid_scores) / len(smart_scores)
-            return (normalizer * sum(smart_scores)) - sum(stupid_scores)
-
-        self.print_nicely(scored, aggregate_scores)
+        self.print_nicely(scored, scoring_functions.aggregate_scores)
 
     def print_nicely(self, scored, scoring_function, ):
         def _print(example):
