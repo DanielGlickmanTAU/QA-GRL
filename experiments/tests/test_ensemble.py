@@ -16,6 +16,7 @@ from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 
 sanity_asserts = False
+ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores', 'label'])
 
 
 class Test(TestCase):
@@ -34,20 +35,19 @@ class Test(TestCase):
         dataset_smart = self.iterate_tasks(roberta_model_params, roberta_tasks)
         assert len(dataset_smart['scores']) == len(dataset_stupid['scores'])
 
-        ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores', 'label'])
         scored = []
         for smart, stupid in [(dataset_smart[i], dataset_stupid[i]) for i in range(len(dataset_smart['scores']))]:
-            assert smart['label'] == stupid['label']
             if sanity_asserts:
+                assert smart['label'] == stupid['label']
                 assert smart['passage'] == stupid['passage']
                 assert smart['question'] == stupid['question']
             scored.append(
                 ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores'], smart['label']))
 
-        # self.print_nicely(scored, scoring_functions.smart_minus_stupid)
-        self.print_nicely(scored, scoring_functions.absolute_error)
+        self.print_nicely(scored, scoring_functions.smart_minus_stupid)
+        # self.print_nicely(scored, scoring_functions.absolute_error)
 
-    def print_nicely(self, scored, scoring_function, ):
+    def print_nicely(self, scored, scoring_function, num=3):
         def _print(example):
             print('-' * 50)
             print('question:', example.question)
@@ -66,9 +66,9 @@ class Test(TestCase):
             key=lambda scored_question: scoring_function(scored_question.smart_scores,
                                                          scored_question.stupid_scores))
         print('TOP')
-        for x in scored[:3]: _print(x)
+        for x in scored[:num]: _print(x)
         print('BOT')
-        for x in scored[-3:]: _print(x)
+        for x in scored[-num:]: _print(x)
 
     def iterate_tasks(self, model_params, tasks):
         final_model_path = get_save_path('scored_is', model_params)
