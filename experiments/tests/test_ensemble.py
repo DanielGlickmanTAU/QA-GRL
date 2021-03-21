@@ -87,7 +87,7 @@ class Test(TestCase):
 
         scored.sort(
             key=lambda scored_question: scoring_function(scored_question.smart_scores,
-                                                         scored_question.stupid_scores))
+                                                         scored_question.stupid_scores), reverse=True)
         print('___TOP___')
         for x in scored[:num]: _print(x)
         print('\n\n____BOT____')
