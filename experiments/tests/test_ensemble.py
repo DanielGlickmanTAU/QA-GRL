@@ -1,20 +1,20 @@
+import gc
 import os
 from collections import namedtuple
-from experiments import experiment
-from datasets import load_from_disk
-
-from data.DatasetPostMapper import DataSetPostMapper
-from config.ExperimentVariables import hyperparams
-import config.ExperimentVariables as variables
-from models.model_loading import get_save_path, get_best_model_and_tokenizer
-
-from train.training import get_trainer
 from unittest import TestCase
 
-from data import tasks, datasets_loading, boolq_utils
-import gc
-
 import torch
+from datasets import load_from_disk
+
+import config.ExperimentVariables as variables
+from config.ExperimentVariables import hyperparams
+from data import tasks, datasets_loading
+from data.DatasetPostMapper import DataSetPostMapper
+from experiments import experiment
+from models.model_loading import get_save_path, get_best_model_and_tokenizer
+from train.training import get_trainer
+
+sanity_asserts = False
 
 
 class Test(TestCase):
@@ -36,8 +36,9 @@ class Test(TestCase):
         ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores'])
         scored = []
         for smart, stupid in [(dataset_smart[i], dataset_stupid[i]) for i in range(len(dataset_smart['scores']))]:
-            assert smart['passage'] == stupid['passage']
-            assert smart['question'] == stupid['question']
+            if sanity_asserts:
+                assert smart['passage'] == stupid['passage']
+                assert smart['question'] == stupid['question']
             scored.append(ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores']))
 
         def aggregate_scores(smart_scores, stupid_scores):
@@ -54,7 +55,7 @@ class Test(TestCase):
         dataset = None
         paths = []
         if os.path.isdir(final_model_path):
-            load_from_disk(final_model_path)
+            return load_from_disk(final_model_path)
         for task in tasks:
             path = get_save_path(task, model_params)
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
