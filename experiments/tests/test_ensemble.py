@@ -47,7 +47,29 @@ class Test(TestCase):
         self.print_nicely(scored, scoring_functions.smart_minus_stupid)
         # self.print_nicely(scored, scoring_functions.absolute_error)
 
-    def print_nicely(self, scored, scoring_function, num=3):
+    def iterate_tasks(self, model_params, tasks):
+        final_model_path = get_save_path('scored_is', model_params)
+        dataset = None
+        paths = []
+        if os.path.isdir(final_model_path):
+            return load_from_disk(final_model_path)
+        for task in tasks:
+            path = get_save_path(task, model_params)
+            answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
+            # first time, load unprocessed dataset
+            if not dataset:
+                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False, keep_text=True)
+                dataset = dataset['validation']
+            dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
+            paths.append(path)
+            print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
+
+        scored_ds = dataset.map(lambda example: {'scores': [example[key] for key in paths]})
+        scored_ds.save_to_disk(final_model_path)
+        return scored_ds
+
+    @staticmethod
+    def print_nicely(scored, scoring_function, num=3):
         def _print(example):
             print('-' * 50)
             print('question:', example.question)
@@ -69,27 +91,6 @@ class Test(TestCase):
         for x in scored[:num]: _print(x)
         print('BOT')
         for x in scored[-num:]: _print(x)
-
-    def iterate_tasks(self, model_params, tasks):
-        final_model_path = get_save_path('scored_is', model_params)
-        dataset = None
-        paths = []
-        if os.path.isdir(final_model_path):
-            return load_from_disk(final_model_path)
-        for task in tasks:
-            path = get_save_path(task, model_params)
-            answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
-            # first time, load unprocessed dataset
-            if not dataset:
-                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False, keep_text=True)
-                dataset = dataset['validation']
-            dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
-            paths.append(path)
-            print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
-
-        scored_ds = dataset.map(lambda example: {'scores': [example[key] for key in paths]})
-        scored_ds.save_to_disk(final_model_path)
-        return scored_ds
 
     def disabledtest_train_boolq_multiplem_models(self):
         model_params = variables._roberta_squad.clone()
