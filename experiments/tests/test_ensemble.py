@@ -50,8 +50,8 @@ class Test(TestCase):
     def print_nicely(self, scored, scoring_function, ):
         def _print(example):
             print('-' * 50)
-            print('question:', example['question'])
-            print('text:', example['text'])
+            print('question:', example.question)
+            print('text:', example.text)
             # print('score:', score)
             print('smart scores:', example.smart_scores)
             print('stupid scores:', example.stupid_scores)
