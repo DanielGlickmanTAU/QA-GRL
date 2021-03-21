@@ -62,7 +62,7 @@ class Test(TestCase):
             :return:
             """
 
-        scored = scored.sort(
+        scored.sort(
             key=lambda scored_question: scoring_function(scored_question.smart_scores,
                                                          scored_question.stupid_scores))
         print('TOP')
