@@ -34,9 +34,12 @@ def preprocess_function_swag(examples, tokenizer):
 
 
 @decorators.measure_time
-def preprocess(dataset, tokenizer, preprocess_function):
+def preprocess(dataset, tokenizer, preprocess_function, fields_to_keep=None):
     to_remove = list(dataset['train'][0].keys())
     if 'label' in to_remove: to_remove.remove('label')
+    if fields_to_keep:
+        for field in fields_to_keep:
+            to_remove.remove(field)
     return dataset.map(lambda examples: preprocess_function(examples, tokenizer), batched=True,
                        remove_columns=to_remove)
 
@@ -129,7 +132,13 @@ def tokenize_boolq(examples, tokenizer):
             'label': labels}
 
 
-def get_boolq_dataset(tokenizer, limit=None, remove_duplicates=True):
+def get_boolq_dataset(tokenizer, limit=None, remove_duplicates=True, keep_text=False):
+    """
+    :param limit: limit the number of examples. useful for debugging
+    :param remove_duplicates: should remove questions in validation set that ask on texts that are also in train set
+    :param keep_text: should keep the fields 'passage' and 'question'
+    :return:
+    """
     print(os.getcwd())
     boolq = load_boolq()
     if remove_duplicates:
@@ -140,7 +149,8 @@ def get_boolq_dataset(tokenizer, limit=None, remove_duplicates=True):
         boolq['train'] = boolq['train'].select(range(10))
         boolq['validation'] = boolq['validation'].select(range(10))
 
-    return preprocess(boolq, tokenizer, preprocess_function=tokenize_boolq)
+    return preprocess(boolq, tokenizer, preprocess_function=tokenize_boolq,
+                      fields_to_keep=['passage', 'question'] if keep_text else [])
 
 
 def load_boolq():
