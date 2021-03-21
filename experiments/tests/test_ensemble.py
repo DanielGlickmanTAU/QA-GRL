@@ -69,7 +69,7 @@ class Test(TestCase):
         return scored_ds
 
     @staticmethod
-    def print_nicely(scored, scoring_function, num=3):
+    def print_nicely(scored, scoring_function, num=5):
         def _print(example):
             print('-' * 50)
             print('question:', example.question)
@@ -87,9 +87,9 @@ class Test(TestCase):
         scored.sort(
             key=lambda scored_question: scoring_function(scored_question.smart_scores,
                                                          scored_question.stupid_scores))
-        print('TOP')
+        print('___TOP___')
         for x in scored[:num]: _print(x)
-        print('BOT')
+        print('\n\n____BOT____')
         for x in scored[-num:]: _print(x)
 
     def disabledtest_train_boolq_multiplem_models(self):
