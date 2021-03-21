@@ -28,3 +28,8 @@ def get_t_q_a(tokenizer, example):
     a = example['label']
 
     return remove_speical_tokens(tokenizer, t), remove_speical_tokens(tokenizer, q), a
+
+
+def get_t_q_a_as_dict(tokenizer, example):
+    t, q, a = get_t_q_a(tokenizer, example)
+    return {'text': t, 'question': q, 'answer': a}
