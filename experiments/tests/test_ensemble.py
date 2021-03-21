@@ -42,7 +42,7 @@ class Test(TestCase):
                 assert smart['question'] == stupid['question']
             scored.append(ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores']))
 
-        self.print_nicely(scored, scoring_functions.aggregate_scores)
+        self.print_nicely(scored, scoring_functions.smart_minus_stupid)
 
     def print_nicely(self, scored, scoring_function, ):
         def _print(example):
