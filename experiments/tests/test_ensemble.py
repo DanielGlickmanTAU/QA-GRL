@@ -45,10 +45,30 @@ class Test(TestCase):
             normalizer = len(stupid_scores) / len(smart_scores)
             return (normalizer * sum(smart_scores)) - sum(stupid_scores)
 
-        scored.sort(
-            key=lambda scored_question: aggregate_scores(scored_question.smart_scores, scored_question.stupid_scores))
-        print(scored[:3])
-        print(scored[-3:])
+        self.print_nicely(scored, aggregate_scores)
+
+    def print_nicely(self, scored, scoring_function, ):
+        def _print(example):
+            print('-' * 50)
+            print('question:', example['question'])
+            print('text:', example['text'])
+            # print('score:', score)
+            print('smart scores:', example.smart_scores)
+            print('stupid scores:', example.stupid_scores)
+            print('-' * 50)
+
+            """
+            :param scoring_function: gets list_smart_scores, list_stupid_scores and returns the rank
+            :return:
+            """
+
+        scored = scored.sort(
+            key=lambda scored_question: scoring_function(scored_question.smart_scores,
+                                                         scored_question.stupid_scores))
+        print('TOP')
+        for x in scored[:3]: _print(x)
+        print('BOT')
+        for x in scored[-3:]: _print(x)
 
     def iterate_tasks(self, model_params, tasks):
         final_model_path = get_save_path('scored_is', model_params)
