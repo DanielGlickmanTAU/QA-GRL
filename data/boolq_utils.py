@@ -14,7 +14,7 @@ def get_t_q_a(tokenizer, example):
     sep = tokenizer.sep_token
 
     q_seperator = get_answer_seperator(tokenizer)
-    str = tokenizer.decode(example['input_ids'])
+    str = tokenizer.decode(example['input_ids'], skip_special_tokens=True, clean_up_tokenization_spaces=False)
 
     str = remove_sep_if_starting_with_sep(str)
     idx = str.index(sep) + len(sep)

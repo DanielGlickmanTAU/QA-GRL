@@ -30,7 +30,7 @@ class QuestionGenerator:
             **generate_kwargs
         )
 
-        return [self.tokenizer.decode(out, skip_special_tokens=True) for out in outs]
+        return [self.tokenizer.decode(out, skip_special_tokens=True, clean_up_tokenization_spaces=False) for out in outs]
 
     def _prepare_inputs_for_e2e_qg(self, context):
         source_text = context
