@@ -11,7 +11,7 @@ from config.ExperimentVariables import hyperparams
 from data import tasks, datasets_loading
 from data.DatasetPostMapper import DataSetPostMapper
 from experiments import experiment
-from .. import scoring_functions
+from experiments import scoring_functions
 from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 
@@ -34,15 +34,18 @@ class Test(TestCase):
         dataset_smart = self.iterate_tasks(roberta_model_params, roberta_tasks)
         assert len(dataset_smart['scores']) == len(dataset_stupid['scores'])
 
-        ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores'])
+        ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores', 'label'])
         scored = []
         for smart, stupid in [(dataset_smart[i], dataset_stupid[i]) for i in range(len(dataset_smart['scores']))]:
+            assert smart['label'] == stupid['label']
             if sanity_asserts:
                 assert smart['passage'] == stupid['passage']
                 assert smart['question'] == stupid['question']
-            scored.append(ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores']))
+            scored.append(
+                ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores'], smart['label']))
 
-        self.print_nicely(scored, scoring_functions.smart_minus_stupid)
+        # self.print_nicely(scored, scoring_functions.smart_minus_stupid)
+        self.print_nicely(scored, scoring_functions.absolute_error)
 
     def print_nicely(self, scored, scoring_function, ):
         def _print(example):
@@ -52,11 +55,11 @@ class Test(TestCase):
             # print('score:', score)
             print('smart scores:', example.smart_scores)
             print('stupid scores:', example.stupid_scores)
+            print('real answer:', True if example.label else False)
             print('-' * 50)
 
             """
             :param scoring_function: gets list_smart_scores, list_stupid_scores and returns the rank
-            :return:
             """
 
         scored.sort(
