@@ -8,7 +8,7 @@ def smart_is_right_and_stupid_is_wrong(smart_scores, stupid_scores):
 
 
 def smart_is_right_and_stupid_are_not_sure(smart_scores, stupid_scores):
-    sum(smart_scores) - sum([numpy.abs(0.5 - x) for x in stupid_scores])
+    return sum(smart_scores) - sum([numpy.abs(0.5 - x) for x in stupid_scores])
 
 
 def absolute_error(smart_scores, stupid_scores):

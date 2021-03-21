@@ -44,7 +44,8 @@ class Test(TestCase):
             scored.append(
                 ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores'], smart['label']))
 
-        self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong)
+        self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_are_not_sure)
+        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong)
         # self.print_nicely(scored, scoring_functions.absolute_error)
 
     def iterate_tasks(self, model_params, tasks):
