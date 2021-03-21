@@ -1,5 +1,5 @@
 import os
-
+from collections import namedtuple
 from experiments import experiment
 from datasets import load_from_disk
 
@@ -11,7 +11,7 @@ from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 from unittest import TestCase
 
-from data import tasks, datasets_loading
+from data import tasks, datasets_loading, boolq_utils
 import gc
 
 import torch
@@ -19,25 +19,35 @@ import torch
 
 class Test(TestCase):
     def test_mark_prob_being_correct(self):
-        def aggregate_scores(example, stupid_keys, smart_keys):
-            stupid_scores = [example[key] for key in stupid_keys]
-            smart_scores = [example[key] for key in smart_keys]
-            normalizer = len(stupid_scores) / len(smart_scores)
-            return {'score': (normalizer * sum(smart_scores)) - sum(stupid_scores)}
-
         distilbert_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3',
                             'boolq-classification4', 'boolq-classification5']
         distilbert_model_params = variables._distilbert_squad.clone()
+        distilbert_model_params.batch_size *= 3
 
         roberta_tasks = ['boolq-classification1', 'boolq-classification2', 'boolq-classification3']
         roberta_model_params = variables._roberta_squad.clone()
+        roberta_model_params.batch_size *= 3
 
+        # different runs because tokenizers for each set are different
         dataset_stupid = self.iterate_tasks(distilbert_model_params, distilbert_tasks)
         dataset_smart = self.iterate_tasks(roberta_model_params, roberta_tasks)
         assert len(dataset_smart['scores']) == len(dataset_stupid['scores'])
 
-        dataset = dataset.map(lambda example: aggregate_scores(example, stupid_paths, smart_paths))
-        dataset = dataset.sort('score')
+        ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores'])
+        scored = []
+        for smart, stupid in [(dataset_smart[i], dataset_stupid[i]) for i in range(len(dataset_smart['scores']))]:
+            assert smart['passage'] == stupid['passage']
+            assert smart['question'] == stupid['question']
+            scored.append(ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores']))
+
+        def aggregate_scores(smart_scores, stupid_scores):
+            normalizer = len(stupid_scores) / len(smart_scores)
+            return (normalizer * sum(smart_scores)) - sum(stupid_scores)
+
+        scored.sort(
+            key=lambda scored_question: aggregate_scores(scored_question.smart_score, scored_question.stupid_score))
+        print(scored[:3])
+        print(scored[-3:])
 
     def iterate_tasks(self, model_params, tasks):
         dataset = None
@@ -47,7 +57,7 @@ class Test(TestCase):
             answer_model, answer_tokenizer = get_best_model_and_tokenizer(task, model_params)
             # first time, load unprocessed dataset
             if not dataset:
-                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False)
+                dataset = datasets_loading.get_boolq_dataset(answer_tokenizer, remove_duplicates=False, keep_text=True)
                 dataset = dataset['validation']
             dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
             paths.append(path)
