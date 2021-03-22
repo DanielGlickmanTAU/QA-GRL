@@ -11,13 +11,16 @@ def smart_is_right_and_stupid_is_wrong(smart_scores, stupid_scores):
     return (normalizer * sum(smart_scores)) - sum(stupid_scores)
 
 
-def stupid_is_right_and_smart_is_wrong(smart_scores, stupid_scores):
-    normalizer = ratio(smart_scores, stupid_scores)
-    return sum(stupid_scores) - (normalizer * sum(smart_scores))
-
-
 def smart_is_right_and_stupid_are_not_sure(smart_scores, stupid_scores):
-    return sum(smart_scores) - _not_sure(stupid_scores)
+    return _avg(smart_scores) + _sure(stupid_scores)
+
+
+def smart_is_sure_and_stupid_is_not_sure(smart_scores, stupid_scores):
+    return _sure(stupid_scores) - _sure(smart_scores)
+
+
+def smart_is_sure_and_stupid_is_wrong(smart_scores, stupid_scores):
+    return _sure(smart_scores) - _avg(stupid_scores)
 
 
 def smart_is_right_and_stupid_are_not_sure_normalizing_ratio(smart_scores, stupid_scores):
@@ -46,5 +49,17 @@ def ratio(smart_scores, stupid_scores):
 
 
 def _not_sure(stupid_scores):
-    # return sum([numpy.abs(0.5 - x) for x in stupid_scores])
-    return sum([-1 * x * numpy.log2(x) for x in stupid_scores])
+    return -sum([numpy.abs(0.5 - x) for x in stupid_scores])
+
+
+def _sure(stupid_scores):
+    return _avg([numpy.abs(0.5 - x) for x in stupid_scores])
+
+
+def _entropy(scores):
+    scores = [s / sum(scores) for s in scores]
+    return sum([-1 * x * numpy.log2(x) for x in scores])
+
+
+def _avg(scores):
+    return sum(scores) / len(scores)
