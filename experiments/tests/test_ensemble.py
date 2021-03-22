@@ -15,8 +15,8 @@ from experiments import scoring_functions
 from models.model_loading import get_save_path, get_best_model_and_tokenizer
 from train.training import get_trainer
 
-remove_boolq_duplicates = False
-sanity_asserts = False
+remove_boolq_duplicates = True
+sanity_asserts = True
 ScoredQuestion = namedtuple('ScoredQuestion', ['text', 'question', 'smart_scores', 'stupid_scores', 'label'])
 
 
@@ -45,9 +45,11 @@ class Test(TestCase):
             scored.append(
                 ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores'], smart['label']))
 
-        self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_are_not_sure)
-        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong)
+        self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_are_not_sure, 10)
+        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong, 10)
         # self.print_nicely(scored, scoring_functions.absolute_error)
+        # self.print_nicely(scored, scoring_functions.everyone_answers_wth_ease, 10)
+        # self.print_nicely(scored, scoring_functions.stupid_is_right_and_smart_is_wrong, 10)
 
     def iterate_tasks(self, model_params, tasks, remove_boolq_duplicates=remove_boolq_duplicates):
         final_model_path = get_save_path('scored_is', model_params)
@@ -64,7 +66,7 @@ class Test(TestCase):
                 dataset = datasets_loading.get_boolq_dataset(answer_tokenizer,
                                                              remove_duplicates=remove_boolq_duplicates, keep_text=True)
                 dataset = dataset['validation']
-            dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset)
+            dataset = self.process_dataset(answer_model, answer_tokenizer, path, dataset, remove_boolq_duplicates)
             paths.append(path)
             print('avg being correct:', sum(dataset[path]) / len(dataset[path]))
 
@@ -133,8 +135,10 @@ class Test(TestCase):
         print('done train')
         print(results)
 
-    def process_dataset(self, model, tokenizer, path, dataset):
+    def process_dataset(self, model, tokenizer, path, dataset, remove_dups=False):
+        suffix = '_no_dups' if remove_dups else ''
         save_path = '%s/processed_dataset' % path
+        save_path = save_path + suffix
 
         if os.path.isdir(save_path):
             print('loading dataset from ', save_path)
