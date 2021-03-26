@@ -46,15 +46,18 @@ class Test(TestCase):
                 ScoredQuestion(smart['passage'], smart['question'], smart['scores'], stupid['scores'], smart['label']))
 
         # good at showing easy questions at the bottom
-        self.print_nicely(scored, scoring_functions.no_one_is_sure, 20)
+        # self.print_nicely(scored, scoring_functions.no_one_is_sure, 20)
         # complex questions at the top
         # self.print_nicely(scored, scoring_functions.smart_is_sure_and_stupid_is_wrong, 20)
+        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong, 10)
+        # self.print_nicely(scored, scoring_functions.smart_high_variance, 10)
+        # self.print_nicely(scored, scoring_functions.stupid_high_variance, 10)
+        self.print_nicely(scored, scoring_functions.stupid_high_variance, 10)
 
         # self.print_nicely(scored, scoring_functions.absolute_error,10)
         # self.print_nicely(scored, scoring_functions.var_combined, 10)
 
         # not sure what is going on
-        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong, 10)
 
         # self.print_nicely(scored, scoring_functions.everyone_answers_wth_ease, 10)
         # self.print_nicely(scored, scoring_functions.stupid_is_right_and_smart_is_wrong, 10)
