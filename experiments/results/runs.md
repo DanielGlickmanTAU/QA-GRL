@@ -1,7 +1,3 @@
-generation t5-base lots of epochs
-https://www.comet.ml/danielglickmantau/dl/7da134d3dd424ed8885c4af338ef27f8?experiment-tab=stdout
-
-
 error prediction valid acc: 0.758 train acc: 0.86
 https://www.comet.ml/danielglickmantau/dl/addb5ce1b74d401e8e6dc4152aefbcf9?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
 
@@ -12,6 +8,10 @@ https://www.comet.ml/danielglickmantau/dl/e17cb392d8b649eba7bed216639b8cb8?exper
 distiledbert boolq 0.713
 https://www.comet.ml/danielglickmantau/dl/51b4180b6bb44ec6923904b6cb1df822?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
 
+generation t5-base
+https://www.comet.ml/danielglickmantau/dl/7da134d3dd424ed8885c4af338ef27f8?experiment-tab=stdout
+
+------------------------------------------------------------------------
 roberta with [OPT].. 0.80 on RACE
 https://www.comet.ml/danielglickmantau/dl/bcdc929218194196afc1595b6806e934?experiment-tab=metrics
 
