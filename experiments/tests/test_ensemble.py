@@ -51,12 +51,13 @@ class Test(TestCase):
         # self.print_nicely(scored, scoring_functions.random, 20)
         # complex questions at the top
         # self.print_nicely(scored, scoring_functions.smart_is_sure_and_stupid_is_wrong, 20)
-        self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong, 10)
+        # self.print_nicely(scored, scoring_functions.smart_is_right_and_stupid_is_wrong, 10)
         # self.print_nicely(scored, scoring_functions.smart_high_variance, 20)
         # self.print_nicely(scored, scoring_functions.stupid_high_variance, 10)
 
         # self.print_nicely(scored, scoring_functions.absolute_error,10)
         # self.print_nicely(scored, scoring_functions.var_combined, 10)
+        self.print_nicely(scored, lambda x,y :scoring_functions._entropy(x) + scoring_functions._entropy(y), 10)
 
         # not sure what is going on
 

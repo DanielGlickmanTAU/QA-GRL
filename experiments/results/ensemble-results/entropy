@@ -1,0 +1,144 @@
+__TOP___
+--------------------------------------------------
+question: has anyone won two oscars in one night
+text: This is a list of people have won multiple Academy Awards in a single year in the standard competitive categories. To date, a total of 63 individuals have achieved this feat on 74 distinct occasions with the multiple winners having won more than two awards that year, the record belonging to Walt Disney, who won four academy awards in 1953. Of these, nine individuals have achieved this feat on more than one occasion. This list is current as of the 89th Academy Awards ceremony held on February 26, 2017.
+smart scores: [0.9745070338249207, 0.9773626923561096, 0.9754282832145691]
+stupid scores: [0.9195823669433594, 0.9214909672737122, 0.9290156364440918, 0.9214909672737122, 0.928707480430603]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are pokemon let's go main series games
+text: Pokémon: Let's Go, Pikachu! and Let's Go, Eevee! are upcoming role-playing video games (RPGs) developed by Game Freak and published by The Pokémon Company and Nintendo for the Nintendo Switch. The games are the first installments of the main Pokémon RPG series for the Nintendo Switch. They are enhanced remakes of the 1998 video game Pokémon Yellow. They will contain influences from Pokémon Go, as well as integration with Go, and will support a new optional controller called the Poké Ball Plus. The games are scheduled to be released worldwide on November 16, 2018.
+smart scores: [0.967623770236969, 0.9730958938598633, 0.9685190916061401]
+stupid scores: [0.9048030972480774, 0.9062961339950562, 0.9194691181182861, 0.9062961339950562, 0.9190696477890015]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a opening ceremony for world cup
+text: The opening ceremony took place on Thursday, 14 June 2018, at the Luzhniki Stadium in Moscow, preceding the opening match of the tournament between hosts Russia and Saudi Arabia.
+smart scores: [0.979914128780365, 0.9762566089630127, 0.9728097915649414]
+stupid scores: [0.910991370677948, 0.9183047413825989, 0.9269654154777527, 0.9183047413825989, 0.9294927716255188]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a delay of game in hockey
+text: Delay of game is a penalty in ice hockey. It results in the offending player spending two minutes in the penalty box. In the NHL, delay of game is usually called under seven circumstances:
+smart scores: [0.9807703495025635, 0.9794700741767883, 0.9705501794815063]
+stupid scores: [0.8782635927200317, 0.8700562119483948, 0.876537561416626, 0.8700562119483948, 0.8861686587333679]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did the stock market crash of 1929 caused the great depression
+text: The Wall Street Crash of 1929, also known as Black Tuesday (October 29), the Great Crash, or the Stock Market Crash of 1929, began on October 24, 1929 (``Black Thursday''), and was the most devastating stock market crash in the history of the United States, when taking into consideration the full extent and duration of its after effects. The crash, which followed the London Stock Exchange's crash of September, signalled the beginning of the 12-year Great Depression that affected all Western industrialized countries.
+smart scores: [0.9731312990188599, 0.9809975028038025, 0.968643307685852]
+stupid scores: [0.922999382019043, 0.9242029190063477, 0.9286467432975769, 0.9242029190063477, 0.9391367435455322]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a floating mass of garbage in the ocean
+text: The Great Pacific garbage patch, also described as the Pacific trash vortex, is a gyre of marine debris particles in the central North Pacific Ocean discovered between 1985 and 1988. It is located roughly between 135°W to 155°W and 35°N to 42°N. The collection of plastic, floating trash halfway between Hawaii and California extends over an indeterminate area of widely varying range depending on the degree of plastic concentration used to define the affected area.
+smart scores: [0.9715825915336609, 0.9762305021286011, 0.9713294506072998]
+stupid scores: [0.9088767766952515, 0.9114680886268616, 0.9013513922691345, 0.9114680886268616, 0.9249458909034729]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a dam on the missouri river
+text: This is a list of dams in the watershed of the Missouri River, a tributary of the Mississippi River, in the United States. There are an estimated 17,200 dams and reservoirs in the basin, most of which are small, local irrigation structures. Reservoirs in the watershed total a capacity of approximately 141,000,000 acre feet (174 km).
+smart scores: [0.9684181809425354, 0.9788980484008789, 0.9738633036613464]
+stupid scores: [0.9072188138961792, 0.9049674868583679, 0.9024094939231873, 0.9049674868583679, 0.9231338500976562]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a garbage patch in the pacific ocean
+text: The Great Pacific garbage patch, also described as the Pacific trash vortex, is a gyre of marine debris particles in the central North Pacific Ocean discovered between 1985 and 1988. It is located roughly between 135°W to 155°W and 35°N to 42°N. The collection of plastic, floating trash halfway between Hawaii and California extends over an indeterminate area of widely varying range depending on the degree of plastic concentration used to define the affected area.
+smart scores: [0.9783754944801331, 0.979083240032196, 0.9750165939331055]
+stupid scores: [0.914297878742218, 0.9163528084754944, 0.9347851872444153, 0.9163528084754944, 0.9304638504981995]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the international journal of nursing studies peer reviewed
+text: The International Journal of Nursing Studies is a monthly peer-reviewed nursing journal published by Elsevier. It covers the delivery of care in the fields of nursing and midwifery.
+smart scores: [0.9508115649223328, 0.9550894498825073, 0.9635260105133057]
+stupid scores: [0.883924126625061, 0.8973169326782227, 0.9025311470031738, 0.8973169326782227, 0.8880876898765564]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are the marvel tv shows in the mcu
+text: The Marvel Cinematic Universe (MCU) television series are American superhero television shows based on characters that appear in publications by Marvel Comics. The shows have been in production since 2013, and in that time Marvel Television and ABC Studios, along with its production division ABC Signature Studios, have premiered 11 series across broadcast, streaming, and cable television on ABC, Netflix and Hulu, and Freeform, respectively. They have at least three more series in various stages of development, with Marvel Studios--the production studio behind the MCU films--having at least two series in development for the Disney streaming service.
+smart scores: [0.9688438177108765, 0.9741765260696411, 0.9743776321411133]
+stupid scores: [0.8897793292999268, 0.8988732695579529, 0.9097388386726379, 0.8988732695579529, 0.8864818215370178]
+real answer: True
+--------------------------------------------------
+
+
+____BOT____
+--------------------------------------------------
+question: is there a main group element in period 6
+text: In chemistry and atomic physics, the main group is the group of elements whose lightest members are represented by helium, lithium, beryllium, boron, carbon, nitrogen, oxygen, and fluorine as arranged in the periodic table of the elements. The main group includes the elements (except hydrogen, which is sometimes not included) in groups 1 and 2 (s-block), and groups 13 to 18 (p-block). The s-block elements are primarily characterised by one main oxidation state, and the p-block elements, when they have multiple oxidation states, often have common oxidation states separated by two units.
+smart scores: [0.36678415536880493, 0.035256266593933105, 0.09678137302398682]
+stupid scores: [0.27346086502075195, 0.29208993911743164, 0.5158019065856934, 0.29208993911743164, 0.3155297040939331]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: has a woman ever won the indianapolis 500
+text: This is a list of female motor racing drivers who have entered an Indianapolis 500 race. Ten women racing drivers have officially entered at least once, with Janet Guthrie being the first. Sarah Fisher has the most career starts with nine, and Danica Patrick has the best result with a third place in 2009. Lyn St. James, Patrick, and Simona de Silvestro have all won the Rookie of the Year Award.
+smart scores: [0.06838512420654297, 0.4051240086555481, 0.054484784603118896]
+stupid scores: [0.08718562126159668, 0.08685463666915894, 0.04788082838058472, 0.08685463666915894, 0.06187957525253296]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the czech republic and czechoslovakia the same thing
+text: Czechoslovakia, or Czecho-Slovakia (/ˌtʃɛkoʊsloʊˈvækiə, -kə-, -slə-, -ˈvɑː-/; Czech and Slovak: Československo, Česko-Slovensko), was a sovereign state in Central Europe that existed from October 1918, when it declared its independence from the Austro-Hungarian Empire, until its peaceful dissolution into the Czech Republic and Slovakia on 1 January 1993.
+smart scores: [0.10017061233520508, 0.09189599752426147, 0.6486101150512695]
+stupid scores: [0.24763768911361694, 0.2924811840057373, 0.1539960503578186, 0.2924811840057373, 0.28846484422683716]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is a walk in baseball a dead ball
+text: A hit by pitch is not counted statistically as a walk, though the effect is mostly the same, with the batter receiving a free pass to first base. One exception is that on a HBP (hit-by-pitch), the ball is dead. On a HBP, any runners attempting to steal on the play must return to their original base unless forced to the next base anyway. When a walk occurs, the ball is still live: any runner not forced to advance may nevertheless attempt to advance at his own risk, which might occur on a steal play, passed ball, or wild pitch. Also, because a ball is live when a base on balls occurs, runners on base forced to advance one base may attempt to advance beyond one base, at their own risk. The batter-runner himself may attempt to advance beyond first base, at his own risk. Rule 6.08 addresses this matter as well. An attempt to advance an additional base beyond the base awarded might occur when ball four is a passed ball or a wild pitch.
+smart scores: [0.11214298009872437, 0.042054176330566406, 0.5652875900268555]
+stupid scores: [0.5613495111465454, 0.6244070529937744, 0.6269688010215759, 0.6244070529937744, 0.5391671061515808]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the sears tower still the tallest building
+text: The Willis Tower, built as and still commonly referred to as the Sears Tower, is a 110-story, 1,450-foot (442.1 m) skyscraper in Chicago, Illinois. At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years; it remained the tallest building in the Western Hemisphere until the completion of a new building at the World Trade Center site in 2014. The building is considered a seminal achievement for its designer Fazlur Rahman Khan. The Willis Tower is the second-tallest building in the United States and the Western hemisphere -- and the 16th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most-popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.
+smart scores: [0.10404270887374878, 0.05491518974304199, 0.633344292640686]
+stupid scores: [0.3513634204864502, 0.39403724670410156, 0.3250104784965515, 0.39403724670410156, 0.24021673202514648]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: does season finale mean the show is over
+text: A season finale (British English: last in the season; Australian English: season final) is the final episode of a season of a television program. This is often the final episode to be produced for a few months or longer, and, as such, will try to attract viewers to continue watching when the series begins again.
+smart scores: [0.07288891077041626, 0.13028526306152344, 0.8058525919914246]
+stupid scores: [0.36993902921676636, 0.16994506120681763, 0.21484345197677612, 0.16994506120681763, 0.31783342361450195]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is there a mechanical advantage for a fixed pulley
+text: Consider lifting a weight with rope and pulleys. A rope looped through a pulley attached to a fixed spot, e.g. a barn roof rafter, and attached to the weight is called a single pulley. It has a mechanical advantage (MA) = 1 (assuming frictionless bearings in the pulley), moving no mechanical advantage (or disadvantage) however advantageous the change in direction may be.
+smart scores: [0.04475754499435425, 0.025803089141845703, 0.3161301612854004]
+stupid scores: [0.28834158182144165, 0.30504196882247925, 0.17735135555267334, 0.30504196882247925, 0.270768940448761]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: can a batsman be run out on a no ball
+text: A batsman may not be given out bowled, leg before wicket, caught, stumped or hit wicket off a no-ball. A batsman may be given out run out, hit the ball twice, or obstructing the field. Thus the call of no-ball protects the batsman against losing his wicket in ways that are attributed to the bowler, but not in ways that are attributed to running, or to the batsman's own conduct.
+smart scores: [0.034935832023620605, 0.06722640991210938, 0.5187019109725952]
+stupid scores: [0.5916925668716431, 0.7136842608451843, 0.5905559659004211, 0.7136842608451843, 0.6973673105239868]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: will there be another season of the affiar
+text: A 12-episode second season of The Affair premiered on October 4, 2015. On December 9, 2015, the series was renewed for a third season, which debuted on November 20, 2016. On January 9, 2017, Showtime renewed the series for a fourth season, which premiered on June 17, 2018. On July 26, 2018, Showtime announced it had renewed the series for a fifth and final season to debut in 2019.
+smart scores: [0.07407951354980469, 0.04141432046890259, 0.6263936758041382]
+stupid scores: [0.8610730171203613, 0.8825919032096863, 0.8066188097000122, 0.8825919032096863, 0.8669278621673584]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such thing as chronic lyme disease
+text: Chronic Lyme disease (not to be confused with Lyme disease) is a generally rejected diagnosis that encompasses ``a broad array of illnesses or symptom complexes for which there is no reproducible or convincing scientific evidence of any relationship to Borrelia burgdorferi infection.'' Despite numerous studies, there is no clinical evidence that ``chronic'' Lyme disease is caused by a persistent infection. It is distinct from post-treatment Lyme disease syndrome, a set of lingering symptoms which may persist after successful treatment of infection with Lyme spirochetes. The symptoms of ``chronic Lyme'' are generic and non-specific ``symptoms of life''.
+smart scores: [0.05313849449157715, 0.017290234565734863, 0.3963702321052551]
+stupid scores: [0.49958306550979614, 0.4551662802696228, 0.5513319969177246, 0.4551662802696228, 0.46553122997283936]
+real answer: False
+--------------------------------------------------
