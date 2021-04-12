@@ -1,3 +1,5 @@
+import math
+
 import numpy
 
 
@@ -74,6 +76,10 @@ def var_stupid_minus_smart(smart_scores, stupid_scores):
 def ratio(smart_scores, stupid_scores):
     assert len(stupid_scores) >= len(smart_scores)
     return len(stupid_scores) / len(smart_scores)
+
+
+def random(smart_scores,stupid_scores):
+    return numpy.random.random()
 
 
 def _not_sure(stupid_scores):

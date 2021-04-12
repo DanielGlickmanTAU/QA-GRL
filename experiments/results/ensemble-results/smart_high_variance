@@ -1,0 +1,284 @@
+___TOP___
+--------------------------------------------------
+question: does heathrow terminal 5 have an underground station
+text: Heathrow Terminal 5 is a shared railway and London Underground station serving London Heathrow Airport Terminal 5. The station serves as a terminus for the Heathrow Express services to Paddington in central London, and for Piccadilly line services towards Cockfosters. The station is staffed entirely by Heathrow Express staff, unlike the other underground stations serving Terminal 4 and Terminals 2 & 3.
+smart scores: [0.9369125366210938, 0.9445682764053345, 0.15501689910888672]
+stupid scores: [0.8051429986953735, 0.8821713328361511, 0.8892694711685181, 0.8821713328361511, 0.7106536626815796]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the world trade center in the financial district
+text: The Financial District encompasses roughly the area south of City Hall Park in Lower Manhattan but excludes Battery Park and Battery Park City. The former World Trade Center complex was located in the neighborhood until the September 11, 2001 attacks; the neighborhood includes the successor One World Trade Center. The heart of the Financial District is often considered to be the corner of Wall Street and Broad Street, both of which are contained entirely within the district. The northeastern part of the financial district (along Fulton Street and John Street) was known in the early 20th century as the Insurance District, due to the large number of insurance companies that were either headquartered there, or maintained their New York offices there.
+smart scores: [0.927802562713623, 0.9298297762870789, 0.1712019443511963]
+stupid scores: [0.3771241307258606, 0.3881024718284607, 0.3883322477340698, 0.3881024718284607, 0.13104790449142456]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the ogallala aquifer the largest in the world
+text: The Ogallala Aquifer is a shallow water table aquifer surrounded by sand, silt, clay and gravel located beneath the Great Plains in the United States. One of the world's largest aquifers, it underlies an area of approximately 174,000 sq mi (450,000 km) in portions of eight states (South Dakota, Nebraska, Wyoming, Colorado, Kansas, Oklahoma, New Mexico, and Texas). It was named in 1898 by geologist N.H. Darton from its type locality near the town of Ogallala, Nebraska. The aquifer is part of the High Plains Aquifer System, and rests on the Ogallala Formation, which is the principal geologic unit underlying 80% of the High Plains.
+smart scores: [0.13846862316131592, 0.16493940353393555, 0.8898268938064575]
+stupid scores: [0.5339411497116089, 0.808896541595459, 0.5257756114006042, 0.808896541595459, 0.6549323201179504]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: have the bengals ever been to the superbowl
+text: The Bengals are one of the 12 NFL teams to not have won a Super Bowl as of the 2017 season; however, they are also one of 8 NFL teams that have been to at least one Super Bowl, but have not won the game.
+smart scores: [0.19495564699172974, 0.9388981461524963, 0.8786005973815918]
+stupid scores: [0.15534758567810059, 0.12177157402038574, 0.12201356887817383, 0.12177157402038574, 0.15536391735076904]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does season finale mean the show is over
+text: A season finale (British English: last in the season; Australian English: season final) is the final episode of a season of a television program. This is often the final episode to be produced for a few months or longer, and, as such, will try to attract viewers to continue watching when the series begins again.
+smart scores: [0.07288891077041626, 0.13028526306152344, 0.8058525919914246]
+stupid scores: [0.36993902921676636, 0.16994506120681763, 0.21484345197677612, 0.16994506120681763, 0.31783342361450195]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: does seaworld san diego still have killer whales
+text: SeaWorld's main attraction are its killer whales, ten of which are housed in San Diego in a 7 million gallon habitat. Shamu was the name of the first killer whale brought to SeaWorld San Diego in 1965. ``Shamu'' is now used as the character name for the costume character at the park entrance. SeaWorld San Diego ended their theatrical Killer Whale shows at San Diego in January 2017. San Diego was the first of the three SeaWorld parks to premiere ``Orca Encounter,'' a more educational presentation that gives insight into various aspects of a killer whale's life.
+smart scores: [0.09643381834030151, 0.8883703947067261, 0.32743722200393677]
+stupid scores: [0.2053399682044983, 0.4336228370666504, 0.2290775179862976, 0.4336228370666504, 0.4455714821815491]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such a thing as x ray glasses
+text: X-ray specs are American novelties, purported to allow users to see through or into solid objects. In reality, the spectacles merely create an optical illusion; no X-rays are involved. The current paper version is sold under the name ``X-Ray Spex''; a similar product is sold under the name ``X-Ray Gogs''.
+smart scores: [0.41917872428894043, 0.07497936487197876, 0.8750040531158447]
+stupid scores: [0.2602529525756836, 0.25320249795913696, 0.1724206805229187, 0.25320249795913696, 0.19511789083480835]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is chicken cordon bleu made with blue cheese
+text: A cordon bleu or schnitzel cordon bleu is a dish of meat wrapped around cheese (or with cheese filling), then breaded and pan-fried or deep-fried. Veal or pork cordon bleu is made of veal or pork pounded thin and wrapped around a slice of ham and a slice of cheese, breaded, and then pan fried or baked. For chicken cordon bleu chicken breast is used instead of veal. Ham cordon bleu is ham stuffed with mushrooms and cheese.
+smart scores: [0.7935094237327576, 0.04578661918640137, 0.6520560383796692]
+stupid scores: [0.8199160099029541, 0.8767394423484802, 0.739192545413971, 0.8767394423484802, 0.7952784299850464]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a town under caesar's creek
+text: The construction of the Caesar Creek Lake flooded the small farming village of New Burlington, Ohio in 1973. The history of the community was collected through stories, letters, and journals in the book New Burlington: The Life and Death of an American Village by John Baskin.
+smart scores: [0.6683956980705261, 0.9038296937942505, 0.13712096214294434]
+stupid scores: [0.8352731466293335, 0.8512621521949768, 0.8386077284812927, 0.8512621521949768, 0.8961244225502014]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can you contest a scrum in rugby league
+text: While the Laws of the Game continue to provide for competitive scrums, a convention exists that some scrum rules are not enforced. During the 1970s, scrum penalties for feeding the ball into the legs of the second row, packs moving off the ``mark'' or collapsing the scrum were seen as unattractive. The ability of teams to win a game purely on goals from scrum penalties was also seen as unfair. In an effort to improve this situation, changes to rules and their enforcement were made. The number of scrums was reduced with the introduction of the ``handover'' after a team has used a set of six tackles, the differential penalty, one which cannot be kicked at goal was brought in for offences at scrums and referees ceased enforcing some rules regarding feeding the ball into scrum. Aided by this change, it is common for professional teams not to fully contest scrums, according to their choice of tactics.
+smart scores: [0.23647457361221313, 0.8827680945396423, 0.17951709032058716]
+stupid scores: [0.4180387854576111, 0.36181968450546265, 0.6453221440315247, 0.36181968450546265, 0.255092978477478]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is it illegal to flash your headlights to warn of police in virginia
+text: In Virginia, headlight flashing to warn of police activity is not against the law; however radar detectors remain outlawed. Virginia motor vehicle code specifies an ``audible or light signal'' to indicate overtaken vehicles should yield in certain situations
+smart scores: [0.19122076034545898, 0.8185937404632568, 0.9039255380630493]
+stupid scores: [0.8202012181282043, 0.7034248113632202, 0.7786966562271118, 0.7034248113632202, 0.5739357471466064]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: can you drink in the street in russia
+text: According to the article 20.20 of the Offences Code of Russia, drinking in a place where it is forbidden by the federal law is punishable with a fine of 500 to 1500 rubles. The article 16 of the Federal Law #171-FZ ``About the State Regulation of Production and Trade of Ethanol, Alcoholic and Ethanol-containing Products and about Restriction of Alcoholic Products Consumption (Drinking)'' forbids drinking in almost all public places (including entrance halls, staircases and elevators of living buildings) except bars, restaurants or other similar establishments where it is permitted to sell alcoholic products for immediate consumption.
+smart scores: [0.4841291904449463, 0.024481117725372314, 0.7688348889350891]
+stupid scores: [0.5295130610466003, 0.6032737493515015, 0.497248113155365, 0.6032737493515015, 0.5706337094306946]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: do north and south korea have different accents
+text: The standard languages in the North and the South share the same types and the same number of phonemes, but there are some differences in the actual pronunciations. The South Korean standard pronunciation is based on the dialect as spoken in Seoul, and the North Korean standard pronunciation is based on the dialect as spoken in Pyongyang.
+smart scores: [0.7937726378440857, 0.86601722240448, 0.18286818265914917]
+stupid scores: [0.1343768835067749, 0.13153666257858276, 0.14232569932937622, 0.13153666257858276, 0.13321733474731445]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can a person be a citizen of no country
+text: In International law a stateless person is someone who is ``not considered as a national by any state under the operation of its law''. Some stateless persons are also refugees. However, not all refugees are stateless, and many persons who are stateless have never crossed an international border.
+smart scores: [0.8614962697029114, 0.22725951671600342, 0.20497089624404907]
+stupid scores: [0.24314212799072266, 0.376373827457428, 0.23109859228134155, 0.376373827457428, 0.2777895927429199]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a season 7 of the sopranos
+text: HBO broadcast the sixth season in two parts. The first twelve episodes ran from March to June 2006, and the remaining nine episodes ran from April to June 2007. HBO also released the two parts of the sixth season as separate DVD box sets. This effectively turns the second part into a short seventh season, though the show's producers and HBO don't describe it as such. All six seasons are available on DVD in Regions 1, 2, 3, and 4.
+smart scores: [0.16091489791870117, 0.29721778631210327, 0.8622004985809326]
+stupid scores: [0.16532450914382935, 0.1688464879989624, 0.26385611295700073, 0.1688464879989624, 0.26354533433914185]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: are walgreens and rite aid owned by the same company
+text: Rite Aid began in 1962, opening its first store in Scranton, Pennsylvania; it was called Thrift D Discount Center. After several years of growth, Rite Aid adopted its current name and debuted as a public company in 1968. As of 2017, Rite Aid is publicly traded on the New York Stock Exchange under the symbol RAD. Its major competitors are CVS and Walgreens. In late 2015, Walgreens announced that it would acquire Rite Aid for $9.4 billion pending approval. However, on June 29, 2017, over fear of antitrust regulations, Walgreens Boots Alliance announced it would buy roughly half of Rite Aid's stores for $5.18 billion. On September 19, 2017, the Federal Trade Commission (FTC) approved a fourth deal agreement to purchase Rite Aid with 1,932 stores for $4.38 billion total.
+smart scores: [0.7692196369171143, 0.8658663034439087, 0.1791839599609375]
+stupid scores: [0.20445698499679565, 0.19062232971191406, 0.1880018711090088, 0.19062232971191406, 0.13846319913864136]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: can there be an error in a perfect game
+text: A perfect game is defined by Major League Baseball as a game in which a pitcher (or combination of pitchers) pitches a victory that lasts a minimum of nine innings in which no opposing player reaches base. Thus, the pitcher (or pitchers) cannot allow any hits, walks, hit batsmen, or any opposing player to reach base safely for any other reason and the fielders cannot make an error that allows an opposing player to reach a base; in short, ``27 up, 27 down.'' The feat has been achieved 23 times in MLB history -- 21 times since the modern era began in 1900, most recently by Félix Hernández of the Seattle Mariners on August 15, 2012. A perfect game is also a no-hitter and a shutout. A fielding error that does not allow a batter to reach base, such as a misplayed foul ball, does not spoil a perfect game. Weather-shortened contests in which a team has no baserunners and games in which a team reaches first base only in extra innings do not qualify as perfect games under the present definition.
+smart scores: [0.7831432819366455, 0.12961333990097046, 0.15581285953521729]
+stupid scores: [0.6473232507705688, 0.5501708984375, 0.6268594264984131, 0.5501708984375, 0.5293264389038086]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is pva glue and elmer's glue the same thing
+text: Poly(vinyl acetate) (PVA, PVAc, poly(ethenyl ethanoate): best known as wood glue, white glue, carpenter's glue, school glue, Elmer's glue in the US, or PVA glue) is an aliphatic rubbery synthetic polymer with the formula (CHO). It belongs to the polyvinyl esters family, with the general formula -(RCOOCHCH)-. It is a type of thermoplastic. There is considerable confusion between the glue as purchased, an aqueous emulsion of mostly vinyl acetate monomer, and the subsequent dried and polymerized PVAc that is the true thermoplastic polymer.
+smart scores: [0.9099674820899963, 0.9423047304153442, 0.2867579460144043]
+stupid scores: [0.6519166827201843, 0.7405365109443665, 0.5682691335678101, 0.7405365109443665, 0.5719276666641235]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the square root of 3 a rational number
+text: The square root of 3 is an irrational number. It is also known as Theodorus' constant, named after Theodorus of Cyrene, who proved its irrationality.
+smart scores: [0.9517512321472168, 0.28717219829559326, 0.894274890422821]
+stupid scores: [0.10627102851867676, 0.11246639490127563, 0.10262930393218994, 0.11246639490127563, 0.06381219625473022]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did tom hardy won an oscar for the revenant
+text: The following is a list of awards and nominations received by English actor Tom Hardy. He was nominated for the Academy Award for Best Supporting Actor for the 2015 film The Revenant. He also won the 2011 BAFTA Rising Star Award, and has twice won the British Independent Film Award for Best Actor, for Bronson (2009) and Legend (2015).
+smart scores: [0.3501989245414734, 0.7879745960235596, 0.06560266017913818]
+stupid scores: [0.08082741498947144, 0.08718383312225342, 0.06820309162139893, 0.08718383312225342, 0.08562910556793213]
+real answer: False
+--------------------------------------------------
+
+
+____BOT____
+--------------------------------------------------
+question: is there a garbage patch in the pacific ocean
+text: The Great Pacific garbage patch, also described as the Pacific trash vortex, is a gyre of marine debris particles in the central North Pacific Ocean discovered between 1985 and 1988. It is located roughly between 135°W to 155°W and 35°N to 42°N. The collection of plastic, floating trash halfway between Hawaii and California extends over an indeterminate area of widely varying range depending on the degree of plastic concentration used to define the affected area.
+smart scores: [0.9783754944801331, 0.979083240032196, 0.9750165939331055]
+stupid scores: [0.914297878742218, 0.9163528084754944, 0.9347851872444153, 0.9163528084754944, 0.9304638504981995]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there an airport in fort walton beach florida
+text: Destin--Fort Walton Beach Airport (IATA: VPS, ICAO: KVPS, FAA LID: VPS) is an airport located within Eglin Air Force Base, near Destin and Fort Walton Beach in Okaloosa County, Florida. No private aircraft are allowed, so Destin Executive Airport is used instead for non-commercial operations by general aviation and business aircraft. The airport was previously named Northwest Florida Regional Airport until February 17, 2015 and Okaloosa Regional Airport until September 2008.
+smart scores: [0.023792803287506104, 0.02240443229675293, 0.026535093784332275]
+stupid scores: [0.43409544229507446, 0.23396921157836914, 0.16755610704421997, 0.23396921157836914, 0.31985121965408325]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is there a train station at oslo airport
+text: Oslo Airport Station (Norwegian: Oslo lufthavn stasjon), also known as Gardermoen Station, is a railway station located in the airport terminal building of Oslo Airport, Gardermoen in Norway. Located on the Gardermoen Line, it is served by the Airport Express Trains, express trains to Trondheim and Oslo, regional trains to Lillehammer and Skien (via Oslo) and commuter trains to Eidsvoll and Kongsberg (via Oslo).
+smart scores: [0.9805461764335632, 0.9833155870437622, 0.979339063167572]
+stupid scores: [0.9079025983810425, 0.9233803749084473, 0.9562744498252869, 0.9233803749084473, 0.9309312105178833]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can staring at a bright light cause blindness
+text: Flash blindness is a visual impairment during and following exposure to a light flash of extremely high intensity. The bright light overwhelms the eye and gradually fades, lasting anywhere from a few seconds to a few minutes.
+smart scores: [0.9750133156776428, 0.9788029789924622, 0.9757068157196045]
+stupid scores: [0.9073793888092041, 0.8899685144424438, 0.9340178966522217, 0.8899685144424438, 0.8805941939353943]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are you in the navy if you go to the naval academy
+text: Students at the naval academy are addressed as Midshipman, an official military rank and paygrade. As midshipmen are actually in the United States Navy, starting from the moment that they raise their hands and affirm the oath of office at the swearing-in ceremony, they are subject to the Uniform Code of Military Justice, of which USNA regulations are a part, as well as to all executive policies and orders formulated by the Department of the Navy. The same term covers both males and females. Upon graduation, most naval academy midshipmen are commissioned as ensigns in the Navy or second lieutenants in the Marine Corps and serve a minimum of five years after their commissioning. If they are selected to serve as a pilot (aircraft), they will serve 8--11 years minimum from their date of winging, and if they are selected to serve as a naval flight officer they will serve 6--8 years. Foreign midshipmen are commissioned into the armed forces of their native countries.
+smart scores: [0.9726234674453735, 0.9712063074111938, 0.9686511158943176]
+stupid scores: [0.8001572489738464, 0.7348484992980957, 0.6839473247528076, 0.7348484992980957, 0.7720314860343933]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: was the 13th amendment after the civil war
+text: The Thirteenth Amendment (Amendment XIII) to the United States Constitution abolished slavery and involuntary servitude, except as punishment for a crime. In Congress, it was passed by the Senate on April 8, 1864, and by the House on January 31, 1865. The amendment was ratified by the required number of states on December 6, 1865. On December 18, 1865, Secretary of State William H. Seward proclaimed its adoption. It was the first of the three Reconstruction Amendments adopted following the American Civil War.
+smart scores: [0.9559619426727295, 0.9582507014274597, 0.9542686343193054]
+stupid scores: [0.7657703161239624, 0.66209876537323, 0.7739956378936768, 0.66209876537323, 0.5955880880355835]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did england ever win the soccer world cup
+text: The 1966 FIFA World Cup was the eighth FIFA World Cup and was held in England from 11 to 30 July 1966. England beat West Germany 4--2 in the final, winning the Jules Rimet Trophy. It is England's only FIFA World Cup title. They were the fifth nation to win and the third host nation to win after Uruguay in 1930 and Italy in 1934.
+smart scores: [0.9723095297813416, 0.9696933627128601, 0.9685917496681213]
+stupid scores: [0.9031565189361572, 0.917107880115509, 0.9446570873260498, 0.917107880115509, 0.9195668697357178]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can i get my ashes shot into space
+text: Private companies such as Celestis, Inc., Elysium Space, Ascending Memories,, Orbital Memorialsand Horizon Ascending Limited., offer space burial services.
+smart scores: [0.9130415916442871, 0.9095284342765808, 0.9123073816299438]
+stupid scores: [0.8041860461235046, 0.728175699710846, 0.8974833488464355, 0.728175699710846, 0.2871525287628174]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a medical school in las vegas
+text: University of Nevada, Las Vegas (UNLV) School of Medicine, is an academic division of the University of Nevada, Las Vegas (UNLV) with 60 students matriculated on July 17, 2017. The students began their education with a 6 week EMT course. The school is the first to grant the Doctor of Medicine (MD) degree in Southern Nevada. The school uses facilities in the University Medical Center of Southern Nevada (UMCSN) clinical building at the Las Vegas Medical District.
+smart scores: [0.9791161417961121, 0.9809603691101074, 0.9772890210151672]
+stupid scores: [0.9047979712486267, 0.9165791869163513, 0.9599698185920715, 0.9165791869163513, 0.9274500012397766]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is studio city in the san fernando valley
+text: Studio City is a neighborhood in the city of Los Angeles, California, in the San Fernando Valley. It is named after the studio lot that was established in the area by film producer Mack Sennett in 1927, now known as CBS Studio Center.
+smart scores: [0.9652925133705139, 0.9618979096412659, 0.9625798463821411]
+stupid scores: [0.836202085018158, 0.8088437914848328, 0.7672050595283508, 0.8088437914848328, 0.8264443874359131]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does a fennec fox live in the desert
+text: The fennec fox or fennec (Vulpes zerda) is a small nocturnal fox found in the Sahara of North Africa, the Sinai Peninsula, South West Israel (Arava desert) and the Arabian desert. Its most distinctive feature is its unusually large ears, which also serve to dissipate heat. Its name comes from the Berber word (fanak), which means fox, and the species name zerda comes from the Greek word xeros which means dry, referring to the fox's habitat. The fennec is the smallest species of canid. Its coat, ears, and kidney functions have adapted to high-temperature, low-water, desert environments. Also, its hearing is sensitive enough to hear prey moving underground. It mainly eats insects, small mammals, and birds.
+smart scores: [0.9746193289756775, 0.9775260090827942, 0.9742703437805176]
+stupid scores: [0.782871425151825, 0.762420117855072, 0.7637467384338379, 0.762420117855072, 0.7758693695068359]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is highway 91 in florida a toll road
+text: Florida's Turnpike, designated as State Road 91 (SR 91), is a toll road in the U.S. state of Florida, maintained by Florida's Turnpike Enterprise (FTE). Spanning approximately 309 miles (497 km) along a north--south axis, the turnpike is in two sections. The SR 91 mainline runs roughly 265 miles (426 km), from its southern terminus at an interchange with Interstate 95 (I-95) in Miami Gardens to an interchange with I-75 in Wildwood at its northern terminus. The Homestead Extension of Florida's Turnpike (abbreviated HEFT and designated as SR 821) continues from the southern end of the mainline for another 48 miles (77 km) to US Highway 1 (US 1) in Florida City. The slogan for the road is ``The Less Stressway''.
+smart scores: [0.9744000434875488, 0.9738098978996277, 0.9771484136581421]
+stupid scores: [0.8519500494003296, 0.8952564001083374, 0.9110596179962158, 0.8952564001083374, 0.8927247524261475]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does the florida constitution give a minimum age for legislators
+text: Each legislator shall be at least twenty-one years of age, an elector and resident of the District from which elected and shall have resided in the state for a period of two years prior to election.
+smart scores: [0.928049623966217, 0.9262503981590271, 0.9245370030403137]
+stupid scores: [0.7443590760231018, 0.8566956520080566, 0.5011471509933472, 0.8566956520080566, 0.8206846117973328]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has anyone won two oscars in one night
+text: This is a list of people have won multiple Academy Awards in a single year in the standard competitive categories. To date, a total of 63 individuals have achieved this feat on 74 distinct occasions with the multiple winners having won more than two awards that year, the record belonging to Walt Disney, who won four academy awards in 1953. Of these, nine individuals have achieved this feat on more than one occasion. This list is current as of the 89th Academy Awards ceremony held on February 26, 2017.
+smart scores: [0.9745070338249207, 0.9773626923561096, 0.9754282832145691]
+stupid scores: [0.9195823669433594, 0.9214909672737122, 0.9290156364440918, 0.9214909672737122, 0.928707480430603]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is season 4 of better call saul out
+text: The fourth season of the American television drama series Better Call Saul premiered on August 6, 2018, and concluded on October 8, 2018. The fourth season consists of 10 episodes and aired on Mondays at 9:00 pm (Eastern) in the United States on AMC. Better Call Saul is a spin-off prequel of Breaking Bad created by Vince Gilligan and Peter Gould who also worked on Breaking Bad.
+smart scores: [0.9668350219726562, 0.9690107703208923, 0.9667512774467468]
+stupid scores: [0.8971350789070129, 0.9000699520111084, 0.943782389163971, 0.9000699520111084, 0.8066260814666748]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: was popcorn once eaten as a breakfast cereal
+text: Popcorn as a breakfast cereal was consumed by Americans in the 1800s and generally consisted of popcorn with milk and a sweetener.
+smart scores: [0.9737935066223145, 0.974990963935852, 0.9725268483161926]
+stupid scores: [0.7581996321678162, 0.8224399089813232, 0.8371564149856567, 0.8224399089813232, 0.8375401496887207]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does canada have a free trade agreement with eu
+text: The Comprehensive Economic and Trade Agreement (CETA) is a free-trade agreement between Canada, the European Union and its member states. It has been provisionally applied, so the treaty has eliminated 98% of the tariffs between Canada and the EU.
+smart scores: [0.974068284034729, 0.9763349294662476, 0.974943995475769]
+stupid scores: [0.6561251878738403, 0.7326990365982056, 0.7871437072753906, 0.7326990365982056, 0.731477677822113]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a season 4 of crazy ex girlfriend
+text: The fourth and final season of Crazy Ex-Girlfriend was renewed on April 2, 2018, by The CW, with a 2018 release date (needs source). The season comprises 18 episodes and stars Rachel Bloom as Rebecca Bunch, a distraught young woman, dealing with the consequences of pleading guilty to attempted murder at the end of the previous season. Vincent Rodriguez III, Donna Lynne Champlin, Pete Gardner, Vella Lovell, Gabrielle Ruiz, David Hull, and Scott Michael Foster co-star.
+smart scores: [0.9766451120376587, 0.9766804575920105, 0.9749939441680908]
+stupid scores: [0.8208193778991699, 0.8651672601699829, 0.9504377245903015, 0.8651672601699829, 0.6721327304840088]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a sequel to the whole nine yards
+text: The Whole Ten Yards is a 2004 American crime comedy film directed by Howard Deutch and sequel to the 2000 film The Whole Nine Yards. It was based on characters created by Mitchell Kapner, who was the writer of the first film. The film stars Bruce Willis, Matthew Perry, Amanda Peet, Natasha Henstridge, and Kevin Pollak. It was released on April 7, 2004 in North America. Unlike the first film, which was a commercial success despite receiving mixed reviews, The Whole Ten Yards was a major critical and commercial failure.
+smart scores: [0.9621959328651428, 0.9611917734146118, 0.9606374502182007]
+stupid scores: [0.6370600461959839, 0.5204563140869141, 0.4658581018447876, 0.5204563140869141, 0.49923741817474365]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did england host the world cup in 1966
+text: The 1966 FIFA World Cup was the eighth FIFA World Cup and was held in England from 11 to 30 July 1966. England beat West Germany 4--2 in the final, winning the Jules Rimet Trophy. It is England's only FIFA World Cup title. They were the fifth nation to win and the third host nation to win after Uruguay in 1930 and Italy in 1934.
+smart scores: [0.9687060713768005, 0.9676369428634644, 0.968111515045166]
+stupid scores: [0.9070611000061035, 0.917827844619751, 0.9440344572067261, 0.917827844619751, 0.9224013090133667]
+real answer: True
+--------------------------------------------------
