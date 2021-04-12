@@ -1,11 +1,6 @@
-https://www.comet.ml/danielglickmantau/dl/1b21ac9336a54d2cb199dfd73819b522
-
-
-generation t5-small lots of epochs
+generation t5-base lots of epochs
 https://www.comet.ml/danielglickmantau/dl/7da134d3dd424ed8885c4af338ef27f8?experiment-tab=stdout
 
-questoin generatoin t5
-https://www.comet.ml/danielglickmantau/dl/f56214413ef646faaa0abea35adf1b89
 
 error prediction valid acc: 0.758 train acc: 0.86
 https://www.comet.ml/danielglickmantau/dl/addb5ce1b74d401e8e6dc4152aefbcf9?experiment-tab=chart&showOutliers=true&smoothing=0&transformY=smoothing&xAxis=step
