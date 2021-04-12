@@ -1,0 +1,144 @@
+___TOP___
+--------------------------------------------------
+question: have england ever won the women's world cup
+text: England have qualified for the FIFA Women's World Cup four times, reaching the quarter final stage on the first three occasions in 1995, 2007, and 2011, and finishing third in 2015. They reached the final of the UEFA Women's Championship in 1984 and 2009.
+smart scores: [0.9412021040916443, 0.9544001817703247, 0.9126389026641846]
+stupid scores: [0.09526079893112183, 0.0891270637512207, 0.06985825300216675, 0.0891270637512207, 0.06366622447967529]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: will one tree hill return for season 10
+text: The ninth and final season of One Tree Hill, an American television series created by Mark Schwahn for The WB Television Network. The series was officially renewed by The CW for a ninth season on May 17, 2011; two days later, the network announced that the ninth season would serve as the series' final season. Premiering on January 11, 2012, the series aired its 13 episodes uninterrupted.
+smart scores: [0.9461167454719543, 0.9271581768989563, 0.9130492210388184]
+stupid scores: [0.1276710033416748, 0.11181098222732544, 0.04540896415710449, 0.11181098222732544, 0.10114842653274536]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did ireland ever win the soccer world cup
+text: Their first appearance in the finals was in Italy at the 1990 FIFA World Cup. 1990 was also their best performance in a major championship, where they reached the quarter finals.
+smart scores: [0.9272754192352295, 0.9577769637107849, 0.8752521872520447]
+stupid scores: [0.09546548128128052, 0.09550058841705322, 0.10629349946975708, 0.09550058841705322, 0.07160407304763794]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: will there be episode 9 of sacred games
+text: The first four episodes of Sacred Games premiered on 29 June, 2018 with the full season of eight episodes released on Netflix on 6 July across 191 countries with subtitles in more than 20 languages. It received mostly positive review from critics, with particular praise on the performances and writing.
+smart scores: [0.9604677557945251, 0.9675842523574829, 0.9341211915016174]
+stupid scores: [0.1549433469772339, 0.11794328689575195, 0.23558181524276733, 0.11794328689575195, 0.07931971549987793]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: do i need a visa to go to macau from hong kong
+text: Holders of passports issued by following countries and Hong Kong permanent residents can enter Macau as a visitor without a visa (for a maximum period as stated below):
+smart scores: [0.9197602272033691, 0.9511550068855286, 0.8066173195838928]
+stupid scores: [0.12638020515441895, 0.09689372777938843, 0.14410430192947388, 0.09689372777938843, 0.06913965940475464]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did they cancel whose line is it anyway
+text: Production of the American version was canceled by ABC in 2003 because of low ratings, with already-produced episodes airing first-run into 2004. The ABC Family cable channel, which had been airing repeats of the show since 2002, also showed ``new'' episodes from 2005 to 2006, formed from previously filmed but unaired performances.
+smart scores: [0.8085252046585083, 0.9383418560028076, 0.933330237865448]
+stupid scores: [0.10083192586898804, 0.13822388648986816, 0.0819556713104248, 0.13822388648986816, 0.08817970752716064]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are any members of our gang still alive
+text: As of June 2018, the following Our Gang kids are believed to be alive. Note that for several of the people listed below, information is insufficient:
+smart scores: [0.97784024477005, 0.9787024259567261, 0.944259524345398]
+stupid scores: [0.17697888612747192, 0.1587756872177124, 0.2462119460105896, 0.1587756872177124, 0.18343186378479004]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: will there be another chucky movie after cult of chucky
+text: In October 2017, Don Mancini stated that he intends in having Glen and Glenda from Seed of Chucky return in a future film, and acknowledged that most references to that character had been cut from Cult of Chucky. In February 2018, it was announced that a Child's Play television series will be a continuation of the film's story arc. Mancini also stated that following the TV show, feature films will continue to be developed in the future.
+smart scores: [0.8860129714012146, 0.8888990879058838, 0.9391462206840515]
+stupid scores: [0.15290594100952148, 0.09824979305267334, 0.13804757595062256, 0.09824979305267334, 0.1740136742591858]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are they still making new episodes of adventure time
+text: The tenth and final season of Adventure Time, an American animated television series created by Pendleton Ward, premiered on Cartoon Network on September 17, 2017. It is set to conclude on September 3, 2018 and will wrap up the entire animated series. The season was produced by Cartoon Network Studios and Frederator Studios. The season follows the final adventures of Finn, a human boy, and his best friend and adoptive brother Jake, a dog with magical powers to change shape and size at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with the other main characters of the show: Princess Bubblegum, The Ice King, Marceline the Vampire Queen, Lumpy Space Princess, BMO, and Flame Princess.
+smart scores: [0.9287877082824707, 0.9208555221557617, 0.7849059700965881]
+stupid scores: [0.1317957043647766, 0.1355794072151184, 0.054643988609313965, 0.1355794072151184, 0.09653443098068237]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is mycosis fungoides caused by a fungal infection
+text: Mycosis fungoides was first described in 1806 by French dermatologist Jean-Louis-Marc Alibert. The name mycosis fungoides is very misleading--it loosely means ``mushroom-like fungal disease''. The disease, however, is not a fungal infection but rather a type of non-Hodgkin's lymphoma. It was so named because Alibert described the skin tumors of a severe case as having a mushroom-like appearance.
+smart scores: [0.956093430519104, 0.9538527131080627, 0.9034875631332397]
+stupid scores: [0.19402474164962769, 0.18831396102905273, 0.0959579348564148, 0.18831396102905273, 0.1905611753463745]
+real answer: False
+--------------------------------------------------
+
+
+____BOT____
+--------------------------------------------------
+question: is the world health organization a government organization
+text: The World Health Organization (WHO) is a specialized agency of the United Nations that is concerned with international public health. It was established on 7 April 1948, and is headquartered in Geneva, Switzerland. The WHO is a member of the United Nations Development Group. Its predecessor, the Health Organization, was an agency of the League of Nations.
+smart scores: [0.06008690595626831, 0.08341437578201294, 0.07344400882720947]
+stupid scores: [0.6888383030891418, 0.8387801647186279, 0.5689907073974609, 0.8387801647186279, 0.688960611820221]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a mercy rule in professional soccer
+text: International Blind Sports Federation rules require that any time during a game in which one team has scored ten (10) more goals than the other team that game is deemed completed. In US high school soccer, most states use a mercy rule that ends the game if one team is ahead by 10 or more goals at any point from halftime onward. Youth soccer leagues use variations on the rule.
+smart scores: [0.1678065061569214, 0.092318594455719, 0.2509373426437378]
+stupid scores: [0.8379436135292053, 0.8202342391014099, 0.8411508202552795, 0.8202342391014099, 0.8467488288879395]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does the dishwasher make its own hot water
+text: In addition to domestic units, industrial dishwashers are available for use in commercial establishments such as hotels and restaurants, where a large number of dishes must be cleaned. Washing is conducted with temperatures of 65--71 °C (149--160 °F) and sanitation is achieved by either the use of a booster heater that will provide an 82 °C (180 °F) ``final rinse'' temperature or through the use of a chemical sanitizer.
+smart scores: [0.09327870607376099, 0.07406061887741089, 0.2371917963027954]
+stupid scores: [0.7647041082382202, 0.8521097302436829, 0.7481866478919983, 0.8521097302436829, 0.7950803637504578]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is boost mobile and virgin mobile the same
+text: At the 2010 Consumer Electronics Show, Boost Mobile announced it would begin to offer a new unlimited plan using Sprint's CDMA network, costing $50 a month. For $10 more, Boost also offered an unlimited plan for the BlackBerry Curve 8830. Sprint would also acquire fellow prepaid wireless provider Virgin Mobile USA in 2010--both Boost and Virgin Mobile would be re-organized into a new group within Sprint, encompassing the two brands and other no-contract phone services offered by the company.
+smart scores: [0.10131776332855225, 0.10643184185028076, 0.1553727388381958]
+stupid scores: [0.8221087455749512, 0.8013402223587036, 0.7480574250221252, 0.8013402223587036, 0.8570026159286499]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did the jamaican bobsled team carry the sled
+text: The 1988 team was the inspiration for the film Cool Runnings (1993). The characters in the film are fictional, although original footage of the crash during a qualifier is used during the film. The film's depiction of the post-crash rescue was changed to show the bobsledders carrying the sled over the line on their shoulders for dramatic effect.
+smart scores: [0.08139181137084961, 0.12839436531066895, 0.15054643154144287]
+stupid scores: [0.6967305541038513, 0.8986244201660156, 0.7791197896003723, 0.8986244201660156, 0.8330676555633545]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is mccormick and schmick owned by landry's
+text: McCormick & Schmick's Seafood Restaurants Inc. is an American seafood restaurant chain, based in Portland, Oregon. As of October 2016, the company operates 72 locations in North America under various brands, including 60 restaurants across 22 U.S. states, as well as 12 Canadian locations that operate under the Boathouse name. A sale to the parent company, Landry's, Inc., was completed in January 2012.
+smart scores: [0.10968101024627686, 0.12547773122787476, 0.14282774925231934]
+stupid scores: [0.8046814799308777, 0.8163772821426392, 0.8719136714935303, 0.8163772821426392, 0.8283566832542419]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: do you need a visa to visit oman
+text: Citizens of member nations of the Gulf Cooperation Council may travel to Oman without visa limits. Nationals of 71 other countries and territories can apply for visas online which are valid for a period of 30 days. All visitors must hold a passport valid for 6 months.
+smart scores: [0.2825073003768921, 0.0502510666847229, 0.1896483302116394]
+stupid scores: [0.8509718179702759, 0.8987802267074585, 0.8602820038795471, 0.8987802267074585, 0.9283450245857239]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are there any sam's clubs in canada
+text: There were also Sam's Club locations in Canada, six located in Ontario, in which the last location closed in 2009.
+smart scores: [0.05387759208679199, 0.028956592082977295, 0.1302938461303711]
+stupid scores: [0.8913341760635376, 0.7846989035606384, 0.9052587151527405, 0.7846989035606384, 0.8912584185600281]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is log x the same as ln x
+text: The natural logarithm of a number is its logarithm to the base of the mathematical constant e, where e is an irrational and transcendental number approximately equal to 7000271828182845899♠2.718281828459. The natural logarithm of x is generally written as ln x, log x, or sometimes, if the base e is implicit, simply log x. Parentheses are sometimes added for clarity, giving ln(x), log(x) or log(x). This is done in particular when the argument to the logarithm is not a single symbol, to prevent ambiguity.
+smart scores: [0.11285030841827393, 0.025926709175109863, 0.03783339262008667]
+stupid scores: [0.8230887651443481, 0.8687866926193237, 0.8615061640739441, 0.8687866926193237, 0.8618990778923035]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the jaws ride at universal orlando closed
+text: On December 2, 2011, Universal Orlando Resort announced that the Jaws attraction along with the entire Amity area of Universal Studios Florida would close permanently on January 2, 2012 to ``make room for an exciting, NEW, experience.'' (the second phase of The Wizarding World Of Harry Potter.) severe backlash followed after the announcement. The attraction officially closed on January 2, 2012 at 9:00 pm with Michael Skipper aka ``Skip'' giving the final voyage to the last lucky group of 48 guests. By the next morning, the entire Amity area was walled off and completely demolished in the following months. The hanging shark statue from the town square remains as a tribute to the ride and can be found in the Fisherman's Wharf area of the San Francisco section of the park. The attraction remains open at Universal Studios Japan as well as the original tram stop at Universal Studios Hollywood.
+smart scores: [0.05722248554229736, 0.03196144104003906, 0.05785137414932251]
+stupid scores: [0.8678935766220093, 0.8478338718414307, 0.8978888988494873, 0.8478338718414307, 0.8755860328674316]
+real answer: False
+--------------------------------------------------

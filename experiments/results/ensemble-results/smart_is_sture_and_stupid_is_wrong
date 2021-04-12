@@ -1,0 +1,284 @@
+___TOP___
+--------------------------------------------------
+question: has sweden ever been in a world cup final
+text: Sweden have been one of the more successful national teams in the history of the World Cup, having reached 4 semi-finals, and becoming runners-up on home ground in 1958. They have been present at 11 out of 20 World Cups by 2014.
+smart scores: [0.03761178255081177, 0.031772732734680176, 0.03988105058670044]
+stupid scores: [0.08858096599578857, 0.08306574821472168, 0.06491053104400635, 0.08306574821472168, 0.06003516912460327]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: can you get a 3rd set of teeth
+text: It is possible to have extra, or ``supernumerary,'' teeth. This phenomenon is called hyperdontia and is often erroneously referred to as ``a third set of teeth.'' These teeth may erupt into the mouth or remain impacted in the bone. Hyperdontia is often associated with syndromes such as cleft lip and palate, trichorhinophalangeal syndrome, cleidocranial dysplasia, and Gardner's syndrome.
+smart scores: [0.018284380435943604, 0.015384972095489502, 0.02316516637802124]
+stupid scores: [0.11529195308685303, 0.12990200519561768, 0.10505551099777222, 0.12990200519561768, 0.11396557092666626]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is there a such thing as a broken heart
+text: Broken heart (also known as a heartbreak or heartache) is a metaphor for the intense emotional--and sometimes physical--stress or pain one feels at experiencing great longing. The concept is cross-cultural, often cited with reference to a desired or lost lover, and dates back at least 3,000 years.
+smart scores: [0.021081745624542236, 0.015997648239135742, 0.023244261741638184]
+stupid scores: [0.11699116230010986, 0.11672818660736084, 0.09218472242355347, 0.11672818660736084, 0.16867130994796753]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: was the battle of new orleans fought after the war of 1812
+text: The Battle of New Orleans was fought on Sunday, January 8, 1815, between the British Army under Major General Sir Edward Pakenham, and the United States Army under Brevet Major General Andrew Jackson. It took place approximately 5 miles (8.0 kilometres) south of the city of New Orleans, close to the present-day town of Chalmette, Louisiana, and was an American victory. The battle effectively marked the end of the War of 1812.
+smart scores: [0.05545353889465332, 0.0542946457862854, 0.07185918092727661]
+stupid scores: [0.07926082611083984, 0.08946508169174194, 0.06202840805053711, 0.08946508169174194, 0.08921647071838379]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: have england ever won the women's world cup
+text: England have qualified for the FIFA Women's World Cup four times, reaching the quarter final stage on the first three occasions in 1995, 2007, and 2011, and finishing third in 2015. They reached the final of the UEFA Women's Championship in 1984 and 2009.
+smart scores: [0.9412021040916443, 0.9544001817703247, 0.9126389026641846]
+stupid scores: [0.09526079893112183, 0.0891270637512207, 0.06985825300216675, 0.0891270637512207, 0.06366622447967529]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: will there be a new how to train your dragon series
+text: The How to Train Your Dragon franchise from DreamWorks Animation consists of two feature films How to Train Your Dragon (2010) and How to Train Your Dragon 2 (2014), with a third feature film, How to Train Your Dragon: The Hidden World, set for a 2019 release. The franchise is inspired by the British book series of the same name by Cressida Cowell. The franchise also consists of four short films: Legend of the Boneknapper Dragon (2010), Book of Dragons (2011), Gift of the Night Fury (2011) and Dawn of the Dragon Racers (2014). A television series following the events of the first film, Dragons: Riders of Berk, began airing on Cartoon Network in September 2012. Its second season was renamed Dragons: Defenders of Berk. Set several years later, and as a more immediate prequel to the second film, a new television series, titled Dragons: Race to the Edge, aired on Netflix in June 2015. The second season of the show was added to Netflix in January 2016 and a third season in June 2016. A fourth season aired on Netflix in February 2017, a fifth season in August 2017, and a sixth and final season on February 16, 2018.
+smart scores: [0.03254687786102295, 0.040341079235076904, 0.037355899810791016]
+stupid scores: [0.12342482805252075, 0.10333812236785889, 0.12207525968551636, 0.10333812236785889, 0.09333312511444092]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is it possible to run a mile in 2 minutes
+text: In the sport of athletics, a four-minute mile means completing a mile run (1,760 yards, or 1,609.344 metres) in less than four minutes. It was first achieved in 1954 by Roger Bannister in 3:59.4. The ``four-minute barrier'' has since been broken by over 1,400 male athletes, and is now the standard of all male professional middle distance runners. In the last 50 years the mile record has been lowered by almost 17 seconds, and currently stands at 3:43.13. Running a mile in four minutes translates to a speed of 15 miles per hour (24.14 km/h, or 2:29.13 per kilometre, or 14.91 seconds per 100 metres). It also equals 22 feet per second (1,320 feet per minute).
+smart scores: [0.033175110816955566, 0.02292543649673462, 0.04761207103729248]
+stupid scores: [0.13710206747055054, 0.1156378984451294, 0.1060868501663208, 0.1156378984451294, 0.11135530471801758]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: has the u s ever won a world cup
+text: The 21 World Cup tournaments have been won by eight national teams. Brazil have won five times, and they are the only team to have played in every tournament. The other World Cup winners are Germany and Italy, with four titles each; Argentina, France and inaugural winner Uruguay, with two titles each; and England and Spain with one title each.
+smart scores: [0.0342753529548645, 0.027257680892944336, 0.027162551879882812]
+stupid scores: [0.10035175085067749, 0.11252886056900024, 0.1380963921546936, 0.11252886056900024, 0.16297465562820435]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: are flying fish fish that can actually fly
+text: The Exocoetidae are a family of marine fish in the order Beloniformes class Actinopterygii. Fish of this family are known as flying fish. About 64 species are grouped in seven to nine genera. Flying fish can make powerful, self-propelled leaps out of water into air, where their long, wing-like fins enable gliding flight for considerable distances above the water's surface. This uncommon ability is a natural defence mechanism to evade predators.
+smart scores: [0.02583068609237671, 0.020254433155059814, 0.03249579668045044]
+stupid scores: [0.16613805294036865, 0.13468629121780396, 0.07098507881164551, 0.13468629121780396, 0.1640954613685608]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: does california use the letter o on license plates
+text: Exclusions: The letters I, O, and Q are not used in the first or third alpha positions of the 7-digit alpha-numeric series.
+smart scores: [0.039744436740875244, 0.03892529010772705, 0.06796795129776001]
+stupid scores: [0.13465148210525513, 0.11772298812866211, 0.10750335454940796, 0.11772298812866211, 0.09903758764266968]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can you drink the water in flint now
+text: The Flint water crisis first started in 2014 when the drinking water source for the city of Flint, Michigan was changed from Lake Huron and the Detroit River to the cheaper Flint River. Due to insufficient water treatment, lead leached from the lead water pipes into the drinking water, exposing over 100,000 residents. After a pair of scientific studies proved lead contamination was present in the water supply, a federal state of emergency was declared in January 2016 and Flint residents were instructed to use only bottled or filtered water for drinking, cooking, cleaning, and bathing. As of early 2017, the water quality had returned to acceptable levels; however, residents were instructed to continue to use bottled or filtered water until all the lead pipes have been replaced, which is expected to be completed no sooner than 2020.
+smart scores: [0.04164201021194458, 0.04413503408432007, 0.07922899723052979]
+stupid scores: [0.13602346181869507, 0.11562633514404297, 0.076174795627594, 0.11562633514404297, 0.10661900043487549]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: was the battle of the alamo part of the mexican american war
+text: The Battle of the Alamo (February 23 -- March 6, 1836) was a pivotal event in the Texas Revolution. Following a 13-day siege, Mexican troops under President General Antonio López de Santa Anna launched an assault on the Alamo Mission near San Antonio de Béxar (modern-day San Antonio, Texas, United States), killing the Texian defenders. Santa Anna's cruelty during the battle inspired many Texians--both Texas settlers and adventurers from the United States--to join the Texian Army. Buoyed by a desire for revenge, the Texians defeated the Mexican Army at the Battle of San Jacinto, on April 21, 1836, ending the revolution.
+smart scores: [0.05961209535598755, 0.09343189001083374, 0.05078399181365967]
+stupid scores: [0.09042197465896606, 0.10302269458770752, 0.11171990633010864, 0.10302269458770752, 0.07941794395446777]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is july 27 lunar eclipse visible in usa
+text: The lunar eclipse was completely visible over Eastern Africa, Southern Africa, Southern Asia and Central Asia, seen rising over South America, Western Africa, and Europe, and setting over Eastern Asia, and Australia.
+smart scores: [0.06122303009033203, 0.07804620265960693, 0.03457742929458618]
+stupid scores: [0.0963929295539856, 0.1007317304611206, 0.1523754596710205, 0.1007317304611206, 0.09706366062164307]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is paget's disease of the bone cancer
+text: Paget's disease of bone (commonly known as Paget's disease or historically, osteitis deformans) is a condition involving cellular remodeling and deformity of one or more bones. The affected bones show signs of dysregulated bone remodeling at the microscopic level, specifically excessive bone breakdown and subsequent disorganized new bone formation. These structural changes cause the bone to weaken, which may result in deformity, pain, fracture, or arthritis of associated joints. The exact cause is unknown, although leading theories indicate both genetic and acquired factors (see causes). Paget's disease may affect any one or multiple bones of the body (most commonly pelvis, femur, and lumbar vertebrae, and skull), but never the entire skeleton, and does not spread from bone to bone. Rarely, a bone affected by Paget's disease can transform into a malignant bone cancer.
+smart scores: [0.03489530086517334, 0.027746498584747314, 0.07381916046142578]
+stupid scores: [0.12598735094070435, 0.11404502391815186, 0.08065921068191528, 0.11404502391815186, 0.1822035312652588]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did deion sanders ever win a world series
+text: Sanders played football primarily at cornerback, but also as a kick returner, punt returner, and occasionally wide receiver. He played in the National Football League (NFL) for the Atlanta Falcons, the San Francisco 49ers, the Dallas Cowboys, the Washington Redskins and the Baltimore Ravens, winning the Super Bowl with both the 49ers and the Cowboys. An outfielder in baseball, he played professionally for the New York Yankees, the Atlanta Braves, the Cincinnati Reds and the San Francisco Giants, and participated in the 1992 World Series with the Braves. He attended Florida State University, where he was recognized as a two-time All-American in football, and also played baseball and ran track.
+smart scores: [0.038170456886291504, 0.04035019874572754, 0.06173539161682129]
+stupid scores: [0.11044299602508545, 0.11861401796340942, 0.09160071611404419, 0.11861401796340942, 0.17664122581481934]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: will one tree hill return for season 10
+text: The ninth and final season of One Tree Hill, an American television series created by Mark Schwahn for The WB Television Network. The series was officially renewed by The CW for a ninth season on May 17, 2011; two days later, the network announced that the ninth season would serve as the series' final season. Premiering on January 11, 2012, the series aired its 13 episodes uninterrupted.
+smart scores: [0.9461167454719543, 0.9271581768989563, 0.9130492210388184]
+stupid scores: [0.1276710033416748, 0.11181098222732544, 0.04540896415710449, 0.11181098222732544, 0.10114842653274536]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is vauxhall station in zone 1 or 2
+text: Vauxhall (/ˈvɒksɔːl/, VOK-sawl) is a National Rail, London Underground and London Buses interchange station in central London. It is at the Vauxhall Cross road junction opposite the southern approach to Vauxhall Bridge over the River Thames in the district of Vauxhall. The station is on the boundary of zones 1 and 2 of the London Travelcard area and, although a through station, it is classed as a central London terminus for ticketing purposes.
+smart scores: [0.06262809038162231, 0.03779023885726929, 0.05328369140625]
+stupid scores: [0.12729698419570923, 0.09859782457351685, 0.15310972929000854, 0.09859782457351685, 0.1270924210548401]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did ireland ever win the soccer world cup
+text: Their first appearance in the finals was in Italy at the 1990 FIFA World Cup. 1990 was also their best performance in a major championship, where they reached the quarter finals.
+smart scores: [0.9272754192352295, 0.9577769637107849, 0.8752521872520447]
+stupid scores: [0.09546548128128052, 0.09550058841705322, 0.10629349946975708, 0.09550058841705322, 0.07160407304763794]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is los lobos in the rock and roll hall of fame
+text: On October 9, 2015, Los Lobos was nominated for induction into the Rock and Roll Hall of Fame for the first time.
+smart scores: [0.06417155265808105, 0.07607632875442505, 0.0799301266670227]
+stupid scores: [0.09723758697509766, 0.15058505535125732, 0.04870802164077759, 0.15058505535125732, 0.0684194564819336]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: has any major league baseball team gone undefeated
+text: The 1916 New York Giants hold the record for the longest unbeaten streak in MLB history at 26, with a tie in-between the 14th and 15th win. The record for the longest winning streak by an American League team is held by the 2017 Cleveland Indians at 22. The Chicago Cubs franchise has won 21 games twice, once in 1880 when they were the Chicago White Stockings and once in 1935.
+smart scores: [0.05457836389541626, 0.025475800037384033, 0.04551541805267334]
+stupid scores: [0.09256857633590698, 0.1530628204345703, 0.10885465145111084, 0.1530628204345703, 0.1747637391090393]
+real answer: False
+--------------------------------------------------
+
+
+____BOT____
+--------------------------------------------------
+question: is there a sequel to the journey to the mysterious island
+text: In August 2014, it was announced that Carey Hayes and Chad Hayes are writing the script for a third film. In 2015, it was announced that Brad Peyton and Dwayne Johnson would return to direct and star in the sequel, respectively. It was later announced that there would be two sequels. In January 2018, Johnson stated that although a third Journey film, titled Journey from the Earth to the Moon, was intended, it's development had been cancelled due to a lack of immediate interest and troubles in adapting the novel.
+smart scores: [0.7160366773605347, 0.18460720777511597, 0.49243050813674927]
+stupid scores: [0.8936883211135864, 0.8678036332130432, 0.8956079483032227, 0.8678036332130432, 0.885020911693573]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is fixed cost the same as total cost
+text: If one assumes that the unit variable cost is constant, as in cost-volume-profit analysis developed and used in cost accounting by the accountants, then total cost is linear in volume, and given by: total cost = fixed costs + unit variable cost * amount.
+smart scores: [0.6531648635864258, 0.7537187933921814, 0.5541840195655823]
+stupid scores: [0.8286393880844116, 0.8979593515396118, 0.84296053647995, 0.8979593515396118, 0.8325014114379883]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: has a supreme court justice ever run for president
+text: Charles Evans Hughes Sr. (April 11, 1862 -- August 27, 1948) was an American statesman, Republican politician, and the 11th Chief Justice of the United States. He was also the 36th Governor of New York, the Republican presidential nominee in the 1916 presidential election, and the 44th United States Secretary of State.
+smart scores: [0.719046950340271, 0.37578117847442627, 0.7561826705932617]
+stupid scores: [0.9055615663528442, 0.9104005098342896, 0.9195398688316345, 0.9104005098342896, 0.9089834094047546]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is san juan puerto rico in the caribbean
+text: San Juan, as a settlement of the Spanish Empire, was used by merchant and military ships traveling from Spain as the first stopover in the Americas. Because of its prominence in the Caribbean, a network of fortifications was built to protect the transports of gold and silver from the New World to Europe. Because of the rich cargoes, San Juan became a target of the foreign powers of the time.
+smart scores: [0.49196118116378784, 0.45887428522109985, 0.6648948788642883]
+stupid scores: [0.7865545749664307, 0.7916302680969238, 0.7509316802024841, 0.7916302680969238, 0.8107801675796509]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there going to be a 13th captain underpants book
+text: The series includes 12 books and three spin-offs, and won a Disney Adventures Kids' Choice Award on April 4, 2006. As of 2016, the series had been translated into over 20 languages, with more than 70 million books sold worldwide, including over 50 million in the United States. DreamWorks Animation acquired rights to the series to make an animated feature film adaptation, which was released on June 2, 2017 to positive reviews.
+smart scores: [0.3859397768974304, 0.29695767164230347, 0.39667969942092896]
+stupid scores: [0.8603761196136475, 0.8463358283042908, 0.8163807988166809, 0.8463358283042908, 0.9167810678482056]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is for a few dollars more a sequel
+text: The Dollars Trilogy (Italian: Trilogia del dollaro), also known as the Man with No Name Trilogy, is a film series consisting of three Spaghetti Western films directed by Sergio Leone. The films are titled A Fistful of Dollars (1964), For a Few Dollars More (1965) and The Good, the Bad and the Ugly (1966). They were distributed by United Artists.
+smart scores: [0.5736990571022034, 0.22924023866653442, 0.381233274936676]
+stupid scores: [0.888744592666626, 0.8541161417961121, 0.9198426604270935, 0.8541161417961121, 0.8611400723457336]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is pizza sauce and tomato sauce the same thing
+text: Tomato-garlic sauce is prepared using tomatoes as a main ingredient, and is used in various cuisines and dishes. In Italian cuisine, alla pizzaiola refers to tomato-garlic sauce, which is used on pizza, pasta and meats.
+smart scores: [0.6184695363044739, 0.6292898058891296, 0.4754296541213989]
+stupid scores: [0.8345335721969604, 0.8549326658248901, 0.7443752884864807, 0.8549326658248901, 0.7718098759651184]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is britain still a member of european union
+text: The United Kingdom European Union membership referendum, also known as the EU referendum and the Brexit referendum, took place on 23 June 2016 in the United Kingdom (UK) and Gibraltar to gauge support for the country either remaining a member of, or leaving, the European Union (EU) under the provisions of the European Union Referendum Act 2015 and also the Political Parties, Elections and Referendums Act 2000. The referendum resulted in a simple majority of 51.9% (of people who voted) being in favour of leaving the EU. Although legally the referendum was non-binding, the government of that time had promised to implement the result, and it initiated the official EU withdrawal process on 29 March 2017, which put the UK on course to leave the EU by 30 March 2019, after a period of Brexit negotiations.
+smart scores: [0.49298399686813354, 0.6006649732589722, 0.2594892978668213]
+stupid scores: [0.7848010659217834, 0.8684481978416443, 0.9229428172111511, 0.8684481978416443, 0.755682647228241]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the movie the shape of water based on a book
+text: The idea for The Shape of Water formed during del Toro's breakfast with Daniel Kraus in 2011, with whom he later co-wrote the novel Trollhunters. It shows similarities to the 2015 short film The Space Between Us. It was also primarily inspired by del Toro's childhood memories of seeing Creature from the Black Lagoon and wanting to see the Gill-man and Kay Lawrence (played by Julie Adams) succeed in their romance. When del Toro was in talks with Universal to direct a remake of Creature from the Black Lagoon, he tried pitching a version focused more on the creature's perspective, where the Creature ended up together with the female lead, but the studio executives rejected the concept.
+smart scores: [0.48750317096710205, 0.7829703688621521, 0.71268630027771]
+stupid scores: [0.8662671446800232, 0.8975001573562622, 0.9063491225242615, 0.8975001573562622, 0.9050660133361816]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is jurassic world the sequel to jurassic park
+text: Set 22 years after the events of Jurassic Park, Jurassic World takes place on the same fictional Central American island of Isla Nublar, which is located off the Pacific coast of Costa Rica, where a theme park of cloned dinosaurs has operated for nearly a decade. The park plunges into chaos when a genetically-engineered dinosaur escapes from its enclosure and goes on a rampage.
+smart scores: [0.38752663135528564, 0.2438691258430481, 0.47034263610839844]
+stupid scores: [0.8440143465995789, 0.8776722550392151, 0.8045510649681091, 0.8776722550392151, 0.9008080959320068]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does every real number have a cube root
+text: In mathematics, a cube root of a number x is a number y such that y = x. All real numbers (except zero) have exactly one real cube root and a pair of complex conjugate cube roots, and all nonzero complex numbers have three distinct complex cube roots. For example, the real cube root of 8, denoted √8, is 2, because 2 = 8, while the other cube roots of 8 are −1 + √3i and −1 − √3i. The three cube roots of −27i are
+smart scores: [0.4499649405479431, 0.31529295444488525, 0.48549067974090576]
+stupid scores: [0.8313034176826477, 0.8582639098167419, 0.7375182509422302, 0.8582639098167419, 0.7975188493728638]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is it legal to be a bounty hunter in the us
+text: Bounty hunters may run into serious legal problems if they try to apprehend fugitives outside the United States, where laws treat the re-arrest of any fugitive by private persons as kidnapping, or the bail agent may incur the punishments of some other serious crime if local and international laws are broken by them. While the United States government generally allows the activities of bounty hunters within the United States, the governments in other sovereign nations consider them a felony.
+smart scores: [0.5073246955871582, 0.4674866795539856, 0.2994005084037781]
+stupid scores: [0.8023096323013306, 0.848879873752594, 0.7763295769691467, 0.848879873752594, 0.8225816488265991]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are beef short ribs the same as spare ribs
+text: Beef short ribs are the equivalent of spare ribs in pork, with beef short ribs usually larger and meatier than pork spare ribs.
+smart scores: [0.518418550491333, 0.5430946946144104, 0.12013334035873413]
+stupid scores: [0.8709917664527893, 0.916915237903595, 0.8948567509651184, 0.916915237903595, 0.889342725276947]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the october revolution the same as the bolshevik revolution
+text: The October Revolution (Russian: Октя́брьская револю́ция, tr. Oktyabr'skaya revolyutsiya, IPA: (ɐkˈtjabrjskəjə rjɪvɐˈljutsɨjə)), officially known in Soviet literature as the Great October Socialist Revolution (Вели́кая Октя́брьская социалисти́ческая револю́ция, Velikaya Oktyabr'skaya sotsialističeskaya revolyutsiya), and commonly referred to as Red October, the October Uprising, the Bolshevik Revolution, or the Bolshevik Coup, was a revolution in Russia led by the Bolsheviks and Vladimir Lenin that was instrumental in the larger Russian Revolution of 1917. It took place with an armed insurrection in Petrograd on 7 November (25 October, Old Style) 1917.
+smart scores: [0.8569779992103577, 0.6175791025161743, 0.5097277760505676]
+stupid scores: [0.9177242517471313, 0.8999558091163635, 0.9584065079689026, 0.8999558091163635, 0.9200645685195923]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is baylor college of medicine related to baylor university
+text: In 1969, the college separated from Baylor University and became an independent institution, which allowed it access to federal research funding, changing its name to Baylor College of Medicine. That same year, BCM negotiated with the Texas Legislature to double its class size in order to increase the number of physicians in Texas.
+smart scores: [0.5215123891830444, 0.8064581155776978, 0.5014596581459045]
+stupid scores: [0.8729333877563477, 0.889907956123352, 0.8036075830459595, 0.889907956123352, 0.9089562296867371]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: can you build up immunity to snake venom
+text: There are only a few, if any, practical uses of mithridatism. Venomous snake handler Bill Haast used this method. Snake handlers from Burma are said to tattoo themselves with snake venom for the same reason.
+smart scores: [0.5160290598869324, 0.658798098564148, 0.565507709980011]
+stupid scores: [0.8009036779403687, 0.8490655422210693, 0.8819870352745056, 0.8490655422210693, 0.9095678925514221]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does the hatch act apply to elected officials
+text: The Hatch Act of 1939, officially An Act to Prevent Pernicious Political Activities, is a United States federal law whose main provision prohibits employees in the executive branch of the federal government, except the president, vice-president, and certain designated high-level officials, from engaging in some forms of political activity. It went into law on August 2, 1939. The law was named for Senator Carl Hatch of New Mexico. It was most recently amended in 2012.
+smart scores: [0.5989872217178345, 0.5585619807243347, 0.4846498966217041]
+stupid scores: [0.8606551885604858, 0.8869087100028992, 0.87532639503479, 0.8869087100028992, 0.748971164226532]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is reverse osmosis water the same as deionized
+text: Many reef aquarium keepers use reverse osmosis systems for their artificial mixture of seawater. Ordinary tap water can contain excessive chlorine, chloramines, copper, nitrates, nitrites, phosphates, silicates, or many other chemicals detrimental to the sensitive organisms in a reef environment. Contaminants such as nitrogen compounds and phosphates can lead to excessive and unwanted algae growth. An effective combination of both reverse osmosis and deionization is the most popular among reef aquarium keepers, and is preferred above other water purification processes due to the low cost of ownership and minimal operating costs. Where chlorine and chloramines are found in the water, carbon filtration is needed before the membrane, as the common residential membrane used by reef keepers does not cope with these compounds.
+smart scores: [0.6758057475090027, 0.4965503215789795, 0.4705163240432739]
+stupid scores: [0.855932891368866, 0.8842287063598633, 0.879645824432373, 0.8842287063598633, 0.8700203895568848]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: are pokemon gold silver and crystal the same
+text: Pokémon Gold Version and Silver Version are the second installments of the Pokémon series of role-playing video games, developed by Game Freak and published by Nintendo for the Game Boy Color. They were released in Japan in 1999, Australia and North America in 2000, and Europe in 2001. Pokémon Crystal, a special edition, was released roughly a year later in each region. In 2009, Game Freak remade Gold and Silver for the Nintendo DS as Pokémon HeartGold and SoulSilver.
+smart scores: [0.5121497511863708, 0.5646392107009888, 0.5535113215446472]
+stupid scores: [0.874749481678009, 0.8373020887374878, 0.8980874419212341, 0.8373020887374878, 0.8891032338142395]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: was the lord of the rings originally one book
+text: The work was initially intended by Tolkien to be one volume of a two-volume set, the other to be The Silmarillion, but this idea was dismissed by his publisher. For economic reasons, The Lord of the Rings was published in three volumes over the course of a year from 29 July 1954 to 20 October 1955. The three volumes were titled The Fellowship of the Ring, The Two Towers and The Return of the King. Structurally, the novel is divided internally into six books, two per volume, with several appendices of background material included at the end. Some editions combine the entire work into a single volume. The Lord of the Rings has since been reprinted numerous times and translated into 38 languages.
+smart scores: [0.5166394114494324, 0.4961426258087158, 0.47413837909698486]
+stupid scores: [0.8554725646972656, 0.8753238916397095, 0.7902942299842834, 0.8753238916397095, 0.8792055249214172]
+real answer: False
+--------------------------------------------------

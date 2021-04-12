@@ -1,0 +1,424 @@
+___TOP___
+--------------------------------------------------
+question: do anne and gilbert get together in the books
+text: As the series ends, it is 1919 and they are happy; Gilbert is fifty-five and still sincerely in love with Anne of Green Gables.
+smart scores: [0.5153247117996216, 0.5009604096412659, 0.4982467293739319]
+stupid scores: [0.47777336835861206, 0.506051242351532, 0.555160403251648, 0.506051242351532, 0.5609557032585144]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are babies born with 2 sets of teeth
+text: Tooth development is the complex process by which teeth form from embryonic cells, grow, and erupt into the mouth. Although many diverse species have teeth, their development is largely the same as in humans. For human teeth to have a healthy oral environment, enamel, dentin, cementum, and the periodontium must all develop during appropriate stages of fetal development. Primary teeth start to form in the development of the embryo between the sixth and eighth weeks, and permanent teeth begin to form in the twentieth week. If teeth do not start to develop at or near these times, they will not develop at all.
+smart scores: [0.5526536107063293, 0.48011451959609985, 0.4206100106239319]
+stupid scores: [0.5459953546524048, 0.5545276403427124, 0.39372241497039795, 0.5545276403427124, 0.5939393639564514]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can minors drink with parents in new york
+text: In response to the National Minimum Drinking Age Act in 1984, which reduced by up to 10% the federal highway funding of any state which did not have a minimum purchasing age of 21, the New York Legislature raised the drinking age from 19 to 21, effective December 1, 1985. (The drinking age had been 18 for many years before the first raise on December 4th, 1982, to 19.) Persons under 21 are prohibited from purchasing alcohol or possessing alcohol with the intent to consume, unless the alcohol was given to that person by their parent or legal guardian. There is no law prohibiting where people under 21 may possess or consume alcohol that was given to them by their parents. Persons under 21 are prohibited from having a blood alcohol level of 0.02% or higher while driving.
+smart scores: [0.5521368384361267, 0.40247035026550293, 0.5964257121086121]
+stupid scores: [0.5268372297286987, 0.45271235704421997, 0.6314034461975098, 0.45271235704421997, 0.5225344896316528]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is canada a state in the united states
+text: In the United States, the term ``the 51st state'' when applied to Canada can serve to highlight the similarities and close relationship between the United States and Canada. Sometimes the term is used disparagingly, intended to deride Canada as an unimportant neighbor. In the Quebec general election, 1989, the political party Parti 51 ran 11 candidates on a platform of Quebec seceding from Canada to join the United States (with its leader, André Perron, claiming Quebec could not survive as an independent nation). The party attracted just 3,846 votes across the province, 0.11% of the total votes cast. In comparison, the other parties in favour of sovereignty of Quebec in that election got 40.16% (PQ) and 1.22% (NPDQ).
+smart scores: [0.4594792127609253, 0.6000650525093079, 0.7132770419120789]
+stupid scores: [0.5519225001335144, 0.49319541454315186, 0.47596919536590576, 0.49319541454315186, 0.38495492935180664]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the dominican republic a part of mexico
+text: The Dominican Republic and Mexico are two Latin American nations that were once colonized by the Spanish empire. After both nations gained independence from Spain; diplomatic relations between the Dominican Republic and Mexico were established on 23 July 1888. In March 1890, a treaty of 'Friendship, Navigation and Commerce' was signed between both nations. In 1929, resident diplomatic missions were established in each other's capitals, respectively.
+smart scores: [0.4036023020744324, 0.5083438158035278, 0.2673608660697937]
+stupid scores: [0.3274882435798645, 0.5077146887779236, 0.4788304567337036, 0.5077146887779236, 0.5150770545005798]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is a father in law considered a relative
+text: A parent-in-law is a person who has a legal affinity with another by being the parent of the other's spouse. Many cultures and legal systems impose duties and responsibilities on persons connected by this relationship. A person is a son-in-law or daughter-in-law to the parents of the spouse, who are in turn also the parents of those sisters-in-law and brothers-in-law (if any) who are siblings of the spouse (as opposed to spouses of siblings). Together the members of this family affinity group are called the in-laws.
+smart scores: [0.6674936413764954, 0.411396861076355, 0.43666982650756836]
+stupid scores: [0.45352035760879517, 0.49581778049468994, 0.32024186849594116, 0.49581778049468994, 0.48837924003601074]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are kidneys on both sides of your body
+text: In humans, the kidneys are located high in the abdominal cavity, one on each side of the spine, and lie in a retroperitoneal position at a slightly oblique angle. The asymmetry within the abdominal cavity, caused by the position of the liver, typically results in the right kidney being slightly lower and smaller than the left, and being placed slightly more to the middle than the left kidney. The left kidney is approximately at the vertebral level T12 to L3, and the right is slightly lower. The right kidney sits just below the diaphragm and posterior to the liver. The left sits below the diaphragm and posterior to the spleen. On top of each kidney is an adrenal gland. The upper parts of the kidneys are partially protected by the 11th and 12th ribs. Each kidney, with its adrenal gland is surrounded by two layers of fat: the perirenal fat present between renal fascia and renal capsule and pararenal fat superior to the renal fascia.
+smart scores: [0.6310729384422302, 0.5805931091308594, 0.4533722400665283]
+stupid scores: [0.4688122868537903, 0.5564252734184265, 0.5613808631896973, 0.5564252734184265, 0.6092696785926819]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is a tablespoon bigger than a dessert spoon
+text: As a unit of culinary measure, a level dessertspoon (dstspn.) equals two teaspoons, or 10 milliliters, whereas a U.S. tablespoon is three teaspoons (15ml or half a fluid ounce) in the U.S., and two dessertspoons, i.e. four teaspoons (20ml or two thirds of a fluid ounce) in Britain and Australia, which is the old British standard. For dry ingredients, a rounded or heaped teaspoonful is often specified instead.
+smart scores: [0.5187468528747559, 0.4360027313232422, 0.655288815498352]
+stupid scores: [0.6413519978523254, 0.501604437828064, 0.5239981412887573, 0.501604437828064, 0.31882351636886597]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there only 1 season of the terror
+text: The Terror is an American anthology horror drama television series that premiered on AMC on March 25, 2018. The series is named after Dan Simmons' 2007 best-selling novel, a fictionalized account of Captain Sir John Franklin's lost expedition to the Arctic in 1845--1848, which serves as the basis for the series' first season. On June 22, 2018, it was announced that AMC had renewed the series for a ten-episode second season set to premiere in 2019.
+smart scores: [0.349418044090271, 0.5770400166511536, 0.3796553611755371]
+stupid scores: [0.5119835734367371, 0.4871189594268799, 0.694482147693634, 0.4871189594268799, 0.48446810245513916]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is canada and australia part of the uk
+text: Canada maintains a High Commission in London. The United Kingdom, in turn, maintains a High Commission in Ottawa, along with Consulates-General in Toronto, Montreal, Calgary, and Vancouver. In recent years Canada has sought closer Commonwealth cooperation, with the announcement in 2012 of joint diplomatic missions with the UK and of the intention of extending the scheme to include Australia and New Zealand, both of whom already share a head of state with Canada. In September 2012, Canada and the United Kingdom signed a Memorandum of Understanding on diplomatic cooperation, which promotes the co-location of embassies, the joint provision of consular services, and common crisis response. The project has been criticised by some Canadian politicians as giving the appearance of a common foreign policy and is seen by many in the UK as an alternative and counterweight to EU integration.
+smart scores: [0.5631791353225708, 0.5441911220550537, 0.25850385427474976]
+stupid scores: [0.5700550675392151, 0.5042345523834229, 0.6712705492973328, 0.5042345523834229, 0.4989597201347351]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the caribbean in north america or south america
+text: North America covers an area of about 24,709,000 square kilometers (9,540,000 square miles), about 16.5% of the earth's land area and about 4.8% of its total surface. North America is the third largest continent by area, following Asia and Africa, and the fourth by population after Asia, Africa, and Europe. In 2013, its population was estimated at nearly 579 million people in 23 independent states, or about 7.5% of the world's population, if nearby islands (most notably the Caribbean) are included.
+smart scores: [0.5934244990348816, 0.5464107990264893, 0.3829934000968933]
+stupid scores: [0.5460318326950073, 0.5062142610549927, 0.4562609791755676, 0.5062142610549927, 0.25330889225006104]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is west virginia and virginia the same state
+text: West Virginia (/vərˈdʒɪniə/ ( listen)) is a state located in the Appalachian region in the Southern United States and in addition is also considered to be a part of the Middle Atlantic States. It is bordered by Virginia to the southeast, Kentucky to the southwest, Ohio to the northwest, and Pennsylvania and Maryland to the northeast. West Virginia is the 41st largest state by area, and is ranked 38th in population. The capital and largest city is Charleston.
+smart scores: [0.47696131467819214, 0.5900369882583618, 0.2575468420982361]
+stupid scores: [0.5533836483955383, 0.4511091709136963, 0.45659250020980835, 0.4511091709136963, 0.5588818788528442]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: are a meter and a yard the same length
+text: The yard (abbreviation: yd) is an English unit of length, in both the British imperial and US customary systems of measurement, that comprises 3 feet or 36 inches. It is by international agreement in 1959 standardized as exactly 0.9144 meters. A metal yardstick originally formed the physical standard from which all other units of length were officially derived in both English systems.
+smart scores: [0.44076985120773315, 0.43167173862457275, 0.34438443183898926]
+stupid scores: [0.40234774351119995, 0.43389320373535156, 0.5166861414909363, 0.43389320373535156, 0.5820742845535278]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is footlocker and champs owned by the same company
+text: Although established in 1974, and founded as a separate company in 1988, Foot Locker is a successor corporation to the F.W. Woolworth Company (``Woolworth's''), as many of its freestanding stores were former Woolworth's locations. The company operates the eponymous ``Foot Locker'' chain of athletic footwear retail outlets (along with ``Kids Foot Locker'' and ``Lady Foot Locker'' stores), and other athletic-based divisions including Champs Sports, Footaction USA, House of Hoops, and Eastbay/Footlocker.com, which owns the rights to Final Score. The company is also famous for its employees' uniforms at its flagship Foot Locker chain, resembling those of referees.
+smart scores: [0.39328956604003906, 0.49132370948791504, 0.7625952363014221]
+stupid scores: [0.5077577233314514, 0.5322849750518799, 0.5194757580757141, 0.5322849750518799, 0.6442396640777588]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is any part of lake michigan in canada
+text: Though the five lakes lie in separate basins, they form a single, naturally interconnected body of fresh water, within the Great Lakes Basin. They form a chain connecting the east-central interior of North America to the Atlantic Ocean. From the interior to the outlet at the Saint Lawrence River, water flows from Superior to Huron and Michigan, southward to Erie, and finally northward to Lake Ontario. The lakes drain a large watershed via many rivers, and are studded with approximately 35,000 islands. There are also several thousand smaller lakes, often called ``inland lakes,'' within the basin. The surface area of the five primary lakes combined is roughly equal to the size of the United Kingdom, while the surface area of the entire basin (the lakes and the land they drain) is about the size of the UK and France combined. Lake Michigan is the only one of the Great Lakes that is located entirely within the United States; the others form a water boundary between the United States and Canada. The lakes are divided among the jurisdictions of the Canadian province of Ontario and the U.S. states of Michigan, Wisconsin, Minnesota, Illinois, Indiana, Ohio, Pennsylvania, and New York. Both Ontario and Michigan include in their boundaries portions of four of the lakes: Ontario does not border Lake Michigan, and Michigan does not border Lake Ontario. New York and Wisconsin's jurisdictions extend into two lakes, and each of the remaining states into one of the lakes.
+smart scores: [0.261552095413208, 0.5125025510787964, 0.6322212219238281]
+stupid scores: [0.44208061695098877, 0.5246502757072449, 0.61711585521698, 0.5246502757072449, 0.466532826423645]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is new jersey a suburb of new york city
+text: The New York metropolitan area, also referred to as the Tri-State Area, is the largest metropolitan area in the world by urban landmass, at 4,495 sq mi (11,640 km). The metropolitan area includes New York City (the most populous city in the United States), Long Island, and the Mid and Lower Hudson Valley in the state of New York; the five largest cities in New Jersey: Newark, Jersey City, Paterson, Elizabeth, and Edison, and their vicinities; six of the seven largest cities in Connecticut: Bridgeport, New Haven, Stamford, Waterbury, Norwalk, and Danbury, and their vicinities.
+smart scores: [0.560347318649292, 0.5002637505531311, 0.29947370290756226]
+stupid scores: [0.6783794164657593, 0.5268151760101318, 0.4442793130874634, 0.5268151760101318, 0.5992924571037292]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does anyone die in the movie forever my girl
+text: In Saint Augustine, Louisiana, Josie is left at the altar by her fiancé Liam. Eight years later, Liam is a successful country singer. The day after a concert in New Orleans, Liam learns that Mason, one of his groomsmen from the wedding, has been killed in a car accident. Liam returns to St. Augustine and attends Mason's funeral. Although Liam attempts to be discreet, Josie recognizes him. After Mason's burial, Josie approaches Liam and punches him in the stomach.
+smart scores: [0.5037779211997986, 0.42484861612319946, 0.5441664457321167]
+stupid scores: [0.7127435207366943, 0.5980936288833618, 0.5834552645683289, 0.5980936288833618, 0.5327469706535339]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are research and scientific method related to one another
+text: The question can refer to the explanation of a specific observation, as in ``Why is the sky blue?'' but can also be open-ended, as in ``How can I design a drug to cure this particular disease?'' This stage frequently involves finding and evaluating evidence from previous experiments, personal scientific observations or assertions, as well as the work of other scientists. If the answer is already known, a different question that builds on the evidence can be posed. When applying the scientific method to research, determining a good question can be very difficult and it will affect the outcome of the investigation.
+smart scores: [0.5636619329452515, 0.7987515926361084, 0.581015408039093]
+stupid scores: [0.4958840012550354, 0.535567045211792, 0.40112823247909546, 0.535567045211792, 0.5338197350502014]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is new york in the new england region
+text: New England is a geographical region comprising six states of the northeastern United States: Maine, Vermont, New Hampshire, Massachusetts, Rhode Island, and Connecticut. It is bordered by the state of New York to the west and by the Canadian provinces of New Brunswick and Quebec to the northeast and north, respectively. The Atlantic Ocean is to the east and southeast, and Long Island Sound is to the south. Boston is New England's largest city as well as the capital of Massachusetts. The largest metropolitan area is Greater Boston, which also includes Worcester, Massachusetts (the second-largest city in New England), Manchester, New Hampshire (the largest city in New Hampshire), and Providence, Rhode Island (the capital and largest city of Rhode Island), with nearly a third of the entire region's population.
+smart scores: [0.6501022577285767, 0.6316251754760742, 0.3048422932624817]
+stupid scores: [0.43959611654281616, 0.5174871683120728, 0.5651625394821167, 0.5174871683120728, 0.4848838448524475]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is the tortoise and the hare a fairy tale
+text: ``The Tortoise and the Hare'' is one of Aesop's Fables and is numbered 226 in the Perry Index. The account of a race between unequal partners has attracted conflicting interpretations. It is itself a variant of a common folktale theme in which ingenuity and trickery (rather than doggedness) are employed to overcome a stronger opponent.
+smart scores: [0.5432924032211304, 0.7791712284088135, 0.3781313896179199]
+stupid scores: [0.3741993308067322, 0.49147140979766846, 0.4590693712234497, 0.49147140979766846, 0.5473238229751587]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is boiling point a characteristic property of matter
+text: A characteristic property is a chemical or physical property that helps identify and classify substances. The characteristic properties of a substance are always the same whether the sample being observed is large or small. Examples of characteristic properties include freezing/melting point, boiling/condensing point, density, viscosity and solubility.
+smart scores: [0.5900523662567139, 0.43532508611679077, 0.3879467248916626]
+stupid scores: [0.3293073773384094, 0.42645829916000366, 0.408791720867157, 0.42645829916000366, 0.5011633634567261]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is theory of a deadman changing their name
+text: With the release of Wake Up Call, the band decided to undergo a name change, shortening it to Theory. The group cited that discussions involving the name of their band with people who are unfamiliar with their music was challenging. Connolly equated it to rock band Red Hot Chili Peppers frequently abbreviating their name to Chili Peppers.
+smart scores: [0.7088079452514648, 0.4133192300796509, 0.709021270275116]
+stupid scores: [0.45324134826660156, 0.4939834475517273, 0.45525097846984863, 0.4939834475517273, 0.42301225662231445]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is ellis island connected to the statue of liberty
+text: Since the September 11 attacks in 2001, the island is guarded by patrols of the United States Park Police Marine Patrol Unit. Public access is by ferry from either Communipaw Terminal in Liberty State Park or from the Battery at the southern tip of Manhattan. The ferry operator, Hornblower Cruises and Events, also provides service to the nearby Statue of Liberty. A bridge built for transporting materials and personnel during restoration projects connects Ellis Island with Liberty State Park but is not open to the public. The city of New York and the private ferry operator at the time opposed proposals to use it or replace it with a pedestrian bridge.
+smart scores: [0.29058343172073364, 0.4110225439071655, 0.49672454595565796]
+stupid scores: [0.4274405837059021, 0.6255453824996948, 0.4630510210990906, 0.6255453824996948, 0.4755058288574219]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does it cost money to get cash back
+text: Additionally, although fees for debit card ATM usage are very rare in countries such as the UK, where cashback originated , this is not the case in some other countries. In Canada and the United States, fees of $1~2 are typical when using an ATM from a different bank than the one with which the customer has an account. The fees in some other countries are even higher. In Germany, for instance, usual fees are €4~5 when using an ATM of another bank network than the one of his bank. This gives rise to another potential cashback advantage for the consumer: by making use of the cashback procedure, this ATM fee can be avoided for the cardholder.
+smart scores: [0.4268137812614441, 0.3483462929725647, 0.47359323501586914]
+stupid scores: [0.6103112697601318, 0.4826759099960327, 0.7508354187011719, 0.4826759099960327, 0.5414765477180481]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is somewhere over the rainbow a love song
+text: About five minutes into the film, Dorothy sings the song after failing to get Aunt Em, Uncle Henry, and the farmhands to listen to her relate an unpleasant incident involving her dog, Toto, and the town spinster, Miss Gulch (Margaret Hamilton). Aunt Em tells her to ``find yourself a place where you won't get into any trouble''. This prompts her to walk off by herself, musing to Toto, ``Some place where there isn't any trouble. Do you suppose there is such a place, Toto? There must be. It's not a place you can get to by a boat, or a train. It's far, far away. Behind the moon, beyond the rain...'', at which point she begins singing.
+smart scores: [0.7222384810447693, 0.4946404695510864, 0.6799200177192688]
+stupid scores: [0.5110193490982056, 0.6133591532707214, 0.5211433172225952, 0.6133591532707214, 0.45676082372665405]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: is a yard the same as a meter
+text: The yard (abbreviation: yd) is an English unit of length, in both the British imperial and US customary systems of measurement, that comprises 3 feet or 36 inches. It is by international agreement in 1959 standardized as exactly 0.9144 meters. A metal yardstick originally formed the physical standard from which all other units of length were officially derived in both English systems.
+smart scores: [0.6884854435920715, 0.5178672075271606, 0.6730446815490723]
+stupid scores: [0.4459260106086731, 0.5629164576530457, 0.4817538261413574, 0.5629164576530457, 0.6335246562957764]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: do salted duck eggs need to be cooked
+text: Salted duck eggs are normally boiled or steamed before being peeled and eaten as a condiment to congee or cooked with other foods as a flavoring. The egg white has a sharp, salty taste. The orange red yolk is rich, fatty, and less salty. The yolk is prized and is used in Chinese mooncakes to symbolize the moon.
+smart scores: [0.5673663020133972, 0.17643529176712036, 0.5187351703643799]
+stupid scores: [0.3607115149497986, 0.5740309357643127, 0.5111894607543945, 0.5740309357643127, 0.5138856768608093]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is the bank of england a private company
+text: The Bank of England is the central bank of the United Kingdom and the model on which most modern central banks have been based. Established in 1694 to act as the English Government's banker, and still one of the bankers for the Government of the United Kingdom, it is the world's eighth-oldest bank. It was privately owned by stockholders from its foundation in 1694 until it was nationalised in 1946.
+smart scores: [0.445003867149353, 0.72296142578125, 0.7396109104156494]
+stupid scores: [0.4732118844985962, 0.48267871141433716, 0.5905217528343201, 0.48267871141433716, 0.5563042163848877]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: does it matter which number comes first in a ratio
+text: In mathematics, a ratio is a relationship between two numbers indicating how many times the first number contains the second. For example, if a bowl of fruit contains eight oranges and six lemons, then the ratio of oranges to lemons is eight to six (that is, 8:6, which is equivalent to the ratio 4:3). Similarly, the ratio of lemons to oranges is 6:8 (or 3:4) and the ratio of oranges to the total amount of fruit is 8:14 (or 4:7).
+smart scores: [0.6611728668212891, 0.5132703185081482, 0.7612215876579285]
+stupid scores: [0.5987985134124756, 0.553876519203186, 0.41138750314712524, 0.553876519203186, 0.5151979923248291]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can you call the police with no sim
+text: Because of loop disconnect dialing, attention was devoted to making the numbers difficult to dial accidentally by making them involve long sequences of pulses, such as with the UK 999 emergency number. That said, the real reason that ``999' was chosen is that the preferred ``000'' and ``111'' could not be used: ``111'' dialing could accidentally take place when phone lines were in too close proximity to each other, and ``0'' was already in use by the operator. Subscribers, as they were called then, were even given instructions on how to find the number ``9'' on the dial in darkened, or smoke-filled, rooms, by locating and placing the first finger in the ``0'' and the second in the ``9'', then removing the first when actually dialling. However, in modern times, where repeated sequences of numbers are easily accidentally dialled on mobile phones, this is problematic, as mobile phones will dial an emergency number while the keypad is locked or even without a SIM card. Some people have reported accidentally dialling 112 by loop-disconnect for various technical reasons, including while working on extension telephone wiring, and point to this as a disadvantage of the 112 emergency number, which takes only four loop disconnects to activate.
+smart scores: [0.5661302804946899, 0.36754268407821655, 0.39603060483932495]
+stupid scores: [0.535376250743866, 0.6466678977012634, 0.47049427032470703, 0.6466678977012634, 0.5855848789215088]
+real answer: True
+--------------------------------------------------
+
+
+____BOT____
+--------------------------------------------------
+question: is rocky balboa in the boxing hall of fame
+text: In 2011, Sylvester Stallone was inducted into the International Boxing Hall of Fame for his work on the Rocky Balboa character, having ``entertained and inspired boxing fans from around the world''. Additionally, Stallone was awarded the Boxing Writers Association of America award for ``Lifetime Cinematic Achievement in Boxing.''
+smart scores: [0.9540308117866516, 0.9712687134742737, 0.952563464641571]
+stupid scores: [0.910876989364624, 0.9181133508682251, 0.9455031752586365, 0.9181133508682251, 0.9373180866241455]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has sweden ever been in a world cup final
+text: Sweden have been one of the more successful national teams in the history of the World Cup, having reached 4 semi-finals, and becoming runners-up on home ground in 1958. They have been present at 11 out of 20 World Cups by 2014.
+smart scores: [0.03761178255081177, 0.031772732734680176, 0.03988105058670044]
+stupid scores: [0.08858096599578857, 0.08306574821472168, 0.06491053104400635, 0.08306574821472168, 0.06003516912460327]
+real answer: False
+--------------------------------------------------
+--------------------------------------------------
+question: did england ever win the soccer world cup
+text: The 1966 FIFA World Cup was the eighth FIFA World Cup and was held in England from 11 to 30 July 1966. England beat West Germany 4--2 in the final, winning the Jules Rimet Trophy. It is England's only FIFA World Cup title. They were the fifth nation to win and the third host nation to win after Uruguay in 1930 and Italy in 1934.
+smart scores: [0.9723095297813416, 0.9696933627128601, 0.9685917496681213]
+stupid scores: [0.9031565189361572, 0.917107880115509, 0.9446570873260498, 0.917107880115509, 0.9195668697357178]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did england host the world cup in 1966
+text: The 1966 FIFA World Cup was the eighth FIFA World Cup and was held in England from 11 to 30 July 1966. England beat West Germany 4--2 in the final, winning the Jules Rimet Trophy. It is England's only FIFA World Cup title. They were the fifth nation to win and the third host nation to win after Uruguay in 1930 and Italy in 1934.
+smart scores: [0.9687060713768005, 0.9676369428634644, 0.968111515045166]
+stupid scores: [0.9070611000061035, 0.917827844619751, 0.9440344572067261, 0.917827844619751, 0.9224013090133667]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a second season of this is us
+text: The second season of the American television series This Is Us continues to follow the lives and connections of the Pearson family across several time periods. The season was produced by Rhode Island Ave. Productions, Zaftig Films, and 20th Century Fox Television, with Dan Fogelman, Isaac Aptaker, and Elizabeth Berger serving as showrunners.
+smart scores: [0.9800933003425598, 0.9845427870750427, 0.977807343006134]
+stupid scores: [0.9009791016578674, 0.8955355882644653, 0.9546224474906921, 0.8955355882644653, 0.9274256825447083]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: can you take a right turn on a red light
+text: It is commonly known as a right turn on red (or simply right on red) in countries that drive on the right side of the road, or a left turn on red in countries which drive on the left side of the road.
+smart scores: [0.9741560816764832, 0.9832714200019836, 0.9724875688552856]
+stupid scores: [0.8874392509460449, 0.9166513085365295, 0.936790943145752, 0.9166513085365295, 0.929372251033783]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is it possible to do a uterus transplant
+text: Uterine transplantation starts with the uterus retrieval surgery on the donor. Working techniques for this exist for animals, including primates and more recently humans. The recovered uterus may need to be stored, for example for transportation to the location of the recipient. Studies on cold-ischemia/eperfusion indicate an ischemic tolerance of more than 24 hours.
+smart scores: [0.9798539280891418, 0.9826813340187073, 0.9743399620056152]
+stupid scores: [0.8976565599441528, 0.9059150815010071, 0.9380391240119934, 0.9059150815010071, 0.9371834397315979]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did they use bayonets in the civil war
+text: During the American Civil War (1861--65) the bayonet was found to be responsible for less than 1% of battlefield casualties, a hallmark of modern warfare. The use of bayonet charges to force the enemy to retreat was very successful in numerous small unit engagements at short range in the American Civil War, as most troops would retreat when charged while reloading (which could take up to a minute with loose powder even for trained troops). Although such charges inflicted few casualties, they often decided short engagements, and tactical possession of important defensive ground features. Additionally, bayonet drill could be used to rally men temporarily discomfited by enemy fire.
+smart scores: [0.9792531728744507, 0.9810007214546204, 0.9739514589309692]
+stupid scores: [0.9111300706863403, 0.9085772037506104, 0.9537243247032166, 0.9085772037506104, 0.9120376706123352]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has a keeper ever won the ballon d'or
+text: The 1963 Ballon d'Or, given to the best football player in Europe as judged by a panel of sports journalists from UEFA member countries, was awarded to Lev Yashin, the first, and as of 2018, the only goalkeeper to win this award. Also he became the first Soviet and Russian national to win the trophy.
+smart scores: [0.971724808216095, 0.9737756848335266, 0.9653960466384888]
+stupid scores: [0.9148268103599548, 0.9104545712471008, 0.9483155608177185, 0.9104545712471008, 0.9360374808311462]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does canada have a men's national soccer team
+text: The Canada men's national soccer team (French: Équipe du Canada de soccer masculin) represents Canada in international soccer competitions at the senior men's level. They are overseen by the Canadian Soccer Association and compete in the Confederation of North, Central American and Caribbean Association Football (CONCACAF).
+smart scores: [0.9779936075210571, 0.9846718907356262, 0.976250946521759]
+stupid scores: [0.9024892449378967, 0.9077382683753967, 0.9440351128578186, 0.9077382683753967, 0.930133581161499]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a opening ceremony for world cup
+text: The opening ceremony took place on Thursday, 14 June 2018, at the Luzhniki Stadium in Moscow, preceding the opening match of the tournament between hosts Russia and Saudi Arabia.
+smart scores: [0.979914128780365, 0.9762566089630127, 0.9728097915649414]
+stupid scores: [0.910991370677948, 0.9183047413825989, 0.9269654154777527, 0.9183047413825989, 0.9294927716255188]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such a thing as a turkey vulture
+text: The turkey vulture (Cathartes aura), also known in some North American regions as the turkey buzzard (or just buzzard), and in some areas of the Caribbean as the John crow or carrion crow, is the most widespread of the New World vultures. One of three species in the genus Cathartes of the family Cathartidae, the turkey vulture ranges from southern Canada to the southernmost tip of South America. It inhabits a variety of open and semi-open areas, including subtropical forests, shrublands, pastures, and deserts.
+smart scores: [0.9796096682548523, 0.9841640591621399, 0.976905345916748]
+stupid scores: [0.9018679261207581, 0.9078445434570312, 0.9450727105140686, 0.9078445434570312, 0.9357072710990906]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a garbage patch in the pacific ocean
+text: The Great Pacific garbage patch, also described as the Pacific trash vortex, is a gyre of marine debris particles in the central North Pacific Ocean discovered between 1985 and 1988. It is located roughly between 135°W to 155°W and 35°N to 42°N. The collection of plastic, floating trash halfway between Hawaii and California extends over an indeterminate area of widely varying range depending on the degree of plastic concentration used to define the affected area.
+smart scores: [0.9783754944801331, 0.979083240032196, 0.9750165939331055]
+stupid scores: [0.914297878742218, 0.9163528084754944, 0.9347851872444153, 0.9163528084754944, 0.9304638504981995]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has anyone won two oscars in one night
+text: This is a list of people have won multiple Academy Awards in a single year in the standard competitive categories. To date, a total of 63 individuals have achieved this feat on 74 distinct occasions with the multiple winners having won more than two awards that year, the record belonging to Walt Disney, who won four academy awards in 1953. Of these, nine individuals have achieved this feat on more than one occasion. This list is current as of the 89th Academy Awards ceremony held on February 26, 2017.
+smart scores: [0.9745070338249207, 0.9773626923561096, 0.9754282832145691]
+stupid scores: [0.9195823669433594, 0.9214909672737122, 0.9290156364440918, 0.9214909672737122, 0.928707480430603]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has australia ever been in a world cup final
+text: The Australia national soccer team, nicknamed the Socceroos, has represented Australia at the FIFA World Cup finals on five occasions: in 1974, 2006, 2010, 2014 and 2018.
+smart scores: [0.977486252784729, 0.981590747833252, 0.9736701846122742]
+stupid scores: [0.9103997349739075, 0.9109786152839661, 0.9466185569763184, 0.9109786152839661, 0.9403112530708313]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a train station in zurich airport
+text: Zürich Airport railway station (German: Bahnhof Zürich Flughafen) is a railway station serving Zürich Airport in Switzerland. The station is located underneath the Airport Centre, the main ground-side passenger terminal of the airport, which is in the canton of Zürich and the municipality of Kloten.
+smart scores: [0.979574978351593, 0.980027973651886, 0.9744631052017212]
+stupid scores: [0.9035944938659668, 0.9191791415214539, 0.9494761228561401, 0.9191791415214539, 0.9278634190559387]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has australia ever been in the world cup
+text: The Australia national soccer team, nicknamed the Socceroos, has represented Australia at the FIFA World Cup finals on five occasions: in 1974, 2006, 2010, 2014 and 2018.
+smart scores: [0.977807343006134, 0.9813807606697083, 0.9725854396820068]
+stupid scores: [0.9120996594429016, 0.9105523228645325, 0.9502876400947571, 0.9105523228645325, 0.9404541254043579]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did the stock market crash of 1929 caused the great depression
+text: The Wall Street Crash of 1929, also known as Black Tuesday (October 29), the Great Crash, or the Stock Market Crash of 1929, began on October 24, 1929 (``Black Thursday''), and was the most devastating stock market crash in the history of the United States, when taking into consideration the full extent and duration of its after effects. The crash, which followed the London Stock Exchange's crash of September, signalled the beginning of the 12-year Great Depression that affected all Western industrialized countries.
+smart scores: [0.9731312990188599, 0.9809975028038025, 0.968643307685852]
+stupid scores: [0.922999382019043, 0.9242029190063477, 0.9286467432975769, 0.9242029190063477, 0.9391367435455322]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a medical school in las vegas
+text: University of Nevada, Las Vegas (UNLV) School of Medicine, is an academic division of the University of Nevada, Las Vegas (UNLV) with 60 students matriculated on July 17, 2017. The students began their education with a 6 week EMT course. The school is the first to grant the Doctor of Medicine (MD) degree in Southern Nevada. The school uses facilities in the University Medical Center of Southern Nevada (UMCSN) clinical building at the Las Vegas Medical District.
+smart scores: [0.9791161417961121, 0.9809603691101074, 0.9772890210151672]
+stupid scores: [0.9047979712486267, 0.9165791869163513, 0.9599698185920715, 0.9165791869163513, 0.9274500012397766]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: are there dolphins in the north atlantic ocean
+text: The Atlantic white-sided dolphin (Lagenorhynchus acutus) is a distinctively coloured dolphin found in the cool to temperate waters of the North Atlantic Ocean.
+smart scores: [0.9821403622627258, 0.9835644960403442, 0.9716756343841553]
+stupid scores: [0.9140251874923706, 0.9225945472717285, 0.9394994974136353, 0.9225945472717285, 0.932344377040863]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such a thing as garlic allergy
+text: Garlic allergy or allergic contact dermatitis to garlic is a common inflammatory skin condition caused by contact with garlic oil or dust. It mostly affects people who cut and handle fresh garlic, such as chefs, and presents on the tips of the thumb, index and middle fingers of the non-dominant hand (which typically hold garlic bulbs during the cutting). The affected fingertips show an asymmetrical pattern of fissure as well as thickening and shedding of the outer skin layers, which may progress to second- or third-degree burn of injured skin.
+smart scores: [0.9817371368408203, 0.98419189453125, 0.9756544828414917]
+stupid scores: [0.9132055044174194, 0.9166913032531738, 0.9522064328193665, 0.9166913032531738, 0.9280610084533691]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is steve blass in the hall of fame
+text: He was inducted into the Kinston Professional Baseball Hall of Fame in 1997.
+smart scores: [0.9669111371040344, 0.9760270714759827, 0.9560021162033081]
+stupid scores: [0.9246104955673218, 0.9223282933235168, 0.9588364362716675, 0.9223282933235168, 0.9417015910148621]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: does northern ireland have a world cup team
+text: The Northern Ireland national football team have appeared in the finals of the FIFA World Cup on three occasions.
+smart scores: [0.9769521951675415, 0.9824821949005127, 0.9670192003250122]
+stupid scores: [0.9223546385765076, 0.9178615808486938, 0.9489436745643616, 0.9178615808486938, 0.9382084608078003]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such a thing as spring fever
+text: Spring fever is any of a number of mood, physical, or behavioral changes, which may be experienced coinciding with the arrival of spring, particularly restlessness, laziness, and even amorousness.
+smart scores: [0.9804270267486572, 0.9854031801223755, 0.9769272804260254]
+stupid scores: [0.9180330634117126, 0.9213056564331055, 0.9487168788909912, 0.9213056564331055, 0.9200266599655151]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a train station at oslo airport
+text: Oslo Airport Station (Norwegian: Oslo lufthavn stasjon), also known as Gardermoen Station, is a railway station located in the airport terminal building of Oslo Airport, Gardermoen in Norway. Located on the Gardermoen Line, it is served by the Airport Express Trains, express trains to Trondheim and Oslo, regional trains to Lillehammer and Skien (via Oslo) and commuter trains to Eidsvoll and Kongsberg (via Oslo).
+smart scores: [0.9805461764335632, 0.9833155870437622, 0.979339063167572]
+stupid scores: [0.9079025983810425, 0.9233803749084473, 0.9562744498252869, 0.9233803749084473, 0.9309312105178833]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: has there ever been a shooting at a hospital
+text: The 2010 Lörrach hospital shooting rampage occurred on 19 September 2010 in the small town of Lörrach, Germany near the Swiss border. Sabine Radmacher, a 41-year-old woman, killed her five-year-old son and the boy's father, her ex-partner. She then crossed the street to St. Elisabethen Hospital, where she shot and stabbed one male nurse, killing him, and also injuring eighteen others, including a police officer. Soon after, the woman was fatally shot by special police units.
+smart scores: [0.9801855087280273, 0.9837136268615723, 0.9748832583427429]
+stupid scores: [0.9108211398124695, 0.9224429130554199, 0.9583654403686523, 0.9224429130554199, 0.933143675327301]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: did star trek discovery get a second season
+text: The second season of the American television series Star Trek: Discovery is set roughly a decade before the events of the original Star Trek series, and follows the crew of the USS Discovery. The season will be produced by CBS Television Studios in association with Secret Hideout, Roddenberry Entertainment, and Living Dead Guy Productions, with Alex Kurtzman serving as showrunner.
+smart scores: [0.9776056408882141, 0.9847415089607239, 0.9755465984344482]
+stupid scores: [0.9236167669296265, 0.9157761931419373, 0.9577471017837524, 0.9157761931419373, 0.9386627078056335]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there a season 2 of designated survivor
+text: The second season of the American political drama series Designated Survivor was ordered on May 11, 2017. It premiered on September 27, 2017, and consisted of 22 episodes. The series is produced by ABC Studios and The Mark Gordon Company, and is filmed in Toronto and Cambridge, Ontario, Canada.
+smart scores: [0.9841657876968384, 0.9851560592651367, 0.977807879447937]
+stupid scores: [0.9131712317466736, 0.9204621911048889, 0.9527382850646973, 0.9204621911048889, 0.9389938712120056]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: is there such a thing as altitude sickness
+text: Altitude sickness, the mildest form being acute mountain sickness (AMS), is the negative health effect of high altitude, caused by rapid exposure to low amounts of oxygen at high elevation. Symptoms may include headache, vomiting, feeling tired, trouble sleeping, and dizziness. Acute mountain sickness can progress to high altitude pulmonary edema (HAPE) with associated shortness of breath or high altitude cerebral edema (HACE) with associated confusion. Chronic mountain sickness may occurs after long term exposure to high altitude.
+smart scores: [0.9799227118492126, 0.9832769632339478, 0.9737845063209534]
+stupid scores: [0.9208666682243347, 0.9264556169509888, 0.9530285596847534, 0.9264556169509888, 0.9432641267776489]
+real answer: True
+--------------------------------------------------
+--------------------------------------------------
+question: will there be a second season of discovery
+text: The second season of the American television series Star Trek: Discovery is set roughly a decade before the events of the original Star Trek series and follows the crew of the USS Discovery. The season will be produced by CBS Television Studios in association with Secret Hideout, Roddenberry Entertainment, and Living Dead Guy Productions, with Alex Kurtzman serving as showrunner.
+smart scores: [0.9817646741867065, 0.9842257499694824, 0.977959930896759]
+stupid scores: [0.9235458970069885, 0.9220976233482361, 0.9588591456413269, 0.9220976233482361, 0.9382821917533875]
+real answer: True
+--------------------------------------------------
