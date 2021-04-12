@@ -27,27 +27,27 @@ Ensemble: https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/test
 
 
 ## Results
-_Scoring difficulty:_  
+_Scoring difficulty_  
 Text generation is typically done by creating multiple possible outputs, using some decoding algorithm, such as beam search, and then selecting the most probable one. We use that fact to implement a simple generation strategy that simply generates multiple candidate questions per text and then uses the trained confidence model to select the best one.  
 We evaluate the 2 confidence scoring models on questions generated using various decoding strategies. We also evaluate the ensemble method on existing questions from the Boolq test set.
 For each evaluation, a text file with the best and worst example, as judged by the model, is provided. 
 Finally, we conduct a survey, using Amazon Mechanical Turk, to quantify the difficulty and relevance of 2 of our methods.
 
 
-Generated Examples:  
+_Generated Examples_  
 Ranked and sorted by error prediction: https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/results/error_prediction_confidence  
 Ranked and sorted by probability ratio:https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/results/probability_ratio_as_confidence
 
 Generating multiple questions per text and sorting pairs of questions by difficulty. I.e show questions on the same texts with high differences in difficulty.
 Confidence model beam search https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/results/questions_confidence_diff_8_beams
-p sampling:
+p sampling:  
 https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/results/question_confidence_diff_p_sampling_top_p_0.85_topk_25_return_seq_4
 
 Results contain mostly “easy” questions which are nonsensical, such as “is paris the same as paris”. This was largely fixed by still taking the difference, but requiring that the difficulty of all questions will cross some difficulty threshold k=0.7.  
 https://github.com/DanielGlickmanTAU/QA-GRL/blob/main/experiments/results/take2/good_diff
 
 
-Ensemble method:  
+_Ensemble method_  
 We also trained an ensemble of 2 roberta-base confidence(probability ratio) models and 3 smaller distilled-bert models. We evaluated their prediction on questions from the dataset(test) itself.  
 This is not simply an attempt to improve results by ensembling. We tried to use the disagreement between the models as a measure of difficulty, with the intuition that if the models do not score a question in the same way, it may serve as an indication for it being difficult.  
 Results:  https://github.com/DanielGlickmanTAU/QA-GRL/tree/main/experiments/results/ensemble-results.  
